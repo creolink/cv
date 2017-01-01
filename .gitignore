@@ -15,7 +15,7 @@ data/sessions/
 data/tmp/
 temp/
 
-#Doctrine 2
+# Doctrine 2
 data/DoctrineORMModule/Proxy/
 data/DoctrineORMModule/cache/
 
@@ -23,3 +23,12 @@ data/DoctrineORMModule/cache/
 # Legacy ZF1
 demos/
 extras/documentation
+
+# ZF Git Ignored data
+.vagrant/
+config/development.config.php
+!data/cache/.gitkeep
+phpunit.xml
+ubuntu-xenial-16.04-cloudimg-console.log
+
+
