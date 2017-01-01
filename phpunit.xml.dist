@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
+<phpunit colors="true" bootstrap="bootstrap.php">
     <testsuites>
         <testsuite name="ZendSkeletonApplication Test Suite">
-            <directory>./module/Application/test</directory>
+            <directory>./module/*/test</directory>
         </testsuite>
     </testsuites>
 </phpunit>
