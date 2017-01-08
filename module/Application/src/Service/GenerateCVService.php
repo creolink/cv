@@ -2,15 +2,42 @@
 
 namespace Application\Service;
 
+use Application\Model\CurriculumVitae;
+use Application\Helper\DateHelper;
+
 class GenerateCVService
 {
-    public function __construct() {
-        
+    /**
+     * @var TCPDF 
+     */
+    private $tcpdf;
+    
+    /**
+     * @var DateHelper 
+     */
+    private $dateHelper;
+    
+    /**
+     * @param CurriculumVitae $tcpdf
+     * @param DateHelper $dateHelper
+     */
+    public function __construct(
+        CurriculumVitae $tcpdf,
+        DateHelper $dateHelper
+    ) {
+        $this->tcpdf = $tcpdf;
+        $this->dateHelper = $dateHelper;
     }
     
-    public function render()
+    public function renderCV()
     {
-//        $this->configure();
+        $this->tcpdf->configure();
+        
+        
+        
+        
+        $this->tcpdf->render();
+        
 //        
 //        $this->addNewPage();
 //

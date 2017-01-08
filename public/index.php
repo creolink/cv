@@ -3,6 +3,13 @@
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
+if ($_SERVER['APPLICATION_ENV'] === 'development') {
+    error_reporting(E_ALL);
+    ini_set("display_errors", true);
+    ini_set('display_startup_errors', true);
+    define('APPLICATION_ENV', $_SERVER['APPLICATION_ENV']);
+}
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.

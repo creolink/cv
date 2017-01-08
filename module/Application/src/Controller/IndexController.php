@@ -3,23 +3,20 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 use Application\Helper\DateHelper;
-use TCPDF;
+use Application\Model\CurriculumVitae;
+use Application\Service\GenerateCVService;
+
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        
-        
-        $dateHelper = new DateHelper(time());
-        
-        
-        
-//        $curriculumVitae = new CurriculumVitae('P', 'mm', 'A4', true, 'UTF-8', false);
-//        $curriculumVitae->render();
-        
-        return new ViewModel();
+        $generateCVService = new GenerateCVService(
+            new CurriculumVitae('P', 'mm', 'A4', true, 'UTF-8', false),
+            new DateHelper(time())
+        );
+
+        return $generateCVService->renderCV();
     }
 }

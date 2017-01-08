@@ -3,6 +3,7 @@
 namespace Application\Model;
 
 use TCPDF;
+use TCPDF_FONTS;
 
 class CurriculumVitae extends TCPDF
 {
@@ -33,58 +34,9 @@ class CurriculumVitae extends TCPDF
     private $email = 'jakub.luczynski@gmail.com';
     private $emailUrl = 'mailto:jakub.luczynski@gmail.com';
     private $cvUrl = 'http://cv.creolink.pl';
+    private $fontsPath = 'public/fonts/unifont/';
     
-	public function footer()
-    {
-        $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
-        
-        $this->SetXY(5, -15);
-        $this->SetFont($this->verdana, '', 6);
-        $this->SetTextColor(150, 150, 150);
-        $this->MultiCell(200, 3, $text, 0, 'C', FALSE);
-        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
-	}
-    
-    public function header()
-    {
-        if ($this->getPage() > 1) {
-            $this->SetTextColor(150, 150, 150);
-            $this->SetDrawColor(150, 150, 150);
-            
-            $x = 62;
-            $y = 6;
-            
-            $this->addPhoto($x, $y);
-            
-
-            
-            $this->SetXY($x + 7, $y);
-            $this->Write(4, $this->documentTitle);
-            
-            $x = $this->GetX();
-            $this->renderIcon($x + 2, $y, 'images/phone.png', $this->phone, $this->phoneUrl, 1);
-            $this->renderIcon($x + 30, $y, 'images/email.png', $this->email, $this->emailUrl, 1);
-            $this->renderIcon($x + 67, $y, 'images/skype.png', 'luczynski.jakub', 'skype:luczynski.jakub', 1);
-        }
-    }
-    
-    private function addPhoto($x, $y)
-    {
-        $width = 5.5;
-        $height = 7;
-        
-        $this->Image('images/photo.png', $x, $y - 1.5, $width, $height, 'PNG', $this->cvUrl);
-        $this->Rect($x, $y - 1.5, $width, $height);
-    }
-    
-    private function addPageNumber($y)
-    {
-        $this->SetY($y);
-        $this->SetFont($this->verdana, '', 6);
-        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
-    }
-    
-    private function configure()
+    public function configure()
     {
         $this->Open();
         $this->SetCreator($this->documentAuthor . ', powered by TCPDF');
@@ -98,12 +50,84 @@ class CurriculumVitae extends TCPDF
         $this->setFontSubsetting(true);
         $this->setPrintHeader(true);
         $this->setPrintFooter(true);
+
+        $this->verdana = $this->registerFont('verdana.ttf');
+        $this->verdanaItalic = $this->registerFont('verdanai.ttf');
+        $this->tahoma = $this->registerFont('tahoma.ttf');
+        $this->tahomaBold = $this->registerFont('tahomabd.ttf');
+        $this->tahomaItalic = $this->registerFont('tahomai.ttf');
+        $this->dejavu = $this->registerFont('DejaVuSansCondensed.ttf');
+    }
+    
+	public function footer()
+    {
+        $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
         
-        $this->verdana = TCPDF_FONTS::addTTFfont('fonts/unifont/verdana.ttf', '', '', 32);
-        $this->verdanaItalic = TCPDF_FONTS::addTTFfont('fonts/unifont/verdanai.ttf', '', '', 32);
-        $this->tahoma = TCPDF_FONTS::addTTFfont('fonts/unifont/tahoma.ttf', '', '', 32);
-        $this->tahomaBold = TCPDF_FONTS::addTTFfont('fonts/unifont/tahomabd.ttf', '', '', 32);
-        $this->tahomaItalic = TCPDF_FONTS::addTTFfont('fonts/unifont/tahomai.ttf', '', '', 32);
-        $this->dejavu = TCPDF_FONTS::addTTFfont('fonts/unifont/DejaVuSansCondensed.ttf', '', '', 32);
+        $this->SetXY(5, -15);
+        $this->SetFont($this->verdana, '', 6);
+        $this->SetTextColor(150, 150, 150);
+        $this->MultiCell(200, 3, $text, 0, 'C', FALSE);
+        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
+	}
+    
+    /**
+     * Add header only for 2nd page and later
+     */
+    public function header()
+    {
+        if ($this->getPage() > 1) {
+            $this->SetTextColor(150, 150, 150);
+            $this->SetDrawColor(150, 150, 150);
+            
+            $x = 62;
+            $y = 6;
+            
+            $this->addPhoto($x, $y);
+            
+            $this->SetXY($x + 7, $y);
+            $this->Write(4, $this->documentTitle);
+            
+            $x = $this->GetX();
+            $this->renderIcon($x + 2, $y, 'images/phone.png', $this->phone, $this->phoneUrl, 1);
+            $this->renderIcon($x + 30, $y, 'images/email.png', $this->email, $this->emailUrl, 1);
+            $this->renderIcon($x + 67, $y, 'images/skype.png', 'luczynski.jakub', 'skype:luczynski.jakub', 1);
+        }
+    }
+    
+    /**
+     * @param float $y
+     */
+    public function addPageNumber($y)
+    {
+        $this->SetY($y);
+        $this->SetFont($this->verdana, '', 6);
+        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
+    }
+    
+    public function render()
+    {
+        $this->Output();
+    }
+    
+    /**
+     * @param float $x
+     * @param float $y
+     */
+    private function addPhoto($x, $y)
+    {
+        $width = 5.5;
+        $height = 7;
+        
+        $this->Image('images/photo.png', $x, $y - 1.5, $width, $height, 'PNG', $this->cvUrl);
+        $this->Rect($x, $y - 1.5, $width, $height);
+    }
+    
+    /**
+     * @param string $font
+     * @return string
+     */
+    private function registerFont($font)
+    {
+        return TCPDF_FONTS::addTTFfont($this->fontsPath . $font, '', '', 32);
     }
 }
