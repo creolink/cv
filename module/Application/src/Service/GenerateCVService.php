@@ -1,9 +1,16 @@
 <?php
+/**
+ * @copyright 2015-2017 Jakub Luczynski
+ * @author Jakub Luczynski <jakub.luczynski@gmail.com>
+ * @link http://cv.creolink.pl/
+ */
 
 namespace Application\Service;
 
 use Application\Model\CurriculumVitae;
 use Application\Helper\DateHelper;
+use Application\Model\DocumentPage;
+use Application\Element\MainHeader;
 
 class GenerateCVService
 {
@@ -13,30 +20,21 @@ class GenerateCVService
     private $tcpdf;
     
     /**
-     * @var DateHelper 
-     */
-    private $dateHelper;
-    
-    /**
      * @param CurriculumVitae $tcpdf
      * @param DateHelper $dateHelper
      */
-    public function __construct(
-        CurriculumVitae $tcpdf,
-        DateHelper $dateHelper
-    ) {
+    public function __construct(CurriculumVitae $tcpdf)
+    {
         $this->tcpdf = $tcpdf;
-        $this->dateHelper = $dateHelper;
     }
     
     public function renderCV()
     {
-        $this->tcpdf->configure();
+        $page = new DocumentPage($this->tcpdf);
+        $page = new MainHeader($page);
+        $this->tcpdf = $page->addElements();
         
-        
-        
-        
-        $this->tcpdf->render();
+        $this->tcpdf->renderPdf();
         
 //        
 //        $this->addNewPage();
@@ -72,5 +70,13 @@ class GenerateCVService
 //        //*/
 //        
 //        $this->Output();
+    }
+    
+    /**
+     * @return DateHelper
+     */
+    private function createDateHelper()
+    {
+        return new DateHelper(time());
     }
 }

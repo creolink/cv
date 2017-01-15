@@ -1,4 +1,9 @@
 <?php
+/**
+ * @copyright 2015-2017 Jakub Luczynski
+ * @author Jakub Luczynski <jakub.luczynski@gmail.com>
+ * @link http://cv.creolink.pl/
+ */
 
 namespace Application\Helper;
 
@@ -12,7 +17,7 @@ class DateHelper
     /**
      * @var array
      */
-    private $polishMonths = array(
+    private $polishMonths = [
         1 => array('styczeń', 'stycznia'),
         2 => array('luty', 'lutego'),
         3 => array('marzec', 'marca'),
@@ -25,12 +30,13 @@ class DateHelper
         10 => array('październik', 'października'),
         11 => array('listopad', 'listopada'),
         12 => array('grudzień', 'grudnia'),
-    );
+    ];
     
     /**
      * @param int $date
      */
-    public function __construct($date) {
+    public function __construct($date)
+    {
         $this->date = $date;
     }
     
