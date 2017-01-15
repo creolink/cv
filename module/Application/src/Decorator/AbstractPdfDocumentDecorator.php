@@ -33,4 +33,12 @@ abstract class AbstractPdfDocumentDecorator implements PdfPageDecoratorInterface
     {
         return $this->tcpdf->createPage();
     }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function addElements()
+    {
+        return $this->createPage();
+    }
 }
