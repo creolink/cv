@@ -41,6 +41,14 @@ class DateHelper
     }
     
     /**
+     * @return int
+     */
+    public function getPassedYears($year)
+    {
+        return date("Y") - $year;
+    }
+    
+    /**
      * @return string
      */
     public function getDate()

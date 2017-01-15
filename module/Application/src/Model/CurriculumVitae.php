@@ -11,6 +11,8 @@ use TCPDF;
 use TCPDF_FONTS;
 use Application\Decorator\PdfDocumentDecoratorInterface;
 use Application\Decorator\PdfPageDecoratorInterface;
+use Application\Model\PdfConfig;
+use Application\Model\PersonalData;
 
 class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, PdfPageDecoratorInterface
 {
@@ -26,23 +28,24 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
     
     private $cursorPositionX = 0;
     private $cursorPositionY = 0;
-    private $workStartYear = 2001;
-    private $documentAuthor = 'Jakub Luczynski';
-    private $documentTitle = 'Jakub Luczynski, Curriculum Vitae';
-    private $documentKeywords = 'Jakub Luczynski, CV, web developer, php, specialist, project manager';
-    private $birthDate = '01/19/1979';
     
-    private $nationality = 'Polish';
-    private $country = 'Germany';
-    private $street = 'Am Wall 54';
-    private $city = 'Kleinmachnow';
-    private $postCode = '14532';
-    private $phone = '+49 1521 7786892';
-    private $phoneUrl = 'tel:04915217786892';
-    private $email = 'jakub.luczynski@gmail.com';
-    private $emailUrl = 'mailto:jakub.luczynski@gmail.com';
-    private $cvUrl = 'http://cv.creolink.pl';
-    private $fontsPath = 'public/fonts/unifont/';
+    //private $workStartYear = 2001;
+    
+    //private $documentAuthor = 'Jakub Luczynski';
+    //private $documentTitle = 'Jakub Luczynski, Curriculum Vitae';
+    //private $documentKeywords = 'Jakub Luczynski, CV, web developer, php, specialist, project manager';
+    
+    //private $birthDate = '01/19/1979';
+    //private $nationality = 'Polish';
+    //private $country = 'Germany';
+    //private $street = 'Am Wall 54';
+    //private $city = 'Kleinmachnow';
+    //private $postCode = '14532';
+    //private $phone = '+49 1521 7786892';
+    //private $phoneUrl = 'tel:04915217786892';
+    //private $email = 'jakub.luczynski@gmail.com';
+    //private $emailUrl = 'mailto:jakub.luczynski@gmail.com';
+    //private $cvUrl = 'http://cv.creolink.pl';
     
     public function __construct($orientation = 'P', $unit = 'mm', $format = 'A4', $unicode = true, $encoding = 'UTF-8', $diskcache = false, $pdfa = false)
     {
@@ -69,12 +72,12 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
             $this->renderPhotoInHeader($x, $y);
             
             $this->SetXY($x + 7, $y);
-            $this->Write(4, $this->documentTitle);
+            $this->Write(4, PdfConfig::DOCUMENT_TITLE);
             
             $x = $this->GetX();
-//            $this->renderIcon($x + 2, $y, 'images/phone.png', $this->phone, $this->phoneUrl, 1);
-//            $this->renderIcon($x + 30, $y, 'images/email.png', $this->email, $this->emailUrl, 1);
-//            $this->renderIcon($x + 67, $y, 'images/skype.png', 'luczynski.jakub', 'skype:luczynski.jakub', 1);
+            $this->renderIcon($x + 2, $y, 'phone.png', PersonalData::PHONE, PersonalData::PHONE_URL, 1);
+            $this->renderIcon($x + 30, $y, 'email.png', PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
+            $this->renderIcon($x + 67, $y, 'skype.png', 'luczynski.jakub', 'skype:luczynski.jakub', 1);
         }
     }
     
@@ -93,6 +96,41 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
         $this->MultiCell(200, 3, $text, 0, 'C', FALSE);
         $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
 	}
+    
+    /**
+     * Renders image icon
+     * 
+     * @param float $x
+     * @param float $y
+     * @param string $image
+     * @param string $text
+     * @param string $url
+     * @param float $move
+     */
+    public function renderIcon($x, $y, $image, $text, $url, $move = 0)
+    {
+        $this->SetFont('verdana', '', 6);
+        
+        $this->Image(PdfConfig::PATH_IMAGES . $image, $x, $y, 4, 4, 'PNG');
+        $this->SetXY($x + 4 + $move, $y - 1);
+        $this->Cell(10, 6, $text, 0, 0, 'L', false, $url);
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function renderImage($file, $x, $y, $w, $h, $type, $link)
+    {
+        return $this->Image(
+            PdfConfig::PATH_IMAGES . $file,
+            $x,
+            $y,
+            $w,
+            $h,
+            $type,
+            $link
+        );
+    }
 
     /**
      * Renders PDF document
@@ -107,7 +145,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
      */
     public function addElements()
     {
-        return $this;
+        return $this->createPage();
     }
     
     /**
@@ -115,7 +153,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
      */
     public function createPage()
     {
-        return $this;
+        return $this-renderPdf();
     }
 
     /**
@@ -123,11 +161,11 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
      */
     private function configure()
     {
-        $this->SetCreator($this->documentAuthor . ', powered by TCPDF');
-        $this->SetAuthor($this->documentAuthor);
-        $this->SetTitle($this->documentTitle);
-        $this->SetSubject($this->documentTitle);
-        $this->SetKeywords($this->documentKeywords);
+        $this->SetCreator(PdfConfig::DOCUMENT_AUTHOR . ', powered by TCPDF');
+        $this->SetAuthor(PdfConfig::DOCUMENT_AUTHOR);
+        $this->SetTitle(PdfConfig::DOCUMENT_TITLE);
+        $this->SetSubject(PdfConfig::DOCUMENT_TITLE);
+        $this->SetKeywords(PdfConfig::DOCUMENT_KEYWORDS);
         $this->SetCompression(true);
         $this->SetDisplayMode('real');
         $this->SetAutoPageBreak(true, 10);
@@ -155,7 +193,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
      */
     private function registerFont($font)
     {
-        return TCPDF_FONTS::addTTFfont($this->fontsPath . $font, '', '', 32);
+        return TCPDF_FONTS::addTTFfont(PdfConfig::PATH_FONTS . $font, '', '', 32);
     }
     
     /**
