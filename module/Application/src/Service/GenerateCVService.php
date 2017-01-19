@@ -32,7 +32,7 @@ class GenerateCVService
     {
         $page = new DocumentPage($this->tcpdf);
         $page = new MainHeader($page);
-        $this->tcpdf = $page->addElements();
+        $this->tcpdf = $page->createPage();
         
         $this->tcpdf->renderPdf();
         
