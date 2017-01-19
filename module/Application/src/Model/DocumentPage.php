@@ -26,4 +26,12 @@ class DocumentPage extends AbstractPdfDocumentDecorator
         
         return $this->tcpdf;
     }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function addElements()
+    {
+        return $this->createPage();
+    }
 }

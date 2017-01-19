@@ -18,7 +18,7 @@ class MainHeader extends AbstractPdfDocumentDecorator
      */
     public function addElements()
     {
-        $this->tcpdf = $this->tcpdf->addElements();
+        parent::addElements();
         
         return $this->renderMainHeader();
     }

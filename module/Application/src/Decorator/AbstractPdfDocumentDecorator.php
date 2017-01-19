@@ -28,6 +28,8 @@ abstract class AbstractPdfDocumentDecorator implements PdfPageDecoratorInterface
     
     /**
      * {@inheritDoc}
+     * 
+     * @return PdfDocumentDecoratorInterface
      */
     public function createPage()
     {
@@ -36,9 +38,11 @@ abstract class AbstractPdfDocumentDecorator implements PdfPageDecoratorInterface
     
     /**
      * {@inheritDoc}
+     * 
+     * @return PdfDocumentDecoratorInterface
      */
     public function addElements()
     {
-        return $this->createPage();
+        $this->tcpdf = $this->tcpdf->addElements();
     }
 }
