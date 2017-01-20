@@ -33,22 +33,22 @@ class KnownTools extends AbstractSkills
         $step = 3.5;
         $textWidth = 38;
         
-        $this->renderSkillOnLeft($x, $y, 'Netbeans, PHPStorm, WebStorm', 6, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Linux: Debian, Ubuntu, Fedora', 5, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'SVN, GIT, JIRA, Trac, Jenkins', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y, 'Netbeans, PHPStorm', 6, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'Debian, Ubuntu, Fedora', 5, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'Git, Svn', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'JIRA, Trac, Jenkins', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Composer, Node.js, npm', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'FPDF, TCPDF, Adobe PDF', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'PHP FPM, APC, Memcache', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Percona server, Galera Cluster', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'CodeSniffer, PhpDoc', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'mytop, mysqltuner', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'MySQL Workbench', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'MySQL Workbench, PMA', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'HTML Validator, W3C', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Mrtg, Cacti, Mtr, Traceroute', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'DIA, Software Ideas Modeler', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Google Analytics, Adwords', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'GIMP, Photoshop', 3, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'VirtualBox, Docker, Vagrant', 3, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'FPDF, TCPDF', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'Percona server, Galera Cluster', 3, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'GIMP, Photoshop', 2, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'VirtualBox, Docker, Vagrant', 2, $textWidth);
         
         // Commented for future needs
         //$this->renderSkillOnLeft($x, $y += $step, 'Apache jMeter', 4, $textWidth);

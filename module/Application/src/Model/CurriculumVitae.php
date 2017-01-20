@@ -143,7 +143,8 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
      */
     private function configure()
     {
-        $this->SetCreator(PdfConfig::DOCUMENT_AUTHOR . ', powered by TCPDF');
+        $this->Open();
+        $this->SetCreator(PdfConfig::DOCUMENT_CREATOR);
         $this->SetAuthor(PdfConfig::DOCUMENT_AUTHOR);
         $this->SetTitle(PdfConfig::DOCUMENT_TITLE);
         $this->SetSubject(PdfConfig::DOCUMENT_TITLE);
