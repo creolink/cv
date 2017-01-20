@@ -22,4 +22,5 @@ class PersonalData
     const CV_URL = 'http://cv.creolink.pl';
     const BIRTH_DATE = '01/19/1979';
     const WORK_START_YEAR = 2001;
+    const WORK_PLACE = 'Berlin, Potsdam';
 }

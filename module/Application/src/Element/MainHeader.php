@@ -28,30 +28,60 @@ class MainHeader extends AbstractPdfDocumentDecorator
      */
     private function renderMainHeader()
     {
-        $this->tcpdf->SetXY(0, 0);
-
-        $this->tcpdf->SetLineWidth(0.1);
+        $this->configure();
         
+        $this->renderBackground();
+        $this->renderName();
+        $this->renderSpeciality();
+        $this->renderCreationInfo();
+        $this->renderFlags();
+        $this->renderDownloadButton();
+        $this->renderContactData();
+        $this->renderPersonalDataPhoto();
+        $this->renderPersonalData();
+        
+        return $this->tcpdf;
+    }
+    
+    private function configure()
+    {
+        $this->tcpdf->SetXY(0, 0);
+        $this->tcpdf->SetLineWidth(0.1);
+    }
+    
+    private function renderBackground()
+    {
         $this->tcpdf->SetFillColor(245,246,244);
         $this->tcpdf->Rect(0, 0, 210, 45, 'F');
-        
+    }
+    
+    private function renderName()
+    {
         $this->tcpdf->SetTextColor(76, 76, 76);
         
         $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 30);
         $this->tcpdf->Text(85, 5, 'JAKUB');
-        
-        $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 30);
         $this->tcpdf->Text(72, 16, 'ŁUCZYŃSKI');
-        
+    }
+    
+    private function renderSpeciality()
+    {
         $this->tcpdf->SetTextColor(138, 138, 138);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
-        $this->tcpdf->Text(66, 29, 'WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER');
         
+        $this->tcpdf->Text(66, 29, 'WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER');
+    }
+    
+    private function renderCreationInfo()
+    {
         $this->tcpdf->SetTextColor(180, 180, 180);
         $this->tcpdf->SetXY(113, 31);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
         $this->tcpdf->Write(6, 'CV created with PHP & TCPDF', 'https://tcpdf.org/');
-        
+    }
+    
+    private function renderFlags()
+    {
         $this->tcpdf->SetDrawColor(200, 200, 200);
         
         $this->tcpdf->Rect(11, 6, 5, 3);
@@ -62,26 +92,27 @@ class MainHeader extends AbstractPdfDocumentDecorator
         
         $this->tcpdf->Rect(11, 14, 5, 3);
         $this->tcpdf->renderImage('pl.png', 11, 14, 5, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?pl');
-        
+    }
+    
+    private function renderDownloadButton()
+    {
         if (!$this->tcpdf->isDownloaded) {
             $this->tcpdf->renderImage('save.png', 12, 18, 3, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?download&en'); 
         }
-
-        $this->tcpdf->Line(0, 39, 210, 39);
-        $this->tcpdf->Line(0, 45, 210, 45);
-        
-        $this->renderPersonalDataPhoto();
-        
+    }
+    
+    private function renderContactData()
+    {
         $this->tcpdf->SetTextColor(50, 50, 50);
+        
         $this->tcpdf->renderIcon(55, 40, 'phone.png', PersonalData::PHONE, PersonalData::PHONE_URL);
         $this->tcpdf->renderIcon(83, 40, 'email.png', PersonalData::EMAIL, PersonalData::EMAIL_URL);
         $this->tcpdf->renderIcon(120, 40, 'linkedin.png', '/jakubluczynski', 'http://pl.linkedin.com/in/jakubluczynski');
         $this->tcpdf->renderIcon(143, 40, 'skype.png', 'luczynski.jakub', 'skype:luczynski.jakub');
         $this->tcpdf->renderIcon(167, 40, 'goldenline.png', '/jakub-luczynski', 'http://www.goldenline.pl/jakub-luczynski/');
         
-        $this->renderPersonalData();
-        
-        return $this->tcpdf;
+        $this->tcpdf->Line(0, 39, 210, 39);
+        $this->tcpdf->Line(0, 45, 210, 45);
     }
     
     /**
@@ -119,7 +150,9 @@ class MainHeader extends AbstractPdfDocumentDecorator
         $posYBox = 5;
         
         $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
+        $this->tcpdf->SetTextColor(76, 76, 76);
         $this->tcpdf->SetFillColor(235,235,235);
+        $this->tcpdf->SetLineWidth(0.1);
         
         $this->tcpdf->RoundedRect(152, $posYBox, 22, 4, 1, '1111', 'DF');
         $this->tcpdf->SetXY(152, $posYText);
@@ -155,6 +188,6 @@ class MainHeader extends AbstractPdfDocumentDecorator
         $this->tcpdf->SetXY(152, $posYText+=7);
         $this->tcpdf->Cell(10, 6, 'Workplace', 0, 0, 'L', false);
         $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, 'Berlin Area, Potsdam', 0, 0, 'L', false);
+        $this->tcpdf->Cell(10, 6, PersonalData::WORK_PLACE, 0, 0, 'L', false);
     }
 }
