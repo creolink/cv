@@ -28,31 +28,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
     
     public $cursorPositionX = 0;
     public $cursorPositionY = 0;
-    
-    private $workStartYear = 2001;
-    private $documentAuthor = 'Jakub Luczynski';
-    private $documentTitle = 'Jakub Luczynski, Curriculum Vitae';
-    private $documentKeywords = 'Jakub Luczynski, CV, web developer, php, specialist, project manager';
-    private $birthDate = '01/19/1979';
-    
-    //private $workStartYear = 2001;
-    
-    //private $documentAuthor = 'Jakub Luczynski';
-    //private $documentTitle = 'Jakub Luczynski, Curriculum Vitae';
-    //private $documentKeywords = 'Jakub Luczynski, CV, web developer, php, specialist, project manager';
-    
-    //private $birthDate = '01/19/1979';
-    //private $nationality = 'Polish';
-    //private $country = 'Germany';
-    //private $street = 'Am Wall 54';
-    //private $city = 'Kleinmachnow';
-    //private $postCode = '14532';
-    //private $phone = '+49 1521 7786892';
-    //private $phoneUrl = 'tel:04915217786892';
-    //private $email = 'jakub.luczynski@gmail.com';
-    //private $emailUrl = 'mailto:jakub.luczynski@gmail.com';
-    //private $cvUrl = 'http://cv.creolink.pl';
-    
+
     public function __construct($orientation = 'P', $unit = 'mm', $format = 'A4', $unicode = true, $encoding = 'UTF-8', $diskcache = false, $pdfa = false)
     {
         parent::__construct($orientation, $unit, $format, $unicode, $encoding, $diskcache, $pdfa);
@@ -62,7 +38,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
     }
     
     /**
-     * Adds header only for 2nd page and later
+     * Overwrites default header and adds header only for 2nd page and later
      * 
      * {@inheritDoc}
      */
