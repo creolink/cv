@@ -7,6 +7,8 @@
 
 namespace Application\Decorator;
 
+use Application\Model\CurriculumVitae;
+
 interface PdfDocumentDecoratorInterface
 {
     /**

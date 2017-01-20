@@ -12,6 +12,7 @@ use Application\Helper\DateHelper;
 use Application\Model\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\TechnicalSkills;
+use Application\Element\PersonalSkills;
 
 class GenerateCVService
 {
@@ -34,6 +35,7 @@ class GenerateCVService
         $page = new DocumentPage($this->tcpdf);
         $page = new MainHeader($page);
         $page = new TechnicalSkills($page);
+        $page = new PersonalSkills($page);
         $this->tcpdf = $page->createPage();
         
         $this->tcpdf->renderPdf();
