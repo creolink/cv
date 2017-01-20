@@ -17,6 +17,7 @@ use Application\Element\PersonalSkills;
 use Application\Element\CareerGoals;
 use Application\Element\Languages;
 use Application\Element\EmploymentHistory;
+use Application\Element\Education;
 
 class GenerateCVService
 {
@@ -44,6 +45,7 @@ class GenerateCVService
         $page = new PersonalSkills($page);
         $page = new Languages($page);
         $page = new EmploymentHistory($page);
+        $page = new Education($page);
         $this->tcpdf = $page->createPage();
         
         $this->tcpdf->renderPdf();
