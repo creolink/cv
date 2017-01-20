@@ -201,7 +201,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
         $width = 5.5;
         $height = 7;
         
-        //$this->Image('images/photo.png', $x, $y - 1.5, $width, $height, 'PNG', $this->cvUrl);
+        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y - 1.5, $width, $height, 'PNG', $this->cvUrl);
         $this->Rect($x, $y - 1.5, $width, $height);
     }
 }
