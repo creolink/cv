@@ -7,10 +7,10 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractSkills;
+use Application\Element\AbstractBlockTitle;
 use Application\Model\PdfConfig;
 
-class EmploymentHistory extends AbstractSkills
+class EmploymentHistory extends AbstractBlockTitle
 {
     /**
      * {@inheritDoc}

@@ -7,9 +7,9 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractSkills;
+use Application\Element\AbstractBlockTitle;
 
-class Education extends AbstractSkills
+class Education extends AbstractBlockTitle
 {
     /**
      * {@inheritDoc}
