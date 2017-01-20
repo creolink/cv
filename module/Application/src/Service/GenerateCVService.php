@@ -19,6 +19,7 @@ use Application\Element\Languages;
 use Application\Element\EmploymentHistory;
 use Application\Element\Education;
 use Application\Element\AboutMe;
+use Application\Element\Hobby;
 
 class GenerateCVService
 {
@@ -47,6 +48,7 @@ class GenerateCVService
         $page = new Languages($page);
         $page = new EmploymentHistory($page);
         $page = new Education($page);
+        $page = new Hobby($page);
         $page = new AboutMe($page);
         $this->tcpdf = $page->createPage();
         
