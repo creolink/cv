@@ -13,20 +13,12 @@ abstract class AbstractSkills extends AbstractBlockTitle
 {
     protected function renderSkillOnRight($x, $y, $text = '', $value = 5, $textWidth = 33)
     {
-        $this->tcpdf->SetFont($this->tcpdf->verdana, '', 7);
+        $this->tcpdf->SetFont($this->tcpdf->verdana, '', 8);
         
         $this->tcpdf->SetXY($x, $y);
-        $this->tcpdf->Cell(53, 6, $text, 0, 0, 'L', false);
+        $this->tcpdf->Cell($textWidth, 6, $text, 0, 0, 'L', false);
 
-        $y = $y + 3;
-        $x = $x + $textWidth;
-        
-        for ($counter = 0; $counter < 6; $counter++) {
-            $this->renderCircle($x + (3.5 * $counter), $y);
-            if ($value > $counter) {
-                $this->renderCircle($x + (3.5 * $counter), $y, true);
-            }
-        }
+        $this->renderFilledCircle($x + $textWidth, $y + 3, $value);
     }
     
     protected function renderSkillOnLeft($x, $y, $text = '', $value = 5, $textWidth = 53)
@@ -36,8 +28,11 @@ abstract class AbstractSkills extends AbstractBlockTitle
         $this->tcpdf->SetXY($x + 15.8, $y);
         $this->tcpdf->Cell($textWidth, 6, $text, 0, 0, 'L', false);
         
-        $y = $y + 3.2;
-        
+        $this->renderFilledCircle($x, $y + 3.2, $value);
+    }
+    
+    private function renderFilledCircle($x, $y, $value)
+    {
         for ($counter = 0; $counter < 5; $counter++) {
             $this->renderCircle($x + (3.5 * $counter), $y);
             if ($value > $counter) {
