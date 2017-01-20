@@ -8,6 +8,7 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
+use Application\Model\PdfConfig;
 
 class EmploymentHistory extends AbstractSkills
 {
@@ -119,14 +120,14 @@ class EmploymentHistory extends AbstractSkills
         if (false === empty($references)) {
             $this->tcpdf->SetXY($x, $y + 1.5);
             $this->tcpdf->Cell(195, 2.2, 'References', '', 0, 'R', false, $references);
-            $this->tcpdf->Image('images/save.png', $this->tcpdf->GetX(), $y + 1.5, 2.5, 2.5, 'PNG', $references);
+            $this->tcpdf->Image(PdfConfig::PATH_IMAGES . 'save.png', $this->tcpdf->GetX(), $y + 1.5, 2.5, 2.5, 'PNG', $references);
         }
 
         if (false === empty($examples)) {
             $shift = (false === empty($references) ? 17 : 0);
             $this->tcpdf->SetXY($x, $y + 1.5);
             $this->tcpdf->Cell(195 - $shift, 2.2, 'Examples', '', 0, 'R', false, $examples);
-            $this->tcpdf->Image('images/save.png', $this->tcpdf->GetX(), $y + 1.5, 2.5, 2.5, 'PNG', $examples);
+            $this->tcpdf->Image(PdfConfig::PATH_IMAGES . 'save.png', $this->tcpdf->GetX(), $y + 1.5, 2.5, 2.5, 'PNG', $examples);
         }
         
         $this->tcpdf->SetTextColor(90, 90, 90);
@@ -157,22 +158,6 @@ class EmploymentHistory extends AbstractSkills
             
             $this->tcpdf->Cell($width - $urlWidth, 2, $text, 0, 0, 'R', false);
         }
-        
-//        $this->SetTextColor(100, 100, 15);
-//        $this->SetFont($this->tahoma, '', 7);
-//        
-//        if (false === empty($references)) {
-//            $this->SetXY($x + 4, $y);
-//            $this->Cell(10, 2.2, 'References', '', 0, 'C', false, $references);
-//            $this->Image('images/save.png', $this->GetX() + 1.5, $y, 2.5, 2.5, 'PNG', $references);
-//        }
-//
-//        if (false === empty($examples)) {
-//            $shift = (false == empty($references) ? 20 : 0);
-//            $this->SetXY($x + $shift, $y);
-//            $this->Cell(10, 2.2, 'Examples', '', 0, 'C', false, $examples);
-//            $this->Image('images/save.png', $this->GetX() + 1, $y, 2.5, 2.5, 'PNG', $examples);
-//        }
         
         $this->tcpdf->cursorPositionY = $this->tcpdf->getY() + 4.3;
     }
