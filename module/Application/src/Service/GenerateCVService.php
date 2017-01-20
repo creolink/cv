@@ -35,7 +35,6 @@ class GenerateCVService
         $page = new DocumentPage($this->tcpdf);
         $page = new MainHeader($page);
         $page = new TechnicalSkills($page);
-        $page = new PersonalSkills($page);
         $this->tcpdf = $page->createPage();
         
         $this->tcpdf->renderPdf();
