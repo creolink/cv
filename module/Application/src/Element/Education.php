@@ -23,12 +23,15 @@ class Education extends AbstractBlockTitle
     
     private function renderTechnicalSkills()
     {
-        $x = 5;
+        $x = 72.5;
         $y = 249;
         
         $this->renderBlockTitle('Education & courses', $x, $y, 65);
 
-        $text = '2013 - 2015 intensive English & German course, 2012 professional Google Analytics training, since 2012 driving license category B, further past: studies at the Lodz University of Technology (computer science, 3 years)';
+        $text = "2013 - 2015 intensive English & German course," . "\r\n"
+            ."2012 professional Google Analytics training," . "\r\n"
+            ."since 2012 driving license category B," . "\r\n"
+            ."further past: studies at the Lodz University of Technology (computer science, 3 years)";
         
         $this->tcpdf->SetXY($this->tcpdf->cursorPositionX, $this->tcpdf->cursorPositionY + 1);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
