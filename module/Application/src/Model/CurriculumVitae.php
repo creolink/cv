@@ -26,8 +26,14 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
     public $tahomaItalic = '';
     public $dejavu = '';
     
-    private $cursorPositionX = 0;
-    private $cursorPositionY = 0;
+    public $cursorPositionX = 0;
+    public $cursorPositionY = 0;
+    
+    private $workStartYear = 2001;
+    private $documentAuthor = 'Jakub Luczynski';
+    private $documentTitle = 'Jakub Luczynski, Curriculum Vitae';
+    private $documentKeywords = 'Jakub Luczynski, CV, web developer, php, specialist, project manager';
+    private $birthDate = '01/19/1979';
     
     //private $workStartYear = 2001;
     
