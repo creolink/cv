@@ -12,7 +12,6 @@ use Application\Helper\DateHelper;
 use Application\Model\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\TechnicalSkills;
-use Application\Element\PersonalSkills;
 
 class GenerateCVService
 {
