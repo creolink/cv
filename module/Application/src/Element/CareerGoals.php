@@ -37,7 +37,7 @@ class CareerGoals extends AbstractBlockTitle
             PersonalData::WORK_START_YEAR
         );
         
-        $this->tcpdf->renderBlockTitle('Career goals', $x, $y, 200, 27.5);
+        $this->renderBlockTitle('Career goals', $x, $y, 200, 27.5);
         
         $this->tcpdf->SetFont($this->tcpdf->verdanaItalic, 'I', 9);
         $this->tcpdf->SetXY($x + 1, $y + 7);
@@ -46,5 +46,7 @@ class CareerGoals extends AbstractBlockTitle
         $this->tcpdf->SetFont($this->tcpdf->verdanaItalic, 'I', 7.5);
         $this->tcpdf->SetXY($x + 1, $y + 12);
         $this->tcpdf->MultiCell(198, 4, "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (" . $workedYears . " years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of big IT department of international company.\r\n", 0, 'J', false);
+        
+        return $this->tcpdf;
     }
 }
