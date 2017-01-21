@@ -17,7 +17,7 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $generateCVService = new GenerateCVService(
-            new CurriculumVitae('P', 'mm', 'A4', true, 'UTF-8', false)
+            new CurriculumVitae()
         );
 
         return $generateCVService->renderCV();

@@ -5,11 +5,11 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Model;
+namespace Application\Element;
 
-use Application\Decorator\AbstractPdfDocumentDecorator;
+use Application\Decorator\AbstractTcpdfDecorator;
 
-class DocumentPage extends AbstractPdfDocumentDecorator
+class DocumentPage extends AbstractTcpdfDecorator
 {
     /**
      * {@inheritDoc}

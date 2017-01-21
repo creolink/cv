@@ -11,6 +11,7 @@ use TCPDF;
 use TCPDF_FONTS;
 use Application\Model\PdfConfig;
 use Application\Model\PersonalData;
+use Application\Model\Images;
 use Application\Model\TcpdfInterface;
 
 class CurriculumVitae extends TCPDF implements TcpdfInterface
@@ -28,9 +29,24 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     public $cursorPositionX = 0;
     public $cursorPositionY = 0;
 
-    public function __construct($orientation = 'P', $unit = 'mm', $format = 'A4', $unicode = true, $encoding = 'UTF-8', $diskcache = false, $pdfa = false)
-    {
-        parent::__construct($orientation, $unit, $format, $unicode, $encoding, $diskcache, $pdfa);
+    public function __construct(
+        $orientation = 'P',
+        $unit = 'mm',
+        $format = 'A4',
+        $unicode = true,
+        $encoding = 'UTF-8',
+        $diskcache = false,
+        $pdfa = false
+    ) {
+        parent::__construct(
+            $orientation,
+            $unit,
+            $format,
+            $unicode,
+            $encoding,
+            $diskcache,
+            $pdfa
+        );
         
         $this->configure();
         $this->initFonts();
@@ -47,18 +63,21 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
             $this->SetTextColor(150, 150, 150);
             $this->SetDrawColor(150, 150, 150);
             
-            $x = 62;
+            $x = 5;
             $y = 6;
             
-            $this->renderPhotoInHeader($x, $y);
+            $this->renderHeaderPhoto($x, $y - 1);
             
-            $this->SetXY($x + 7, $y);
+            $this->SetXY($x + 6, $y);
+            $this->SetFont($this->verdana, '', 6);
             $this->Write(4, PdfConfig::DOCUMENT_TITLE);
             
             $x = $this->GetX();
-            $this->renderIcon($x + 2, $y, 'phone.png', PersonalData::PHONE, PersonalData::PHONE_URL, 1);
-            $this->renderIcon($x + 30, $y, 'email.png', PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
-            $this->renderIcon($x + 67, $y, 'skype.png', 'luczynski.jakub', 'skype:luczynski.jakub', 1);
+            $this->renderIcon($this->GetX() + 2, $y, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL, 1);
+            $this->renderIcon($this->GetX() + 13, $y, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
+            $this->renderIcon($this->GetX() + 22, $y, Images::SKYPE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL, 1);
+            
+            $this->addPageNumber($y);
         }
     }
     
@@ -71,11 +90,14 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     {
         $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
         
-        $this->SetXY(5, -15);
+        $y = -15;
+        
+        $this->SetXY(5, $y);
         $this->SetFont($this->verdana, '', 6);
         $this->SetTextColor(150, 150, 150);
         $this->MultiCell(200, 3, $text, 0, 'C', FALSE);
-        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
+        
+        $this->addPageNumber($y);
 	}
     
     /**
@@ -90,7 +112,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
      */
     public function renderIcon($x, $y, $image, $text, $url, $move = 0)
     {
-        $this->SetFont('verdana', '', 6);
+        $this->SetFont($this->verdana, '', 6);
         
         $this->Image(PdfConfig::PATH_IMAGES . $image, $x, $y, 4, 4, 'PNG');
         
@@ -172,6 +194,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     {
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
+        
         $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
     }
     
@@ -181,12 +204,12 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
      * @param float $x
      * @param float $y
      */
-    private function renderPhotoInHeader($x, $y)
+    private function renderHeaderPhoto($x, $y)
     {
-        $width = 5.5;
-        $height = 7;
+        $width = 4.5;
+        $height = 5.5;
         
-        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y - 1.5, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
-        $this->Rect($x, $y - 1.5, $width, $height);
+        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
+        $this->Rect($x, $y, $width, $height);
     }
 }

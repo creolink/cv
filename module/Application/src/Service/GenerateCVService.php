@@ -9,7 +9,7 @@ namespace Application\Service;
 
 use Application\Model\CurriculumVitae;
 use Application\Helper\DateHelper;
-use Application\Model\DocumentPage;
+use Application\Element\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\TechnicalSkills;
 use Application\Element\KnownTools;

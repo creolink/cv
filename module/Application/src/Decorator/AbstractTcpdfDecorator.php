@@ -12,15 +12,15 @@ use Application\Decorator\PdfDocumentDecoratorInterface;
 use Application\Decorator\PdfPageDecoratorInterface;
 use Application\Model\TcpdfInterface;
 
-abstract class AbstractPdfDocumentDecorator implements TcpdfInterface, PdfPageDecoratorInterface, PdfDocumentDecoratorInterface
+abstract class AbstractTcpdfDecorator implements TcpdfInterface, PdfPageDecoratorInterface, PdfDocumentDecoratorInterface
 {
     /**
-     * @var PdfDocumentDecoratorInterface $tcpdf 
+     * @var TcpdfInterface $tcpdf 
      */
     protected $tcpdf;
     
     /**
-     * @param PdfDocumentDecoratorInterface $tcpdf
+     * @param TcpdfInterface $tcpdf
      */
     public function __construct(TcpdfInterface $tcpdf)
     {
@@ -30,7 +30,7 @@ abstract class AbstractPdfDocumentDecorator implements TcpdfInterface, PdfPageDe
     /**
      * {@inheritDoc}
      * 
-     * @return PdfDocumentDecoratorInterface
+     * @return TcpdfInterface
      */
     public function createPage()
     {
@@ -40,7 +40,7 @@ abstract class AbstractPdfDocumentDecorator implements TcpdfInterface, PdfPageDe
     /**
      * {@inheritDoc}
      * 
-     * @return PdfDocumentDecoratorInterface
+     * @return TcpdfInterface
      */
     public function addElements()
     {

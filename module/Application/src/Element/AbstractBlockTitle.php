@@ -7,9 +7,9 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractPdfDocumentDecorator;
+use Application\Decorator\AbstractTcpdfDecorator;
 
-abstract class AbstractBlockTitle extends AbstractPdfDocumentDecorator
+abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
 {
     protected function renderBlockTitle($title, $x = 5, $y = 50, $width = 65, $hasLine = false, $height = 65)
     {

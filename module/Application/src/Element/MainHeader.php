@@ -7,12 +7,13 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractPdfDocumentDecorator;
+use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Helper\DateHelper;
 use Application\Model\PersonalData;
 use Application\Model\PdfConfig;
+use Application\Model\Images;
 
-class MainHeader extends AbstractPdfDocumentDecorator
+class MainHeader extends AbstractTcpdfDecorator
 {
     /**
      * {@inheritDoc}
@@ -106,11 +107,11 @@ class MainHeader extends AbstractPdfDocumentDecorator
     {
         $this->tcpdf->SetTextColor(50, 50, 50);
         
-        $this->tcpdf->renderIcon(55, 40, 'phone.png', PersonalData::PHONE, PersonalData::PHONE_URL);
-        $this->tcpdf->renderIcon(83, 40, 'email.png', PersonalData::EMAIL, PersonalData::EMAIL_URL);
-        $this->tcpdf->renderIcon(120, 40, 'linkedin.png', '/jakubluczynski', 'http://pl.linkedin.com/in/jakubluczynski');
-        $this->tcpdf->renderIcon(143, 40, 'skype.png', 'luczynski.jakub', 'skype:luczynski.jakub');
-        $this->tcpdf->renderIcon(167, 40, 'goldenline.png', '/jakub-luczynski', 'http://www.goldenline.pl/jakub-luczynski/');
+        $this->tcpdf->renderIcon(55, 40, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
+        $this->tcpdf->renderIcon(83, 40, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
+        $this->tcpdf->renderIcon(120, 40, Images::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
+        $this->tcpdf->renderIcon(152, 40, Images::LINKED_IN, PersonalData::LINKED_IN, PersonalData::LINKED_IN_URL);
+        $this->tcpdf->renderIcon(177, 40, Images::GOLDEN_LINE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL);
         
         $this->tcpdf->Line(0, 39, 210, 39);
         $this->tcpdf->Line(0, 45, 210, 45);
