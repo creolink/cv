@@ -18,10 +18,10 @@ class Languages extends AbstractSkills
     {
         parent::addElements();
         
-        return $this->renderTechnicalSkills();
+        return $this->renderLanguages();
     }
     
-    private function renderTechnicalSkills()
+    private function renderLanguages()
     {
         $x = 140;
         $y = 122.5;

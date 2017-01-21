@@ -18,10 +18,10 @@ class Education extends AbstractBlockTitle
     {
         parent::addElements();
         
-        return $this->renderTechnicalSkills();
+        return $this->renderEducation();
     }
     
-    private function renderTechnicalSkills()
+    private function renderEducation()
     {
         $x = 72.5;
         $y = 249;
