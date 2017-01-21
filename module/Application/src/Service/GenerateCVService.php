@@ -20,6 +20,7 @@ use Application\Element\EmploymentHistory;
 use Application\Element\Education;
 use Application\Element\AboutMe;
 use Application\Element\Hobby;
+use Application\Element\QRCode;
 
 class GenerateCVService
 {
@@ -53,7 +54,7 @@ class GenerateCVService
         $this->tcpdf = $page->createPage();
         
         $page = new DocumentPage($this->tcpdf);
-        
+        $page = new QRCode($page);
         $this->tcpdf = $page->createPage();
         
         $this->tcpdf->renderPdf();
