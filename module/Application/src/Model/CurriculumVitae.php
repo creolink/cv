@@ -123,7 +123,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     /**
      * {@inheritDoc}
      */
-    public function renderImage($file, $x, $y, $w, $h, $type, $link)
+    public function renderImage($file, $x, $y, $w, $h, $link = '')
     {
         return $this->Image(
             PdfConfig::PATH_IMAGES . $file,
@@ -131,7 +131,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
             $y,
             $w,
             $h,
-            $type,
+            '',
             $link
         );
     }
