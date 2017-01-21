@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Decorator\AbstractPdfDocumentDecorator;
 use Application\Helper\DateHelper;
 use Application\Model\PersonalData;
+use Application\Model\PdfConfig;
 
 class MainHeader extends AbstractPdfDocumentDecorator
 {
@@ -134,7 +135,7 @@ class MainHeader extends AbstractPdfDocumentDecorator
         
         $this->tcpdf->SetTextColor(150, 150, 150);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
-        $this->tcpdf->Write(6, 'most recent on cv.creolink.pl', PersonalData::CV_URL);
+        $this->tcpdf->Write(6, 'most recent on cv.creolink.pl', PdfConfig::DOCUMENT_URL);
     }
     
     /**

@@ -31,7 +31,7 @@ class AboutMe extends AbstractBlockTitle
         $text = "I am married and we have " . (date("Y") - 2005) . " years old son. "
             ."In 2015 we started new life in Germany. "
             ."I don't smoke since " . (date("Y") - 2006) . " years. "
-            ."In 2016, through regular diet and systematic training I have lost 35 kg. "
+            ."In 2016, through regular diet and systematic training, I have lost 35 kg. "
             ."I developed my own PHP framework and I used it in all my commissioned projects. "
             ."I've got references from almost all companies I worked for. "
             ."This CV is an example of my abilities.";

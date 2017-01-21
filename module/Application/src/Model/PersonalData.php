@@ -19,7 +19,6 @@ class PersonalData
     const PHONE_URL = 'tel:04915217786892';
     const EMAIL = 'jakub.luczynski@gmail.com';
     const EMAIL_URL = 'mailto:jakub.luczynski@gmail.com';
-    const CV_URL = 'http://cv.creolink.pl';
     const BIRTH_DATE = '01/19/1979';
     const WORK_START_YEAR = 2001;
     const WORK_PLACE = 'Berlin, Potsdam';

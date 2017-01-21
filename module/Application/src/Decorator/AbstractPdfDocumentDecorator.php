@@ -10,8 +10,9 @@ namespace Application\Decorator;
 
 use Application\Decorator\PdfDocumentDecoratorInterface;
 use Application\Decorator\PdfPageDecoratorInterface;
+use Application\Model\TcpdfInterface;
 
-abstract class AbstractPdfDocumentDecorator implements PdfPageDecoratorInterface, PdfDocumentDecoratorInterface
+abstract class AbstractPdfDocumentDecorator implements TcpdfInterface, PdfPageDecoratorInterface, PdfDocumentDecoratorInterface
 {
     /**
      * @var PdfDocumentDecoratorInterface $tcpdf 
@@ -21,7 +22,7 @@ abstract class AbstractPdfDocumentDecorator implements PdfPageDecoratorInterface
     /**
      * @param PdfDocumentDecoratorInterface $tcpdf
      */
-    public function __construct(PdfDocumentDecoratorInterface $tcpdf)
+    public function __construct(TcpdfInterface $tcpdf)
     {
         $this->tcpdf = $tcpdf;
     }

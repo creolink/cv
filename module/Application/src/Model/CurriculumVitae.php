@@ -9,12 +9,11 @@ namespace Application\Model;
 
 use TCPDF;
 use TCPDF_FONTS;
-use Application\Decorator\PdfDocumentDecoratorInterface;
-use Application\Decorator\PdfPageDecoratorInterface;
 use Application\Model\PdfConfig;
 use Application\Model\PersonalData;
+use Application\Model\TcpdfInterface;
 
-class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, PdfPageDecoratorInterface
+class CurriculumVitae extends TCPDF implements TcpdfInterface
 {
     public $isDownloaded = false;
     public $selectedLanguage = 'en';
@@ -94,6 +93,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
         $this->SetFont('verdana', '', 6);
         
         $this->Image(PdfConfig::PATH_IMAGES . $image, $x, $y, 4, 4, 'PNG');
+        
         $this->SetXY($x + 4 + $move, $y - 1);
         $this->Cell(10, 6, $text, 0, 0, 'L', false, $url);
     }
@@ -122,22 +122,6 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
         $this->Output();
     }
     
-    /**
-     * {@inheritDoc}
-     */
-    public function addElements()
-    {
-        return $this->createPage();
-    }
-    
-    /**
-     * {@inheritDoc}
-     */
-    public function createPage()
-    {
-        return $this-renderPdf();
-    }
-
     /**
      * Configures PDF document parameters
      */
@@ -202,7 +186,7 @@ class CurriculumVitae extends TCPDF implements PdfDocumentDecoratorInterface, Pd
         $width = 5.5;
         $height = 7;
         
-        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y - 1.5, $width, $height, 'PNG', $this->cvUrl);
+        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y - 1.5, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
         $this->Rect($x, $y - 1.5, $width, $height);
     }
 }

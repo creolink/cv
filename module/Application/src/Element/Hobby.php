@@ -28,7 +28,7 @@ class Hobby extends AbstractBlockTitle
         
         $this->renderBlockTitle('Hobby & Sport', $x, $y, 65);
         
-        $text = 'movies and tv series, board games, football, stock exchange';
+        $text = 'movies and tv series, board games, football & table tennis, stock exchange';
         
         $this->tcpdf->SetXY($this->tcpdf->cursorPositionX, $this->tcpdf->cursorPositionY + 1);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);

@@ -52,6 +52,10 @@ class GenerateCVService
         $page = new AboutMe($page);
         $this->tcpdf = $page->createPage();
         
+        $page = new DocumentPage($this->tcpdf);
+        
+        $this->tcpdf = $page->createPage();
+        
         $this->tcpdf->renderPdf();
         
 //        
