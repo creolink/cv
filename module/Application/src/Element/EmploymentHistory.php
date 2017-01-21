@@ -25,7 +25,7 @@ class EmploymentHistory extends AbstractBlockTitle
     private function renderTechnicalSkills()
     {
         $x = 5;
-        $y = 145;
+        $y = 143;
         
         $this->renderBlockTitle('Employment history, full & part time', $x, $y, 200, 27.5);
 
