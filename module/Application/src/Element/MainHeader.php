@@ -132,11 +132,11 @@ class MainHeader extends AbstractTcpdfDecorator
         $this->tcpdf->SetDrawColor(150, 150, 150);
         $this->tcpdf->Rect($x, $y, $width, $height);
         
-        $this->tcpdf->SetXY(20.7, 40);
+        $this->tcpdf->SetXY(17, 40.3);
         
         $this->tcpdf->SetTextColor(150, 150, 150);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
-        $this->tcpdf->Write(6, 'most recent on cv.creolink.pl', PdfConfig::DOCUMENT_URL);
+        $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 6);
+        $this->tcpdf->Write(6, 'most recent version cv.creolink.pl', PdfConfig::DOCUMENT_URL);
     }
     
     /**
