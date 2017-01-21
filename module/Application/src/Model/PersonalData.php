@@ -30,4 +30,6 @@ class PersonalData
     const SKYPE_URL = 'skype:luczynski.jakub';
     const GOLDEN_LINE = '/jakub-luczynski';
     const GOLDEN_LINE_URL = 'http://www.goldenline.pl/jakub-luczynski/';
+    
+    const TITLE = 'PHP Developer';
 }

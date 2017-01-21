@@ -14,4 +14,6 @@ class Images
     const SKYPE = 'skype.png';
     const LINKED_IN = 'linkedin.png';
     const GOLDEN_LINE = 'goldenline.png';
+    
+    const PHOTO_URL = 'http://cv.creolink.pl/i/photo.png';
 }
