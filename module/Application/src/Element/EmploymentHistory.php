@@ -18,10 +18,10 @@ class EmploymentHistory extends AbstractEmployment
     {
         parent::addElements();
         
-        return $this->renderTechnicalSkills();
+        return $this->renderEmploymentHistory();
     }
     
-    private function renderTechnicalSkills()
+    private function renderEmploymentHistory()
     {
         $x = 5;
         $y = 143;

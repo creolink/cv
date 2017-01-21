@@ -87,19 +87,19 @@ class MainHeader extends AbstractTcpdfDecorator
         $this->tcpdf->SetDrawColor(200, 200, 200);
         
         $this->tcpdf->Rect(11, 6, 5, 3);
-        $this->tcpdf->renderImage('en.png', 11, 6, 5, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?en');
+        $this->tcpdf->renderImage('en.png', 11, 6, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?en');
         
         $this->tcpdf->Rect(11, 10, 5, 3);
-        $this->tcpdf->renderImage('de.png', 11, 10, 5, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?en');
+        $this->tcpdf->renderImage('de.png', 11, 10, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?en');
         
         $this->tcpdf->Rect(11, 14, 5, 3);
-        $this->tcpdf->renderImage('pl.png', 11, 14, 5, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?pl');
+        $this->tcpdf->renderImage('pl.png', 11, 14, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?pl');
     }
     
     private function renderDownloadButton()
     {
         if (!$this->tcpdf->isDownloaded) {
-            $this->tcpdf->renderImage('save.png', 12, 18, 3, 3, 'PNG', 'http://'.$_SERVER['SERVER_NAME'].'/?download&en'); 
+            $this->tcpdf->renderImage('save.png', 12, 18, 3, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?download&en'); 
         }
     }
     
@@ -127,7 +127,7 @@ class MainHeader extends AbstractTcpdfDecorator
         $width = 30;
         $height = 37;
 
-        $this->tcpdf->renderImage('photo.png', $x, $y, $width, $height, 'PNG', PersonalData::EMAIL_URL);
+        $this->tcpdf->renderImage('photo.png', $x, $y, $width, $height, PersonalData::EMAIL_URL);
         
         $this->tcpdf->SetDrawColor(150, 150, 150);
         $this->tcpdf->Rect($x, $y, $width, $height);

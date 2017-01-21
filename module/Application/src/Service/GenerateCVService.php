@@ -23,6 +23,7 @@ use Application\Element\Hobby;
 use Application\Element\CommisionedJobs;
 use Application\Element\QRCode;
 use Application\Element\Sign;
+use Application\Element\Expectations;
 
 class GenerateCVService
 {
@@ -52,6 +53,7 @@ class GenerateCVService
         $page = new EmploymentHistory($page);
         $page = new Education($page);
         $page = new Hobby($page);
+        $page = new Expectations($page);
         $page = new AboutMe($page);
         $this->tcpdf = $page->createPage();
         

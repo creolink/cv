@@ -18,10 +18,10 @@ class CommisionedJobs extends AbstractEmployment
     {
         parent::addElements();
         
-        return $this->renderTechnicalSkills();
+        return $this->renderCommisionedJobs();
     }
     
-    private function renderTechnicalSkills()
+    private function renderCommisionedJobs()
     {
         $x = 5;
         $y = 14;

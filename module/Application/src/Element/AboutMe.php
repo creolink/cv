@@ -18,10 +18,10 @@ class AboutMe extends AbstractBlockTitle
     {
         parent::addElements();
         
-        return $this->renderTechnicalSkills();
+        return $this->renderAboutMe();
     }
     
-    private function renderTechnicalSkills()
+    private function renderAboutMe()
     {
         $x = 140;
         $y = 249;
