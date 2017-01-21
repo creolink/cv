@@ -107,9 +107,9 @@ class MainHeader extends AbstractTcpdfDecorator
     {
         $this->tcpdf->SetTextColor(50, 50, 50);
         
-        $this->tcpdf->renderIcon(55, 40, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
-        $this->tcpdf->renderIcon(83, 40, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
-        $this->tcpdf->renderIcon(120, 40, Images::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
+        $this->tcpdf->renderIcon(58, 40, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
+        $this->tcpdf->renderIcon(86, 40, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
+        $this->tcpdf->renderIcon(123, 40, Images::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
         $this->tcpdf->renderIcon(152, 40, Images::LINKED_IN, PersonalData::LINKED_IN, PersonalData::LINKED_IN_URL);
         $this->tcpdf->renderIcon(177, 40, Images::GOLDEN_LINE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL);
         
