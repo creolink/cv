@@ -9,9 +9,9 @@ namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Helper\DateHelper;
-use Application\Model\PersonalData;
-use Application\Model\PdfConfig;
-use Application\Model\Images;
+use Application\Config\PersonalData;
+use Application\Config\PdfConfig;
+use Application\Config\Images;
 
 class MainHeader extends AbstractTcpdfDecorator
 {
@@ -20,7 +20,7 @@ class MainHeader extends AbstractTcpdfDecorator
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderMainHeader();
     }

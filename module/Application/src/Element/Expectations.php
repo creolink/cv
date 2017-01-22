@@ -16,7 +16,7 @@ class Expectations extends AbstractBlockTitle
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderExpectations();
     }

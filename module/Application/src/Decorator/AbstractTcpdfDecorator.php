@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @copyright 2015-2017 Jakub Luczynski
  * @author Jakub Luczynski <jakub.luczynski@gmail.com>
@@ -8,11 +7,9 @@
 
 namespace Application\Decorator;
 
-use Application\Decorator\PdfDocumentDecoratorInterface;
-use Application\Decorator\PdfPageDecoratorInterface;
 use Application\Model\TcpdfInterface;
 
-abstract class AbstractTcpdfDecorator implements TcpdfInterface, PdfPageDecoratorInterface, PdfDocumentDecoratorInterface
+abstract class AbstractTcpdfDecorator implements TcpdfInterface
 {
     /**
      * @var TcpdfInterface $tcpdf 
@@ -28,22 +25,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface, PdfPageDecorato
     }
     
     /**
-     * {@inheritDoc}
-     * 
-     * @return TcpdfInterface
+     * return TcpdfInterface
      */
-    public function createPage()
-    {
-        return $this->addElements();
-    }
-    
-    /**
-     * {@inheritDoc}
-     * 
-     * @return TcpdfInterface
-     */
-    public function addElements()
-    {
-        $this->tcpdf = $this->tcpdf->addElements();
-    }
+    abstract public function addElements();
 }

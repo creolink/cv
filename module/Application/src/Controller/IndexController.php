@@ -9,17 +9,19 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Application\Model\CurriculumVitae;
-use Application\Service\GenerateCVService;
+use Application\Builder\CurriculumVitaeBuilder;
+use Application\Builder\CurriculumVitaeDirector;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        $generateCVService = new GenerateCVService(
-            new CurriculumVitae()
+        $director = new CurriculumVitaeDirector(
+            new CurriculumVitaeBuilder()
         );
-
-        return $generateCVService->renderCV();
+        
+        $director->build();
+        
+        return $director->render();
     }
 }

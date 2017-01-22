@@ -8,7 +8,7 @@
 namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
-use Application\Model\Images;
+use Application\Config\Images;
 
 class Sign extends AbstractTcpdfDecorator
 {
@@ -17,7 +17,7 @@ class Sign extends AbstractTcpdfDecorator
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderSign();
     }

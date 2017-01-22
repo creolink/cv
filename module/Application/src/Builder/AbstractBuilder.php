@@ -5,12 +5,12 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Decorator;
+namespace Application\Builder;
 
-interface PdfPageDecoratorInterface
+abstract class AbstractBuilder
 {
     /**
-     * Creates element for PDF Page
+     * @return string
      */
-    public function addElements();
+    abstract public function render();
 }

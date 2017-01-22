@@ -9,9 +9,9 @@ namespace Application\Model;
 
 use TCPDF;
 use TCPDF_FONTS;
-use Application\Model\PdfConfig;
-use Application\Model\PersonalData;
-use Application\Model\Images;
+use Application\Config\PdfConfig;
+use Application\Config\Images;
+use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 
 class CurriculumVitae extends TCPDF implements TcpdfInterface
@@ -28,29 +28,6 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     
     public $cursorPositionX = 0;
     public $cursorPositionY = 0;
-
-    public function __construct(
-        $orientation = 'P',
-        $unit = 'mm',
-        $format = 'A4',
-        $unicode = true,
-        $encoding = 'UTF-8',
-        $diskcache = false,
-        $pdfa = false
-    ) {
-        parent::__construct(
-            $orientation,
-            $unit,
-            $format,
-            $unicode,
-            $encoding,
-            $diskcache,
-            $pdfa
-        );
-        
-        $this->configure();
-        $this->initFonts();
-    }
     
     /**
      * Overwrites default header and adds header only for 2nd page and later
@@ -137,17 +114,19 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     }
 
     /**
-     * Renders PDF document
+     * Renders PDF document inline or as downloadable attachement
+     * 
+     * @return string
      */
     public function renderPdf()
     {
-        $this->Output();
+        $this->Output(PdfConfig::FILE_NAME);
     }
     
     /**
      * Configures PDF document parameters
      */
-    private function configure()
+    public function configure()
     {
         $this->Open();
         $this->SetCreator(PdfConfig::DOCUMENT_CREATOR);
@@ -166,7 +145,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     /**
      * Initialize used fonts
      */
-    private function initFonts()
+    public function initFonts()
     {
         $this->verdana = $this->registerFont('verdana.ttf');
         $this->verdanaItalic = $this->registerFont('verdanai.ttf');
