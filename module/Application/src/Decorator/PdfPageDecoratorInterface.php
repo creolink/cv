@@ -11,6 +11,8 @@ interface PdfPageDecoratorInterface
 {
     /**
      * Creates element for PDF Page
+     * 
+     * @return TcpdfInterface
      */
     public function addElements();
 }

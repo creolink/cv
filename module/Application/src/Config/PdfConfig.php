@@ -5,7 +5,7 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Model;
+namespace Application\Config;
 
 class PdfConfig
 {

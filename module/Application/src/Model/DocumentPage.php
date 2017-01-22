@@ -5,7 +5,7 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Element;
+namespace Application\Model;
 
 use Application\Decorator\AbstractTcpdfDecorator;
 

@@ -10,7 +10,7 @@ namespace Application\Element;
 
 use Application\Element\AbstractBlockTitle;
 use Application\Helper\DateHelper;
-use Application\Model\PersonalData;
+use Application\Config\PersonalData;
 
 class CareerGoals extends AbstractBlockTitle
 {

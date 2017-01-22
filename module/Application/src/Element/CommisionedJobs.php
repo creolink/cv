@@ -120,20 +120,6 @@ class CommisionedJobs extends AbstractEmployment
         $this->renderEmploymentPosition(
             $this->tcpdf->cursorPositionX,
             $this->tcpdf->cursorPositionY,
-            'November 2003 - June 2005',
-            'Portal Designer & PHP Developer / B2B project',
-            'Stawoz sp z o.o.',
-            'Al. Pilsudskiego 141, 92-318, Lodz, Poland',
-            'Design and creation of proprietary system of web portals with CMS about enviromental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals.',
-            '',
-            '',
-            'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306',
-            'http://www.stawoz.pl/'
-            );
-        
-        $this->renderEmploymentPosition(
-            $this->tcpdf->cursorPositionX,
-            $this->tcpdf->cursorPositionY,
             'August 2004 - April 2005',
             'Web Developer & Designer, PHP Coder / B2E & B2C project',
             'GANDALF Księgarnia Internetowa (Online Bookstore "Gandalf")',
@@ -143,6 +129,20 @@ class CommisionedJobs extends AbstractEmployment
             '',
             'Anetta Wilczynska, +48 42 / 252 39 23',
             'http://www.gandalf.com.pl'
+            );
+        
+        $this->renderEmploymentPosition(
+            $this->tcpdf->cursorPositionX,
+            $this->tcpdf->cursorPositionY,
+            'November 2003 - June 2005',
+            'Portal Designer & PHP Developer / B2B project',
+            'Stawoz sp z o.o.',
+            'Al. Pilsudskiego 141, 92-318, Lodz, Poland',
+            'Design and creation of proprietary system of web portals with CMS about enviromental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals.',
+            '',
+            '',
+            'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306',
+            'http://www.stawoz.pl/'
             );
         
         $this->renderEmploymentPosition(

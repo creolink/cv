@@ -8,7 +8,7 @@
 namespace Application\Element;
 
 use Application\Element\AbstractBlockTitle;
-use Application\Model\PdfConfig;
+use Application\Config\PdfConfig;
 
 abstract class AbstractEmployment extends AbstractBlockTitle
 {

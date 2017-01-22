@@ -9,9 +9,9 @@ namespace Application\Model;
 
 use TCPDF;
 use TCPDF_FONTS;
-use Application\Model\PdfConfig;
-use Application\Model\PersonalData;
-use Application\Model\Images;
+use Application\Config\PdfConfig;
+use Application\Config\Images;
+use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 
 class CurriculumVitae extends TCPDF implements TcpdfInterface

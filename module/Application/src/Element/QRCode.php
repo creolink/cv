@@ -8,9 +8,9 @@
 namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
-use Application\Model\PersonalData;
-use Application\Model\PdfConfig;
-use Application\Model\Images;
+use Application\Config\PersonalData;
+use Application\Config\PdfConfig;
+use Application\Config\Images;
 
 class QRCode extends AbstractTcpdfDecorator
 {

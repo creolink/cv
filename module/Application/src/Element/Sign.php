@@ -8,7 +8,7 @@
 namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
-use Application\Model\Images;
+use Application\Config\Images;
 
 class Sign extends AbstractTcpdfDecorator
 {
