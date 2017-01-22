@@ -138,6 +138,8 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
 
     /**
      * Renders PDF document
+     * 
+     * @return string
      */
     public function renderPdf()
     {
