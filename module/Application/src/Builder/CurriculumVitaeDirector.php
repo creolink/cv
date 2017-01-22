@@ -7,6 +7,8 @@
 
 namespace Application\Builder;
 
+use Application\Builder\AbstractDirector;
+
 class CurriculumVitaeDirector extends AbstractDirector
 {
     /**
@@ -14,6 +16,7 @@ class CurriculumVitaeDirector extends AbstractDirector
      */
     public function build()
     {
+        $this->builder->configure();
         $this->builder->generateMainPage();
         $this->builder->generateSecondPage();
     }

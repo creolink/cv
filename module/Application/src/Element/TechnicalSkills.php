@@ -16,7 +16,7 @@ class TechnicalSkills extends AbstractSkills
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderTechnicalSkills();
     }

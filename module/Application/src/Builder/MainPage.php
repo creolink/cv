@@ -5,9 +5,10 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Model;
+namespace Application\Builder;
 
 use Application\Model\TcpdfInterface;
+use Application\Element\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\CareerGoals;
 use Application\Element\TechnicalSkills;
@@ -22,23 +23,24 @@ use Application\Element\AboutMe;
 class MainPage
 {
     /**
-     * @var TcpdfInterface 
+     * @var DocumentPage 
      */
     protected $page;
     
     /**
-     * @param TcpdfInterface $page
+     * @param DocumentPage $page
      */
-    public function __construct(TcpdfInterface $page)
+    public function __construct(DocumentPage $page)
     {
         $this->page = $page;
     }
     
     /**
-     * @param TcpdfInterface $page
+     * @param DocumentPage $page
+     * 
      * @return TcpdfInterface
      */
-    public function createElements(TcpdfInterface $page)
+    public function createElements(DocumentPage $page)
     {
         $page = new MainHeader($page);
         $page = new CareerGoals($page);

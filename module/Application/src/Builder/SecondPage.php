@@ -5,9 +5,10 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Model;
+namespace Application\Builder;
 
 use Application\Model\TcpdfInterface;
+use Application\Element\DocumentPage;
 use Application\Element\CommisionedJobs;
 use Application\Element\QRCode;
 use Application\Element\Sign;
@@ -15,23 +16,24 @@ use Application\Element\Sign;
 class SecondPage
 {
     /**
-     * @var TcpdfInterface
+     * @var DocumentPage
      */
     protected $page;
     
     /**
-     * @param TcpdfInterface $page
+     * @param DocumentPage $page
      */
-    public function __construct(TcpdfInterface $page)
+    public function __construct(DocumentPage $page)
     {
         $this->page = $page;
     }
     
     /**
-     * @param TcpdfInterface $page
+     * @param DocumentPage $page
+     * 
      * @return TcpdfInterface
      */
-    public function createElements(TcpdfInterface $page)
+    public function createElements(DocumentPage $page)
     {
         $page = new CommisionedJobs($page);
         $page = new QRCode($page);

@@ -9,5 +9,5 @@ namespace Application\Model;
 
 interface TcpdfInterface
 {
-    
+
 }

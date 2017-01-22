@@ -37,7 +37,7 @@ class QRCode extends AbstractTcpdfDecorator
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderQRCode();
     }

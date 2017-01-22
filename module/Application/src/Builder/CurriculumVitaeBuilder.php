@@ -7,15 +7,17 @@
 
 namespace Application\Builder;
 
+use Application\Builder\AbstractBuilder;
+use Application\Builder\MainPage;
+use Application\Builder\SecondPage;
+use Application\Element\DocumentPage;
 use Application\Model\CurriculumVitae;
-use Application\Model\DocumentPage;
-use Application\Model\MainPage;
-use Application\Model\SecondPage;
+use Application\Model\TcpdfInterface;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
     /**
-     * @var TCPDF
+     * @var TcpdfInterface
      */
     private $cv = null;
     
@@ -28,6 +30,15 @@ class CurriculumVitaeBuilder extends AbstractBuilder
      */
     public function render() {
         return $this->cv->renderPdf();
+    }
+    
+    /**
+     * Configures PDF document
+     */
+    public function configure()
+    {
+        $this->cv->configure();
+        $this->cv->initFonts();
     }
     
     /**

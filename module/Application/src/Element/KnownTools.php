@@ -16,7 +16,7 @@ class KnownTools extends AbstractSkills
      */
     public function addElements()
     {
-        parent::addElements();
+        $this->tcpdf = $this->tcpdf->addElements();
         
         return $this->renderKnownTools();
     }

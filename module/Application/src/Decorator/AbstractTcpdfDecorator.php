@@ -7,10 +7,9 @@
 
 namespace Application\Decorator;
 
-use Application\Decorator\PdfPageDecoratorInterface;
 use Application\Model\TcpdfInterface;
 
-abstract class AbstractTcpdfDecorator implements TcpdfInterface, PdfPageDecoratorInterface
+abstract class AbstractTcpdfDecorator implements TcpdfInterface
 {
     /**
      * @var TcpdfInterface $tcpdf 
@@ -26,10 +25,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface, PdfPageDecorato
     }
     
     /**
-     * {@inheritDoc}
+     * return TcpdfInterface
      */
-    public function addElements()
-    {
-        $this->tcpdf = $this->tcpdf->addElements();
-    }
+    abstract public function addElements();
 }
