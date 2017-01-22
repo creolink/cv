@@ -11,6 +11,9 @@ use Application\Element\AbstractBlockTitle;
 
 class AboutMe extends AbstractBlockTitle
 {
+    const CURSOR_X = 140;
+    const CURSOR_Y = 249;
+    
     /**
      * {@inheritDoc}
      */
@@ -23,10 +26,7 @@ class AboutMe extends AbstractBlockTitle
     
     private function renderAboutMe()
     {
-        $x = 140;
-        $y = 249;
-        
-        $this->renderBlockTitle('About me', $x, $y, 65);
+        $this->renderBlockTitle('About me', self::CURSOR_X, self::CURSOR_Y, 65);
         
         $text = "I am married and we have " . (date("Y") - 2005) . " years old son. "
             ."In 2015 we started new life in Germany. "

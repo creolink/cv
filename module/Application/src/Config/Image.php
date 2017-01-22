@@ -7,7 +7,7 @@
 
 namespace Application\Config;
 
-class Images
+class Image
 {
     const PHONE = 'phone.png';
     const EMAIL = 'email.png';

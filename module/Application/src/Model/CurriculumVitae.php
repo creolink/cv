@@ -10,7 +10,7 @@ namespace Application\Model;
 use TCPDF;
 use TCPDF_FONTS;
 use Application\Config\PdfConfig;
-use Application\Config\Images;
+use Application\Config\Image;
 use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 
@@ -50,9 +50,9 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
             $this->Write(4, PdfConfig::DOCUMENT_TITLE);
             
             $x = $this->GetX();
-            $this->renderIcon($this->GetX() + 2, $y, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL, 1);
-            $this->renderIcon($this->GetX() + 13, $y, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
-            $this->renderIcon($this->GetX() + 22, $y, Images::SKYPE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL, 1);
+            $this->renderIcon($this->GetX() + 2, $y, Image::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL, 1);
+            $this->renderIcon($this->GetX() + 13, $y, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
+            $this->renderIcon($this->GetX() + 22, $y, Image::SKYPE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL, 1);
             
             $this->addPageNumber($y);
         }

@@ -7,31 +7,16 @@
 
 namespace Application\Builder;
 
-use Application\Model\TcpdfInterface;
+use Application\Builder\AbstractPage;
 use Application\Element\DocumentPage;
 use Application\Element\CommisionedJobs;
 use Application\Element\QRCode;
 use Application\Element\Sign;
 
-class SecondPage
+class SecondPage extends AbstractPage
 {
     /**
-     * @var DocumentPage
-     */
-    protected $page;
-    
-    /**
-     * @param DocumentPage $page
-     */
-    public function __construct(DocumentPage $page)
-    {
-        $this->page = $page;
-    }
-    
-    /**
-     * @param DocumentPage $page
-     * 
-     * @return TcpdfInterface
+     * {@inheritDoc}
      */
     public function createElements(DocumentPage $page)
     {
@@ -40,15 +25,5 @@ class SecondPage
         $page = new Sign($page);
         
         return $page->addElements();
-    }
-    
-    /**
-     * @return TcpdfInterface
-     */
-    public function createPage()
-    {
-        return $this->createElements(
-            $this->page
-        );
     }
 }

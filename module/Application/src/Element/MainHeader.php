@@ -11,7 +11,7 @@ use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
-use Application\Config\Images;
+use Application\Config\Image;
 
 class MainHeader extends AbstractTcpdfDecorator
 {
@@ -59,7 +59,7 @@ class MainHeader extends AbstractTcpdfDecorator
     
     private function renderName()
     {
-        $this->tcpdf->SetTextColor(76, 76, 76);
+        $this->tcpdf->SetTextColor(50, 50, 50);
         
         $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 30);
         $this->tcpdf->Text(85, 5, 'JAKUB');
@@ -68,7 +68,7 @@ class MainHeader extends AbstractTcpdfDecorator
     
     private function renderSpeciality()
     {
-        $this->tcpdf->SetTextColor(138, 138, 138);
+        $this->tcpdf->SetTextColor(90, 90, 90);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
         
         $this->tcpdf->Text(66, 29, 'WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER');
@@ -76,7 +76,7 @@ class MainHeader extends AbstractTcpdfDecorator
     
     private function renderCreationInfo()
     {
-        $this->tcpdf->SetTextColor(180, 180, 180);
+        $this->tcpdf->SetTextColor(150, 150, 150);
         $this->tcpdf->SetXY(113, 31);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
         $this->tcpdf->Write(6, 'CV created with PHP & TCPDF', 'https://tcpdf.org/');
@@ -107,11 +107,11 @@ class MainHeader extends AbstractTcpdfDecorator
     {
         $this->tcpdf->SetTextColor(50, 50, 50);
         
-        $this->tcpdf->renderIcon(58, 40, Images::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
-        $this->tcpdf->renderIcon(86, 40, Images::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
-        $this->tcpdf->renderIcon(123, 40, Images::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
-        $this->tcpdf->renderIcon(152, 40, Images::LINKED_IN, PersonalData::LINKED_IN, PersonalData::LINKED_IN_URL);
-        $this->tcpdf->renderIcon(177, 40, Images::GOLDEN_LINE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL);
+        $this->tcpdf->renderIcon(58, 40, Image::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
+        $this->tcpdf->renderIcon(86, 40, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
+        $this->tcpdf->renderIcon(123, 40, Image::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
+        $this->tcpdf->renderIcon(152, 40, Image::LINKED_IN, PersonalData::LINKED_IN, PersonalData::LINKED_IN_URL);
+        $this->tcpdf->renderIcon(177, 40, Image::GOLDEN_LINE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL);
         
         $this->tcpdf->Line(0, 39, 210, 39);
         $this->tcpdf->Line(0, 45, 210, 45);
@@ -152,7 +152,7 @@ class MainHeader extends AbstractTcpdfDecorator
         $posYBox = 5;
         
         $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
-        $this->tcpdf->SetTextColor(76, 76, 76);
+        $this->tcpdf->SetTextColor(50, 50, 50);
         $this->tcpdf->SetFillColor(235,235,235);
         $this->tcpdf->SetLineWidth(0.1);
         

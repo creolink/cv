@@ -14,6 +14,9 @@ use Application\Builder\CurriculumVitaeDirector;
 
 class IndexController extends AbstractActionController
 {
+    /**
+     * @return string
+     */
     public function indexAction()
     {
         $director = new CurriculumVitaeDirector(

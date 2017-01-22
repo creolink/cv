@@ -26,7 +26,7 @@ class TechnicalSkills extends AbstractSkills
         $x = 5;
         $y = 77;
         
-        $this->renderBlockTitle('Technical skills', $x, $y, 65, 67.5);
+        $this->renderBlockTitle('Technical skills', $x, $y, 65);
 
         $x = $this->tcpdf->cursorPositionX + 2;
         $y = $this->tcpdf->cursorPositionY;

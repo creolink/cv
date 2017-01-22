@@ -7,7 +7,7 @@
 
 namespace Application\Builder;
 
-use Application\Model\TcpdfInterface;
+use Application\Builder\AbstractPage;
 use Application\Element\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\CareerGoals;
@@ -20,25 +20,10 @@ use Application\Element\Education;
 use Application\Element\Hobby;
 use Application\Element\AboutMe;
 
-class MainPage
+class MainPage extends AbstractPage
 {
     /**
-     * @var DocumentPage 
-     */
-    protected $page;
-    
-    /**
-     * @param DocumentPage $page
-     */
-    public function __construct(DocumentPage $page)
-    {
-        $this->page = $page;
-    }
-    
-    /**
-     * @param DocumentPage $page
-     * 
-     * @return TcpdfInterface
+     * {@inheritDoc}
      */
     public function createElements(DocumentPage $page)
     {
@@ -54,15 +39,5 @@ class MainPage
         $page = new AboutMe($page);
         
         return $page->addElements();
-    }
-    
-    /**
-     * @return TcpdfInterface
-     */
-    public function createPage()
-    {
-        return $this->createElements(
-            $this->page
-        );
     }
 }

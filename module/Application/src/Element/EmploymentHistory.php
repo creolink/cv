@@ -26,7 +26,7 @@ class EmploymentHistory extends AbstractEmployment
         $x = 5;
         $y = 143;
         
-        $this->renderBlockTitle('Employment history, full & part time', $x, $y, 200, 27.5);
+        $this->renderBlockTitle('Employment history, full & part time', $x, $y, 200);
 
         $this->renderEmploymentPosition(
             $this->tcpdf->cursorPositionX,

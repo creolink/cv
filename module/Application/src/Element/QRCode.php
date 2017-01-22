@@ -10,7 +10,7 @@ namespace Application\Element;
 use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
-use Application\Config\Images;
+use Application\Config\Image;
 
 class QRCode extends AbstractTcpdfDecorator
 {
@@ -64,7 +64,7 @@ class QRCode extends AbstractTcpdfDecorator
             . 'TITLE:' . PersonalData::TITLE . "\n"
             . 'TEL:' . PersonalData::PHONE . "\n"
             . 'EMAIL:' . PersonalData::EMAIL . "\n"
-            . 'PHOTO;PNG:' . Images::PHOTO_URL . "\n"
+            . 'PHOTO;PNG:' . Image::PHOTO_URL . "\n"
             . 'ADR:;;' . PersonalData::STREET . ';'
                 . PersonalData::CITY . ';;'
                 . PersonalData::POST_CODE . ';'

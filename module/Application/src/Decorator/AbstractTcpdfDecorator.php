@@ -8,11 +8,15 @@
 namespace Application\Decorator;
 
 use Application\Model\TcpdfInterface;
+use Application\Model\CurriculumVitae;
 
 abstract class AbstractTcpdfDecorator implements TcpdfInterface
 {
+    const LINE_WIDTH = 0.2;
+    const LINE_DASH = '0';
+    
     /**
-     * @var TcpdfInterface $tcpdf 
+     * @var CurriculumVitae $tcpdf 
      */
     protected $tcpdf;
     
@@ -22,10 +26,23 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     public function __construct(TcpdfInterface $tcpdf)
     {
         $this->tcpdf = $tcpdf;
+        
+        //$this->setDefaults();
     }
     
     /**
      * return TcpdfInterface
      */
     abstract public function addElements();
+    
+    /**
+     * Sets default values for colors, line styles, etc
+     */
+    protected function setDefaults()
+    {
+        $this->tcpdf->SetLineStyle([
+            'width' => self::LINE_WIDTH,
+            'dash' => self::LINE_DASH
+        ]);
+    }
 }

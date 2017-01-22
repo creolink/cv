@@ -38,7 +38,7 @@ abstract class AbstractEmployment extends AbstractBlockTitle
         $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 9);
         $this->tcpdf->Cell(150, 6, $positionName, 0, 0, 'L', false);
         
-        $this->tcpdf->SetTextColor(100, 100, 15);
+        $this->tcpdf->SetTextColor(90, 90, 90);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
         
         if (false === empty($references)) {
@@ -59,7 +59,7 @@ abstract class AbstractEmployment extends AbstractBlockTitle
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
         $this->tcpdf->MultiCell($width, 4, $description . "\r\n", 0, 'J', false);
         
-        $this->tcpdf->SetTextColor(138, 138, 138);
+        $this->tcpdf->SetTextColor(150, 150, 150);
         
         $y = $this->tcpdf->GetY() + 0.6;
         
