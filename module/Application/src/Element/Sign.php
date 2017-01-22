@@ -19,6 +19,8 @@ class Sign extends AbstractTcpdfDecorator
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setSolidLine();
+        
         return $this->renderSign();
     }
     

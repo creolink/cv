@@ -18,7 +18,6 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
     const TITLE_MARGIN = 0.6;
     const CELL_HEIGHT = 6;
     const CELL_WIDTH = 0;
-    const LINE_WIDTH = 0.2;
     
     protected function renderBlockTitle($title, $x, $y, $width = self::DEFAULT_WIDTH)
     {
@@ -68,11 +67,7 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
      */
     private function drawLine($x, $y, $width)
     {
-//        $this->tcpdf->SetLineStyle(
-//                array('width' => self::LINE_WIDTH, 'dash' => '0')
-//            );
-        
-        $this->tcpdf->Line($x, $y + 6, $x + $width, $y + 6);
+        $this->tcpdf->Line($x, $y + 6.2, $x + $width, $y + 6.2);
     }
     
     /**

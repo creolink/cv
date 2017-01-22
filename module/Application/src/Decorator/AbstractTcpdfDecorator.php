@@ -13,7 +13,8 @@ use Application\Model\CurriculumVitae;
 abstract class AbstractTcpdfDecorator implements TcpdfInterface
 {
     const LINE_WIDTH = 0.2;
-    const LINE_DASH = '0';
+    const LINE_DASH = '1';
+    const LINE_SOLID = '0';
     
     /**
      * @var CurriculumVitae $tcpdf 
@@ -36,13 +37,24 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     abstract public function addElements();
     
     /**
-     * Sets default values for colors, line styles, etc
+     * Sets dashed line style
      */
-    protected function setDefaults()
+    protected function setDashedLine()
     {
         $this->tcpdf->SetLineStyle([
             'width' => self::LINE_WIDTH,
             'dash' => self::LINE_DASH
+        ]);
+    }
+    
+    /**
+     * Sets solid line style
+     */
+    protected function setSolidLine()
+    {
+        $this->tcpdf->SetLineStyle([
+            'width' => self::LINE_WIDTH,
+            'dash' => self::LINE_SOLID
         ]);
     }
 }

@@ -18,6 +18,8 @@ class EmploymentHistory extends AbstractEmployment
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setDashedLine();
+        
         return $this->renderEmploymentHistory();
     }
     

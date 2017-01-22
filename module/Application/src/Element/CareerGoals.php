@@ -21,6 +21,8 @@ class CareerGoals extends AbstractBlockTitle
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setDashedLine();
+        
         return $this->renderCareerGoals();
     }
     

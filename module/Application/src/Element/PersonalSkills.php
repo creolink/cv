@@ -18,6 +18,8 @@ class PersonalSkills extends AbstractSkills
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setDashedLine();
+        
         return $this->renderPersonalSkills();
     }
     
