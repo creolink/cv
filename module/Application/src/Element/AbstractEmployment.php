@@ -27,14 +27,10 @@ abstract class AbstractEmployment extends AbstractBlockTitle
     ) {
         $width = 197;
         
-        $this->tcpdf->SetXY($x, $y);
-        
+        $this->renderDateAndCompany($x, $y, $date, $company);
+
+        $this->tcpdf->SetXY($x, $y += 4.5);        
         $this->tcpdf->SetTextColor(90, 90, 90);
-        
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
-        $this->tcpdf->Cell(50, 6, $date . ', ' . $company, 0, 0, 'L', false);
-        
-        $this->tcpdf->SetXY($x, $y += 4.5);
         $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 9);
         $this->tcpdf->Cell(150, 6, $positionName, 0, 0, 'L', false);
         
@@ -84,5 +80,13 @@ abstract class AbstractEmployment extends AbstractBlockTitle
         }
         
         $this->tcpdf->cursorPositionY = $this->tcpdf->getY() + 4.3;
+    }
+    
+    private function renderDateAndCompany($x, $y, $date, $company)
+    {
+        $this->tcpdf->SetXY($x, $y);
+        $this->tcpdf->SetTextColor(90, 90, 90);
+        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
+        $this->tcpdf->Cell(50, 6, $date . ', ' . $company, 0, 0, 'L', false);
     }
 }
