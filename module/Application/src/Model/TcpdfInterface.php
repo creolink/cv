@@ -9,5 +9,8 @@ namespace Application\Model;
 
 interface TcpdfInterface
 {
-
+    /**
+     * return TcpdfInterface
+     */
+    public function addElements();
 }

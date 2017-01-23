@@ -10,7 +10,6 @@ namespace Application\Builder;
 use Application\Builder\AbstractBuilder;
 use Application\Builder\MainPage;
 use Application\Builder\SecondPage;
-use Application\Element\DocumentPage;
 use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
 
@@ -47,7 +46,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     public function generateMainPage()
     {
         $page = new MainPage(
-            $this->getNewPage()
+            $this->cv
         );
         
         return $page->createPage();
@@ -59,17 +58,9 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     public function generateSecondPage()
     {
         $page = new SecondPage(
-            $this->getNewPage()
+            $this->cv
         );
         
         return $page->createPage();
-    }
-    
-    /**
-     * @return DocumentPage
-     */
-    private function getNewPage()
-    {
-        return new DocumentPage($this->cv);
     }
 }

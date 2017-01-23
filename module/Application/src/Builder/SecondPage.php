@@ -8,17 +8,17 @@
 namespace Application\Builder;
 
 use Application\Builder\AbstractPage;
-use Application\Element\DocumentPage;
 use Application\Element\CommisionedJobs;
 use Application\Element\QRCode;
 use Application\Element\Sign;
+use Application\Model\TcpdfInterface;
 
 class SecondPage extends AbstractPage
 {
     /**
      * {@inheritDoc}
      */
-    public function createElements(DocumentPage $page)
+    public function createElements(TcpdfInterface $page)
     {
         $page = new CommisionedJobs($page);
         $page = new QRCode($page);
