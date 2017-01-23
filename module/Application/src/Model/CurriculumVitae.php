@@ -26,7 +26,16 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     public $tahomaItalic = '';
     public $dejavu = '';
     
+    /**
+     * @deprecated use AbstractTcpdfDecorator::$cursorX instead
+     * @var int 
+     */
     public $cursorPositionX = 0;
+    
+    /**
+     * @deprecated use AbstractTcpdfDecorator::$cursorY instead
+     * @var int 
+     */
     public $cursorPositionY = 0;
     
     /**

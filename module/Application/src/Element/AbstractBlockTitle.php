@@ -18,13 +18,16 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
     const TITLE_MARGIN = 0.6;
     const CELL_HEIGHT = 6;
     const CELL_WIDTH = 0;
+    const LINE_MARGIN = 6.2;
+    const CURSOR_MARGIN_X = 1;
+    const CURSOR_MARGIN_Y = 7;
     
     protected function renderBlockTitle($title, $x, $y, $width = self::DEFAULT_WIDTH)
     {
         $this->setColors();
         $this->printTitle($x, $y, $title);
         $this->drawLine($x, $y, $width);
-        $this->setCursor($x);
+        $this->setCursor($x, $y);
     }
     
     private function setColors()
@@ -55,9 +58,22 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
      */
     private function printTitle($x, $y, $title)
     {
-        $this->tcpdf->SetFont($this->tcpdf->dejavu, Font::BOLD, self::FONT_SIZE);
-        $this->tcpdf->SetXY($x + self::TITLE_MARGIN, $y);
-        $this->tcpdf->Cell(self::CELL_WIDTH, self::CELL_HEIGHT, $title);
+        $this->tcpdf->SetFont(
+            $this->tcpdf->dejavu,
+            Font::BOLD,
+            self::FONT_SIZE
+        );
+        
+        $this->tcpdf->SetXY(
+            $x + self::TITLE_MARGIN,
+            $y
+        );
+        
+        $this->tcpdf->Cell(
+            self::CELL_WIDTH,
+            self::CELL_HEIGHT,
+            $title
+        );
     }
     
     /**
@@ -67,15 +83,28 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
      */
     private function drawLine($x, $y, $width)
     {
-        $this->tcpdf->Line($x, $y + 6.2, $x + $width, $y + 6.2);
+        $this->tcpdf->Line(
+            $x,
+            $y + self::LINE_MARGIN,
+            $x + $width,
+            $y + self::LINE_MARGIN
+        );
     }
     
     /**
      * @param float $x
      */
-    private function setCursor($x)
+    private function setCursor($x, $y)
     {
-        $this->tcpdf->cursorPositionX = $x + 1;
-        $this->tcpdf->cursorPositionY = $this->tcpdf->GetY() + 6;
+        $this->tcpdf->cursorPositionX = $x + self::CURSOR_MARGIN_X;
+        $this->tcpdf->cursorPositionY = $y + 6;
+        
+        $this->cursorX = $x + self::CURSOR_MARGIN_X;
+        $this->cursorY = $y + self::CURSOR_MARGIN_Y;
+        
+        $this->tcpdf->SetXY(
+            $this->cursorX,
+            $this->cursorY
+        );
     }
 }

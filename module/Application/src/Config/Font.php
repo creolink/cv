@@ -11,4 +11,5 @@ class Font
 {
     const BOLD = 'B';
     const ITALICT = 'I';
+    const NORMAL = '';
 }

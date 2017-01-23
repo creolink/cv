@@ -18,6 +18,7 @@ class PersonalData
     const BIRTH_DATE = '01/19/1979';
     const WORK_START_YEAR = 2001;
     const WORK_PLACE = 'Berlin, Potsdam';
+    const STOP_SMOKING_YEAR = 2006;
     
     const PHONE = '+49 1521 7786892';
     const PHONE_URL = 'tel:04915217786892';
@@ -31,4 +32,6 @@ class PersonalData
     const GOLDEN_LINE_URL = 'http://www.goldenline.pl/jakub-luczynski/';
     
     const TITLE = 'PHP Developer';
+    
+    const MAXIMUS_BIRTH_DATE = 2005;
 }

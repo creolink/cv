@@ -17,7 +17,17 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     const LINE_SOLID = '0';
     
     /**
-     * @var CurriculumVitae $tcpdf 
+     * @var float
+     */
+    protected $cursorX = 0.00;
+    
+    /**
+     * @var float
+     */
+    protected $cursorY = 0.00;
+    
+    /**
+     * @var CurriculumVitae|TcpdfInterface $tcpdf 
      */
     protected $tcpdf;
     
@@ -27,20 +37,13 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     public function __construct(TcpdfInterface $tcpdf)
     {
         $this->tcpdf = $tcpdf;
-        
-        //$this->setDefaults();
     }
     
     /**
      * return TcpdfInterface
      */
     abstract public function addElements();
-    
-    /**
-     * Configures created element
-     */
-    //abstract protected function configure();
-    
+
     /**
      * Sets dashed line style
      */
