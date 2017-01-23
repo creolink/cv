@@ -21,7 +21,7 @@ class AboutMe extends AbstractBlockTitle
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
-        $this->setDashedLine();
+        $this->setSolidLine();
         
         return $this->renderAboutMe();
     }

@@ -37,6 +37,11 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     abstract public function addElements();
     
     /**
+     * Configures created element
+     */
+    //abstract protected function configure();
+    
+    /**
      * Sets dashed line style
      */
     protected function setDashedLine()

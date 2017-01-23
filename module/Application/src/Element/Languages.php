@@ -18,7 +18,7 @@ class Languages extends AbstractSkills
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
-        $this->setDashedLine();
+        $this->setSolidLine();
         
         return $this->renderLanguages();
     }

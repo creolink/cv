@@ -18,7 +18,7 @@ class KnownTools extends AbstractSkills
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
-        $this->setDashedLine();
+        $this->setSolidLine();
         
         return $this->renderKnownTools();
     }
