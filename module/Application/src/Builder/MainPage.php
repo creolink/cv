@@ -8,7 +8,6 @@
 namespace Application\Builder;
 
 use Application\Builder\AbstractPage;
-use Application\Element\DocumentPage;
 use Application\Element\MainHeader;
 use Application\Element\CareerGoals;
 use Application\Element\TechnicalSkills;
@@ -19,13 +18,14 @@ use Application\Element\EmploymentHistory;
 use Application\Element\Education;
 use Application\Element\Hobby;
 use Application\Element\AboutMe;
+use Application\Model\TcpdfInterface;
 
 class MainPage extends AbstractPage
 {
     /**
      * {@inheritDoc}
      */
-    public function createElements(DocumentPage $page)
+    public function createElements(TcpdfInterface $page)
     {
         $page = new MainHeader($page);
         $page = new CareerGoals($page);

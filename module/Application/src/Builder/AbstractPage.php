@@ -8,37 +8,44 @@
 namespace Application\Builder;
 
 use Application\Model\TcpdfInterface;
-use Application\Element\DocumentPage;
 
 abstract class AbstractPage
 {
     /**
-     * @var DocumentPage 
+     * @var TcpdfInterface 
      */
-    protected $page;
+    protected $tcpdf;
     
     /**
-     * @param DocumentPage $page
+     * @param TcpdfInterface $tcpdf
      */
-    public function __construct(DocumentPage $page)
+    public function __construct(TcpdfInterface $tcpdf)
     {
-        $this->page = $page;
+        $this->tcpdf = $tcpdf;
     }
-
+    
     /**
      * @return TcpdfInterface
      */
     public function createPage()
     {
+        $this->tcpdf->SetMargins(1, 1, 1);
+        
+        $this->tcpdf->AddPage();
+        
+        $this->tcpdf->SetTextColor(50, 50, 50);
+        $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
+        $this->tcpdf->SetXY(0, 0);
+        
         return $this->createElements(
-            $this->page
+            $this->tcpdf
         );
     }
     
     /**
-     * @param DocumentPage $page
+     * @param TcpdfInterface $page
      * 
      * @return TcpdfInterface
      */
-    abstract public function createElements(DocumentPage $page);
+    abstract public function createElements(TcpdfInterface $page);
 }

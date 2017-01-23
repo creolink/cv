@@ -30,6 +30,14 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
     public $cursorPositionY = 0;
     
     /**
+     * {@inheritDoc}
+     */
+    public function addElements()
+    {
+        return $this;
+    }
+    
+    /**
      * Overwrites default header and adds header only for 2nd page and later
      * 
      * {@inheritDoc}
