@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractEmployment;
+use Application\Entity\SectionTitle;
 
 class EmploymentHistory extends AbstractEmployment
 {
+    const CURSOR_X = 5;
+    const CURSOR_Y = 143;
+    
+    const SECTION_WIDTH = 200;
+    
     /**
      * {@inheritDoc}
      */
@@ -25,10 +31,12 @@ class EmploymentHistory extends AbstractEmployment
     
     private function renderEmploymentHistory()
     {
-        $x = 5;
-        $y = 143;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Employment history, full & part time', $x, $y, 200);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
 
         $this->renderEmploymentPosition(
             $this->tcpdf->cursorPositionX,
@@ -87,5 +95,19 @@ class EmploymentHistory extends AbstractEmployment
             );
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Employment history, full & part time');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

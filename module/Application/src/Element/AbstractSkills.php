@@ -7,9 +7,9 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractBlockTitle;
+use Application\Element\AbstractSection;
 
-abstract class AbstractSkills extends AbstractBlockTitle
+abstract class AbstractSkills extends AbstractSection
 {
     protected function renderSkillOnRight($x, $y, $text = '', $value = 5, $textWidth = 33)
     {

@@ -7,10 +7,10 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractBlockTitle;
+use Application\Element\AbstractSection;
 use Application\Config\PdfConfig;
 
-abstract class AbstractEmployment extends AbstractBlockTitle
+abstract class AbstractEmployment extends AbstractSection
 {
     protected function renderEmploymentPosition(
         $x,

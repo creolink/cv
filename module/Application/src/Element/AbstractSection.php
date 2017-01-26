@@ -10,8 +10,9 @@ namespace Application\Element;
 use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\Color;
 use Application\Config\Font;
+use Application\Entity\SectionTitle;
 
-abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
+abstract class AbstractSection extends AbstractTcpdfDecorator
 {
     const DEFAULT_WIDTH = 65;
     const FONT_SIZE = 13;
@@ -22,14 +23,23 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
     const CURSOR_MARGIN_X = 1;
     const CURSOR_MARGIN_Y = 7;
     
-    protected function renderBlockTitle($title, $x, $y, $width = self::DEFAULT_WIDTH)
+    /**
+     * Renders section title
+     * 
+     * @param SectionTitle $sectionTitle
+     */
+    protected function renderTitle(SectionTitle $sectionTitle)
     {
         $this->setColors();
-        $this->printTitle($x, $y, $title);
-        $this->drawLine($x, $y, $width);
-        $this->setCursor($x, $y);
+        $this->setFont();
+        $this->printTitle($sectionTitle);
+        $this->drawLineUnderTitle($sectionTitle);
+        $this->setCursor($sectionTitle);
     }
     
+    /**
+     * Sets colors for title
+     */
     private function setColors()
     {
         $this->tcpdf->SetDrawColor(
@@ -52,55 +62,57 @@ abstract class AbstractBlockTitle extends AbstractTcpdfDecorator
     }
     
     /**
-     * @param float $x
-     * @param float $y
-     * @param string $title
+     * Sets font for title
      */
-    private function printTitle($x, $y, $title)
+    private function setFont()
     {
         $this->tcpdf->SetFont(
             $this->tcpdf->dejavu,
             Font::BOLD,
             self::FONT_SIZE
         );
-        
+    }
+    
+    /**
+     * @param SectionTitle $sectionTitle
+     */
+    private function printTitle(SectionTitle $sectionTitle)
+    {
         $this->tcpdf->SetXY(
-            $x + self::TITLE_MARGIN,
-            $y
+            $sectionTitle->getCursorX() + self::TITLE_MARGIN,
+            $sectionTitle->getCursorY()
         );
         
         $this->tcpdf->Cell(
             self::CELL_WIDTH,
             self::CELL_HEIGHT,
-            $title
+            $sectionTitle->getTitle()
         );
     }
     
     /**
-     * @param float $x
-     * @param float $y
-     * @param float $width
+     * @param SectionTitle $sectionTitle
      */
-    private function drawLine($x, $y, $width)
+    private function drawLineUnderTitle(SectionTitle $sectionTitle)
     {
         $this->tcpdf->Line(
-            $x,
-            $y + self::LINE_MARGIN,
-            $x + $width,
-            $y + self::LINE_MARGIN
+            $sectionTitle->getCursorX(),
+            $sectionTitle->getCursorY() + self::LINE_MARGIN,
+            $sectionTitle->getCursorX() + $sectionTitle->getWidth(),
+            $sectionTitle->getCursorY() + self::LINE_MARGIN
         );
     }
     
     /**
-     * @param float $x
+     * @param SectionTitle $sectionTitle
      */
-    private function setCursor($x, $y)
+    private function setCursor(SectionTitle $sectionTitle)
     {
-        $this->tcpdf->cursorPositionX = $x + self::CURSOR_MARGIN_X;
-        $this->tcpdf->cursorPositionY = $y + 6;
+        $this->tcpdf->cursorPositionX = $sectionTitle->getCursorX() + self::CURSOR_MARGIN_X;
+        $this->tcpdf->cursorPositionY = $sectionTitle->getCursorY() + 6;
         
-        $this->cursorX = $x + self::CURSOR_MARGIN_X;
-        $this->cursorY = $y + self::CURSOR_MARGIN_Y;
+        $this->cursorX = $sectionTitle->getCursorX() + self::CURSOR_MARGIN_X;
+        $this->cursorY = $sectionTitle->getCursorY() + self::CURSOR_MARGIN_Y;
         
         $this->tcpdf->SetXY(
             $this->cursorX,
