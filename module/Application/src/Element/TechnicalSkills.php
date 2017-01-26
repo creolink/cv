@@ -17,6 +17,8 @@ class TechnicalSkills extends AbstractSkills
     
     const SECTION_WIDTH = 65;
     
+    
+    
     /**
      * {@inheritDoc}
      */

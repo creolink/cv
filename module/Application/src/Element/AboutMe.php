@@ -56,7 +56,7 @@ class AboutMe extends AbstractSection
         );
         
         $this->tcpdf->MultiCell(
-            self::SECTION_WIDTH - 2,
+            self::SECTION_WIDTH - 1,
             self::CELL_HEIGHT,
             $this->getContent(),
             self::BORDER_NONE,

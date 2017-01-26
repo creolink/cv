@@ -16,7 +16,7 @@ abstract class AbstractSection extends AbstractTcpdfDecorator
 {
     const DEFAULT_WIDTH = 65;
     const FONT_SIZE = 13;
-    const TITLE_MARGIN = 0.6;
+    const TITLE_MARGIN = 0;
     const CELL_HEIGHT = 6;
     const CELL_WIDTH = 0;
     const LINE_MARGIN = 6.2;
@@ -108,10 +108,10 @@ abstract class AbstractSection extends AbstractTcpdfDecorator
      */
     private function setCursor(SectionTitle $sectionTitle)
     {
-        $this->tcpdf->cursorPositionX = $sectionTitle->getCursorX() + self::CURSOR_MARGIN_X;
+        $this->tcpdf->cursorPositionX = $sectionTitle->getCursorX();
         $this->tcpdf->cursorPositionY = $sectionTitle->getCursorY() + 6;
         
-        $this->cursorX = $sectionTitle->getCursorX() + self::CURSOR_MARGIN_X;
+        $this->cursorX = $sectionTitle->getCursorX();
         $this->cursorY = $sectionTitle->getCursorY() + self::CURSOR_MARGIN_Y;
         
         $this->tcpdf->SetXY(
