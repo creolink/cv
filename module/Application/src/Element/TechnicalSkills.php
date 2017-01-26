@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
+use Application\Entity\SectionTitle;
 
 class TechnicalSkills extends AbstractSkills
 {
+    const CURSOR_X = 5;
+    const CURSOR_Y = 77;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -23,10 +29,12 @@ class TechnicalSkills extends AbstractSkills
     
     private function renderTechnicalSkills()
     {
-        $x = 5;
-        $y = 77;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Technical skills', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
 
         $x = $this->tcpdf->cursorPositionX + 2;
         $y = $this->tcpdf->cursorPositionY;
@@ -52,5 +60,19 @@ class TechnicalSkills extends AbstractSkills
         $this->renderSkillOnLeft($x, $y += $step, 'Perl, Python, Java', 1, $textWidth);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Technical skills');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

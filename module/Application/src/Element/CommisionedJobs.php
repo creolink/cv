@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractEmployment;
+use Application\Entity\SectionTitle;
 
 class CommisionedJobs extends AbstractEmployment
 {
+    const CURSOR_X = 5;
+    const CURSOR_Y = 14;
+    
+    const SECTION_WIDTH = 200;
+    
     /**
      * {@inheritDoc}
      */
@@ -23,10 +29,12 @@ class CommisionedJobs extends AbstractEmployment
     
     private function renderCommisionedJobs()
     {
-        $x = 5;
-        $y = 14;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Additional, commisioned & freelance jobs', $x, $y, 200, 27.5);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
         
         $step = 4;
         
@@ -174,5 +182,19 @@ class CommisionedJobs extends AbstractEmployment
             );
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Additional, commisioned & freelance jobs');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

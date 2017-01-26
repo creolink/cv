@@ -7,17 +7,20 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractBlockTitle;
+use Application\Element\AbstractSection;
 use Application\Config\PersonalData;
 use Application\Config\Font;
+use Application\Entity\SectionTitle;
 
-class AboutMe extends AbstractBlockTitle
+class AboutMe extends AbstractSection
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 249;
     
-    const WIDTH = 65;
+    const SECTION_WIDTH = 65;
+    
     const CELL_HEIGHT = 4;
+    
     const FONT_SIZE = 7;
     
     /**
@@ -37,11 +40,8 @@ class AboutMe extends AbstractBlockTitle
      */
     private function renderAboutMe()
     {
-        $this->renderBlockTitle(
-            'About me',
-            self::CURSOR_X,
-            self::CURSOR_Y,
-            self::WIDTH
+        $this->renderTitle(
+            $this->createSectionTitle()
         );
         
 //        $this->tcpdf->SetXY(
@@ -56,7 +56,7 @@ class AboutMe extends AbstractBlockTitle
         );
         
         $this->tcpdf->MultiCell(
-            self::WIDTH - 2,
+            self::SECTION_WIDTH - 2,
             self::CELL_HEIGHT,
             $this->getContent(),
             self::BORDER_NONE,
@@ -79,5 +79,19 @@ class AboutMe extends AbstractBlockTitle
             . "I've got references from almost all companies I worked for. "
             . "This CV is an example of my abilities."
             . self::NEW_LINE;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('About me');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

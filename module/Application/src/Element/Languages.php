@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
+use Application\Entity\SectionTitle;
 
 class Languages extends AbstractSkills
 {
+    const CURSOR_X = 140;
+    const CURSOR_Y = 122.5;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -25,10 +31,12 @@ class Languages extends AbstractSkills
     
     private function renderLanguages()
     {
-        $x = 140;
-        $y = 122.5;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Languages', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
         
         $x = $this->tcpdf->cursorPositionX + 2;
         $y = $this->tcpdf->cursorPositionY;
@@ -41,5 +49,19 @@ class Languages extends AbstractSkills
         $this->renderSkillOnLeft($x, $y += $step, 'German (B1), communicative', 2);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Languages');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

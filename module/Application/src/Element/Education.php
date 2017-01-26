@@ -7,10 +7,16 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractBlockTitle;
+use Application\Element\AbstractSection;
+use Application\Entity\SectionTitle;
 
-class Education extends AbstractBlockTitle
+class Education extends AbstractSection
 {
+    const CURSOR_X = 72.5;
+    const CURSOR_Y = 249;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -23,10 +29,12 @@ class Education extends AbstractBlockTitle
     
     private function renderEducation()
     {
-        $x = 72.5;
-        $y = 249;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Education & courses', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
 
         $text = "2013 - 2015 intensive English & German course," . "\r\n"
             ."2012 professional Google Analytics training," . "\r\n"
@@ -38,5 +46,19 @@ class Education extends AbstractBlockTitle
         $this->tcpdf->MultiCell(63, 4, $text . "\r\n", 0, 'L', false);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Education & courses');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
+use Application\Entity\SectionTitle;
 
 class PersonalSkills extends AbstractSkills
 {
+    const CURSOR_X = 140;
+    const CURSOR_Y = 77;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -25,10 +31,12 @@ class PersonalSkills extends AbstractSkills
     
     private function renderPersonalSkills()
     {
-        $x = 140;
-        $y = 77;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
 
-        $this->renderBlockTitle('Personality', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
         
         $x = $this->tcpdf->cursorPositionX + 2;
         $y = $this->tcpdf->cursorPositionY;
@@ -47,5 +55,19 @@ class PersonalSkills extends AbstractSkills
         $this->renderSkillOnLeft($x, $y += $step, 'Creativity', 3, $textWidth);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Personality');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

@@ -7,10 +7,16 @@
 
 namespace Application\Element;
 
-use Application\Element\AbstractBlockTitle;
+use Application\Element\AbstractSection;
+use Application\Entity\SectionTitle;
 
-class Hobby extends AbstractBlockTitle
+class Hobby extends AbstractSection
 {
+    const CURSOR_X = 5;
+    const CURSOR_Y = 249;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -23,10 +29,12 @@ class Hobby extends AbstractBlockTitle
     
     private function renderHobby()
     {
-        $x = 5;
-        $y = 249;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Hobby & Sport', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
         
         $text = 'movies and tv series, board games, football & table tennis, stock exchange';
         
@@ -35,5 +43,19 @@ class Hobby extends AbstractBlockTitle
         $this->tcpdf->MultiCell(63, 4, $text . "\r\n", 0, 'L', false);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Hobby & Sport');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }

@@ -8,9 +8,15 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
+use Application\Entity\SectionTitle;
 
 class KnownTools extends AbstractSkills
 {
+    const CURSOR_X = 72.5;
+    const CURSOR_Y = 77;
+    
+    const SECTION_WIDTH = 65;
+    
     /**
      * {@inheritDoc}
      */
@@ -25,10 +31,12 @@ class KnownTools extends AbstractSkills
     
     private function renderKnownTools()
     {
-        $x = 72.5;
-        $y = 77;
+        $x = self::CURSOR_X;
+        $y = self::CURSOR_Y;
         
-        $this->renderBlockTitle('Known software & tools', $x, $y, 65);
+        $this->renderTitle(
+            $this->createSectionTitle()
+        );
         
         $x = $this->tcpdf->cursorPositionX + 2;
         $y = $this->tcpdf->cursorPositionY;
@@ -72,5 +80,19 @@ class KnownTools extends AbstractSkills
         //$this->skillOnLeft($x, $y += $step, 'Enova, Optima, WFMag, Subiekt', 5, $textWidth);
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * @return SectionTitle
+     */
+    private function createSectionTitle()
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(self::CURSOR_X);
+        $sectionTitle->setCursorY(self::CURSOR_Y);
+        $sectionTitle->setTitle('Known software & tools');
+        $sectionTitle->setWidth(self::SECTION_WIDTH);
+        
+        return $sectionTitle;
     }
 }
