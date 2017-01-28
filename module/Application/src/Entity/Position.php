@@ -7,7 +7,9 @@
 
 namespace Application\Entity;
 
-class Position
+use Application\Entity\EntityInterface;
+
+class Position implements EntityInterface
 {
     /**
      * Name of skill

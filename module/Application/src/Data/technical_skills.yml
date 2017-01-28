@@ -1,7 +1,7 @@
 positions:
     - { name: 'PHP 4/5/6/7, OOP & PSR', level: 4, experience: 15 }
-    - { name: 'MySQL: Percona / MariaDB', level: 4, experience: 14 }
     - { name: 'HTML 4/5, XHTML, Css', level: 4, experience: 15 }
+    - { name: 'MySQL: Percona / MariaDB', level: 4, experience: 14 }
     - { name: 'JS, jQuery, Json, Xml', level: 4, experience: 10 }
     - { name: 'UML, WEB / UI / DB Design', level: 4, experience: 10 }
     - { name: 'Linux, Windows', level: 4, experience: 10 }
