@@ -45,7 +45,7 @@ class PersonalSkills extends AbstractSkills
         
         $this->renderSkillOnLeft($x, $y, 'Organization', 5, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Reliability', 5, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Teamwork', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'Cooperation', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Punctuality', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Management', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Assertiveness', 4, $textWidth);

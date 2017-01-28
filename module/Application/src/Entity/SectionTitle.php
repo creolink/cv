@@ -26,14 +26,14 @@ class SectionTitle
     /**
      * Starting cursor Y position
      * 
-     * @var type 
+     * @var type
      */
     private $cursorY = 0;
     
     /**
      * Width of section
      * 
-     * @var float 
+     * @var float
      */
     private $width = 65;
     

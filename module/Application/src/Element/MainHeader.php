@@ -77,9 +77,9 @@ class MainHeader extends AbstractTcpdfDecorator
     private function renderCreationInfo()
     {
         $this->tcpdf->SetTextColor(150, 150, 150);
-        $this->tcpdf->SetXY(113, 31);
+        $this->tcpdf->SetXY(110, 31);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
-        $this->tcpdf->Write(6, 'CV created with PHP & TCPDF', 'https://tcpdf.org/');
+        $this->tcpdf->Write(6, 'created in PHP with ZF2 & TCPDF', 'https://tcpdf.org/');
     }
     
     private function renderFlags()

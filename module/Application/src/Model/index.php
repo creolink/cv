@@ -307,7 +307,7 @@ class CurriculumVitae extends TCPDF
         $this->renderSkillOnLeft($x, $y += $step, 'MySQL & MariaDB / Percona', 5, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'TDD, UnitTesting', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Symfony 2 & 3', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'SOLID, Clear code, KISS, DRY', 4, $textWidth);
+        $this->renderSkillOnLeft($x, $y += $step, 'SOLID, Clean code, KISS, DRY', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'Soap, Rest, Json, Xml, OAuth', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'SEO, SEM', 4, $textWidth);
         $this->renderSkillOnLeft($x, $y += $step, 'UML, WEB / UI / DB Design', 4, $textWidth);

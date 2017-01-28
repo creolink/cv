@@ -23,18 +23,28 @@ abstract class AbstractSkills extends AbstractSection
     
     protected function renderSkillOnLeft($x, $y, $text = '', $value = 5, $textWidth = 53)
     {
-        $this->tcpdf->SetFont($this->tcpdf->verdana, '', 8);
-        
-        $this->tcpdf->SetXY($x + 15.8, $y);
-        $this->tcpdf->Cell($textWidth, 6, $text, 0, 0, 'L', false);
+        $text = trim($text);
         
         $this->renderFilledCircle($x, $y + 3.2, $value);
+        
+        $this->tcpdf->SetXY($this->tcpdf->GetX() + 1, $y);
+        $this->tcpdf->SetFont($this->tcpdf->verdana, '', 8);
+        $textWidth = (int)$this->tcpdf->GetStringWidth($text);
+        $this->tcpdf->Cell($textWidth ,6, $text, 0, 0, 'L');
+        
+        $this->tcpdf->SetXY($this->tcpdf->GetX() + 1, $y);
+        $this->tcpdf->SetFont($this->tcpdf->verdanaItalic, '', 5);
+        $this->tcpdf->Cell(0, 6, '(' . mt_rand(5,15) . 'y)', 0, 0, 'L', false);
+        
+        
     }
     
     private function renderFilledCircle($x, $y, $value)
     {
-        for ($counter = 0; $counter < 5; $counter++) {
+        for ($counter = 0; $counter < 4; $counter++) {
+            
             $this->renderCircle($x + (3.5 * $counter), $y);
+            
             if ($value > $counter) {
                 $this->renderCircle($x + (3.5 * $counter), $y, true);
             }
@@ -52,6 +62,7 @@ abstract class AbstractSkills extends AbstractSection
                 150, 150, 150
             )
         );
+        
         $fillColor = array();
         
         if (true === $filled) {
@@ -61,5 +72,7 @@ abstract class AbstractSkills extends AbstractSection
         }
         
         $this->tcpdf->circle($x, $y, $radius, 0, 360, $style, $lineStyle, $fillColor);
+        
+        $this->tcpdf->SetXY($x, $y);
     }
 }

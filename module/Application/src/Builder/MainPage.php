@@ -11,7 +11,7 @@ use Application\Builder\AbstractPage;
 use Application\Element\MainHeader;
 use Application\Element\CareerGoals;
 use Application\Element\TechnicalSkills;
-use Application\Element\KnownTools;
+use Application\Element\SoftwareAndTools;
 use Application\Element\PersonalSkills;
 use Application\Element\Languages;
 use Application\Element\EmploymentHistory;
@@ -30,7 +30,7 @@ class MainPage extends AbstractPage
         $page = new MainHeader($page);
         $page = new CareerGoals($page);
         $page = new TechnicalSkills($page);
-        $page = new KnownTools($page);
+        $page = new SoftwareAndTools($page);
         $page = new PersonalSkills($page);
         $page = new Languages($page);
         $page = new EmploymentHistory($page);
