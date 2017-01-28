@@ -7,10 +7,10 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractTcpdfDecorator;
+use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Image;
 
-class Sign extends AbstractTcpdfDecorator
+class Sign extends AbstractPageDecorator
 {
     /**
      * {@inheritDoc}

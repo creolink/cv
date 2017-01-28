@@ -7,12 +7,12 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractTcpdfDecorator;
+use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Color;
 use Application\Config\Font;
 use Application\Entity\SectionTitle;
 
-abstract class AbstractSection extends AbstractTcpdfDecorator
+abstract class AbstractSection extends AbstractPageDecorator
 {
     const DEFAULT_WIDTH = 65;
     const FONT_SIZE = 13;

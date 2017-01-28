@@ -7,13 +7,13 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractTcpdfDecorator;
+use Application\Decorator\AbstractPageDecorator;
 use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
 
-class MainHeader extends AbstractTcpdfDecorator
+class MainHeader extends AbstractPageDecorator
 {
     /**
      * {@inheritDoc}
