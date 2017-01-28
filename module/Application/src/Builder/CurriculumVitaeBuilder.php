@@ -41,7 +41,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     }
     
     /**
-     * @return TcpdfInterface
+     * Generates main page
      */
     public function generateMainPage()
     {
@@ -49,11 +49,11 @@ class CurriculumVitaeBuilder extends AbstractBuilder
             $this->cv
         );
         
-        return $page->createPage();
+        $page->createPage();
     }
     
     /**
-     * @return TcpdfInterface
+     * Generates second page
      */
     public function generateSecondPage()
     {
@@ -61,6 +61,6 @@ class CurriculumVitaeBuilder extends AbstractBuilder
             $this->cv
         );
         
-        return $page->createPage();
+        $page->createPage();
     }
 }
