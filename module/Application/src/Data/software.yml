@@ -1,38 +1,38 @@
 positions:
     - { name: 'MySQL Workbench, PMA', level: 4, experience: 14 }
-    - { name: 'Debian, Ubuntu, Fedora', level: 4, experience: 12 }
     - { name: 'Netbeans, PHPStorm', level: 4, experience: 10 }
-    - { name: 'Nginx, Lighttpd, Apache', level: 4, experience: 7 }
-    - { name: 'Google Analytics, Adwords', level: 4, experience: 7 }
-    - { name: 'Soap, Rest, OAuth', level: 4, experience: 7 }
-    - { name: 'Git, Svn', level: 4, experience: 6 }
-    - { name: 'PHP FPM, APC, Memcache', level: 4, experience: 5 }
-    - { name: 'FPDF, TCPDF', level: 4, experience: 5 }
-    - { name: 'DIA, Confluence', level: 4, experience: 5 }
-    - { name: 'CodeSniffer, PhpDoc', level: 4, experience: 4 }
-    - { name: 'VirtualBox, Docker, Vagrant', level: 4, experience: 3 }
-    - { name: 'Trac, JIRA, Jenkins', level: 4, experience: 3 }
-    - { name: 'Composer, Node.js, npm', level: 4, experience: 3 }
-    - { name: 'GIMP, Photoshop, Fireworks', level: 4, experience: 3 }
-    - { name: 'Percona server, Galera Cluster', level: 4, experience: 2 }
-    - { name: 'Apache jMeter', level: 4, experience: 1, disabled: true }
-    - { name: 'Xenu, Total validator', level: 4, experience: 1, disabled: true }
+    - { name: 'Debian, Ubuntu, Fedora', level: 4, experience: 9 }
+    - { name: 'Nginx, Lighttpd, Apache', level: 3, experience: 7 }
+    - { name: 'Google Analytics, Adwords', level: 3, experience: 7 }
+    - { name: 'Soap, Rest, OAuth', level: 3, experience: 7 }
+    - { name: 'Git, Svn', level: 3, experience: 6 }
+    - { name: 'PHP FPM, APC, Memcache', level: 3, experience: 5 }
+    - { name: 'FPDF, TCPDF', level: 3, experience: 5 }
+    - { name: 'DIA, Confluence', level: 3, experience: 5 }
+    - { name: 'CodeSniffer, PhpDoc', level: 3, experience: 4 }
+    - { name: 'VirtualBox, Docker, Vagrant', level: 2, experience: 3 }
+    - { name: 'Trac, JIRA, Jenkins', level: 2, experience: 3 }
+    - { name: 'Composer, Node.js, npm', level: 2, experience: 3 }
+    - { name: 'GIMP, Photoshop, Fireworks', level: 1, experience: 3 }
+    - { name: 'Percona server, Galera Cluster', level: 1, experience: 2 }
+    - { name: 'Apache jMeter', level: 1, experience: 1, disabled: true }
+    - { name: 'Xenu, Total validator', level: 2, experience: 1, disabled: true }
     - { name: 'Adminer', level: 4, experience: 5, disabled: true }
-    - { name: 'Manual UI & acceptance tests', level: 4, experience: 8, disabled: true }
-    - { name: 'Audio Watermarking Tools 2', level: 4, experience: 1, disabled: true }
-    - { name: 'Macromedia Dreamweaver & Fireworks', level: 4, experience: 4, disabled: true }
+    - { name: 'Manual UI & acceptance tests', level: 3, experience: 8, disabled: true }
+    - { name: 'Audio Watermarking Tools 2', level: 1, experience: 1, disabled: true }
+    - { name: 'Macromedia Dreamweaver & Fireworks', level: 2, experience: 4, disabled: true }
     - { name: 'Firefox, Opera, Chrome, IE', level: 4, experience: 16, disabled: true }
-    - { name: 'SeveralNines Cluster Control', level: 4, experience: 1, disabled: true }
+    - { name: 'SeveralNines Cluster Control', level: 1, experience: 1, disabled: true }
     - { name: 'MS Office, LibreOffice, OpenOffice', level: 4, experience: 14, disabled: true }
-    - { name: 'Eset', level: 4, experience: 4, disabled: true }
+    - { name: 'Eset', level: 4, experience: 2, disabled: true }
     - { name: 'Total Commander, Mc', level: 4, experience: 15, disabled: true }
-    - { name: 'Acunetix web vulnerability scanner', level: 4, experience: 2, disabled: true }
-    - { name: 'Axure RP Pro', level: 4, experience: 1, disabled: true }
-    - { name: 'Bootstrap', level: 4, experience: 1, disabled: true }
-    - { name: 'Grunt', level: 4, experience: 1, disabled: true }
-    - { name: 'Enova, Optima, WFMag, Subiekt', level: 4, experience: 5, disabled: true }
-    - { name: 'Mrtg, Cacti, Mtr, Traceroute', level: 4, experience: 7, disabled: true }
-    - { name: 'VMware ESX Server & Center', level: 4, experience: 2, disabled: true }
+    - { name: 'Acunetix web vulnerability scanner', level: 1, experience: 2, disabled: true }
+    - { name: 'Axure RP Pro', level: 1, experience: 1, disabled: true }
+    - { name: 'Bootstrap', level: 2, experience: 1, disabled: true }
+    - { name: 'Grunt', level: 1, experience: 1, disabled: true }
+    - { name: 'Enova, Optima, WFMag, Subiekt', level: 3, experience: 5, disabled: true }
+    - { name: 'Mrtg, Cacti, Mtr, Traceroute', level: 3, experience: 7, disabled: true }
+    - { name: 'VMware ESX Server & Center', level: 2, experience: 2, disabled: true }
     - { name: 'HTML Validator, W3C', level: 4, experience: 12, disabled: true }
 
 

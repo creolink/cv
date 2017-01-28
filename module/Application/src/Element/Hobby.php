@@ -13,7 +13,7 @@ use Application\Entity\SectionTitle;
 class Hobby extends AbstractSection
 {
     const CURSOR_X = 5;
-    const CURSOR_Y = 249;
+    const CURSOR_Y = 251;
     
     const SECTION_WIDTH = 65;
     

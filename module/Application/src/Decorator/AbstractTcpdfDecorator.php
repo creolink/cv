@@ -17,11 +17,13 @@ abstract class AbstractTcpdfDecorator implements TcpdfInterface
     const LINE_SOLID = '0';
     
     /**
+     * @deprecated 
      * @var float
      */
     protected $cursorX = 0.00;
     
     /**
+     * @deprecated
      * @var float
      */
     protected $cursorY = 0.00;

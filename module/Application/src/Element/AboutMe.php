@@ -15,11 +15,12 @@ use Application\Entity\SectionTitle;
 class AboutMe extends AbstractSection
 {
     const CURSOR_X = 140;
-    const CURSOR_Y = 249;
+    const CURSOR_Y = 251;
     
     const SECTION_WIDTH = 65;
     
     const CELL_HEIGHT = 4;
+    const CELL_PADDING = 1;
     
     const FONT_SIZE = 7;
     
@@ -61,7 +62,7 @@ class AboutMe extends AbstractSection
         );
         
         $this->tcpdf->MultiCell(
-            self::SECTION_WIDTH - 1,
+            self::SECTION_WIDTH - self::CELL_PADDING,
             self::CELL_HEIGHT,
             $this->getContent(),
             self::BORDER_NONE,

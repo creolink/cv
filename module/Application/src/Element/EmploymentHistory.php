@@ -59,7 +59,7 @@ class EmploymentHistory extends AbstractEmployment
             'IT Manager / B2E & B2C, eCommerce complex solution',
             'GANDALF SP. Z O.O. (Empik Media & Fashion Group)',
             'Beskidzka 37, 91-612, Lodz, Poland',
-            'Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Solr, PHP-FPM, APC, Nginx, VMware ESX. Employees management, budget controlling, reporting, API integration, business processes optimization, SEO & SEM analysis, performance & acceptance tests, code refactoring, software tests, duties of the Information Security Administrator.',
+            'Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Employees management, budget controlling, reporting, API integration, optimization of business processes, SEO & SEM analysis, load tests with Apache Jmeter, performance and acceptance tests, code refactoring, integration with external web applications, duties of the Information Security Administrator.',
             'http://cv.creolink.pl/examples/gandalf.zip',
             'http://cv.creolink.pl/references/references_gandalf.zip',
             'Anetta Wilczynska, +48 42 / 252 39 23',

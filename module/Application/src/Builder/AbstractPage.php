@@ -8,11 +8,22 @@
 namespace Application\Builder;
 
 use Application\Model\TcpdfInterface;
+use Application\Model\CurriculumVitae;
+use Application\Config\Color;
 
 abstract class AbstractPage
 {
+    const MARGIN_LEFT = 1;
+    const MARGIN_TOP = 1;
+    const MARGIN_RIGHT = 1;
+    
+    const CURSOR_X = 0;
+    const CURSOR_Y = 0;
+    
+    const FONT_SIZE = 8;
+    
     /**
-     * @var TcpdfInterface 
+     * @var TcpdfInterface|CurriculumVitae
      */
     protected $tcpdf;
     
@@ -29,13 +40,12 @@ abstract class AbstractPage
      */
     public function createPage()
     {
-        $this->tcpdf->SetMargins(1, 1, 1);
-        
         $this->tcpdf->AddPage();
         
-        $this->tcpdf->SetTextColor(50, 50, 50);
-        $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
-        $this->tcpdf->SetXY(0, 0);
+        $this->setMargins();
+        $this->setTextColor();
+        $this->setFont();
+        $this->setCursor();
         
         return $this->createElements(
             $this->tcpdf
@@ -48,4 +58,51 @@ abstract class AbstractPage
      * @return TcpdfInterface
      */
     abstract public function createElements(TcpdfInterface $page);
+    
+    /**
+     * Sets default font for page
+     */
+    private function setFont()
+    {
+        $this->tcpdf->SetFont(
+            $this->tcpdf->dejavu,
+            '',
+            self::FONT_SIZE
+        );
+    }
+    
+    /**
+     * Sets default cursor position on page
+     */
+    private function setCursor()
+    {
+        $this->tcpdf->SetXY(
+            self::CURSOR_X,
+            self::CURSOR_Y
+        );
+    }
+    
+    /**
+     * Sets default text color for page
+     */
+    private function setTextColor()
+    {
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_DARK_RED,
+            Color::TEXT_COLOR_DARK_GREEN,
+            Color::TEXT_COLOR_DARK_BLUE
+        );
+    }
+    
+    /**
+     * Sets default margins for page
+     */
+    private function setMargins()
+    {
+        $this->tcpdf->SetMargins(
+            self::MARGIN_LEFT,
+            self::MARGIN_TOP,
+            self::MARGIN_RIGHT
+        );
+    }
 }
