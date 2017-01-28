@@ -10,7 +10,7 @@ namespace Application\Decorator;
 use Application\Model\TcpdfInterface;
 use Application\Model\CurriculumVitae;
 
-abstract class AbstractTcpdfDecorator implements TcpdfInterface
+abstract class AbstractPageDecorator implements TcpdfInterface
 {
     const LINE_WIDTH = 0.2;
     const LINE_DASH = '1';

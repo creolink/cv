@@ -7,12 +7,12 @@
 
 namespace Application\Element;
 
-use Application\Decorator\AbstractTcpdfDecorator;
+use Application\Decorator\AbstractPageDecorator;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
 
-class QRCode extends AbstractTcpdfDecorator
+class QRCode extends AbstractPageDecorator
 {
     const BORDER = false;
     const VERTICAL_PADDING = 'auto';
