@@ -191,7 +191,7 @@ class CurriculumVitae extends TCPDF implements TcpdfInterface
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
         
-        $this->Cell(223, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
+        $this->Cell(214.5, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
     }
     
     /**
