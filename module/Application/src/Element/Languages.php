@@ -9,11 +9,12 @@ namespace Application\Element;
 
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
+use Application\Entity\Position;
 
 class Languages extends AbstractSkills
 {
     const CURSOR_X = 140;
-    const CURSOR_Y = 122.5;
+    const CURSOR_Y = 77;
     
     const SECTION_WIDTH = 65;
     
@@ -31,22 +32,16 @@ class Languages extends AbstractSkills
     
     private function renderLanguages()
     {
-        $x = self::CURSOR_X;
-        $y = self::CURSOR_Y;
-        
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
-        $x = $this->tcpdf->cursorPositionX + 2;
-        $y = $this->tcpdf->cursorPositionY;
-        
-        $step = 3.5;
-        $textWidth = 38;
-        
-        $this->renderSkillOnLeftOld($x, $y, 'Polish, mother language', 5);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'English (C1), prof. proficiency', 4);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'German (B1), communicative', 2);
+
+        $this->renderPositions(
+            $this->getPositions(
+                'languages.yml',
+                Position::class
+            )
+        );
         
         return $this->tcpdf;
     }

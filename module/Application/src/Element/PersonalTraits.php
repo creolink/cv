@@ -9,11 +9,12 @@ namespace Application\Element;
 
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
+use Application\Entity\Position;
 
 class PersonalTraits extends AbstractSkills
 {
     const CURSOR_X = 140;
-    const CURSOR_Y = 77;
+    const CURSOR_Y = 98;
     
     const SECTION_WIDTH = 65;
     
@@ -31,28 +32,16 @@ class PersonalTraits extends AbstractSkills
     
     private function renderPersonalSkills()
     {
-        $x = self::CURSOR_X;
-        $y = self::CURSOR_Y;
-
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
-        $x = $this->tcpdf->cursorPositionX + 2;
-        $y = $this->tcpdf->cursorPositionY;
-        $step = 4;
-        $textWidth = 38;
-        
-        $this->renderSkillOnLeftOld($x, $y, 'Organization', 5, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Reliability', 5, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Cooperation', 4, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Punctuality', 4, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Management', 4, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Assertiveness', 4, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Independence', 4, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Diligence', 4, $textWidth);
-        //$this->renderSkillOnLeft($x, $y += $step, 'Work under time pressure', 3, $textWidth);
-        $this->renderSkillOnLeftOld($x, $y += $step, 'Creativity', 3, $textWidth);
+
+        $this->renderPositions(
+            $this->getPositions(
+                'personal_traits.yml',
+                Position::class
+            )
+        );
         
         return $this->tcpdf;
     }

@@ -9,8 +9,6 @@ namespace Application\Element;
 
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
-use Zend\Config\Factory;
-use Zend\Hydrator\ClassMethods as Hydrator;
 use Application\Entity\Skill;
 
 class TechnicalSkills extends AbstractSkills
@@ -43,7 +41,7 @@ class TechnicalSkills extends AbstractSkills
         
         $this->renderPositions(
             $this->getPositions(
-                Factory::fromFile(__DIR__.'/../Data/technical_skills.yml'),
+                'technical_skills.yml',
                 Skill::class
             )
         );
@@ -64,31 +62,4 @@ class TechnicalSkills extends AbstractSkills
         
         return $sectionTitle;
     }
-    
-//    /**
-//     * Returns array of skill objects
-//     * 
-//     * @return Skill[]
-//     */
-//    private function getSkills()
-//    {
-//        $config = Factory::fromFile(__DIR__.'/../Data/technical_skills.yml');
-//        
-//        $skills = [];
-//        $hydrator = new Hydrator();
-//        
-//        $objectName = Skill::class;
-//        
-//        if (!class_exists($objectName)) {
-//            die('aaa');
-//        }
-//        
-//        $object = new $objectName;
-//        
-//        foreach ($config['skills'] as $skill) {
-//            $skills[] = $hydrator->hydrate($skill, new $object);
-//        }
-//        
-//        return $skills;
-//    }
 }

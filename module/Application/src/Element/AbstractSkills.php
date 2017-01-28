@@ -11,7 +11,9 @@ use Application\Element\AbstractSection;
 use Application\Entity\Position;
 use Application\Entity\Skill;
 use Application\Exception\EntityNotFoundException;
+use Application\Exception\FileNotFoundException;
 use Zend\Hydrator\ClassMethods as Hydrator;
+use Zend\Config\Factory;
 
 abstract class AbstractSkills extends AbstractSection
 {
@@ -26,7 +28,7 @@ abstract class AbstractSkills extends AbstractSection
      */
     protected function renderPosition(Position $position, $x = 0, $y = 0)
     {
-        $this->renderCircles($x, $y + 3.2, $position->getStrength());
+        $this->renderCircles($x, $y + 3.2, $position->getLevel(), $position->getStrength());
         
         $this->tcpdf->SetXY($this->tcpdf->GetX() + 1.3, $y);
         $this->tcpdf->SetFont($this->tcpdf->verdana, '', 8);
@@ -98,19 +100,25 @@ abstract class AbstractSkills extends AbstractSection
     /**
      * Returns array of skill objects
      * 
-     * @param array $config
+     * @param string $file
      * @param string $class
      * @throws EntityNotFoundException
      * @return Position[]
      */
-    protected function getPositions(array $config = [], $class = '')
+    protected function getPositions($file = '', $class = '')
     {
         $positions = [];
-      
+
         $this->validateClass($class);
         
-        foreach ($config['skills'] as $skill) {
-            $positions[] = $this->getHydrator()->hydrate($skill, new $class);
+        $path = __DIR__.'/../Data/' . $file;
+        
+        $this->validateFile($path);
+        
+        $config = Factory::fromFile($path);
+        
+        foreach ($config['positions'] as $position) {
+            $positions[] = $this->getHydrator()->hydrate($position, new $class);
         }
         
         return $positions;
@@ -135,8 +143,26 @@ abstract class AbstractSkills extends AbstractSection
         if (false === class_exists($class)) {
             throw new EntityNotFoundException(
                 sprintf(
-                    "Entity %s not found.",
+                    "Entity '%s' not found.",
                     $class
+                )
+            );
+        }
+    }
+    
+    /**
+     * Validates file name
+     * 
+     * @param string $path
+     * @throws EntityNotFoundException
+     */
+    private function validateFile($path)
+    {
+        if (false === file_exists($path)) {
+            throw new FileNotFoundException(
+                sprintf(
+                    "Config file '%s' not found.",
+                    $path
                 )
             );
         }
@@ -149,9 +175,9 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $y
      * @param int $value
      */
-    private function renderCircles($x, $y, $value)
+    private function renderCircles($x, $y, $value, $strength = 4)
     {
-        for ($counter = 0; $counter < 4; $counter++) {
+        for ($counter = 0; $counter < $strength; $counter++) {
             $this->renderCircle($x + (3.5 * $counter), $y);
             
             if ($value > $counter) {
