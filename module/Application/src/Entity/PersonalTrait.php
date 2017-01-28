@@ -9,7 +9,7 @@ namespace Application\Entity;
 
 use Application\Entity\Position;
 
-class Skill extends Position
+class PersonalTrait extends Position
 {
     /**
      * Time of experience in years

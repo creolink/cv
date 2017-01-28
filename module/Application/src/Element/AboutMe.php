@@ -44,11 +44,16 @@ class AboutMe extends AbstractSection
             $this->createSectionTitle()
         );
         
-//        $this->tcpdf->SetXY(
-//            $this->cursorX,
-//            $this->cursorY + 1
-//        );
+        $this->renderContent();
         
+        return $this->tcpdf;
+    }
+    
+    /**
+     * Renders content of element
+     */
+    private function renderContent()
+    {
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::NORMAL,
@@ -62,8 +67,6 @@ class AboutMe extends AbstractSection
             self::BORDER_NONE,
             self::ALIGN_LEFT
         );
-        
-        return $this->tcpdf;
     }
     
     /**

@@ -43,22 +43,22 @@ class SoftwareAndTools extends AbstractSkills
         $step = 3.5;
         $textWidth = 38;
         
-        $this->renderSkillOnLeft($x, $y, 'Netbeans, PHPStorm', 4, $textWidth); //10y
-        $this->renderSkillOnLeft($x, $y += $step, 'Debian, Ubuntu, Fedora', 4, $textWidth); //10y
-        $this->renderSkillOnLeft($x, $y += $step, 'MySQL Workbench, PMA', 4, $textWidth); //10y
-        $this->renderSkillOnLeft($x, $y += $step, 'Nginx, Lighttpd, Apache', 4, $textWidth); //7y
-        $this->renderSkillOnLeft($x, $y += $step, 'Google Analytics, Adwords', 4, $textWidth); //7y
-        $this->renderSkillOnLeft($x, $y += $step, 'Soap, Rest, OAuth', 4, $textWidth); //7y
-        $this->renderSkillOnLeft($x, $y += $step, 'Git, Svn', 4, $textWidth); //6y
-        $this->renderSkillOnLeft($x, $y += $step, 'PHP FPM, APC, Memcache', 4, $textWidth); //5y
-        $this->renderSkillOnLeft($x, $y += $step, 'FPDF, TCPDF', 4, $textWidth); //5y
-        $this->renderSkillOnLeft($x, $y += $step, 'DIA, Confluence', 4, $textWidth); //5y
-        $this->renderSkillOnLeft($x, $y += $step, 'CodeSniffer, PhpDoc', 3, $textWidth); //4y
-        $this->renderSkillOnLeft($x, $y += $step, 'VirtualBox, Docker, Vagrant', 3, $textWidth); //3y
-        $this->renderSkillOnLeft($x, $y += $step, 'Trac, JIRA, Jenkins', 3, $textWidth); //3y
-        $this->renderSkillOnLeft($x, $y += $step, 'Composer, Node.js, npm', 3, $textWidth); //3y
-        $this->renderSkillOnLeft($x, $y += $step, 'GIMP, Photoshop', 2, $textWidth); //3y
-        $this->renderSkillOnLeft($x, $y += $step, 'Percona server, Galera Cluster', 1, $textWidth); //2y
+        $this->renderSkillOnLeftOld($x, $y, 'Netbeans, PHPStorm', 4, $textWidth); //10y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Debian, Ubuntu, Fedora', 4, $textWidth); //10y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'MySQL Workbench, PMA', 4, $textWidth); //10y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Nginx, Lighttpd, Apache', 4, $textWidth); //7y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Google Analytics, Adwords', 4, $textWidth); //7y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Soap, Rest, OAuth', 4, $textWidth); //7y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Git, Svn', 4, $textWidth); //6y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'PHP FPM, APC, Memcache', 4, $textWidth); //5y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'FPDF, TCPDF', 4, $textWidth); //5y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'DIA, Confluence', 4, $textWidth); //5y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'CodeSniffer, PhpDoc', 3, $textWidth); //4y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'VirtualBox, Docker, Vagrant', 3, $textWidth); //3y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Trac, JIRA, Jenkins', 3, $textWidth); //3y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Composer, Node.js, npm', 3, $textWidth); //3y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'GIMP, Photoshop', 2, $textWidth); //3y
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Percona server, Galera Cluster', 1, $textWidth); //2y
         
         
         

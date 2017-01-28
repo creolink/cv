@@ -1,0 +1,19 @@
+traits:
+    - { name: 'PHP 4/5/6/7, OOP & PSR', level: 4, experience: 15 }
+    - { name: 'MySQL: Percona / MariaDB', level: 4, experience: 14 }
+    - { name: 'HTML 4/5, XHTML, Css', level: 4, experience: 15 }
+    - { name: 'JS, jQuery, Json, Xml', level: 4, experience: 10 }
+    - { name: 'SEO, SEM', level: 4, experience: 10 }
+    - { name: 'UML, WEB / UI / DB Design', level: 4, experience: 10 }
+    - { name: 'Linux, Windows', level: 4, experience: 10 }
+    - { name: 'SOLID, Clean code, KISS, DRY', level: 3, experience: 4 }
+    - { name: 'Symfony 2 & 3', level: 3, experience: 4 }
+    - { name: 'Design patterns: MVC, DI, ...', level: 3, experience: 4 }
+    - { name: 'TDD, PHPUnit', level: 3, experience: 2 }
+    - { name: 'Sass, Less', level: 2, experience: 2, disabled: true }
+    - { name: 'Elastic Search, Solr, Sphinx', level: 2, experience: 2 }
+    - { name: 'React, Typescript', level: 2, experience: 1 }
+    - { name: 'MsSQL, PostgreSQL', level: 2, experience: 1, disabled: true }
+    - { name: 'ZF 1 & 2', level: 1, experience: 0.5 }
+    - { name: 'BDD, Behat', level: 1, experience: 0.5 }
+    - { name: 'Perl, Python, Java', level: 1, experience: 0.5 }

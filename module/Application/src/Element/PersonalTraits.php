@@ -10,7 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 
-class PersonalSkills extends AbstractSkills
+class PersonalTraits extends AbstractSkills
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 77;
@@ -43,16 +43,16 @@ class PersonalSkills extends AbstractSkills
         $step = 4;
         $textWidth = 38;
         
-        $this->renderSkillOnLeft($x, $y, 'Organization', 5, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Reliability', 5, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Cooperation', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Punctuality', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Management', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Assertiveness', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Independence', 4, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Diligence', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y, 'Organization', 5, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Reliability', 5, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Cooperation', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Punctuality', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Management', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Assertiveness', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Independence', 4, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Diligence', 4, $textWidth);
         //$this->renderSkillOnLeft($x, $y += $step, 'Work under time pressure', 3, $textWidth);
-        $this->renderSkillOnLeft($x, $y += $step, 'Creativity', 3, $textWidth);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'Creativity', 3, $textWidth);
         
         return $this->tcpdf;
     }

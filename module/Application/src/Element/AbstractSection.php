@@ -111,12 +111,9 @@ abstract class AbstractSection extends AbstractTcpdfDecorator
         $this->tcpdf->cursorPositionX = $sectionTitle->getCursorX();
         $this->tcpdf->cursorPositionY = $sectionTitle->getCursorY() + 6;
         
-        $this->cursorX = $sectionTitle->getCursorX();
-        $this->cursorY = $sectionTitle->getCursorY() + self::CURSOR_MARGIN_Y;
-        
         $this->tcpdf->SetXY(
-            $this->cursorX,
-            $this->cursorY
+            $sectionTitle->getCursorX(),
+            $sectionTitle->getCursorY() + self::CURSOR_MARGIN_Y
         );
     }
 }

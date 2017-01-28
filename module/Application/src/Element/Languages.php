@@ -44,9 +44,9 @@ class Languages extends AbstractSkills
         $step = 3.5;
         $textWidth = 38;
         
-        $this->renderSkillOnLeft($x, $y, 'Polish, mother language', 5);
-        $this->renderSkillOnLeft($x, $y += $step, 'English (C1), prof. proficiency', 4);
-        $this->renderSkillOnLeft($x, $y += $step, 'German (B1), communicative', 2);
+        $this->renderSkillOnLeftOld($x, $y, 'Polish, mother language', 5);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'English (C1), prof. proficiency', 4);
+        $this->renderSkillOnLeftOld($x, $y += $step, 'German (B1), communicative', 2);
         
         return $this->tcpdf;
     }
