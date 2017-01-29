@@ -17,6 +17,10 @@ interface TcpdfInterface
     const ALIGN_CENTER = 'C';
     const ALIGN_RIGHT = 'R';
     
+    const NOT_FILLED = false;
+    
+    const CELL_LINE_NONE = 0;
+    
     /**
      * return TcpdfInterface
      */

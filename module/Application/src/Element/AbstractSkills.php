@@ -10,7 +10,6 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Entity\Position;
 use Application\Entity\Skill;
-use Application\Hydrator\Hydrator;
 
 abstract class AbstractSkills extends AbstractSection
 {
@@ -42,20 +41,6 @@ abstract class AbstractSkills extends AbstractSection
             );
         }
     }
-    
-//    /**
-//     * Returns array of skill objects
-//     * 
-//     * @param string $file
-//     * @param string $class
-//     * @return Position[]
-//     */
-//    protected function getPositions($file = '', $class = '')
-//    {
-//        $hydrator = new Hydrator($class, $file);
-//        
-//        return $hydrator->hydrate();
-//    }
     
     /**
      * Renders position with circles on left

@@ -10,48 +10,41 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Config\PdfConfig;
 use Application\Entity\EmploymentPosition;
-use Application\Hydrator\Hydrator;
+use Application\Config\Color;
+use Application\Config\Font;
 
 abstract class AbstractEmployment extends AbstractSection
 {
     const SECTION_WIDTH = 197;
     
-    const POSITION_MARGIN = 4;
+    const FIRST_POSITION_MARGIN = -1;
+    const NEXT_POSITION_MARGIN = 2;
+    
+    const DATE_FONT_SIZE = 8;
+    const DATE_CELL_WIDTH = 0;
+    const DATE_CELL_HEIGHT = 6;
+    
+    const NAME_MARGIN = 4.5;
+    const NAME_FONT_SIZE = 9;
+    const NAME_CELL_WIDTH = 150;
+    const NAME_CELL_HEIGHT = 6;
+    
+    const REFERENCES_MARGIN = 5.5;
+    const REFERENCES_FONT_SIZE = 7;
+    const REFERENCES_CELL_WIDTH = 195;
+    const REFERENCES_CELL_HEIGHT = 2.2;
     
     /**
      * @var float
      */
     private $companyUrlWidth = 0;
     
-    protected function renderEmploymentPosition(
-        $x,
-        $y,
-        $date = '',
-        $positionName = '',
-        $company = '',
-        $address = '',
-        $description = '',
-        $examples = '',
-        $references = '',
-        $contact = '',
-        $companyUrl = ''
-    ) {
-        $this->renderDateAndCompany($x, $y, $date, $company);
-        $this->renderPositionName($x, $y, $positionName);
-        $this->renderReferences($x, $y, $references);
-        $this->renderExamples($x, $y, $examples, $references);
-        $this->renderDescription($x, $y, $description);
-        $this->renderCompanyData($x, $companyUrl, $contact, $address);
-        
-        $this->setCursor();
-    }
-    
     /**
      * Renders list of skills
      * 
      * @param EmploymentPosition[] $positions
      */
-    protected function renderPositions($positions)
+    protected function renderPositions(array $positions = [])
     {
         $x = $this->tcpdf->GetX();
 
@@ -62,14 +55,23 @@ abstract class AbstractEmployment extends AbstractSection
                 continue;
             }
             
-            $positionMargin = ($counter++) > 0 ? self::POSITION_MARGIN : 0;
-            
             $this->renderPosition(
                 $position,
                 $x,
-                $this->tcpdf->GetY() - 1 + $positionMargin
+                $this->tcpdf->GetY() + $this->calculatePositionMargin($counter++)
             );
         }
+    }
+    
+    /**
+     * @param int $counter
+     * @return float
+     */
+    private function calculatePositionMargin($counter = 0)
+    {
+        return ($counter) > 0
+                ? self::NEXT_POSITION_MARGIN + self::FIRST_POSITION_MARGIN
+                : self::FIRST_POSITION_MARGIN;
     }
     
     /**
@@ -79,114 +81,223 @@ abstract class AbstractEmployment extends AbstractSection
      */
     private function renderPosition(EmploymentPosition $position, $x, $y)
     {
-        $this->renderDateAndCompany($x, $y, $position->getDateStart(), $position->getCompany(), $position->getDateEnd());
-        $this->renderPositionName($x, $y, $position->getName());
-        $this->renderReferences($x, $y, $position->getReferences());
-        $this->renderExamples($x, $y, $position->getExamples(), $position->getReferences());
-        $this->renderDescription($x, $y, $position->getDescription());
-        $this->renderCompanyData($x, $position->getCompanyUrl(), $position->getContact(), $position->getAddress());
-        
-        $this->setCursor();
+        $this->renderDateAndCompany($position, $x, $y);
+        $this->renderPositionName($position, $x, $y);
+        $this->renderReferences($position, $x, $y);
+        $this->renderExamples($position, $x, $y);
+        $this->renderDescription($position, $x, $y);
+        $this->renderCompanyData($position, $x);
     }
     
-    private function setCursor()
-    {
-        $this->tcpdf->cursorPositionY = $this->tcpdf->getY() + 4.3;
-    }
-    
-    private function renderDateAndCompany($x, $y, $dateStart, $company, $dateEnd)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderDateAndCompany(EmploymentPosition $position, $x, $y)
     {
         $this->tcpdf->SetXY($x, $y);
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
+        
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_MEDIUM_RED,
+            Color::TEXT_COLOR_MEDIUM_GREEN,
+            Color::TEXT_COLOR_MEDIUM_BLUE
+        );
+        
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::DATE_FONT_SIZE
+        );
         
         $this->tcpdf->Cell(
-            50,
-            6,
-            $this->getDate($dateStart, $dateEnd) . ', ' . $company
+            self::DATE_CELL_WIDTH,
+            self::DATE_CELL_HEIGHT,
+            $this->getDateAndCompany($position)
         );
     }
     
-    private function getDate($dateStart, $dateEnd)
+    /**
+     * @param EmploymentPosition $position
+     * @return string
+     */
+    private function getDateAndCompany(EmploymentPosition $position)
     {
-        return $dateStart
+        return $this->getDate($position) . ', ' . $position->getCompany();
+    }
+    
+    /**
+     * @param EmploymentPosition $position
+     * @return string
+     */
+    private function getDate(EmploymentPosition $position)
+    {
+        $dateEnd = $position->getDateEnd();
+        
+        return $position->getDateStart()
             . ' - '
             . (false === empty($dateEnd) ? $dateEnd : '...present');
     }
     
-    private function renderPositionName($x, $y, $positionName)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderPositionName(EmploymentPosition $position, $x, $y)
     {
-        $this->tcpdf->SetXY($x, $y + 4.5);
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 9);
-        $this->tcpdf->Cell(150, 6, $positionName);
+        $this->tcpdf->SetXY($x, $y + self::NAME_MARGIN);
+        
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_MEDIUM_RED,
+            Color::TEXT_COLOR_MEDIUM_GREEN,
+            Color::TEXT_COLOR_MEDIUM_BLUE
+        );
+        
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahomaBold,
+            Font::NORMAL,
+            self::NAME_FONT_SIZE
+        );
+        
+        $this->tcpdf->Cell(
+            self::NAME_CELL_WIDTH,
+            self::NAME_CELL_HEIGHT,
+            $position->getName()
+        );
     }
     
-    private function renderReferences($x, $y, $references)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderReferences(EmploymentPosition $position, $x, $y)
     {
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
-        
-        if (false === empty($references)) {
-            $this->tcpdf->SetXY($x, $y + 5.5);
-            $this->tcpdf->Cell(195, 2.2, 'References', '', 0, 'R', false, $references);
-            $this->tcpdf->Image(PdfConfig::PATH_IMAGES . 'save.png', $this->tcpdf->GetX(), $y + 5.5, 2.5, 2.5, 'PNG', $references);
+        if ($position->hasReferences()) {
+            $this->tcpdf->SetXY($x, $y + self::REFERENCES_MARGIN);
+            
+            $references = $position->getReferences();
+
+            $this->tcpdf->SetTextColor(
+                Color::TEXT_COLOR_MEDIUM_RED,
+                Color::TEXT_COLOR_MEDIUM_GREEN,
+                Color::TEXT_COLOR_MEDIUM_BLUE
+            );
+
+            $this->tcpdf->SetFont(
+                $this->tcpdf->tahoma,
+                Font::NORMAL,
+                self::REFERENCES_FONT_SIZE
+            );
+
+            $this->tcpdf->Cell(
+                self::REFERENCES_CELL_WIDTH,
+                self::REFERENCES_CELL_HEIGHT,
+                'References',
+                self::BORDER_NONE,
+                self::CELL_LINE_NONE,
+                self::ALIGN_RIGHT,
+                self::NOT_FILLED,
+                $references
+            );
+            
+            $this->tcpdf->Image(
+                PdfConfig::PATH_IMAGES . 'save.png',
+                $this->tcpdf->GetX(),
+                $y + 5.5,
+                2.5,
+                2.5,
+                'PNG',
+                $references
+            );
         }
     }
     
-    private function renderExamples($x, $y, $examples, $references)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderExamples(EmploymentPosition $position, $x, $y)
     {
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
-        
-        if (false === empty($examples)) {
-            $shift = (false === empty($references) ? 17 : 0);
+        if ($position->hasExamples()) {
+            $examples = $position->getExamples();
+
+            $this->tcpdf->SetTextColor(90, 90, 90);
+            $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
+
+            $shift = ($position->hasReferences() ? 17 : 0);
             $this->tcpdf->SetXY($x, $y + 5.5);
             $this->tcpdf->Cell(195 - $shift, 2.2, 'Examples', '', 0, 'R', false, $examples);
             $this->tcpdf->Image(PdfConfig::PATH_IMAGES . 'save.png', $this->tcpdf->GetX(), $y + 5.5, 2.5, 2.5, 'PNG', $examples);
         }
     }
     
-    private function renderDescription($x, $y, $description)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderDescription(EmploymentPosition $position, $x, $y)
     {
         $this->tcpdf->SetXY($x + 1.5, $y + 10);
         $this->tcpdf->SetTextColor(90, 90, 90);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
-        $this->tcpdf->MultiCell(self::SECTION_WIDTH, 4, $description . "\r\n");
+        $this->tcpdf->MultiCell(self::SECTION_WIDTH, 4, $position->getDescription() . "\r\n");
     }
     
-    private function renderCompanyData($x, $companyUrl, $contact, $address)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderCompanyData(EmploymentPosition $position, $x)
     {
-        $this->tcpdf->SetTextColor(150, 150, 150);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 6.5);
-        
-        $y = $this->tcpdf->GetY() + 0.5;
-        
-        $this->renderCompanyUrl($x + 1, $y, $companyUrl);
-        $this->renderContact($x + 1, $y, $contact, $address);
+        if ($position->hasCompanyData()) {
+            $this->tcpdf->SetTextColor(150, 150, 150);
+            $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 6.5);
+
+            $y = $this->tcpdf->GetY() + 0.5;
+
+            $this->renderCompanyUrl($position, $x + 1, $y);
+            $this->renderContact($position, $x + 1, $y);
+            
+            $this->tcpdf->SetXY($x + 1, $y + 2.5);
+        }
     }
     
-    private function renderCompanyUrl($x, $y, $companyUrl)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderCompanyUrl(EmploymentPosition $position, $x, $y)
     {
-        if (false === empty($companyUrl)) {
+        $this->companyUrlWidth = 0;
+        
+        if ($position->hasCompanyUrl()) {
             $this->tcpdf->SetXY($x, $y);
+            $companyUrl = $position->getCompanyUrl();
             $this->companyUrlWidth = $this->tcpdf->GetStringWidth($companyUrl) + 0.3;
             $this->tcpdf->Cell(self::SECTION_WIDTH, 2, $companyUrl, 0, 0, 'R', false, $companyUrl);
         }
     }
     
-    private function renderContact($x, $y, $contact, $address)
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderContact(EmploymentPosition $position, $x, $y)
     {
-        $isContact = false === empty($contact);
-        $isAddress = false === empty($address);
-        
-        if ($isContact || $isAddress) {
+        if ($position->hasContact() || $position->hasAddress()) {
             $this->tcpdf->SetXY($x, $y);
             
             $text = 'Contact: '
-                . $contact
-                . ($isContact && $isAddress ? ', ' : '')
-                . $address
+                . $position->getContact()
+                . ($position->hasContact() && $position->hasAddress() ? ', ' : '')
+                . $position->getAddress()
                 . ($this->companyUrlWidth > 0 ? ', ' : '');
             
             $this->tcpdf->Cell(self::SECTION_WIDTH - $this->companyUrlWidth, 2, $text, 0, 0, 'R');

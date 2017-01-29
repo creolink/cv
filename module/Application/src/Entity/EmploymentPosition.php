@@ -180,6 +180,14 @@ class EmploymentPosition implements EntityInterface
     }
     
     /**
+     * @return bool
+     */
+    public function hasAddress()
+    {
+        return false === empty($this->address);
+    }
+    
+    /**
      * @param string $description
      */
     public function setDescription($description = '')
@@ -212,6 +220,14 @@ class EmploymentPosition implements EntityInterface
     }
     
     /**
+     * @return bool
+     */
+    public function hasExamples()
+    {
+        return false === empty($this->examples);
+    }
+    
+    /**
      * @param string $references
      */
     public function setReferences($references = '')
@@ -225,6 +241,14 @@ class EmploymentPosition implements EntityInterface
     public function getReferences()
     {
         return $this->references;
+    }
+    
+    /**
+     * @return bool
+     */
+    public function hasReferences()
+    {
+        return false === empty($this->references);
     }
     
     /**
@@ -244,6 +268,14 @@ class EmploymentPosition implements EntityInterface
     }
     
     /**
+     * @return bool
+     */
+    public function hasContact()
+    {
+        return false === empty($this->contact);
+    }
+    
+    /**
      * @param string $companyUrl
      */
     public function setCompanyUrl($companyUrl = '')
@@ -257,6 +289,22 @@ class EmploymentPosition implements EntityInterface
     public function getCompanyUrl()
     {
         return $this->companyUrl;
+    }
+    
+    /**
+     * @return bool
+     */
+    public function hasCompanyUrl()
+    {
+        return false === empty($this->companyUrl);
+    }
+    
+    /**
+     * @return bool
+     */
+    public function hasCompanyData()
+    {
+        return $this->hasCompanyUrl() || $this->hasAddress() || $this->hasContact();
     }
     
     /**

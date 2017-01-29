@@ -37,7 +37,7 @@ class AboutMe extends AbstractSection
     }
     
     /**
-     * @return type
+     * @return TcpdfInterface
      */
     private function renderAboutMe()
     {

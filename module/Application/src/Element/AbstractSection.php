@@ -21,7 +21,6 @@ abstract class AbstractSection extends AbstractPageDecorator
     const CELL_HEIGHT = 6;
     const CELL_WIDTH = 0;
     const LINE_MARGIN = 6.2;
-    const CURSOR_MARGIN_X = 1;
     const CURSOR_MARGIN_Y = 7;
     
     /**
