@@ -14,7 +14,48 @@ use Application\Hydrator\Hydrator;
 
 abstract class AbstractSkills extends AbstractSection
 {
-    const NEXT_LINE_POSITION = 3.5;
+    const POSITION_MARGIN = 3.5;
+    const FIRST_LINE_MARGIN = -1;
+    const POSITION_PADDING = 2.3;
+    
+    /**
+     * Renders list of skills
+     * 
+     * @param Position[] $positions
+     */
+    protected function renderPositions($positions)
+    {
+        $x = $this->tcpdf->GetX() + self::POSITION_PADDING;
+        $y = $this->tcpdf->GetY() + self::FIRST_LINE_MARGIN;
+
+        $counter = 0;
+
+        foreach ($positions as $position) {
+            if ($position->isDisabled()) {
+                continue;
+            }
+            
+            $this->renderPosition(
+                $position,
+                $x,
+                $y + (self::POSITION_MARGIN * ($counter++))
+            );
+        }
+    }
+    
+//    /**
+//     * Returns array of skill objects
+//     * 
+//     * @param string $file
+//     * @param string $class
+//     * @return Position[]
+//     */
+//    protected function getPositions($file = '', $class = '')
+//    {
+//        $hydrator = new Hydrator($class, $file);
+//        
+//        return $hydrator->hydrate();
+//    }
     
     /**
      * Renders position with circles on left
@@ -23,7 +64,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    protected function renderPosition(Position $position, $x = 0, $y = 0)
+    private function renderPosition(Position $position, $x = 0, $y = 0)
     {
         $this->renderCircles($x, $y + 3.2, $position->getLevel(), $position->getStrength());
         
@@ -45,115 +86,6 @@ abstract class AbstractSkills extends AbstractSection
             );
         }
     }
-    
-    /**
-     * Renders list of skills
-     * 
-     * @param Position[] $positions
-     */
-    protected function renderPositions($positions)
-    {
-        $x = $this->tcpdf->GetX() + 2.3;
-        $y = $this->tcpdf->GetY() - 1;
-
-        $counter = 0;
-
-        foreach ($positions as $position) {
-            if ($position->isDisabled()) {
-                continue;
-            }
-            
-            $this->renderPosition(
-                $position,
-                $x,
-                $y + (self::NEXT_LINE_POSITION * ($counter++))
-            );
-        }
-    }
-    
-    /**
-     * Returns array of skill objects
-     * 
-     * @param string $file
-     * @param string $class
-     * @return Position[]
-     */
-    protected function getPositions($file = '', $class = '')
-    {
-        $hydrator = new Hydrator($class, $file);
-        
-        return $hydrator->hydrate();
-    }
-    
-//    /**
-//     * Returns array of skill objects
-//     * 
-//     * @param string $file
-//     * @param string $class
-//     * @return Position[]
-//     */
-//    protected function getPositions($file = '', $class = '')
-//    {
-//        $positions = [];
-//
-//        $this->validateClass($class);
-//        
-//        $path = __DIR__.'/../Data/' . $file;
-//        
-//        $this->validateFile($path);
-//        
-//        $config = Factory::fromFile($path);
-//        
-//        foreach ($config['positions'] as $position) {
-//            $positions[] = $this->getHydrator()->hydrate($position, new $class);
-//        }
-//        
-//        return $positions;
-//    }
-//    
-//    /**
-//     * @return Hydrator
-//     */
-//    private function getHydrator()
-//    {
-//        return new Hydrator();
-//    }
-//    
-//    /**
-//     * Validates class name
-//     * 
-//     * @param string $class
-//     * @throws EntityNotFoundException
-//     */
-//    private function validateClass($class)
-//    {
-//        if (false === class_exists($class)) {
-//            throw new EntityNotFoundException(
-//                sprintf(
-//                    "Entity '%s' not found.",
-//                    $class
-//                )
-//            );
-//        }
-//    }
-//    
-//    /**
-//     * Validates file name
-//     * 
-//     * @param string $path
-//     * @throws EntityNotFoundException
-//     */
-//    private function validateFile($path)
-//    {
-//        if (false === file_exists($path)) {
-//            throw new FileNotFoundException(
-//                sprintf(
-//                    "Config file '%s' not found.",
-//                    $path
-//                )
-//            );
-//        }
-//    }
     
     /**
      * Renders filled circle

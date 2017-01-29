@@ -11,6 +11,7 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Color;
 use Application\Config\Font;
 use Application\Entity\SectionTitle;
+use Application\Hydrator\Hydrator;
 
 abstract class AbstractSection extends AbstractPageDecorator
 {
@@ -35,6 +36,18 @@ abstract class AbstractSection extends AbstractPageDecorator
         $this->printTitle($sectionTitle);
         $this->drawLineUnderTitle($sectionTitle);
         $this->setCursor($sectionTitle);
+    }
+    
+    /**
+     * @param string $file
+     * @param string $class
+     * @return EntityInterface[]
+     */
+    protected function getPositions($file = '', $class = '')
+    {
+        $hydrator = new Hydrator($class, $file);
+        
+        return $hydrator->hydrate();
     }
     
     /**

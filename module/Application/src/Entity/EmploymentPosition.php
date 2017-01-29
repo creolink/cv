@@ -80,6 +80,13 @@ class EmploymentPosition implements EntityInterface
      * @var string
      */
     private $companyUrl = '';
+    
+    /**
+     * Part time job flag
+     * 
+     * @var bool
+     */
+    private $partTime = false;
 
     /**
      * Sets position as disabled
@@ -117,7 +124,7 @@ class EmploymentPosition implements EntityInterface
      */
     public function getDateStart()
     {
-        return $this->dateStart;
+        return (new \DateTime($this->dateStart))->format("F Y");
     }
     
     /**
@@ -129,11 +136,15 @@ class EmploymentPosition implements EntityInterface
     }
     
     /**
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getDateEnd()
     {
-        return $this->dateEnd;
+        if (false === empty($this->dateEnd)) {
+            return (new \DateTime($this->dateEnd))->format("F Y");
+        }
+        
+        return null;
     }
     
     /**
@@ -246,6 +257,22 @@ class EmploymentPosition implements EntityInterface
     public function getCompanyUrl()
     {
         return $this->companyUrl;
+    }
+    
+    /**
+     * @param bool $partTime
+     */
+    public function setPartTime($partTime = false)
+    {
+        $this->partTime = $partTime;
+    }
+    
+    /**
+     * @return bool
+     */
+    public function isPartTime()
+    {
+        return $this->partTime;
     }
     
     /**
