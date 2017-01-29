@@ -34,7 +34,8 @@ class Hydrator
     }
     
     /**
-     * H
+     * Hydrates entity
+     * 
      * @return EntityInterface
      */
     public function hydrate()
@@ -65,7 +66,7 @@ class Hydrator
     }
     
     /**
-     * @return Hydrator
+     * @return ZendHydrator
      */
     private function getHydrator()
     {
