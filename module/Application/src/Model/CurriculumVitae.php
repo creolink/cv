@@ -7,14 +7,14 @@
 
 namespace Application\Model;
 
-use TCPDF;
 use TCPDF_FONTS;
+use Application\Fixes\TcpdfFix;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
 use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 
-class CurriculumVitae extends TCPDF implements TcpdfInterface
+class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 {
     public $isDownloaded = false;
     public $selectedLanguage = 'en';

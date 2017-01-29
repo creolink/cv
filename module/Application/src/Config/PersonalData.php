@@ -33,5 +33,7 @@ class PersonalData
     
     const TITLE = 'PHP Developer';
     
+    const GITHUB = 'https://github.com/creolink/cv';
+    
     const MAXIMUS_BIRTH_DATE = 2005;
 }
