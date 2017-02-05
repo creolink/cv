@@ -16,5 +16,9 @@ class Image
     const GOLDEN_LINE = 'goldenline.png';
     const SIGN = 'sign.png';
     
+    const DOWNLOAD = 'save.png';
+    const DOWNLOAD_WIDTH = 3;
+    const DOWNLOAD_HEIGHT = 3;
+    
     const PHOTO_URL = 'http://cv.creolink.pl/i/photo.png';
 }

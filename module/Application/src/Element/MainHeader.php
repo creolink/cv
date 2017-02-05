@@ -79,7 +79,7 @@ class MainHeader extends AbstractPageDecorator
         $this->tcpdf->SetTextColor(150, 150, 150);
         $this->tcpdf->SetXY(110, 31);
         $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
-        $this->tcpdf->Write(6, 'created in PHP with ZF2 & TCPDF', PersonalData::GITHUB);
+        $this->tcpdf->Write(6, 'created in PHP with ZF3 & TCPDF', PersonalData::GITHUB);
     }
     
     private function renderFlags()
@@ -98,8 +98,15 @@ class MainHeader extends AbstractPageDecorator
     
     private function renderDownloadButton()
     {
-        if (!$this->tcpdf->isDownloaded) {
-            $this->tcpdf->renderImage('save.png', 12, 18, 3, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?download&en'); 
+        if (false === $this->tcpdf->isDownloaded) {
+            $this->tcpdf->renderImage(
+                Image::DOWNLOAD,
+                12,
+                18,
+                Image::DOWNLOAD_WIDTH,
+                Image::DOWNLOAD_HEIGHT,
+                'http://'.$_SERVER['SERVER_NAME'].'/?download&en'
+            ); 
         }
     }
     

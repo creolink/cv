@@ -16,7 +16,7 @@ class TcpdfFix extends TCPDF
 {
     /**
      * Overwrites oryginal method
-     * Fix for annotations for urls in Chrome
+     * Fixed annotations for urls in Chrome
      * 
      * {@inheritDoc}
      */
@@ -84,10 +84,7 @@ class TcpdfFix extends TCPDF
 						$annots .= ' /FT /'.$pl['opt']['ft'];
 						$formfield = true;
 					}
-                    // Fix for annotations in Chrome
-                    if (strtolower($pl['opt']['subtype']) !== 'link') {
-                        $annots .= ' /Contents '.$this->_textstring($pl['txt'], $annot_obj_id);
-                    }
+                    $annots .= $this->fixAnnotation($pl, $annot_obj_id, $annots); // Fix for annotations in Chrome
 					$annots .= ' /P '.$this->page_obj_id[$n].' 0 R';
 					$annots .= ' /NM '.$this->_datastring(sprintf('%04u-%04u', $n, $key), $annot_obj_id);
 					$annots .= ' /M '.$this->_datestring($annot_obj_id, $this->doc_modification_timestamp);
@@ -657,4 +654,21 @@ class TcpdfFix extends TCPDF
 			}
 		} // end for each page
 	}
+    
+    /**
+     * Fix for annotations for urls in Chrome
+     * 
+     * @param array $pl
+     * @param int $annot_obj_id
+     * @param string $annots
+     * @return string
+     */
+    private function fixAnnotation(array $pl, $annot_obj_id = 0, $annots = '')
+    {
+        if (strtolower($pl['opt']['subtype']) !== 'link') {
+            $annots .= ' /Contents '.$this->_textstring($pl['txt'], $annot_obj_id);
+        }
+        
+        return $annots;
+    }
 }

@@ -12,6 +12,7 @@ use Application\Config\PdfConfig;
 use Application\Entity\EmploymentPosition;
 use Application\Config\Color;
 use Application\Config\Font;
+use Application\Config\Image;
 
 abstract class AbstractEmployment extends AbstractSection
 {
@@ -30,9 +31,33 @@ abstract class AbstractEmployment extends AbstractSection
     const NAME_CELL_HEIGHT = 6;
     
     const REFERENCES_MARGIN = 5.5;
-    const REFERENCES_FONT_SIZE = 7;
     const REFERENCES_CELL_WIDTH = 195;
     const REFERENCES_CELL_HEIGHT = 2.2;
+    
+    const EXAMPLES_CELL_WIDTH = 195;
+    const EXAMPLES_CELL_HEIGHT = 2.2;
+    const EXAMPLES_CELL_PADDING = 17;
+    const EXAMPLES_CELL_NO_PADDING = 0;
+    const EXAMPLES_MARGIN = 5.5;
+    
+    const DOWNLOAD_ICON_MARGIN = 5.5;
+    const DOWNLOAD_DOCUMENT_FONT_SIZE = 7;
+    
+    const DESCRIPTION_MARGIN_X = 1.5;
+    const DESCRIPTION_MARGIN_Y = 10;
+    const DESCRIPTION_FONT_SIZE = 8;
+    const DESCRIPTION_LINE_HEIGHT = 4;
+    
+    const COMPANY_DATA_FONT_SIZE = 6.5;
+    const COMPANY_DATA_MARGIN_Y = 0.5;
+    const COMPANY_DATA_MARGIN_X = 1;
+    const COMPANY_DATA_PADDING = 2.5;
+    
+    const COMPANY_URL_MARGIN = 0.3;
+    const COMPANY_URL_LINE_HEIGHT = 2;
+    
+    const CONTACT_SEPARATOR = ', ';
+    const CONTACT_CELL_HEIGHT = 2;
     
     /**
      * @var float
@@ -175,21 +200,11 @@ abstract class AbstractEmployment extends AbstractSection
     private function renderReferences(EmploymentPosition $position, $x, $y)
     {
         if ($position->hasReferences()) {
-            $this->tcpdf->SetXY($x, $y + self::REFERENCES_MARGIN);
-            
             $references = $position->getReferences();
-
-            $this->tcpdf->SetTextColor(
-                Color::TEXT_COLOR_MEDIUM_RED,
-                Color::TEXT_COLOR_MEDIUM_GREEN,
-                Color::TEXT_COLOR_MEDIUM_BLUE
-            );
-
-            $this->tcpdf->SetFont(
-                $this->tcpdf->tahoma,
-                Font::NORMAL,
-                self::REFERENCES_FONT_SIZE
-            );
+            
+            $this->setDownloadDocumentText();
+            
+            $this->tcpdf->SetXY($x, $y + self::REFERENCES_MARGIN);
 
             $this->tcpdf->Cell(
                 self::REFERENCES_CELL_WIDTH,
@@ -198,19 +213,11 @@ abstract class AbstractEmployment extends AbstractSection
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT,
-                self::NOT_FILLED,
+                self::TRANSPARENT,
                 $references
             );
             
-            $this->tcpdf->Image(
-                PdfConfig::PATH_IMAGES . 'save.png',
-                $this->tcpdf->GetX(),
-                $y + 5.5,
-                2.5,
-                2.5,
-                'PNG',
-                $references
-            );
+            $this->renderDownloadIcon($y, $references);
         }
     }
     
@@ -224,30 +231,100 @@ abstract class AbstractEmployment extends AbstractSection
         if ($position->hasExamples()) {
             $examples = $position->getExamples();
 
-            $this->tcpdf->SetTextColor(90, 90, 90);
-            $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
+            $this->setDownloadDocumentText();
 
-            $shift = ($position->hasReferences() ? 17 : 0);
-            $this->tcpdf->SetXY($x, $y + 5.5);
-            $this->tcpdf->Cell(195 - $shift, 2.2, 'Examples', '', 0, 'R', false, $examples);
-            $this->tcpdf->Image(PdfConfig::PATH_IMAGES . 'save.png', $this->tcpdf->GetX(), $y + 5.5, 2.5, 2.5, 'PNG', $examples);
+            $margin = $position->hasReferences() ? self::EXAMPLES_CELL_PADDING : self::EXAMPLES_CELL_NO_PADDING;
+            
+            $this->tcpdf->SetXY($x, $y + self::EXAMPLES_MARGIN);
+            
+            $this->tcpdf->Cell(
+                self::EXAMPLES_CELL_WIDTH - $margin,
+                self::EXAMPLES_CELL_HEIGHT,
+                'Examples',
+                self::BORDER_NONE,
+                self::CELL_LINE_NONE,
+                self::ALIGN_RIGHT,
+                self::TRANSPARENT,
+                $examples
+            );
+            
+            $this->renderDownloadIcon($y, $examples);
         }
     }
     
     /**
+     * Sets fonts color and size for downloadable documents
+     *  like references or examples
+     */
+    private function setDownloadDocumentText()
+    {
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_MEDIUM_RED,
+            Color::TEXT_COLOR_MEDIUM_GREEN,
+            Color::TEXT_COLOR_MEDIUM_BLUE
+        );
+
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::DOWNLOAD_DOCUMENT_FONT_SIZE
+        );
+    }
+    
+    /**
+     * Renders save image with proper link
+     * 
+     * @param float $y
+     * @param type $link
+     */
+    private function renderDownloadIcon($y, $link = '')
+    {
+        $this->tcpdf->renderImage(
+            Image::DOWNLOAD,
+            $this->tcpdf->GetX(),
+            $y + self::DOWNLOAD_ICON_MARGIN,
+            Image::DOWNLOAD_WIDTH,
+            Image::DOWNLOAD_HEIGHT,
+            $link
+        );
+    }
+    
+    /**
+     * Renders description of position
+     * 
      * @param EmploymentPosition $position
      * @param float $x
      * @param float $y
      */
     private function renderDescription(EmploymentPosition $position, $x, $y)
     {
-        $this->tcpdf->SetXY($x + 1.5, $y + 10);
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
-        $this->tcpdf->MultiCell(self::SECTION_WIDTH, 4, $position->getDescription() . "\r\n");
+        $this->tcpdf->SetXY(
+            $x + self::DESCRIPTION_MARGIN_X,
+            $y + self::DESCRIPTION_MARGIN_Y
+        );
+        
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_MEDIUM_RED,
+            Color::TEXT_COLOR_MEDIUM_GREEN,
+            Color::TEXT_COLOR_MEDIUM_BLUE
+        );
+        
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::DESCRIPTION_FONT_SIZE
+        );
+        
+        $this->tcpdf->MultiCell(
+            self::SECTION_WIDTH,
+            self::DESCRIPTION_LINE_HEIGHT,
+            $position->getDescription() . self::NEW_LINE
+        );
     }
     
     /**
+     * Renders company data: address, phone, email, person, url, etc..
+     * 
      * @param EmploymentPosition $position
      * @param float $x
      * @param float $y
@@ -255,15 +332,36 @@ abstract class AbstractEmployment extends AbstractSection
     private function renderCompanyData(EmploymentPosition $position, $x)
     {
         if ($position->hasCompanyData()) {
-            $this->tcpdf->SetTextColor(150, 150, 150);
-            $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 6.5);
-
-            $y = $this->tcpdf->GetY() + 0.5;
-
-            $this->renderCompanyUrl($position, $x + 1, $y);
-            $this->renderContact($position, $x + 1, $y);
+            $this->tcpdf->SetTextColor(
+                Color::TEXT_COLOR_LIGHT_RED,
+                Color::TEXT_COLOR_LIGHT_GREEN,
+                Color::TEXT_COLOR_LIGHT_BLUE
+            );
             
-            $this->tcpdf->SetXY($x + 1, $y + 2.5);
+            $this->tcpdf->SetFont(
+                $this->tcpdf->tahoma,
+                Font::NORMAL,
+                self::COMPANY_DATA_FONT_SIZE
+            );
+
+            $y = $this->tcpdf->GetY() + self::COMPANY_DATA_MARGIN_Y;
+
+            $this->renderCompanyUrl(
+                $position,
+                $x + self::COMPANY_DATA_MARGIN_X,
+                $y
+            );
+            
+            $this->renderContact(
+                $position,
+                $x + self::COMPANY_DATA_MARGIN_X,
+                $y
+            );
+            
+            $this->tcpdf->SetXY(
+                $x,
+                $y + self::COMPANY_DATA_PADDING
+            );
         }
     }
     
@@ -278,9 +376,21 @@ abstract class AbstractEmployment extends AbstractSection
         
         if ($position->hasCompanyUrl()) {
             $this->tcpdf->SetXY($x, $y);
+            
             $companyUrl = $position->getCompanyUrl();
-            $this->companyUrlWidth = $this->tcpdf->GetStringWidth($companyUrl) + 0.3;
-            $this->tcpdf->Cell(self::SECTION_WIDTH, 2, $companyUrl, 0, 0, 'R', false, $companyUrl);
+            
+            $this->companyUrlWidth = $this->tcpdf->GetStringWidth($companyUrl) + self::COMPANY_URL_MARGIN;
+            
+            $this->tcpdf->Cell(
+                self::SECTION_WIDTH,
+                self::COMPANY_URL_LINE_HEIGHT,
+                $companyUrl,
+                self::BORDER_NONE,
+                self::CELL_LINE_NONE,
+                self::ALIGN_RIGHT,
+                self::TRANSPARENT,
+                $companyUrl
+            );
         }
     }
     
@@ -293,14 +403,42 @@ abstract class AbstractEmployment extends AbstractSection
     {
         if ($position->hasContact() || $position->hasAddress()) {
             $this->tcpdf->SetXY($x, $y);
-            
-            $text = 'Contact: '
-                . $position->getContact()
-                . ($position->hasContact() && $position->hasAddress() ? ', ' : '')
-                . $position->getAddress()
-                . ($this->companyUrlWidth > 0 ? ', ' : '');
-            
-            $this->tcpdf->Cell(self::SECTION_WIDTH - $this->companyUrlWidth, 2, $text, 0, 0, 'R');
+
+            $this->tcpdf->Cell(
+                self::SECTION_WIDTH - $this->companyUrlWidth,
+                self::CONTACT_CELL_HEIGHT,
+                $this->createContactText($position),
+                self::BORDER_NONE,
+                self::CELL_LINE_NONE,
+                self::ALIGN_RIGHT
+            );
         }
+    }
+    
+    /**
+     * @param EmploymentPosition $position
+     * @return string
+     */
+    private function createContactText(EmploymentPosition $position)
+    {
+        $text = 'Contact: ';
+
+        if ($position->hasContact()) {
+            $text .= $position->getContact();
+        }
+
+        if ($position->hasContact() && $position->hasAddress()) {
+            $text .= self::CONTACT_SEPARATOR;
+        }
+
+        if ($position->hasAddress()) {
+            $text .= $position->getAddress();
+        }
+
+        if ($this->companyUrlWidth > 0) {
+            $text .= self::CONTACT_SEPARATOR;
+        }
+        
+        return $text;
     }
 }
