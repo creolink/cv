@@ -155,48 +155,80 @@ class MainHeader extends AbstractPageDecorator
             strtotime(PersonalData::BIRTH_DATE)
         );
         
-        $posYText = 4;
         $posYBox = 5;
         
         $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
         $this->tcpdf->SetTextColor(50, 50, 50);
         $this->tcpdf->SetFillColor(235,235,235);
         $this->tcpdf->SetLineWidth(0.1);
-        
-        $this->tcpdf->RoundedRect(152, $posYBox, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText);
-        $this->tcpdf->Cell(10, 6, 'Experience', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, $dateHelper->getPassedYears(PersonalData::WORK_START_YEAR) . ' years', 0, 0, 'L', false);
 
-        $this->tcpdf->RoundedRect(152, $posYBox+=5, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText+=5);
-        $this->tcpdf->Cell(10, 6, 'Date of birth', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, $dateHelper->getDate(), 0, 0, 'L', false); //'19 January 1979'
+        $this->renderPersonalDataRow(
+            'Experience',
+            $dateHelper->getPassedYears(PersonalData::WORK_START_YEAR) . ' years',
+            $posYBox
+        );
         
-        $this->tcpdf->RoundedRect(152, $posYBox+=5, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText+=5);
-        $this->tcpdf->Cell(10, 6, 'Nationality', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, PersonalData::NATIONALITY, 0, 0, 'L', false);
+        $this->renderPersonalDataRow(
+            'Date of birth',
+            $dateHelper->getDate(),
+            $posYBox += 5
+        );
         
-        $this->tcpdf->RoundedRect(152, $posYBox+=5, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText+=5);
-        $this->tcpdf->Cell(10, 6, 'Location', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, PersonalData::COUNTRY, 0, 0, 'L', false);
+        $this->renderPersonalDataRow(
+            'Nationality',
+            PersonalData::NATIONALITY,
+            $posYBox += 5
+        );
         
-        $this->tcpdf->RoundedRect(152, $posYBox+=5, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText+=5);
-        $this->tcpdf->Cell(10, 6, 'Address', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText+=1);
-        $this->tcpdf->MultiCell(35, 5, PersonalData::STREET . "\n" . PersonalData::POST_CODE . ' ' . PersonalData::CITY , 0, 'L', false);
+        $this->renderPersonalDataRow(
+            'Location',
+            PersonalData::COUNTRY,
+            $posYBox += 5
+        );
         
-        $this->tcpdf->RoundedRect(152, $posYBox+=8, 22, 4, 1, '1111', 'DF');
-        $this->tcpdf->SetXY(152, $posYText+=7);
-        $this->tcpdf->Cell(10, 6, 'Workplace', 0, 0, 'L', false);
-        $this->tcpdf->SetXY(174, $posYText);
-        $this->tcpdf->Cell(10, 6, PersonalData::WORK_PLACE, 0, 0, 'L', false);
+        $this->renderPersonalDataRow(
+            'Address',
+            PersonalData::STREET . "\n" . PersonalData::POST_CODE . ' ' . PersonalData::CITY,
+            $posYBox += 5
+        );
+        
+        $this->renderPersonalDataRow(
+            'Workplace',
+            PersonalData::WORK_PLACE,
+            $posYBox += 8
+        );
+    }
+    
+    /**
+     * @param string $name
+     * @param string $text
+     * @param float $y
+     */
+    private function renderPersonalDataRow($name, $text, $y)
+    {
+        $this->renderPersonalDataBox($name, $y);
+        $this->renderPersonalDataText($text, $y);
+    }
+    
+    /**
+     * @param string $name
+     * @param float $y
+     */
+    private function renderPersonalDataBox($name, $y)
+    {
+        $this->tcpdf->RoundedRect(152, $y, 22, 4, 1, '1111', 'DF');
+        
+        $this->tcpdf->SetXY(152, $y - 1);
+        $this->tcpdf->Cell(10, 6, $name, 0, 0, 'L', false);
+    }
+    
+    /**
+     * @param string $text
+     * @param float $y
+     */
+    private function renderPersonalDataText($text, $y)
+    {
+        $this->tcpdf->SetXY($this->tcpdf->getX() + 12, $y + 0.2);
+        $this->tcpdf->MultiCell(35, 6, $text , 0, 'L', false);
     }
 }
