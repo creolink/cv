@@ -27,6 +27,9 @@ class Expectations extends AbstractSection
         return $this->renderExpectations();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderExpectations()
     {
         $x = self::CURSOR_X;

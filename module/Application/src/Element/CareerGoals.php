@@ -43,6 +43,9 @@ class CareerGoals extends AbstractSection
         return $this->renderCareerGoals();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderCareerGoals()
     {
         $this->renderTitle(

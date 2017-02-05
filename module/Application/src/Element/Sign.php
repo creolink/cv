@@ -24,6 +24,9 @@ class Sign extends AbstractPageDecorator
         return $this->renderSign();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderSign()
     {
         $this->tcpdf->SetDrawColor(200, 200, 200);

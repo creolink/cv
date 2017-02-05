@@ -42,6 +42,9 @@ class QRCode extends AbstractPageDecorator
         return $this->renderQRCode();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderQRCode()
     {
         $this->tcpdf->write2DBarcode(

@@ -35,6 +35,9 @@ class Hobby extends AbstractSection
         return $this->renderHobby();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderHobby()
     {
         $this->renderTitle(

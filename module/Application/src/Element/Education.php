@@ -35,6 +35,9 @@ class Education extends AbstractSection
         return $this->renderEducation();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderEducation()
     {
         $this->renderTitle(
