@@ -10,11 +10,12 @@ namespace Application\Element;
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Position;
+use Application\Hydrator\Hydrator;
 
 class PersonalTraits extends AbstractSkills
 {
     const CURSOR_X = 140;
-    const CURSOR_Y = 98;
+    const CURSOR_Y = 98.6;
     
     const SECTION_WIDTH = 65;
     
@@ -30,6 +31,9 @@ class PersonalTraits extends AbstractSkills
         return $this->renderPersonalSkills();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderPersonalSkills()
     {
         $this->renderTitle(
@@ -37,9 +41,9 @@ class PersonalTraits extends AbstractSkills
         );
 
         $this->renderPositions(
-            $this->getPositions(
-                'personal_traits.yml',
-                Position::class
+            new Hydrator(
+                Position::class,
+                'personal_traits.yml'
             )
         );
         

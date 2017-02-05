@@ -38,18 +38,6 @@ abstract class AbstractSection extends AbstractPageDecorator
     }
     
     /**
-     * @param string $file
-     * @param string $class
-     * @return EntityInterface[]
-     */
-    protected function getPositions($file = '', $class = '')
-    {
-        $hydrator = new Hydrator($class, $file);
-        
-        return $hydrator->hydrate();
-    }
-    
-    /**
      * Sets colors for title
      */
     private function setColors()

@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Position;
+use Application\Hydrator\Hydrator;
 
 class Languages extends AbstractSkills
 {
@@ -30,6 +31,9 @@ class Languages extends AbstractSkills
         return $this->renderLanguages();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderLanguages()
     {
         $this->renderTitle(
@@ -37,9 +41,9 @@ class Languages extends AbstractSkills
         );
 
         $this->renderPositions(
-            $this->getPositions(
-                'languages.yml',
-                Position::class
+            new Hydrator(
+                Position::class,
+                'languages.yml'
             )
         );
         

@@ -10,61 +10,128 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Entity\Position;
 use Application\Entity\Skill;
+use Application\Config\Font;
+use Application\Config\Color;
+use Application\Hydrator\Hydrator;
 
 abstract class AbstractSkills extends AbstractSection
 {
-    const POSITION_MARGIN = 3.5;
     const FIRST_LINE_MARGIN = -1;
+    
+    const POSITION_NEXT_LINE = 3.6;
     const POSITION_PADDING = 2.3;
+    const POSITION_MARGIN = 1.3;
+    const POSITION_FONT_SIZE = 8;
+    const POSITION_CELL_HEIGHT = 6;
+    
+    const CIRCLE_CENTER_POINT_MARGIN = 3.2;
+    const CIRCLE_RADIUS = 1.3;
+    const CIRCLE_MARGIN = 3.5;
+    const CIRCLE_LINE_WIDTH = 0.1;
+    const CIRCLE_LINE_DASH = '0';
+    const CIRCLE_STYLE = '';
+    const CIRCLE_ANGLE_START = 0;
+    const CIRCLE_ANGLE_END = 360;
+    
+    const FILLED_CIRCLE_RADIUS = 0.9;
+    const FILLED_CIRCLE_STYLE = 'F';
+    
+    const EXPERIENCE_FONT_SIZE = 5;
+    const EXPERIENCE_MARGIN_Y = -0.15;
+    const EXPERIENCE_MARGIN_X = 1;
     
     /**
      * Renders list of skills
      * 
-     * @param Position[] $positions
+     * @param Hydrator $hydrator
      */
-    protected function renderPositions($positions)
+    protected function renderPositions(Hydrator $hydrator)
     {
         $x = $this->tcpdf->GetX() + self::POSITION_PADDING;
         $y = $this->tcpdf->GetY() + self::FIRST_LINE_MARGIN;
 
         $counter = 0;
 
-        foreach ($positions as $position) {
+        foreach ($hydrator->getList() as $position) {
             if ($position->isDisabled()) {
                 continue;
             }
             
-            $this->renderPosition(
+            $this->renderCircles(
                 $position,
                 $x,
-                $y + (self::POSITION_MARGIN * ($counter++))
+                $this->getCircleCenter($y, $counter++)
+            );
+            
+            $this->renderPosition(
+                $position
             );
         }
+    }
+    
+    /**
+     * @param float $y
+     * @param int $counter
+     * @return float
+     */
+    private function getCircleCenter($y, $counter)
+    {
+        return $y
+            + (self::POSITION_NEXT_LINE * $counter)
+            + self::CIRCLE_CENTER_POINT_MARGIN;
     }
     
     /**
      * Renders position with circles on left
      * 
      * @param Position|Skill $position
-     * @param float $x
-     * @param float $y
      */
-    private function renderPosition(Position $position, $x = 0, $y = 0)
+    private function renderPosition(Position $position)
     {
-        $this->renderCircles($x, $y + 3.2, $position->getLevel(), $position->getStrength());
+        $this->tcpdf->SetXY(
+            $this->tcpdf->GetX() + self::POSITION_MARGIN,
+            $this->tcpdf->getY()
+        );
         
-        $this->tcpdf->SetXY($this->tcpdf->GetX() + 1.3, $y);
-        $this->tcpdf->SetFont($this->tcpdf->verdana, '', 8);
+        $this->tcpdf->SetFont(
+            $this->tcpdf->verdana,
+            Font::NORMAL,
+            self::POSITION_FONT_SIZE
+        );
+
+        $this->tcpdf->Cell(
+            $this->tcpdf->GetStringWidth(
+                $position->getName()
+            ),
+            self::POSITION_CELL_HEIGHT,
+            $position->getName()
+        );
         
-        $textWidth = $this->tcpdf->GetStringWidth($position->getName());
-        $this->tcpdf->Cell($textWidth , 6, $position->getName());
-        
+        $this->renderExperienceTime($position);
+    }
+    
+    /**
+     * @param Position $position
+     */
+    private function renderExperienceTime(Position $position)
+    {
         if ($position instanceof Skill) {
-            $this->tcpdf->SetXY($this->tcpdf->GetX() + 1, $y);
-            $this->tcpdf->SetFont($this->tcpdf->verdanaItalic, '', 5);
+            $this->tcpdf->SetXY(
+                $this->tcpdf->GetX() + self::EXPERIENCE_MARGIN_X,
+                $this->tcpdf->getY() + self::EXPERIENCE_MARGIN_Y
+            );
+            
+            $this->tcpdf->SetFont(
+                $this->tcpdf->verdanaItalic,
+                Font::NORMAL,
+                self::EXPERIENCE_FONT_SIZE
+            );
+            
             $this->tcpdf->Cell(
-                0,
-                6,
+                $this->tcpdf->GetStringWidth(
+                    $position->getExperience()
+                ),
+                self::POSITION_CELL_HEIGHT,
                 $this->createExperienceText(
                     $position->getExperience()
                 )
@@ -75,51 +142,93 @@ abstract class AbstractSkills extends AbstractSection
     /**
      * Renders filled circle
      * 
+     * @param Position $position
      * @param float $x
      * @param float $y
-     * @param int $value
      */
-    private function renderCircles($x, $y, $value, $strength = 4)
+    private function renderCircles(Position $position, $x, $y)
     {
-        for ($counter = 0; $counter < $strength; $counter++) {
-            $this->renderCircle($x + (3.5 * $counter), $y);
+        for ($counter = 0; $counter < $position->getStrength(); $counter++) {
+            $this->renderCircle(
+                $x + (self::CIRCLE_MARGIN * $counter),
+                $y
+            );
             
-            if ($value > $counter) {
-                $this->renderCircle($x + (3.5 * $counter), $y, true);
+            if ($position->getLevel() > $counter) {
+                $this->renderFilledCircle(
+                    $x + (self::CIRCLE_MARGIN * $counter),
+                    $y
+                );
             }
         }
+        
+        $this->tcpdf->setY(
+            $y - self::CIRCLE_CENTER_POINT_MARGIN,
+            false
+        );
     }
     
     /**
-     * Renders circle / filled circle
+     * Renders circle
      * 
      * @param float $x
      * @param float $y
-     * @param bool $filled
      */
-    private function renderCircle($x, $y, $filled = false)
+    private function renderCircle($x, $y)
     {
-        $radius = 1.3;
-        $style = '';
-        $lineStyle = array(
-            'width' => 0.1,
-            'dash' => '0',
-            'color' => array(
-                150, 150, 150
-            )
+        $this->tcpdf->Circle(
+            $x,
+            $y,
+            self::CIRCLE_RADIUS,
+            self::CIRCLE_ANGLE_START,
+            self::CIRCLE_ANGLE_END,
+            self::CIRCLE_STYLE,
+            $this->getCircleLineStyle()
         );
         
-        $fillColor = array();
-        
-        if (true === $filled) {
-            $radius = 0.9;
-            $fillColor = array(100, 100, 100);
-            $style = 'F';
-        }
-        
-        $this->tcpdf->circle($x, $y, $radius, 0, 360, $style, $lineStyle, $fillColor);
-        
         $this->tcpdf->SetXY($x, $y);
+    }
+    
+    /**
+     * Renders filled circle
+     * 
+     * @param float $x
+     * @param float $y
+     */
+    private function renderFilledCircle($x, $y)
+    {
+        $this->tcpdf->Circle(
+            $x,
+            $y,
+            self::FILLED_CIRCLE_RADIUS,
+            self::CIRCLE_ANGLE_START,
+            self::CIRCLE_ANGLE_END,
+            self::FILLED_CIRCLE_STYLE,
+            $this->getCircleLineStyle(),
+            [
+                Color::FILL_COLOR_DARK_RED,
+                Color::FILL_COLOR_DARK_GREEN,
+                Color::FILL_COLOR_DARK_BLUE
+            ]
+        );
+    }
+    
+    /**
+     * Returns line style for circle
+     * 
+     * @return array
+     */
+    private function getCircleLineStyle()
+    {
+        return [
+            'width' => self::CIRCLE_LINE_WIDTH,
+            'dash' => self::CIRCLE_LINE_DASH,
+            'color' => [
+                Color::DRAW_COLOR_DARK_RED,
+                Color::DRAW_COLOR_DARK_GREEN,
+                Color::DRAW_COLOR_DARK_BLUE
+            ]
+        ];
     }
     
     /**
@@ -130,10 +239,8 @@ abstract class AbstractSkills extends AbstractSection
      */
     private function createExperienceText($years = 1)
     {
-        $text = '('
-            . ($years < 1 ? ceil(12 * $years) . 'm' : $years . 'y')
-            . ')';
+        $time = $years < 1 ? ceil(12 * $years) . 'm' : $years . 'y';
         
-        return $text;
+        return '(' . $time . ')';
     }
 }

@@ -12,6 +12,7 @@ use Application\Entity\EmploymentPosition;
 use Application\Config\Color;
 use Application\Config\Font;
 use Application\Config\Image;
+use Application\Hydrator\Hydrator;
 
 abstract class AbstractEmployment extends AbstractSection
 {
@@ -23,6 +24,7 @@ abstract class AbstractEmployment extends AbstractSection
     const DATE_FONT_SIZE = 8;
     const DATE_CELL_WIDTH = 0;
     const DATE_CELL_HEIGHT = 6;
+    const DATE_SEPARATOR = ' - ';
     
     const NAME_MARGIN = 4.5;
     const NAME_FONT_SIZE = 9;
@@ -58,6 +60,8 @@ abstract class AbstractEmployment extends AbstractSection
     const CONTACT_SEPARATOR = ', ';
     const CONTACT_CELL_HEIGHT = 2;
     
+    const DATE_AND_COMPANY_SEPARATOR = ', ';
+    
     /**
      * @var float
      */
@@ -66,15 +70,15 @@ abstract class AbstractEmployment extends AbstractSection
     /**
      * Renders list of skills
      * 
-     * @param EmploymentPosition[] $positions
+     * @param Hydrator $hydrator
      */
-    protected function renderPositions(array $positions = [])
+    protected function renderPositions(Hydrator $hydrator)
     {
         $x = $this->tcpdf->GetX();
 
         $counter = 0;
 
-        foreach ($positions as $position) {
+        foreach ($hydrator->getList() as $position) {
             if ($position->isDisabled()) {
                 continue;
             }
@@ -147,7 +151,7 @@ abstract class AbstractEmployment extends AbstractSection
      */
     private function getDateAndCompany(EmploymentPosition $position)
     {
-        return $this->getDate($position) . ', ' . $position->getCompany();
+        return $this->getDate($position) . self::DATE_AND_COMPANY_SEPARATOR . $position->getCompany();
     }
     
     /**
@@ -159,7 +163,7 @@ abstract class AbstractEmployment extends AbstractSection
         $dateEnd = $position->getDateEnd();
         
         return $position->getDateStart()
-            . ' - '
+            . self::DATE_SEPARATOR
             . (false === empty($dateEnd) ? $dateEnd : '...present');
     }
     

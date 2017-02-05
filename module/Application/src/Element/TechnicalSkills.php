@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Skill;
+use Application\Hydrator\Hydrator;
 
 class TechnicalSkills extends AbstractSkills
 {
@@ -40,9 +41,9 @@ class TechnicalSkills extends AbstractSkills
         );
         
         $this->renderPositions(
-            $this->getPositions(
-                'technical_skills.yml',
-                Skill::class
+            new Hydrator(
+                Skill::class,
+                'technical_skills.yml'
             )
         );
 

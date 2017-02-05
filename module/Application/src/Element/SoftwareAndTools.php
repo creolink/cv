@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Skill;
+use Application\Hydrator\Hydrator;
 
 class SoftwareAndTools extends AbstractSkills
 {
@@ -30,6 +31,9 @@ class SoftwareAndTools extends AbstractSkills
         return $this->renderKnownTools();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderKnownTools()
     {
         $this->renderTitle(
@@ -37,9 +41,9 @@ class SoftwareAndTools extends AbstractSkills
         );
         
         $this->renderPositions(
-            $this->getPositions(
-                'software.yml',
-                Skill::class
+            new Hydrator(
+                Skill::class,
+                'software.yml'
             )
         );
         

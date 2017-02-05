@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractEmployment;
 use Application\Entity\SectionTitle;
 use Application\Entity\EmploymentPosition;
+use Application\Hydrator\Hydrator;
 
 class CommisionedJobs extends AbstractEmployment
 {
@@ -28,6 +29,9 @@ class CommisionedJobs extends AbstractEmployment
         return $this->renderCommisionedJobs();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderCommisionedJobs()
     {
         $this->renderTitle(
@@ -35,9 +39,9 @@ class CommisionedJobs extends AbstractEmployment
         );
         
         $this->renderPositions(
-            $this->getPositions(
-                'commisions.yml',
-                EmploymentPosition::class
+            new Hydrator(
+                EmploymentPosition::class,
+                'commisions.yml'
             )
         );
 

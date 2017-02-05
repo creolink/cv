@@ -9,6 +9,7 @@ namespace Application\Element;
 
 use Application\Element\AbstractSection;
 use Application\Entity\SectionTitle;
+use Application\Config\Font;
 
 class Education extends AbstractSection
 {
@@ -17,6 +18,11 @@ class Education extends AbstractSection
     
     const SECTION_WIDTH = 65;
     
+    const CELL_HEIGHT = 4;
+    const CELL_PADDING = 1;
+    
+    const FONT_SIZE = 7;
+    
     /**
      * {@inheritDoc}
      */
@@ -24,28 +30,52 @@ class Education extends AbstractSection
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setSolidLine();
+        
         return $this->renderEducation();
     }
     
     private function renderEducation()
     {
-        $x = self::CURSOR_X;
-        $y = self::CURSOR_Y;
-        
         $this->renderTitle(
             $this->createSectionTitle()
         );
+        
+        $this->renderContent();
 
-        $text = "2013 - 2015 intensive English & German course," . "\r\n"
+        return $this->tcpdf;
+    }
+    
+    /**
+     * Renders content of element
+     */
+    private function renderContent()
+    {
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::FONT_SIZE
+        );
+        
+        $this->tcpdf->MultiCell(
+            self::SECTION_WIDTH - self::CELL_PADDING,
+            self::CELL_HEIGHT,
+            $this->getContent(),
+            self::BORDER_NONE,
+            self::ALIGN_LEFT
+        );
+    }
+    
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return "2013 - 2015 intensive English & German course," . "\r\n"
             ."2012 professional Google Analytics training," . "\r\n"
             ."since 2012 driving license category B," . "\r\n"
-            ."further past: studies at the Lodz University of Technology (computer science, 3 years)";
-        
-        $this->tcpdf->SetXY($this->tcpdf->cursorPositionX, $this->tcpdf->cursorPositionY + 1);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
-        $this->tcpdf->MultiCell(63, 4, $text . "\r\n", 0, 'L', false);
-        
-        return $this->tcpdf;
+            ."further past: studies at the Lodz University of Technology (computer science, 3 years)"
+            . self::NEW_LINE;
     }
     
     /**

@@ -9,6 +9,7 @@ namespace Application\Element;
 
 use Application\Element\AbstractSection;
 use Application\Entity\SectionTitle;
+use Application\Config\Font;
 
 class Hobby extends AbstractSection
 {
@@ -17,6 +18,11 @@ class Hobby extends AbstractSection
     
     const SECTION_WIDTH = 65;
     
+    const CELL_HEIGHT = 4;
+    const CELL_PADDING = 1;
+    
+    const FONT_SIZE = 7;
+    
     /**
      * {@inheritDoc}
      */
@@ -24,25 +30,49 @@ class Hobby extends AbstractSection
     {
         $this->tcpdf = $this->tcpdf->addElements();
         
+        $this->setSolidLine();
+        
         return $this->renderHobby();
     }
     
     private function renderHobby()
     {
-        $x = self::CURSOR_X;
-        $y = self::CURSOR_Y;
-        
         $this->renderTitle(
             $this->createSectionTitle()
         );
         
-        $text = 'movies and tv series, board games, football & table tennis, stock exchange';
-        
-        $this->tcpdf->SetXY($this->tcpdf->cursorPositionX, $this->tcpdf->cursorPositionY + 1);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
-        $this->tcpdf->MultiCell(63, 4, $text . "\r\n", 0, 'L', false);
+        $this->renderContent();
         
         return $this->tcpdf;
+    }
+    
+    /**
+     * Renders content of element
+     */
+    private function renderContent()
+    {
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::FONT_SIZE
+        );
+        
+        $this->tcpdf->MultiCell(
+            self::SECTION_WIDTH - self::CELL_PADDING,
+            self::CELL_HEIGHT,
+            $this->getContent(),
+            self::BORDER_NONE,
+            self::ALIGN_LEFT
+        );
+    }
+    
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return "movies and tv series, board games, football & table tennis, stock exchange"
+            . self::NEW_LINE;
     }
     
     /**

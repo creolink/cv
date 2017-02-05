@@ -34,21 +34,32 @@ class Hydrator
     }
     
     /**
-     * Hydrates entity
+     * Returns list of entities
      * 
-     * @return EntityInterface
+     * @return EntityInterface[]
      */
-    public function hydrate()
+    public function getList()
     {
-        $positions = [];
+        $list = [];
 
         $this->validateClass();
         
-        foreach ($this->getFileData() as $position) {
-            $positions[] = $this->getHydrator()->hydrate($position, new $this->entity);
+        foreach ($this->getFileData() as $record) {
+            $list[] = $this->getEntity($record);
         }
         
-        return $positions;
+        return $list;
+    }
+    
+    /**
+     * Hydrates entity
+     * 
+     * @param array $data
+     * @return EntityInterface
+     */
+    public function getEntity($data)
+    {
+        return $this->getHydrator()->hydrate($data, new $this->entity);
     }
     
     /**

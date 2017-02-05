@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractEmployment;
 use Application\Entity\SectionTitle;
 use Application\Entity\EmploymentPosition;
+use Application\Hydrator\Hydrator;
 
 class EmploymentHistory extends AbstractEmployment
 {
@@ -30,6 +31,9 @@ class EmploymentHistory extends AbstractEmployment
         return $this->renderEmploymentHistory();
     }
     
+    /**
+     * @return TcpdfInterface
+     */
     private function renderEmploymentHistory()
     {
         $this->renderTitle(
@@ -37,9 +41,9 @@ class EmploymentHistory extends AbstractEmployment
         );
         
         $this->renderPositions(
-            $this->getPositions(
-                'contracts.yml',
-                EmploymentPosition::class
+            new Hydrator(
+                EmploymentPosition::class,
+                'contracts.yml'
             )
         );
         
