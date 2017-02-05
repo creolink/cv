@@ -11,7 +11,6 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Color;
 use Application\Config\Font;
 use Application\Entity\SectionTitle;
-use Application\Hydrator\Hydrator;
 
 abstract class AbstractSection extends AbstractPageDecorator
 {
@@ -108,9 +107,6 @@ abstract class AbstractSection extends AbstractPageDecorator
      */
     private function setCursor(SectionTitle $sectionTitle)
     {
-        $this->tcpdf->cursorPositionX = $sectionTitle->getCursorX();
-        $this->tcpdf->cursorPositionY = $sectionTitle->getCursorY() + 6;
-        
         $this->tcpdf->SetXY(
             $sectionTitle->getCursorX(),
             $sectionTitle->getCursorY() + self::CURSOR_MARGIN_Y

@@ -17,12 +17,19 @@ class Expectations extends AbstractSection
     
     const SECTION_WIDTH = 65;
     
+    const CELL_HEIGHT = 4;
+    const CELL_PADDING = 1;
+    
+    const FONT_SIZE = 7;
+    
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
+        
+        $this->setSolidLine();
         
         return $this->renderExpectations();
     }
@@ -32,20 +39,42 @@ class Expectations extends AbstractSection
      */
     private function renderExpectations()
     {
-        $x = self::CURSOR_X;
-        $y = self::CURSOR_Y;
-        
         $this->renderTitle(
             $this->createSectionTitle()
         );
         
-        $text = 'Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly.';
-        
-        $this->tcpdf->SetXY($this->tcpdf->cursorPositionX, $this->tcpdf->cursorPositionY + 1);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 7);
-        $this->tcpdf->MultiCell(63, 4, $text . "\r\n", 0, 'L', false);
-        
+        $this->renderContent();
+
         return $this->tcpdf;
+    }
+    
+    /**
+     * Renders content of element
+     */
+    private function renderContent()
+    {
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::FONT_SIZE
+        );
+        
+        $this->tcpdf->MultiCell(
+            self::SECTION_WIDTH - self::CELL_PADDING,
+            self::CELL_HEIGHT,
+            $this->getContent(),
+            self::BORDER_NONE,
+            self::ALIGN_LEFT
+        );
+    }
+    
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+            . self::NEW_LINE;
     }
     
     /**
