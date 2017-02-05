@@ -8,7 +8,6 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSection;
-use Application\Config\PdfConfig;
 use Application\Entity\EmploymentPosition;
 use Application\Config\Color;
 use Application\Config\Font;
