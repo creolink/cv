@@ -12,9 +12,47 @@ use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
+use Application\Config\Color;
+use Application\Config\Font;
+use Application\Element\MainHeaderFullName;
+use Application\Element\MainHeaderSpeciality;
 
 class MainHeader extends AbstractPageDecorator
 {
+    const CURSOR_X = 0;
+    const CURSOR_Y = 0;
+    
+    const LINE_WIDTH = 0.1;
+    
+    const BACKGROUND_WIDTH = 210;
+    const BACKGROUND_HEIGHT = 45;
+    const BACKGROUND_STYLE = 'F';
+    
+    const FLAGS_CURSOR_X = 11;
+    const FLAGS_CURSOR_Y = 6;
+    
+    const FLAG_EN_MARGIN = 0;
+    const FLAG_DE_MARGIN = 4;
+    const FLAG_PL_MARGIN = 8;
+    
+    const DOWNLOAD_CURSOR_X = 12;
+    const DOWNLOAD_CURSOR_Y = 18;
+    
+    const CONTACT_ICON_CURSOR_Y = 40;
+    const CONTACT_ICON_PHONE_CURSOR_X = 58;
+    const CONTACT_ICON_EMAIL_CURSOR_X = 86;
+    const CONTACT_ICON_SKYPE_CURSOR_X = 123;
+    const CONTACT_ICON_LINKED_IN_CURSOR_X = 152;
+    const CONTACT_ICON_GOLDEN_LINE_CURSOR_X = 177;
+    
+    const CONTACT_LINE_UP_CURSOR_X_START = 0;
+    const CONTACT_LINE_UP_CURSOR_X_END = 210;
+    const CONTACT_LINE_UP_CURSOR_Y = 39;
+    
+    const CONTACT_LINE_DOWN_CURSOR_X_START = 0;
+    const CONTACT_LINE_DOWN_CURSOR_X_END = 210;
+    const CONTACT_LINE_DOWN_CURSOR_Y = 45;
+    
     /**
      * {@inheritDoc}
      */
@@ -33,9 +71,7 @@ class MainHeader extends AbstractPageDecorator
         $this->configure();
         
         $this->renderBackground();
-        $this->renderName();
-        $this->renderSpeciality();
-        $this->renderCreationInfo();
+        $this->renderTitle();
         $this->renderFlags();
         $this->renderDownloadButton();
         $this->renderContactData();
@@ -45,64 +81,122 @@ class MainHeader extends AbstractPageDecorator
         return $this->tcpdf;
     }
     
+    /**
+     * Configures header element
+     */
     private function configure()
     {
-        $this->tcpdf->SetXY(0, 0);
-        $this->tcpdf->SetLineWidth(0.1);
+        $this->tcpdf->SetXY(
+            self::CURSOR_X,
+            self::CURSOR_Y
+        );
+        
+        $this->tcpdf->SetLineWidth(
+            self::LINE_WIDTH
+        );
+        
+        $this->tcpdf->SetDrawColor(
+            Color::DRAW_COLOR_BRIGHT_RED,
+            Color::DRAW_COLOR_BRIGHT_GREEN,
+            Color::DRAW_COLOR_BRIGHT_BLUE
+        );
     }
     
+    /**
+     * Renders header background
+     */
     private function renderBackground()
     {
-        $this->tcpdf->SetFillColor(245,246,244);
-        $this->tcpdf->Rect(0, 0, 210, 45, 'F');
-    }
-    
-    private function renderName()
-    {
-        $this->tcpdf->SetTextColor(50, 50, 50);
+        $this->tcpdf->SetFillColor(
+            Color::FILL_COLOR_BRIGHT_RED,
+            Color::FILL_COLOR_BRIGHT_GREEN,
+            Color::FILL_COLOR_BRIGHT_BLUE
+        );
         
-        $this->tcpdf->SetFont($this->tcpdf->tahomaBold, '', 30);
-        $this->tcpdf->Text(85, 5, 'JAKUB');
-        $this->tcpdf->Text(72, 16, 'ŁUCZYŃSKI');
+        $this->tcpdf->Rect(
+            self::CURSOR_X,
+            self::CURSOR_Y,
+            self::BACKGROUND_WIDTH,
+            self::BACKGROUND_HEIGHT,
+            self::BACKGROUND_STYLE
+        );
     }
     
-    private function renderSpeciality()
+    /**
+     * Renders CV title
+     */
+    private function renderTitle()
     {
-        $this->tcpdf->SetTextColor(90, 90, 90);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, '', 8);
+        $mainHeaderFullName = new MainHeaderFullName($this->tcpdf);
+        $mainHeaderFullName->renderTitle();
         
-        $this->tcpdf->Text(66, 29, 'WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER');
+        $mainHeaderSpeciality = new MainHeaderSpeciality($this->tcpdf);
+        $mainHeaderSpeciality->renderSpeciality();
+        
+        $MainHeaderTools = new MainHeaderTools($this->tcpdf);
+        $MainHeaderTools->renderTools();
     }
-    
-    private function renderCreationInfo()
-    {
-        $this->tcpdf->SetTextColor(150, 150, 150);
-        $this->tcpdf->SetXY(109, 31);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 5.5);
-        $this->tcpdf->Write(6, 'created in PHP7 with ZF3 & TCPDF', PersonalData::GITHUB);
-    }
-    
+
+    /**
+     * Renders flags / cv languages & urls
+     */
     private function renderFlags()
     {
-        $this->tcpdf->SetDrawColor(200, 200, 200);
+        $this->renderFlag(
+            Image::FLAG_EN,
+            'en',
+            self::FLAG_EN_MARGIN
+        );
         
-        $this->tcpdf->Rect(11, 6, 5, 3);
-        $this->tcpdf->renderImage('en.png', 11, 6, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?en');
+        $this->renderFlag(
+            Image::FLAG_DE,
+            'de',
+            self::FLAG_DE_MARGIN
+        );
         
-        $this->tcpdf->Rect(11, 10, 5, 3);
-        $this->tcpdf->renderImage('de.png', 11, 10, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?en');
-        
-        $this->tcpdf->Rect(11, 14, 5, 3);
-        $this->tcpdf->renderImage('pl.png', 11, 14, 5, 3, 'http://'.$_SERVER['SERVER_NAME'].'/?pl');
+        $this->renderFlag(
+            Image::FLAG_PL,
+            'pl',
+            self::FLAG_PL_MARGIN
+        );
     }
     
+    /**
+     * Renders flag with url
+     * 
+     * @param string $flag
+     * @param string $language
+     * @param float $margin
+     */
+    private function renderFlag($flag = '', $language = '', $margin = 0)
+    {
+        $this->tcpdf->renderImage(
+            $flag,
+            self::FLAGS_CURSOR_X,
+            self::FLAGS_CURSOR_Y + $margin,
+            Image::FLAG_WIDTH,
+            Image::FLAG_HEIGHT,
+            'http://'.$_SERVER['SERVER_NAME'].'/?' . $language
+        );
+        
+        $this->tcpdf->Rect(
+            self::FLAGS_CURSOR_X,
+            self::FLAGS_CURSOR_Y + $margin,
+            Image::FLAG_WIDTH,
+            Image::FLAG_HEIGHT
+        );
+    }
+    
+    /**
+     * Renders download button
+     */
     private function renderDownloadButton()
     {
         if (false === $this->tcpdf->isDownloaded) {
             $this->tcpdf->renderImage(
                 Image::DOWNLOAD,
-                12,
-                18,
+                self::DOWNLOAD_CURSOR_X,
+                self::DOWNLOAD_CURSOR_Y,
                 Image::DOWNLOAD_WIDTH,
                 Image::DOWNLOAD_HEIGHT,
                 'http://'.$_SERVER['SERVER_NAME'].'/?download&en'
@@ -112,16 +206,65 @@ class MainHeader extends AbstractPageDecorator
     
     private function renderContactData()
     {
-        $this->tcpdf->SetTextColor(50, 50, 50);
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_DARK_RED,
+            Color::TEXT_COLOR_DARK_GREEN,
+            Color::TEXT_COLOR_DARK_BLUE
+        );
         
-        $this->tcpdf->renderIcon(58, 40, Image::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL);
-        $this->tcpdf->renderIcon(86, 40, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL);
-        $this->tcpdf->renderIcon(123, 40, Image::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL);
-        $this->tcpdf->renderIcon(152, 40, Image::LINKED_IN, PersonalData::LINKED_IN, PersonalData::LINKED_IN_URL);
-        $this->tcpdf->renderIcon(177, 40, Image::GOLDEN_LINE, PersonalData::GOLDEN_LINE, PersonalData::GOLDEN_LINE_URL);
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_PHONE_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::PHONE,
+            PersonalData::PHONE,
+            PersonalData::PHONE_URL
+        );
         
-        $this->tcpdf->Line(0, 39, 210, 39);
-        $this->tcpdf->Line(0, 45, 210, 45);
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_EMAIL_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::EMAIL,
+            PersonalData::EMAIL,
+            PersonalData::EMAIL_URL
+        );
+        
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_SKYPE_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::SKYPE,
+            PersonalData::SKYPE,
+            PersonalData::SKYPE_URL
+        );
+        
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_LINKED_IN_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::LINKED_IN,
+            PersonalData::LINKED_IN,
+            PersonalData::LINKED_IN_URL
+        );
+        
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_GOLDEN_LINE_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::GOLDEN_LINE,
+            PersonalData::GOLDEN_LINE,
+            PersonalData::GOLDEN_LINE_URL
+        );
+        
+        $this->tcpdf->Line(
+            self::CONTACT_LINE_UP_CURSOR_X_START,
+            self::CONTACT_LINE_UP_CURSOR_Y,
+            self::CONTACT_LINE_UP_CURSOR_X_END,
+            self::CONTACT_LINE_UP_CURSOR_Y
+        );
+        
+        $this->tcpdf->Line(
+            self::CONTACT_LINE_DOWN_CURSOR_X_START,
+            self::CONTACT_LINE_DOWN_CURSOR_Y,
+            self::CONTACT_LINE_DOWN_CURSOR_X_END,
+            self::CONTACT_LINE_DOWN_CURSOR_Y
+        );
     }
     
     /**

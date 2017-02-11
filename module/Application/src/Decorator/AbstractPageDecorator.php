@@ -8,41 +8,16 @@
 namespace Application\Decorator;
 
 use Application\Model\TcpdfInterface;
-use Application\Model\CurriculumVitae;
+use Application\Decorator\AbstractTcpdfDecorator;
 
-abstract class AbstractPageDecorator implements TcpdfInterface
+abstract class AbstractPageDecorator extends AbstractTcpdfDecorator implements TcpdfInterface
 {
     const LINE_WIDTH = 0.2;
     const LINE_DASH = '1';
     const LINE_SOLID = '0';
     
     /**
-     * @deprecated 
-     * @var float
-     */
-    protected $cursorX = 0.00;
-    
-    /**
-     * @deprecated
-     * @var float
-     */
-    protected $cursorY = 0.00;
-    
-    /**
-     * @var CurriculumVitae|TcpdfInterface $tcpdf 
-     */
-    protected $tcpdf;
-    
-    /**
-     * @param TcpdfInterface $tcpdf
-     */
-    public function __construct(TcpdfInterface $tcpdf)
-    {
-        $this->tcpdf = $tcpdf;
-    }
-    
-    /**
-     * return TcpdfInterface
+     * {@inheritDoc}
      */
     abstract public function addElements();
 

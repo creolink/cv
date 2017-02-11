@@ -15,6 +15,12 @@ class Image
     const LINKED_IN = 'linkedin.png';
     const GOLDEN_LINE = 'goldenline.png';
     
+    const FLAG_PL = 'pl.png';
+    const FLAG_EN = 'en.png';
+    const FLAG_DE = 'de.png';
+    const FLAG_WIDTH = 5;
+    const FLAG_HEIGHT = 3;
+    
     const SIGN = 'sign.png';
     const SIGN_WIDTH = 90;
     const SIGN_HEIGHT = 25;
