@@ -14,7 +14,10 @@ class Image
     const SKYPE = 'skype.png';
     const LINKED_IN = 'linkedin.png';
     const GOLDEN_LINE = 'goldenline.png';
+    
     const SIGN = 'sign.png';
+    const SIGN_WIDTH = 90;
+    const SIGN_HEIGHT = 25;
     
     const DOWNLOAD = 'save.png';
     const DOWNLOAD_WIDTH = 3;

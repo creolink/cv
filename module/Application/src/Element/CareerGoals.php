@@ -58,6 +58,9 @@ class CareerGoals extends AbstractSection
         return $this->tcpdf;
     }
     
+    /**
+     * Renders recipient name
+     */
     private function renderRecipient()
     {
         $this->tcpdf->SetFont(
@@ -78,6 +81,9 @@ class CareerGoals extends AbstractSection
         );
     }
     
+    /**
+     * Renders content of career goals
+     */
     private function renderContent()
     {
         $dateHelper = new DateHelper(

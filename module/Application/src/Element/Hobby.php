@@ -74,7 +74,10 @@ class Hobby extends AbstractSection
      */
     private function getContent()
     {
-        return "movies and tv series, board games, football & table tennis, stock exchange"
+        return 'My free time I spend playing board games "Civilization Through the Ages" or "Robinson Crusoe: Adventure on the Cursed Island". '
+            . 'I like to watch sf & adventure movies as well as tv series. My favourite are "Battlestar Galactica" & "The Last of the Mohicans". '
+            . 'When I have possibility I play football or table tennis. '
+            . 'I also like to analize Stock Exchange and our investments.'
             . self::NEW_LINE;
     }
     

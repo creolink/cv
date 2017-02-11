@@ -74,11 +74,11 @@ class Education extends AbstractSection
      */
     private function getContent()
     {
-        return "2013 - 2015 intensive English & German course," . "\r\n"
-            ."2012 professional Google Analytics training," . "\r\n"
-            ."since 2012 driving license category B," . "\r\n"
-            ."further past: studies at the Lodz University of Technology (computer science, 3 years)"
-            . self::NEW_LINE;
+        return "2013 - 2015 intensive English & German course," . self::NEW_LINE
+            ."2012 professional course of Information Security Administrator with certificate" . self::NEW_LINE
+            ."2012 professional Google Analytics training," . self::NEW_LINE
+            ."since 2012 driving license category B," . self::NEW_LINE
+            ."further past: studies at the Lodz University of Technology (computer science, 3 years)" . self::NEW_LINE;
     }
     
     /**

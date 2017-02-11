@@ -9,6 +9,9 @@ namespace Application\Config;
 
 class PersonalData
 {
+    const NAME = 'Jakub';
+    const LASTNAME = 'Łuczyński';
+    
     const COUNTRY = 'Germany';
     const STREET = 'Am Wall 54';
     const CITY = 'Kleinmachnow';

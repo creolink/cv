@@ -68,7 +68,7 @@ class QRCode extends AbstractPageDecorator
     {
         return 'BEGIN:VCARD'. "\n"
             . 'VERSION:2.1' . "\n"
-            . 'FN:' . PdfConfig::DOCUMENT_AUTHOR . "\n"
+            . 'FN:' . PersonalData::NAME . ' ' . PersonalData::LASTNAME . "\n"
             . 'TITLE:' . PersonalData::TITLE . "\n"
             . 'TEL:' . PersonalData::PHONE . "\n"
             . 'EMAIL:' . PersonalData::EMAIL . "\n"

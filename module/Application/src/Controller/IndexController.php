@@ -19,12 +19,12 @@ class IndexController extends AbstractActionController
      */
     public function indexAction()
     {
-        $director = new CurriculumVitaeDirector(
+        $cvDirector = new CurriculumVitaeDirector(
             new CurriculumVitaeBuilder()
         );
         
-        $director->build();
+        $cvDirector->build();
         
-        return $director->render();
+        return $cvDirector->render();
     }
 }
