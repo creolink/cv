@@ -16,6 +16,10 @@ use Application\Config\Color;
 use Application\Config\Font;
 use Application\Element\MainHeaderFullName;
 use Application\Element\MainHeaderSpeciality;
+use Application\Element\MainHeaderFlags;
+use Application\Element\MainHeaderDownload;
+use Application\Element\MainHeaderIcons;
+use Application\Element\MainHeaderMostRecentInfo;
 
 class MainHeader extends AbstractPageDecorator
 {
@@ -27,31 +31,6 @@ class MainHeader extends AbstractPageDecorator
     const BACKGROUND_WIDTH = 210;
     const BACKGROUND_HEIGHT = 45;
     const BACKGROUND_STYLE = 'F';
-    
-    const FLAGS_CURSOR_X = 11;
-    const FLAGS_CURSOR_Y = 6;
-    
-    const FLAG_EN_MARGIN = 0;
-    const FLAG_DE_MARGIN = 4;
-    const FLAG_PL_MARGIN = 8;
-    
-    const DOWNLOAD_CURSOR_X = 12;
-    const DOWNLOAD_CURSOR_Y = 18;
-    
-    const CONTACT_ICON_CURSOR_Y = 40;
-    const CONTACT_ICON_PHONE_CURSOR_X = 58;
-    const CONTACT_ICON_EMAIL_CURSOR_X = 86;
-    const CONTACT_ICON_SKYPE_CURSOR_X = 123;
-    const CONTACT_ICON_LINKED_IN_CURSOR_X = 152;
-    const CONTACT_ICON_GOLDEN_LINE_CURSOR_X = 177;
-    
-    const CONTACT_LINE_UP_CURSOR_X_START = 0;
-    const CONTACT_LINE_UP_CURSOR_X_END = 210;
-    const CONTACT_LINE_UP_CURSOR_Y = 39;
-    
-    const CONTACT_LINE_DOWN_CURSOR_X_START = 0;
-    const CONTACT_LINE_DOWN_CURSOR_X_END = 210;
-    const CONTACT_LINE_DOWN_CURSOR_Y = 45;
     
     /**
      * {@inheritDoc}
@@ -75,7 +54,8 @@ class MainHeader extends AbstractPageDecorator
         $this->renderFlags();
         $this->renderDownloadButton();
         $this->renderContactData();
-        $this->renderPersonalDataPhoto();
+        $this->renderPersonalPhoto();
+        $this->renderMostRecentInfo();
         $this->renderPersonalData();
         
         return $this->tcpdf;
@@ -142,49 +122,8 @@ class MainHeader extends AbstractPageDecorator
      */
     private function renderFlags()
     {
-        $this->renderFlag(
-            Image::FLAG_EN,
-            'en',
-            self::FLAG_EN_MARGIN
-        );
-        
-        $this->renderFlag(
-            Image::FLAG_DE,
-            'de',
-            self::FLAG_DE_MARGIN
-        );
-        
-        $this->renderFlag(
-            Image::FLAG_PL,
-            'pl',
-            self::FLAG_PL_MARGIN
-        );
-    }
-    
-    /**
-     * Renders flag with url
-     * 
-     * @param string $flag
-     * @param string $language
-     * @param float $margin
-     */
-    private function renderFlag($flag = '', $language = '', $margin = 0)
-    {
-        $this->tcpdf->renderImage(
-            $flag,
-            self::FLAGS_CURSOR_X,
-            self::FLAGS_CURSOR_Y + $margin,
-            Image::FLAG_WIDTH,
-            Image::FLAG_HEIGHT,
-            'http://'.$_SERVER['SERVER_NAME'].'/?' . $language
-        );
-        
-        $this->tcpdf->Rect(
-            self::FLAGS_CURSOR_X,
-            self::FLAGS_CURSOR_Y + $margin,
-            Image::FLAG_WIDTH,
-            Image::FLAG_HEIGHT
-        );
+        $mainHeaderFlags = new MainHeaderFlags($this->tcpdf);
+        $mainHeaderFlags->renderFlags();
     }
     
     /**
@@ -192,101 +131,35 @@ class MainHeader extends AbstractPageDecorator
      */
     private function renderDownloadButton()
     {
-        if (false === $this->tcpdf->isDownloaded) {
-            $this->tcpdf->renderImage(
-                Image::DOWNLOAD,
-                self::DOWNLOAD_CURSOR_X,
-                self::DOWNLOAD_CURSOR_Y,
-                Image::DOWNLOAD_WIDTH,
-                Image::DOWNLOAD_HEIGHT,
-                'http://'.$_SERVER['SERVER_NAME'].'/?download&en'
-            ); 
-        }
+        $mainHeaderDownload = new MainHeaderDownload($this->tcpdf);
+        $mainHeaderDownload->renderDownloadButton();
     }
     
+    /**
+     * Renders contact icons
+     */
     private function renderContactData()
     {
-        $this->tcpdf->SetTextColor(
-            Color::TEXT_COLOR_DARK_RED,
-            Color::TEXT_COLOR_DARK_GREEN,
-            Color::TEXT_COLOR_DARK_BLUE
-        );
-        
-        $this->tcpdf->renderIcon(
-            self::CONTACT_ICON_PHONE_CURSOR_X,
-            self::CONTACT_ICON_CURSOR_Y,
-            Image::PHONE,
-            PersonalData::PHONE,
-            PersonalData::PHONE_URL
-        );
-        
-        $this->tcpdf->renderIcon(
-            self::CONTACT_ICON_EMAIL_CURSOR_X,
-            self::CONTACT_ICON_CURSOR_Y,
-            Image::EMAIL,
-            PersonalData::EMAIL,
-            PersonalData::EMAIL_URL
-        );
-        
-        $this->tcpdf->renderIcon(
-            self::CONTACT_ICON_SKYPE_CURSOR_X,
-            self::CONTACT_ICON_CURSOR_Y,
-            Image::SKYPE,
-            PersonalData::SKYPE,
-            PersonalData::SKYPE_URL
-        );
-        
-        $this->tcpdf->renderIcon(
-            self::CONTACT_ICON_LINKED_IN_CURSOR_X,
-            self::CONTACT_ICON_CURSOR_Y,
-            Image::LINKED_IN,
-            PersonalData::LINKED_IN,
-            PersonalData::LINKED_IN_URL
-        );
-        
-        $this->tcpdf->renderIcon(
-            self::CONTACT_ICON_GOLDEN_LINE_CURSOR_X,
-            self::CONTACT_ICON_CURSOR_Y,
-            Image::GOLDEN_LINE,
-            PersonalData::GOLDEN_LINE,
-            PersonalData::GOLDEN_LINE_URL
-        );
-        
-        $this->tcpdf->Line(
-            self::CONTACT_LINE_UP_CURSOR_X_START,
-            self::CONTACT_LINE_UP_CURSOR_Y,
-            self::CONTACT_LINE_UP_CURSOR_X_END,
-            self::CONTACT_LINE_UP_CURSOR_Y
-        );
-        
-        $this->tcpdf->Line(
-            self::CONTACT_LINE_DOWN_CURSOR_X_START,
-            self::CONTACT_LINE_DOWN_CURSOR_Y,
-            self::CONTACT_LINE_DOWN_CURSOR_X_END,
-            self::CONTACT_LINE_DOWN_CURSOR_Y
-        );
+        $mainHeaderIcons = new MainHeaderIcons($this->tcpdf);
+        $mainHeaderIcons->renderContactData();
     }
     
     /**
      * Renders personal photo in header
      */
-    private function renderPersonalDataPhoto()
+    private function renderPersonalPhoto()
     {
-        $x = 19;
-        $y = 5;
-        $width = 30;
-        $height = 37;
-
-        $this->tcpdf->renderImage('photo.png', $x, $y, $width, $height, PersonalData::EMAIL_URL);
-        
-        $this->tcpdf->SetDrawColor(150, 150, 150);
-        $this->tcpdf->Rect($x, $y, $width, $height);
-        
-        $this->tcpdf->SetXY(17, 40.3);
-        
-        $this->tcpdf->SetTextColor(150, 150, 150);
-        $this->tcpdf->SetFont($this->tcpdf->tahoma, 'B', 6);
-        $this->tcpdf->Write(6, 'most recent version cv.creolink.pl', PdfConfig::DOCUMENT_URL);
+        $mainHeaderPersonalPhoto = new MainHeaderPersonalPhoto($this->tcpdf);
+        $mainHeaderPersonalPhoto->renderPersonalPhoto();
+    }
+    
+    /**
+     * Renders information about most recent CV
+     */
+    private function renderMostRecentInfo()
+    {
+        $mainHeaderMostRecentInfo = new MainHeaderMostRecentInfo($this->tcpdf);
+        $mainHeaderMostRecentInfo->renderMostRecentInfo();
     }
     
     /**

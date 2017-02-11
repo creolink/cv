@@ -29,5 +29,6 @@ class Image
     const DOWNLOAD_WIDTH = 3;
     const DOWNLOAD_HEIGHT = 3;
     
-    const PHOTO_URL = 'http://cv.creolink.pl/i/photo.png';
+    const PERSONAL_PHOTO = 'photo.png';
+    const PERSONAL_PHOTO_URL = 'http://cv.creolink.pl/i/photo.png';
 }

@@ -193,7 +193,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $width = 4.5;
         $height = 5.5;
         
-        $this->Image(PdfConfig::PATH_IMAGES . 'photo.png', $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
+        $this->Image(PdfConfig::PATH_IMAGES . Image::PERSONAL_PHOTO, $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
         $this->Rect($x, $y, $width, $height);
     }
 }

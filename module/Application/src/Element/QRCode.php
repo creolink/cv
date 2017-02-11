@@ -72,7 +72,7 @@ class QRCode extends AbstractPageDecorator
             . 'TITLE:' . PersonalData::TITLE . "\n"
             . 'TEL:' . PersonalData::PHONE . "\n"
             . 'EMAIL:' . PersonalData::EMAIL . "\n"
-            . 'PHOTO;PNG:' . Image::PHOTO_URL . "\n"
+            . 'PHOTO;PNG:' . Image::PERSONAL_PHOTO_URL . "\n"
             . 'ADR:;;' . PersonalData::STREET . ';'
                 . PersonalData::CITY . ';;'
                 . PersonalData::POST_CODE . ';'
