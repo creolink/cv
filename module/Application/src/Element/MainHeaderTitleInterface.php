@@ -8,7 +8,7 @@
 
 namespace Application\Element;
 
-interface MainHeaderTitle
+interface MainHeaderTitleInterface
 {
     const TITLE_CURSOR_X = 60;
     const TITLE_CURSOR_Y = 5;

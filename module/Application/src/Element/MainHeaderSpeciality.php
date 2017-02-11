@@ -11,7 +11,7 @@ use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\Color;
 use Application\Config\Font;
 
-class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderTitle
+class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderTitleInterface
 {
     const SPECIALITY_FONT_SIZE = 8;
     const SPECIALITY_PADDING_Y = 23;

@@ -12,7 +12,7 @@ use Application\Config\PersonalData;
 use Application\Config\Color;
 use Application\Config\Font;
 
-class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitle
+class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleInterface
 {
     const TOOLS_PADDING = 27;
     const TOOLS_FONT_SIZE = 6;

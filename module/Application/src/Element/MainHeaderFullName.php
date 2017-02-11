@@ -12,7 +12,7 @@ use Application\Config\PersonalData;
 use Application\Config\Color;
 use Application\Config\Font;
 
-class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTitle
+class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTitleInterface
 {
     const FULL_NAME_FONT_SIZE = 30;
     
