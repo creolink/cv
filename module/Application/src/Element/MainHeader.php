@@ -8,18 +8,15 @@
 namespace Application\Element;
 
 use Application\Decorator\AbstractPageDecorator;
-use Application\Helper\DateHelper;
-use Application\Config\PersonalData;
-use Application\Config\PdfConfig;
-use Application\Config\Image;
 use Application\Config\Color;
-use Application\Config\Font;
 use Application\Element\MainHeaderFullName;
 use Application\Element\MainHeaderSpeciality;
 use Application\Element\MainHeaderFlags;
 use Application\Element\MainHeaderDownload;
 use Application\Element\MainHeaderIcons;
 use Application\Element\MainHeaderMostRecentInfo;
+use Application\Element\MainHeaderBackground;
+use Application\Element\MainHeaderPersonalData;
 
 class MainHeader extends AbstractPageDecorator
 {
@@ -27,10 +24,6 @@ class MainHeader extends AbstractPageDecorator
     const CURSOR_Y = 0;
     
     const LINE_WIDTH = 0.1;
-    
-    const BACKGROUND_WIDTH = 210;
-    const BACKGROUND_HEIGHT = 45;
-    const BACKGROUND_STYLE = 'F';
     
     /**
      * {@inheritDoc}
@@ -87,19 +80,8 @@ class MainHeader extends AbstractPageDecorator
      */
     private function renderBackground()
     {
-        $this->tcpdf->SetFillColor(
-            Color::FILL_COLOR_BRIGHT_RED,
-            Color::FILL_COLOR_BRIGHT_GREEN,
-            Color::FILL_COLOR_BRIGHT_BLUE
-        );
-        
-        $this->tcpdf->Rect(
-            self::CURSOR_X,
-            self::CURSOR_Y,
-            self::BACKGROUND_WIDTH,
-            self::BACKGROUND_HEIGHT,
-            self::BACKGROUND_STYLE
-        );
+        $mainHeaderBackground = new MainHeaderBackground($this->tcpdf);
+        $mainHeaderBackground->renderBackground();
     }
     
     /**
@@ -163,88 +145,11 @@ class MainHeader extends AbstractPageDecorator
     }
     
     /**
-     * Renders personal data
+     * Renders personal data column
      */
     private function renderPersonalData()
     {
-        $dateHelper = new DateHelper(
-            strtotime(PersonalData::BIRTH_DATE)
-        );
-        
-        $posYBox = 5;
-        
-        $this->tcpdf->SetFont($this->tcpdf->dejavu, '', 8);
-        $this->tcpdf->SetTextColor(50, 50, 50);
-        $this->tcpdf->SetFillColor(235,235,235);
-        $this->tcpdf->SetLineWidth(0.1);
-
-        $this->renderPersonalDataRow(
-            'Experience',
-            $dateHelper->getPassedYears(PersonalData::WORK_START_YEAR) . ' years',
-            $posYBox
-        );
-        
-        $this->renderPersonalDataRow(
-            'Date of birth',
-            $dateHelper->getDate(),
-            $posYBox += 5
-        );
-        
-        $this->renderPersonalDataRow(
-            'Nationality',
-            PersonalData::NATIONALITY,
-            $posYBox += 5
-        );
-        
-        $this->renderPersonalDataRow(
-            'Location',
-            PersonalData::COUNTRY,
-            $posYBox += 5
-        );
-        
-        $this->renderPersonalDataRow(
-            'Address',
-            PersonalData::STREET . "\n" . PersonalData::POST_CODE . ' ' . PersonalData::CITY,
-            $posYBox += 5
-        );
-        
-        $this->renderPersonalDataRow(
-            'Workplace',
-            PersonalData::WORK_PLACE,
-            $posYBox += 8
-        );
-    }
-    
-    /**
-     * @param string $name
-     * @param string $text
-     * @param float $y
-     */
-    private function renderPersonalDataRow($name, $text, $y)
-    {
-        $this->renderPersonalDataBox($name, $y);
-        $this->renderPersonalDataText($text, $y);
-    }
-    
-    /**
-     * @param string $name
-     * @param float $y
-     */
-    private function renderPersonalDataBox($name, $y)
-    {
-        $this->tcpdf->RoundedRect(152, $y, 22, 4, 1, '1111', 'DF');
-        
-        $this->tcpdf->SetXY(152, $y - 1);
-        $this->tcpdf->Cell(10, 6, $name, 0, 0, 'L', false);
-    }
-    
-    /**
-     * @param string $text
-     * @param float $y
-     */
-    private function renderPersonalDataText($text, $y)
-    {
-        $this->tcpdf->SetXY($this->tcpdf->getX() + 12, $y + 0.2);
-        $this->tcpdf->MultiCell(35, 6, $text , 0, 'L', false);
+        $mainHeaderPersonalData = new MainHeaderPersonalData($this->tcpdf);
+        $mainHeaderPersonalData->renderPersonalData();
     }
 }

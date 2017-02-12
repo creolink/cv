@@ -21,6 +21,10 @@ class Color
     const FILL_COLOR_DARK_GREEN = 100;
     const FILL_COLOR_DARK_BLUE = 100;
     
+    const FILL_COLOR_MEDIUM_RED = 230;
+    const FILL_COLOR_MEDIUM_GREEN = 230;
+    const FILL_COLOR_MEDIUM_BLUE = 230;
+    
     const FILL_COLOR_BRIGHT_RED = 245;
     const FILL_COLOR_BRIGHT_GREEN = 246;
     const FILL_COLOR_BRIGHT_BLUE = 244;

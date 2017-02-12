@@ -14,14 +14,19 @@ use Application\Config\PdfConfig;
 
 class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
 {
+    const INFO_CURSOR_X = 17.3;
+    const INFO_CURSOR_Y = 40.3;
+    
+    const INFO_FONT_SIZE = 6;
+    
     /**
      * Renders information about most recent CV
      */
     public function renderMostRecentInfo()
     {
         $this->tcpdf->SetXY(
-            17,
-            40.3
+            self::INFO_CURSOR_X,
+            self::INFO_CURSOR_Y
         );
         
         $this->tcpdf->SetTextColor(
@@ -33,11 +38,11 @@ class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::BOLD,
-            6
+            self::INFO_FONT_SIZE
         );
         
         $this->tcpdf->Write(
-            6,
+            self::INFO_FONT_SIZE,
             'most recent version cv.creolink.pl',
             PdfConfig::DOCUMENT_URL
         );
