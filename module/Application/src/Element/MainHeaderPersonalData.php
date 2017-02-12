@@ -190,7 +190,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     private function renderPersonalDataText($text, $y)
     {
         $this->tcpdf->SetXY(
-            $this->tcpdf->getX() + self::DATA_TEXT_MARGIN_Y,
+            $this->tcpdf->getX() + self::DATA_TEXT_MARGIN_X,
             $y + self::DATA_TEXT_MARGIN_Y
         );
         
