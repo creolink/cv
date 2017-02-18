@@ -28,7 +28,7 @@ positions:
       address: 'Pomorska 41, 90-203, Lodz, Poland'
       description: 'Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems using SOAP / REST. Advising, coaching. Project documentation.'
       examples: 'http://cv.creolink.pl/examples/freepers.zip'
-      references: 'http://cv.creolink.pl/references/freepers_en.jpg'
+      references: 'http://cv.creolink.pl/references/references_freepers.zip'
       contact: 'Krzysztof Rogalski, +48 42 / 239 41 77, +48 42 / 791 24 95 30'
       companyUrl: 'http://fripers.pl/'
       
@@ -61,7 +61,7 @@ positions:
       address: 'Prinseneiland 303, 1013 LP Amsterdam, The Netherlands'
       description: 'Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work.'
       examples: ''
-      references: 'http://cv.creolink.pl/references/iizt.jpg'
+      references: 'http://cv.creolink.pl/references/references_iizt.zip'
       contact: 'Todd Wilkinson, todd@sacramentomarketinglabs.com'
       companyUrl: 'https://www.iizt.com/'
       
