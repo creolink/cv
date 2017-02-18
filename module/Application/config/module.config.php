@@ -4,6 +4,7 @@ namespace Application;
 
 use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
+use Zend\Router\Http\Hostname;
 
 return [
     'controllers' => [
@@ -26,6 +27,20 @@ return [
                     'route'    => '/',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
+                        'action'     => 'home',
+                    ],
+                ],
+            ],
+            'subdomain' => [
+                'type' => Hostname::class,
+                'options' => [
+                    'route'    => ':subdomain.' . $_SERVER['SERVER_NAME'],
+                    'constraints' => [
+                        'subdomain' => 'pl|en|de',
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'subdomain' => 'en',
                         'action'     => 'index',
                     ],
                 ],

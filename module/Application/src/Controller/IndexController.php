@@ -11,6 +11,7 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Application\Builder\CurriculumVitaeBuilder;
 use Application\Builder\CurriculumVitaeDirector;
+use Zend\Http\Response;
 
 class IndexController extends AbstractActionController
 {
@@ -26,5 +27,18 @@ class IndexController extends AbstractActionController
         $cvDirector->build();
         
         return $cvDirector->render();
+    }
+
+    /**
+     * Home page - auto redirect to english site
+     *
+     * @return Response
+     */
+    public function homeAction()
+    {
+        return $this->redirect()->toRoute(
+            'subdomain',
+            ['subdomain' => 'en']
+        );
     }
 }
