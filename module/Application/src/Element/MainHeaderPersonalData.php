@@ -30,7 +30,8 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     const DATA_BOX_HEIGHT = 4;
     const DATA_BOX_BORDER_RADIUS = 1;
     
-    const DATA_BOX_TITLE_PADDING = 1;
+    const DATA_BOX_TITLE_PADDING_Y = 1;
+    const DATA_BOX_TITLE_PADDING_X = 0.4;
     const DATA_BOX_TITLE_WIDTH = 10;
     const DATA_BOX_TITLE_HEIGHT = 6;
     
@@ -172,8 +173,8 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     private function renderPersonalDataBoxTitle($name, $y)
     {
         $this->tcpdf->SetXY(
-            self::CURSOR_X,
-            $y - self::DATA_BOX_TITLE_PADDING
+            self::CURSOR_X + self::DATA_BOX_TITLE_PADDING_X,
+            $y - self::DATA_BOX_TITLE_PADDING_Y
         );
         
         $this->tcpdf->Cell(

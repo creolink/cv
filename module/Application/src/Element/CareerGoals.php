@@ -76,7 +76,7 @@ class CareerGoals extends AbstractSection
         $this->tcpdf->Cell(
             self::RECIPIENT_CELL_WIDTH,
             self::RECIPIENT_CELL_HEIGHT,
-            'Dear Sir or Madam / Mr Smith / Ms Smith / Mrs Smith'
+            'Dear Sir or Madam'
         );
         
         $this->tcpdf->Ln();

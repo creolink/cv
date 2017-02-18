@@ -20,7 +20,7 @@ abstract class AbstractSkills extends AbstractSection
     
     const POSITION_NEXT_LINE = 3.6;
     const POSITION_PADDING = 2.3;
-    const POSITION_MARGIN = 1.3;
+    const POSITION_MARGIN = 1.5;
     const POSITION_FONT_SIZE = 8;
     const POSITION_CELL_HEIGHT = 6;
     

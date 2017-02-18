@@ -11,7 +11,7 @@ interface MainHeaderTitleInterface
 {
     const TITLE_CURSOR_X = 60;
     const TITLE_CURSOR_Y = 5;
-    const TITLE_CELL_WIDTH = 80;
+    const TITLE_CELL_WIDTH = 82;
     const TITLE_CELL_HEIGHT = 0;
     const TITLE_PADDING = -2.5;
 }
