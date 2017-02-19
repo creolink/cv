@@ -8,29 +8,19 @@
 
 namespace Application\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Application\Builder\CurriculumVitaeBuilder;
-use Application\Builder\CurriculumVitaeDirector;
+use Application\Controller\BaseController;
 use Zend\Http\Response;
-use Zend\I18n\Translator\Translator;
 
-class IndexController extends AbstractActionController
+class IndexController extends BaseController
 {
     /**
      * @return string
      */
     public function indexAction()
     {
-//        $tr = new Translator();
-//        var_dump($tr->translate('Skeleton Application')); die();
-        
-        $cvDirector = new CurriculumVitaeDirector(
-            new CurriculumVitaeBuilder()
-        );
-        
-        $cvDirector->build();
-        
-        return $cvDirector->render();
+        return $this->getCurriculumVitae()
+            ->build()
+            ->render();
     }
 
     /**

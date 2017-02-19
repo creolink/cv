@@ -6,6 +6,10 @@ use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
 use Zend\Mvc\I18n\Router\TranslatorAwareTreeRouteStack;
+use Zend\I18n\Translator\TranslatorServiceFactory;
+use Zend\I18n\Translator\Translator;
+use Application\Normalization\NormalizationService;
+use Application\Normalization\NormalizationServiceFactory;
 
 return [
     'controllers' => [
@@ -49,12 +53,18 @@ return [
             ],
         ],
     ],
+    'service_manager' => [
+        'factories' => [
+            Translator::class => TranslatorServiceFactory::class,
+            NormalizationService::class => NormalizationServiceFactory::class,
+        ],
+    ],
     'translator' => [
         'locale' => 'en_GB',
         'translation_file_patterns' => [
             [
                 'type' => 'gettext',
-                'base_dir' => __DIR__ . '/../languages',
+                'base_dir' => __DIR__ . '/../language',
                 'pattern' => '%s.mo',
             ],
         ],
