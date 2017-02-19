@@ -12,15 +12,24 @@ use Application\Builder\MainPage;
 use Application\Builder\SecondPage;
 use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
+use Application\Normalization\NormalizedLocalizationService;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
     /**
-     * @var TcpdfInterface
+     * @var TcpdfInterface|CurriculumVitae
      */
     private $cv = null;
     
-    public function __construct() {
+    /**
+     * @var NormalizedLocalizationService
+     */
+    private $normalizedLocalization;
+    
+    public function __construct(NormalizedLocalizationService $normalizedLocalization)
+    {
+        $this->normalizedLocalization = $normalizedLocalization;
+        
         $this->cv = new CurriculumVitae();
     }
 
@@ -38,6 +47,9 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     {
         $this->cv->configure();
         $this->cv->initFonts();
+        $this->cv->setTranslator(
+            $this->normalizedLocalization
+        );
     }
     
     /**

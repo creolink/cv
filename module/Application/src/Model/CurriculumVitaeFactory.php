@@ -11,6 +11,7 @@ use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 use Application\Builder\CurriculumVitaeDirector;
 use Application\Builder\CurriculumVitaeBuilder;
+use Application\Normalization\NormalizedLocalizationService;
 
 class CurriculumVitaeFactory implements FactoryInterface
 {
@@ -24,8 +25,12 @@ class CurriculumVitaeFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
+        $normalizedLocalization = $container->get(NormalizedLocalizationService::class);
+        
         $cvDirector = new CurriculumVitaeDirector(
-            new CurriculumVitaeBuilder()
+            new CurriculumVitaeBuilder(
+                $normalizedLocalization
+            )
         );
 
         return $cvDirector;

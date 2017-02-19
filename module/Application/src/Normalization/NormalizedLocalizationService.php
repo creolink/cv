@@ -9,7 +9,7 @@ namespace Application\Normalization;
 
 use Zend\I18n\Translator\Translator;
 
-class NormalizationService
+class NormalizedLocalizationService
 {
     /**
      * Characters for normalization

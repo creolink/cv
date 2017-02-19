@@ -85,7 +85,7 @@ class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTit
             self::TITLE_CELL_WIDTH,
             self::TITLE_CELL_HEIGHT,
             mb_strtoupper(
-                PersonalData::LASTNAME,
+                $this->trans(PersonalData::LASTNAME),
                 self::ENCODING
             ),
             self::BORDER_NONE,

@@ -10,9 +10,9 @@ namespace Application\Normalization;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 use Zend\I18n\Translator\Translator;
-use Application\Normalization\NormalizationService;
+use Application\Normalization\NormalizedLocalizationService;
 
-class NormalizationServiceFactory implements FactoryInterface
+class NormalizedLocalizationServiceFactory implements FactoryInterface
 {
     /**
      * Create a Normalization instance.
@@ -25,7 +25,7 @@ class NormalizationServiceFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $translator = $container->get(Translator::class);
-        $localization = new NormalizationService($translator);
+        $localization = new NormalizedLocalizationService($translator);
 
         return $localization;
     }

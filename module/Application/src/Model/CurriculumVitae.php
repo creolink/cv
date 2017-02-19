@@ -13,6 +13,7 @@ use Application\Config\PdfConfig;
 use Application\Config\Image;
 use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
+use Application\Normalization\NormalizedLocalizationService;
 
 class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 {
@@ -25,6 +26,11 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     public $tahomaBold = '';
     public $tahomaItalic = '';
     public $dejavu = '';
+    
+    /**
+     * @var NormalizedLocalizationService
+     */
+    private $translator;
 
     /**
      * {@inheritDoc}
@@ -32,6 +38,24 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     public function addElements()
     {
         return $this;
+    }
+    
+    /**
+     * Injects translator service with normalization
+     * 
+     * @param NormalizedLocalizationService $translator
+     */
+    public function setTranslator(NormalizedLocalizationService $translator)
+    {
+        $this->translator = $translator;
+    }
+    
+    /**
+     * @return NormalizedLocalizationService
+     */
+    public function getTranslator()
+    {
+        return $this->translator;
     }
     
     /**

@@ -9,7 +9,7 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\I18n\Translator\Translator;
-use Application\Normalization\NormalizationService;
+use Application\Normalization\NormalizedLocalizationService;
 use Application\Model\CurriculumVitae;
 use Application\Builder\CurriculumVitaeDirector;
 
@@ -29,11 +29,11 @@ class BaseController extends AbstractActionController
     }
     
     /**
-     * @return NormalizationService
+     * @return NormalizedLocalizationService
      */
     protected function getNormalizationService()
     {
-        return $this->getService(NormalizationService::class);
+        return $this->getService(NormalizedLocalizationService::class);
     }
     
     /**

@@ -8,8 +8,8 @@ use Zend\Router\Http\Hostname;
 use Zend\Mvc\I18n\Router\TranslatorAwareTreeRouteStack;
 use Zend\I18n\Translator\TranslatorServiceFactory;
 use Zend\I18n\Translator\Translator;
-use Application\Normalization\NormalizationService;
-use Application\Normalization\NormalizationServiceFactory;
+use Application\Normalization\NormalizedLocalizationService;
+use Application\Normalization\NormalizedLocalizationServiceFactory;
 
 return [
     'controllers' => [
@@ -56,7 +56,7 @@ return [
     'service_manager' => [
         'factories' => [
             Translator::class => TranslatorServiceFactory::class,
-            NormalizationService::class => NormalizationServiceFactory::class,
+            NormalizedLocalizationService::class => NormalizedLocalizationServiceFactory::class,
         ],
     ],
     'translator' => [

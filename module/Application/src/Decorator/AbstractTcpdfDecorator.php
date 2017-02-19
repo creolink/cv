@@ -25,4 +25,13 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
     {
         $this->tcpdf = $tcpdf;
     }
+    
+    /**
+     * @param string $message
+     * @return string
+     */
+    protected function trans($message)
+    {
+        return $this->tcpdf->getTranslator()->trans($message);
+    }
 }
