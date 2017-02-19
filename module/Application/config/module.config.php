@@ -5,6 +5,7 @@ namespace Application;
 use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
+use Zend\Mvc\I18n\Router\TranslatorAwareTreeRouteStack;
 
 return [
     'controllers' => [
@@ -20,6 +21,7 @@ return [
         'display_exceptions'       => true,
     ],
     'router' => [
+        'router_class' => TranslatorAwareTreeRouteStack::class,
         'routes' => [
             'home' => [
                 'type' => Literal::class,
@@ -48,11 +50,11 @@ return [
         ],
     ],
     'translator' => [
-        'locale' => 'en_US',
+        'locale' => 'en_GB',
         'translation_file_patterns' => [
             [
                 'type' => 'gettext',
-                'base_dir' => __DIR__ . '/../language',
+                'base_dir' => __DIR__ . '/../languages',
                 'pattern' => '%s.mo',
             ],
         ],

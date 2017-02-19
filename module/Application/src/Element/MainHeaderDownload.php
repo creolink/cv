@@ -27,7 +27,7 @@ class MainHeaderDownload extends AbstractTcpdfDecorator
                 self::DOWNLOAD_CURSOR_Y,
                 Image::DOWNLOAD_WIDTH,
                 Image::DOWNLOAD_HEIGHT,
-                'http://'.$_SERVER['SERVER_NAME'].'/?download&en'
+                'http://'.$_SERVER['HTTP_HOST'].'/?download'
             ); 
         }
     }

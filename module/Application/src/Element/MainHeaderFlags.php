@@ -58,7 +58,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             self::FLAGS_CURSOR_Y + $margin,
             Image::FLAG_WIDTH,
             Image::FLAG_HEIGHT,
-            'http://'.$_SERVER['SERVER_NAME'].'/?' . $language
+            'http://' . $language . '.' . $_SERVER['SERVER_NAME'].'/'
         );
         
         $this->tcpdf->Rect(

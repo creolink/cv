@@ -12,6 +12,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Application\Builder\CurriculumVitaeBuilder;
 use Application\Builder\CurriculumVitaeDirector;
 use Zend\Http\Response;
+use Zend\I18n\Translator\Translator;
 
 class IndexController extends AbstractActionController
 {
@@ -20,6 +21,9 @@ class IndexController extends AbstractActionController
      */
     public function indexAction()
     {
+//        $tr = new Translator();
+//        var_dump($tr->translate('Skeleton Application')); die();
+        
         $cvDirector = new CurriculumVitaeDirector(
             new CurriculumVitaeBuilder()
         );
