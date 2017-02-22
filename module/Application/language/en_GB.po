@@ -16,426 +16,107 @@ msgstr ""
 "Language: en_GB\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
+msgid "cv-personalData-country"
+msgstr "Germany"
 
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
+msgid "cv-personalData-nationality"
+msgstr "Polish"
 
-msgid ""
-msgstr ""
+msgid "cv-personalData-workPlace"
+msgstr "Berlin, Potsdam"
 
-msgid ""
-msgstr ""
+msgid "cv-personalData-title"
+msgstr "PHP Developer"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-tpnets-name"
+msgstr "System Designer & Main PHP Coder / B2E & B2C project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-tpnets-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-tpnets-description"
+msgstr "Design and development of dedicated, proprietary B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5 basing on my own, MVC framework and template system. Online, remote work. Long-term cooperation. Development and modernization of application. Technical supervision."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-msPerfect-name"
+msgstr "Web Designer / B2C project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-msPerfect-country"
+msgstr "Germany"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-msPerfect-description"
+msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS with Bootstrap library."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-freepers-name"
+msgstr "Software designer / B2C & B2E, eCommerce project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-freepers-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-freepers-description"
+msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems using SOAP / REST. Advising, coaching. Project documentation."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2009-name"
+msgstr "PHP Web Developer / B2C project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2009-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2009-description"
+msgstr "Brand improvement through implementation of proprietary online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2009-name"
+msgstr "Portal Designer & PHP Developer / B2B project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2009-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2009-description"
+msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. maintenance, development and supervision of portals. (portals are closed)"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-iizt-name"
+msgstr "PHP Programmer & Web Developer / Freelancer"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-iizt-country"
+msgstr "The Netherlands"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-iizt-description"
+msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2005-name"
+msgstr "Web Developer & Designer, PHP Coder / B2E & B2C project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2005-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gandalf2005-description"
+msgstr "Design, programming and implementation of dedicated, proprietary e-commerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for e-commerce applications. Modernization and development of the system. Service and support."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2005-name"
+msgstr "Portal Designer & PHP Developer / B2B project"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2005-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-stawoz2005-description"
+msgstr "Design and creation of proprietary system of web portals with CMS about environmental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-arges-name"
+msgstr "Junior PHP developer"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-arges-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-arges-description"
+msgstr "PHP programmer, software developer. Creation of CMS for several companies. PHP, MySQL and JS tasks."
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gpl-name"
+msgstr "IT Specialist"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gpl-country"
+msgstr "Poland"
 
-msgid ""
-msgstr ""
+msgid "cv-commisions-gpl-description"
+msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid ""
 msgstr ""
-

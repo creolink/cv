@@ -47,6 +47,13 @@ class EmploymentPosition implements EntityInterface
     private $address = '';
     
     /**
+     * Company country
+     * 
+     * @var string
+     */
+    private $country = '';
+    
+    /**
      * Description of position
      * 
      * @var string
@@ -188,6 +195,30 @@ class EmploymentPosition implements EntityInterface
     }
     
     /**
+     * @param string $country
+     */
+    public function setCountry($country = '')
+    {
+        $this->country = $country;
+    }
+    
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+    
+    /**
+     * @return bool
+     */
+    public function hasCountry()
+    {
+        return false === empty($this->country);
+    }
+    
+    /**
      * @param string $description
      */
     public function setDescription($description = '')
@@ -304,7 +335,19 @@ class EmploymentPosition implements EntityInterface
      */
     public function hasCompanyData()
     {
-        return $this->hasCompanyUrl() || $this->hasAddress() || $this->hasContact();
+        return $this->hasCompanyUrl()
+            || $this->hasAddress()
+            || $this->hasContact()
+            || $this->hasCountry();
+    }
+    
+    /**
+     * @return bool
+     */
+    public function hasCompanyAddress()
+    {
+        return $this->hasAddress()
+            || $this->hasCountry();
     }
     
     /**

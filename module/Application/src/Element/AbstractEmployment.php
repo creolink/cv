@@ -151,7 +151,11 @@ abstract class AbstractEmployment extends AbstractSection
      */
     private function getDateAndCompany(EmploymentPosition $position)
     {
-        return $this->getDate($position) . self::DATE_AND_COMPANY_SEPARATOR . $position->getCompany();
+        return $this->getDate($position)
+            . self::DATE_AND_COMPANY_SEPARATOR
+            . $this->trans(
+                $position->getCompany()
+            );
     }
     
     /**
@@ -191,7 +195,7 @@ abstract class AbstractEmployment extends AbstractSection
         $this->tcpdf->Cell(
             self::NAME_CELL_WIDTH,
             self::NAME_CELL_HEIGHT,
-            $position->getName()
+            $this->trans($position->getName())
         );
     }
     
@@ -321,7 +325,8 @@ abstract class AbstractEmployment extends AbstractSection
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH,
             self::DESCRIPTION_LINE_HEIGHT,
-            $position->getDescription() . self::NEW_LINE
+            $this->trans($position->getDescription())
+                . self::NEW_LINE
         );
     }
     
@@ -382,8 +387,6 @@ abstract class AbstractEmployment extends AbstractSection
             
             $companyUrl = $position->getCompanyUrl();
             
-            $this->companyUrlWidth = $this->tcpdf->GetStringWidth($companyUrl) + self::COMPANY_URL_MARGIN;
-            
             $this->tcpdf->Cell(
                 self::SECTION_WIDTH,
                 self::COMPANY_URL_LINE_HEIGHT,
@@ -394,7 +397,19 @@ abstract class AbstractEmployment extends AbstractSection
                 self::TRANSPARENT,
                 $companyUrl
             );
+                
+            $this->setCompanyUrlWidth($position);
         }
+    }
+    
+    /**
+     * @param EmploymentPosition $position
+     */
+    private function setCompanyUrlWidth(EmploymentPosition $position)
+    {
+        $this->companyUrlWidth = $this->tcpdf->GetStringWidth(
+            $position->getCompanyUrl()
+        ) + self::COMPANY_URL_MARGIN;
     }
     
     /**
@@ -404,13 +419,13 @@ abstract class AbstractEmployment extends AbstractSection
      */
     private function renderContact(EmploymentPosition $position, $x, $y)
     {
-        if ($position->hasContact() || $position->hasAddress()) {
+        if ($position->hasContact() || $position->hasCompanyAddress()) {
             $this->tcpdf->SetXY($x, $y);
 
             $this->tcpdf->Cell(
                 self::SECTION_WIDTH - $this->companyUrlWidth,
                 self::CONTACT_CELL_HEIGHT,
-                $this->createContactText($position),
+                $this->createCompanyData($position),
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT
@@ -422,24 +437,62 @@ abstract class AbstractEmployment extends AbstractSection
      * @param EmploymentPosition $position
      * @return string
      */
+    private function createCompanyData(EmploymentPosition $position)
+    {
+        return $this->createContactText($position)
+            . $this->createAddressText($position);
+    }
+    
+    /**
+     * @param EmploymentPosition $position
+     * @return string
+     */
     private function createContactText(EmploymentPosition $position)
     {
-        $text = 'Contact: ';
+        $text = '';
 
         if ($position->hasContact()) {
+            $text = 'Contact: ';
             $text .= $position->getContact();
+            
+            if ($position->hasCompanyAddress()
+                || ($position->hasCompanyUrl() && false === $position->hasCompanyAddress())
+            ) {
+                $text .= self::CONTACT_SEPARATOR;
+            }
         }
 
-        if ($position->hasContact() && $position->hasAddress()) {
-            $text .= self::CONTACT_SEPARATOR;
-        }
+        return $text;
+    }
+    
+    /**
+     * @param EmploymentPosition $position
+     * @return string
+     */
+    private function createAddressText(EmploymentPosition $position)
+    {
+        $text = '';
+        
+        if ($position->hasCompanyAddress()) {
+            $text = 'Address: ';
 
-        if ($position->hasAddress()) {
-            $text .= $position->getAddress();
-        }
+            if ($position->hasAddress()) {
+                $text .= $position->getAddress();
+            }
+            
+            if ($position->hasAddress() && $position->hasCountry()) {
+                $text .= self::CONTACT_SEPARATOR;
+            }
 
-        if ($this->companyUrlWidth > 0) {
-            $text .= self::CONTACT_SEPARATOR;
+            if ($position->hasCountry()) {
+                $text .= $this->trans(
+                    $position->getCountry()
+                );
+            }
+
+            if ($position->hasCompanyUrl()) {
+                $text .= self::CONTACT_SEPARATOR;
+            }
         }
         
         return $text;
