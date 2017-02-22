@@ -195,7 +195,9 @@ abstract class AbstractEmployment extends AbstractSection
         $this->tcpdf->Cell(
             self::NAME_CELL_WIDTH,
             self::NAME_CELL_HEIGHT,
-            $this->trans($position->getName())
+            $this->trans(
+                $position->getName()
+            )
         );
     }
     
@@ -325,8 +327,10 @@ abstract class AbstractEmployment extends AbstractSection
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH,
             self::DESCRIPTION_LINE_HEIGHT,
-            $this->trans($position->getDescription())
-                . self::NEW_LINE
+            $this->trans(
+                $position->getDescription()
+            )
+            . self::NEW_LINE
         );
     }
     
@@ -477,7 +481,9 @@ abstract class AbstractEmployment extends AbstractSection
             $text = 'Address: ';
 
             if ($position->hasAddress()) {
-                $text .= $position->getAddress();
+                $text .= $this->trans(
+                    $position->getAddress()
+                );
             }
             
             if ($position->hasAddress() && $position->hasCountry()) {
