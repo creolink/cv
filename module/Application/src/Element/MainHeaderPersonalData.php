@@ -68,7 +68,9 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     {
         return [
             'Experience' => $this->createExperienceText(),
-            'Date of birth' => $this->getDateHelper()->getDate(),
+            'Date of birth' => DateHelper::getDate(
+                PersonalData::BIRTH_DATE
+            ),
             'Nationality' => PersonalData::NATIONALITY,
             'Address' => $this->createAddressText(),
             'Workplace' => PersonalData::WORK_PLACE,
@@ -80,11 +82,9 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
      */
     private function createExperienceText()
     {
-        return $this->getDateHelper()
-            ->getPassedYears(
+        return DateHelper::getPassedYears(
                 PersonalData::WORK_START_YEAR
-            )
-            . ' years';
+            ) . ' years';
     }
     
     /**
@@ -122,16 +122,6 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
         
         $this->tcpdf->SetLineWidth(
             self::LINE_WIDTH
-        );
-    }
-    
-    /**
-     * @return DateHelper
-     */
-    private function getDateHelper()
-    {
-        return new DateHelper(
-            strtotime(PersonalData::BIRTH_DATE)
         );
     }
     

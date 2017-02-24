@@ -87,8 +87,7 @@ class CareerGoals extends AbstractSection
      */
     private function renderContent()
     {
-        $workedYears = $this->getDateHelper()
-            ->getPassedYears(
+        $workedYears = DateHelper::getPassedYears(
                 PersonalData::WORK_START_YEAR
             );
         
@@ -110,15 +109,15 @@ class CareerGoals extends AbstractSection
         );
     }
     
-    /**
-     * @return DateHelper
-     */
-    private function getDateHelper()
-    {
-        return new DateHelper(
-            strtotime(PersonalData::BIRTH_DATE)
-        );
-    }
+//    /**
+//     * @return DateHelper
+//     */
+//    private function getDateHelper()
+//    {
+//        return new DateHelper(
+//            strtotime(PersonalData::BIRTH_DATE)
+//        );
+//    }
     
     /**
      * @return SectionTitle

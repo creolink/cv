@@ -10,11 +10,6 @@ namespace Application\Helper;
 class DateHelper
 {
     /**
-     * @var int
-     */
-    private $date = 0;
-    
-    /**
      * @var array
      */
     private $polishMonths = [
@@ -34,46 +29,47 @@ class DateHelper
     
     /**
      * @param int $date
-     */
-    public function __construct($date)
-    {
-        $this->date = $date;
-    }
-    
-    /**
-     * @return int
-     */
-    public function getPassedYears($year)
-    {
-        return date("Y") - $year;
-    }
-    
-    /**
      * @return string
      */
-    public function getDate()
+    public static function getDate($date)
     {
         $currentLocale = setlocale(LC_TIME, "0");
         
-        $formatedDate = strftime("%d %B %Y", $this->date);
+        $formatedDate = strftime("%d %B %Y", $date);
         
         if (strpos($currentLocale, 'pl_PL') !== false) {
-            return $this->getPolishMonths($formatedDate);
+            return self::getPolishMonths(
+                $date,
+                $formatedDate
+            );
         }
         
         return $formatedDate;
     }
     
     /**
-     * @param string $date
+     * @return int
+     */
+    public static function getPassedYears($year)
+    {
+        return date("Y") - $year;
+    }
+    
+    /**
+     * @param int $date
+     * @param string $formatedDate
      * @return string
      */
-    private function getPolishMonths($date = '')
+    private static function getPolishMonths($date, $formatedDate = '')
     {
-        $month = date("n", $this->date);
+        $month = date("n", $date);
         $monthNames = $this->polishMonths[$month];
         
-        return str_replace($monthNames[0], $monthNames[1], $date);
+        return str_replace(
+            $monthNames[0],
+            $monthNames[1],
+            $formatedDate
+        );
     }
 }
 
