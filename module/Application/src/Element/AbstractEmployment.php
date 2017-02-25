@@ -24,7 +24,6 @@ abstract class AbstractEmployment extends AbstractSection
     const DATE_FONT_SIZE = 8;
     const DATE_CELL_WIDTH = 0;
     const DATE_CELL_HEIGHT = 6;
-    const DATE_SEPARATOR = ' - ';
     
     const NAME_MARGIN = 4.5;
     const NAME_FONT_SIZE = 9;
@@ -60,7 +59,8 @@ abstract class AbstractEmployment extends AbstractSection
     const CONTACT_SEPARATOR = ', ';
     const CONTACT_CELL_HEIGHT = 2;
     
-    const DATE_AND_COMPANY_SEPARATOR = ', ';
+    const SEPARATOR_COMMA = ', ';
+    const SEPARATOR_MINUS = ' - ';
     
     /**
      * @var float
@@ -152,7 +152,7 @@ abstract class AbstractEmployment extends AbstractSection
     private function getDateAndCompany(EmploymentPosition $position)
     {
         return $this->getDate($position)
-            . self::DATE_AND_COMPANY_SEPARATOR
+            . self::SEPARATOR_COMMA
             . $this->trans(
                 $position->getCompany()
             );
@@ -167,8 +167,9 @@ abstract class AbstractEmployment extends AbstractSection
         $dateEnd = $position->getDateEnd();
         
         return $position->getDateStart()
-            . self::DATE_SEPARATOR
-            . (false === empty($dateEnd) ? $dateEnd : '...present');
+            . self::SEPARATOR_MINUS
+            . (false === empty($dateEnd) ? $dateEnd : $this->trans('cv-employment-date-present'))
+            . ($position->isPartTime() ? self::SEPARATOR_COMMA . ' part time' : '');
     }
     
     /**

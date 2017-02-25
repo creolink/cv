@@ -118,5 +118,5 @@ msgstr "Poland"
 msgid "cv-commisions-gpl-description"
 msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
-msgid ""
-msgstr ""
+msgid "cv-employment-date-present"
+msgstr "...present"

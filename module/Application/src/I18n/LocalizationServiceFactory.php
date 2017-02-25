@@ -5,14 +5,13 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\Normalization;
+namespace Application\I18n;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
-use Zend\I18n\Translator\Translator;
-use Application\Normalization\NormalizedLocalizationService;
+use Application\I18n\LocalizationService;
+use Application\Factory\AbstractBaseFactory;
 
-class NormalizedLocalizationServiceFactory implements FactoryInterface
+class LocalizationServiceFactory extends AbstractBaseFactory
 {
     /**
      * Create a Normalization instance.
@@ -20,13 +19,12 @@ class NormalizedLocalizationServiceFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param null|array $options
-     * @return Translator
+     * @return LocalizationService
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $translator = $container->get(Translator::class);
-        $localization = new NormalizedLocalizationService($translator);
-
-        return $localization;
+        return new LocalizationService(
+            $this->getLocale($container)
+        );
     }
 }

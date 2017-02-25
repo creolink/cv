@@ -28,14 +28,17 @@ class DateHelper
     ];
     
     /**
-     * @param int $date
+     * @param string $date
      * @return string
      */
     public static function getDate($date)
     {
         $currentLocale = setlocale(LC_TIME, "0");
         
-        $formatedDate = strftime("%d %B %Y", $date);
+        $formatedDate = strftime(
+            "%d %B %Y", 
+            strtotime($date)
+        );
         
         if (strpos($currentLocale, 'pl_PL') !== false) {
             return self::getPolishMonths(

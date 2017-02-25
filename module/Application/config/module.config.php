@@ -5,11 +5,13 @@ namespace Application;
 use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
-use Zend\Mvc\I18n\Router\TranslatorAwareTreeRouteStack;
 use Zend\I18n\Translator\TranslatorServiceFactory;
 use Zend\I18n\Translator\Translator;
-use Application\Normalization\NormalizedLocalizationService;
-use Application\Normalization\NormalizedLocalizationServiceFactory;
+use Application\Normalization\NormalizedTranslationService;
+use Application\Normalization\NormalizedTranslationServiceFactory;
+use Application\I18n\LocalizationService;
+use Application\I18n\LocalizationServiceFactory;
+use Application\Config\Locale;
 
 return [
     'controllers' => [
@@ -25,7 +27,6 @@ return [
         'display_exceptions'       => true,
     ],
     'router' => [
-        'router_class' => TranslatorAwareTreeRouteStack::class,
         'routes' => [
             'home' => [
                 'type' => Literal::class,
@@ -40,13 +41,13 @@ return [
             'subdomain' => [
                 'type' => Hostname::class,
                 'options' => [
-                    'route'    => ':subdomain.' . $_SERVER['SERVER_NAME'],
+                    'route'    => ':' . Locale::ROUTER_LOCALE_PARAM . '.' . $_SERVER['SERVER_NAME'],
                     'constraints' => [
-                        'subdomain' => 'pl|en|de',
+                        'subdomain' => Locale::ALLOWED_ROUTED_LOCALES,
                     ],
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'subdomain' => 'en',
+                        'locale' => Locale::DEFAULT_ROUTED_LOCALE,
                         'action'     => 'index',
                     ],
                 ],
@@ -55,12 +56,13 @@ return [
     ],
     'service_manager' => [
         'factories' => [
+            LocalizationService::class => LocalizationServiceFactory::class,
             Translator::class => TranslatorServiceFactory::class,
-            NormalizedLocalizationService::class => NormalizedLocalizationServiceFactory::class,
+            NormalizedTranslationService::class => NormalizedTranslationServiceFactory::class,
         ],
     ],
     'translator' => [
-        'locale' => 'en_GB',
+        'locale' => Locale::DEFAULT_LOCALE,
         'translation_file_patterns' => [
             [
                 'type' => 'gettext',

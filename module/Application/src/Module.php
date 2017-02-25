@@ -13,6 +13,7 @@ use Zend\Mvc\MvcEvent;
 use Zend\I18n\Translator\Translator;
 use Application\Model\CurriculumVitaeFactory;
 use Application\Model\CurriculumVitae;
+use Zend\Di\ServiceLocatorInterface;
 
 class Module
 {
@@ -26,8 +27,12 @@ class Module
         Factory::registerReader( 'yml', 'yaml' );
         
         $decoder = new Parser();
+        
         $reader  = Factory::getReaderPluginManager()->get( 'yaml' );
-        $reader->setYamlDecoder( [ $decoder, 'parse' ] );
+        $reader->setYamlDecoder([
+            $decoder,
+            'parse'
+        ]);
     }
     
     /**
@@ -51,14 +56,42 @@ class Module
     }
     
     /**
-     * Setups bootstrap data
-     * 
-     * @param MvcEvent $e
+     * @param MvcEvent $mvcEvent
+     * @return ServiceLocatorInterface
      */
-    public function onBootstrap(MvcEvent $e)
+    private function getServiceManager(MvcEvent $mvcEvent)
     {
-        $translator = $e->getApplication()->getServiceManager()->get(Translator::class);
-        $translator->setLocale('de_DE')
-            ->setFallbackLocale('en_GB');
+        return $mvcEvent->getApplication()
+            ->getServiceManager();
+    }
+    
+    /**
+     * @param MvcEvent $mvcEvent
+     * @return Translator
+     */
+    private function getTranslator(MvcEvent $mvcEvent)
+    {
+        return $this->getServiceManager($mvcEvent)
+            ->get(Translator::class);
+    }
+    
+    /**
+     * @param MvcEvent $mvcEvent
+     * @return array
+     */
+    private function getApplicationConfig(MvcEvent $mvcEvent)
+    {
+        return $this->getServiceManager($mvcEvent)
+            ->get('ApplicationConfig');
+    }
+    
+    /**
+     * @param MvcEvent $mvcEvent
+     * @return array
+     */
+    private function getModuleConfig(MvcEvent $mvcEvent)
+    {
+        return $this->getServiceManager($mvcEvent)
+            ->get('Config');
     }
 }

@@ -94,7 +94,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     {
         return PersonalData::STREET . self::NEW_LINE
             . PersonalData::POST_CODE . ' ' . PersonalData::CITY . self::NEW_LINE
-            . PersonalData::COUNTRY;
+            . $this->trans(PersonalData::COUNTRY);
     }
     
     /**

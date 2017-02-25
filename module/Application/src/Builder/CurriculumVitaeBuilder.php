@@ -12,7 +12,7 @@ use Application\Builder\MainPage;
 use Application\Builder\SecondPage;
 use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
-use Application\Normalization\NormalizedLocalizationService;
+use Application\Normalization\NormalizedTranslationService;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
@@ -22,11 +22,11 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     private $cv = null;
     
     /**
-     * @var NormalizedLocalizationService
+     * @var NormalizedTranslationService
      */
     private $normalizedLocalization;
     
-    public function __construct(NormalizedLocalizationService $normalizedLocalization)
+    public function __construct(NormalizedTranslationService $normalizedLocalization)
     {
         $this->normalizedLocalization = $normalizedLocalization;
         

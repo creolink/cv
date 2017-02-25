@@ -32,7 +32,7 @@ class IndexController extends BaseController
     {
         return $this->redirect()->toRoute(
             'subdomain',
-            ['subdomain' => 'en']
+            ['locale' => 'en']
         );
     }
 }

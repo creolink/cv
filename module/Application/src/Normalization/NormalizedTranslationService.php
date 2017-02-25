@@ -8,8 +8,9 @@
 namespace Application\Normalization;
 
 use Zend\I18n\Translator\Translator;
+use Zend\I18n\Translator\TranslatorInterface;
 
-class NormalizedLocalizationService
+class NormalizedTranslationService implements TranslatorInterface
 {
     /**
      * Characters for normalization
@@ -50,14 +51,33 @@ class NormalizedLocalizationService
     }
     
     /**
-     * @param string $message
-     * 
-     * @return string
+     * {@inheritDoc}
      */
-    public function trans($message)
+    public function translate($message, $textDomain = 'default', $locale = null)
     {
-        return $this->translator->translate(
-            $this->normalize($message)
+        return $this->normalize(
+            $this->translator->translate($message)
+        );
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function translatePlural(
+        $singular,
+        $plural,
+        $number,
+        $textDomain = 'default',
+        $locale = null
+    ) {
+        return $this->normalize(
+            $this->translator->translatePlural(
+                $singular,
+                $plural,
+                $number,
+                $textDomain,
+                $locale
+            )
         );
     }
     
