@@ -9,11 +9,8 @@ namespace Application;
 
 use Zend\Config\Factory;
 use Symfony\Component\Yaml\Parser;
-use Zend\Mvc\MvcEvent;
-use Zend\I18n\Translator\Translator;
 use Application\Model\CurriculumVitaeFactory;
 use Application\Model\CurriculumVitae;
-use Zend\Di\ServiceLocatorInterface;
 
 class Module
 {
@@ -24,15 +21,7 @@ class Module
      */
     public function init()
     {
-        Factory::registerReader( 'yml', 'yaml' );
-        
-        $decoder = new Parser();
-        
-        $reader  = Factory::getReaderPluginManager()->get( 'yaml' );
-        $reader->setYamlDecoder([
-            $decoder,
-            'parse'
-        ]);
+        $this->setYamlReader();
     }
     
     /**
@@ -55,43 +44,18 @@ class Module
         ];
     }
     
-    /**
-     * @param MvcEvent $mvcEvent
-     * @return ServiceLocatorInterface
-     */
-    private function getServiceManager(MvcEvent $mvcEvent)
+    private function setYamlReader()
     {
-        return $mvcEvent->getApplication()
-            ->getServiceManager();
-    }
-    
-    /**
-     * @param MvcEvent $mvcEvent
-     * @return Translator
-     */
-    private function getTranslator(MvcEvent $mvcEvent)
-    {
-        return $this->getServiceManager($mvcEvent)
-            ->get(Translator::class);
-    }
-    
-    /**
-     * @param MvcEvent $mvcEvent
-     * @return array
-     */
-    private function getApplicationConfig(MvcEvent $mvcEvent)
-    {
-        return $this->getServiceManager($mvcEvent)
-            ->get('ApplicationConfig');
-    }
-    
-    /**
-     * @param MvcEvent $mvcEvent
-     * @return array
-     */
-    private function getModuleConfig(MvcEvent $mvcEvent)
-    {
-        return $this->getServiceManager($mvcEvent)
-            ->get('Config');
+        Factory::registerReader('yml', 'yaml');
+        
+        $decoder = new Parser();
+        
+        $reader  = Factory::getReaderPluginManager()
+            ->get('yaml');
+        
+        $reader->setYamlDecoder([
+            $decoder,
+            'parse'
+        ]);
     }
 }

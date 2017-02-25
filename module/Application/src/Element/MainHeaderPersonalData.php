@@ -12,6 +12,7 @@ use Application\Config\PersonalData;
 use Application\Helper\DateHelper;
 use Application\Config\Color;
 use Application\Config\Font;
+use \DateTime;
 
 class MainHeaderPersonalData extends AbstractTcpdfDecorator
 {
@@ -68,8 +69,11 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     {
         return [
             'Experience' => $this->createExperienceText(),
-            'Date of birth' => DateHelper::getDate(
-                PersonalData::BIRTH_DATE
+//            'Date of birth' => DateHelper::getDate(
+//                PersonalData::BIRTH_DATE
+//            ),
+            'Date of birth' => $this->getTransformedDate(
+                new DateTime(PersonalData::BIRTH_DATE)
             ),
             'Nationality' => PersonalData::NATIONALITY,
             'Address' => $this->createAddressText(),

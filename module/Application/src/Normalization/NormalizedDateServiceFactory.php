@@ -5,24 +5,31 @@
  * @link http://cv.creolink.pl/
  */
 
-namespace Application\I18n;
+namespace Application\Normalization;
 
 use Interop\Container\ContainerInterface;
-use Application\I18n\LocalizationService;
 use Application\Factory\AbstractBaseFactory;
+use Application\Normalization\NormalizedDateService;
+use Application\I18n\LocalizationService;
 
-class LocalizationServiceFactory extends AbstractBaseFactory
+class NormalizedDateServiceFactory extends AbstractBaseFactory
 {
     /**
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param null|array $options
-     * @return LocalizationService
+     * @return 
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new LocalizationService(
-            $this->getLocale($container)
+        $localizationService = $container->get(LocalizationService::class);
+
+        $normalizedDateService = new NormalizedDateService(
+            $localizationService
         );
+        
+        $normalizedDateService->setFormatter();
+        
+        return $normalizedDateService;
     }
 }

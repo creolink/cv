@@ -14,6 +14,7 @@ use Application\Config\Image;
 use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 use Application\Normalization\NormalizedTranslationService;
+use Application\Normalization\NormalizedDateService;
 
 class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 {
@@ -31,6 +32,11 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @var NormalizedTranslationService
      */
     private $translator;
+    
+    /**
+     * @var NormalizedDateService
+     */
+    private $dateService;
 
     /**
      * {@inheritDoc}
@@ -51,11 +57,29 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     }
     
     /**
+     * Injects date internalization service
+     * 
+     * @param NormalizedDateService $dateService
+     */
+    public function setDateService(NormalizedDateService $dateService)
+    {
+        $this->dateService = $dateService;
+    }
+    
+    /**
      * @return NormalizedTranslationService
      */
     public function getTranslator()
     {
         return $this->translator;
+    }
+    
+    /**
+     * @return NormalizedDateService
+     */
+    public function getDate()
+    {
+        return $this->dateService;
     }
     
     /**
@@ -147,7 +171,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * 
      * @return string
      */
-    public function renderPdf()
+    public function outputPdf()
     {
         $this->Output(PdfConfig::FILE_NAME);
     }

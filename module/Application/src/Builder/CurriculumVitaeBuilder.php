@@ -13,6 +13,7 @@ use Application\Builder\SecondPage;
 use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
 use Application\Normalization\NormalizedTranslationService;
+use Application\Normalization\NormalizedDateService;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
@@ -26,9 +27,21 @@ class CurriculumVitaeBuilder extends AbstractBuilder
      */
     private $normalizedLocalization;
     
-    public function __construct(NormalizedTranslationService $normalizedLocalization)
-    {
+    /**
+     * @var NormalizedDateService
+     */
+    private $normalizedDate;
+    
+    /**
+     * @param NormalizedTranslationService $normalizedLocalization
+     * @param NormalizedDateService $normalizedDate
+     */
+    public function __construct(
+        NormalizedTranslationService $normalizedLocalization,
+        NormalizedDateService $normalizedDate
+    ) {
         $this->normalizedLocalization = $normalizedLocalization;
+        $this->normalizedDate = $normalizedDate;
         
         $this->cv = new CurriculumVitae();
     }
@@ -37,7 +50,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
      * {@inheritDoc}
      */
     public function render() {
-        return $this->cv->renderPdf();
+        return $this->cv->outputPdf();
     }
     
     /**
@@ -49,6 +62,9 @@ class CurriculumVitaeBuilder extends AbstractBuilder
         $this->cv->initFonts();
         $this->cv->setTranslator(
             $this->normalizedLocalization
+        );
+        $this->cv->setDateService(
+            $this->normalizedDate
         );
     }
     

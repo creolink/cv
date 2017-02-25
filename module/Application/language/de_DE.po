@@ -16,5 +16,5 @@ msgstr ""
 "Language: de_DE\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid "Skeleton Application"
-msgstr "aaa"
+msgid "cv-personalData-country"
+msgstr "Deutschland"

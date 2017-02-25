@@ -35,4 +35,14 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
         return $this->tcpdf->getTranslator()
             ->translate($message);
     }
+    
+    /**
+     * @param int $date
+     * @return string
+     */
+    protected function getTransformedDate($date)
+    {
+        return $this->tcpdf->getDate()
+            ->getTransformedDate($date);
+    }
 }

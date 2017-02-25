@@ -8,7 +8,8 @@
 namespace Application\Normalization;
 
 use Interop\Container\ContainerInterface;
-use Zend\I18n\Translator\Translator;
+//use Zend\I18n\Translator\Translator;
+use Zend\Mvc\I18n\Translator;
 use Application\Normalization\NormalizedTranslationService;
 use Application\I18n\LocalizationService;
 use Application\Config\Locale;
@@ -17,8 +18,6 @@ use Application\Factory\AbstractBaseFactory;
 class NormalizedTranslationServiceFactory extends AbstractBaseFactory
 {
     /**
-     * Create a Normalization instance.
-     *
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param null|array $options
@@ -26,10 +25,10 @@ class NormalizedTranslationServiceFactory extends AbstractBaseFactory
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $localizationServise = $container->get(LocalizationService::class);
+        $localizationService = $container->get(LocalizationService::class);
         
         $translator = $container->get(Translator::class);
-        $translator->setLocale($localizationServise->getLocale())
+        $translator->setLocale($localizationService->getLocale())
             ->setFallbackLocale(
                     Locale::DEFAULT_LOCALE
                 );

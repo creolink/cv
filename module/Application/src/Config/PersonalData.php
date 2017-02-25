@@ -18,7 +18,8 @@ class PersonalData
     const POST_CODE = '14532';
 
     const NATIONALITY = 'cv-personalData-nationality';    
-    const BIRTH_DATE = '01/19/1979';
+    //const BIRTH_DATE = '01/19/1979';
+    const BIRTH_DATE = '1979/01/19';
     const WORK_START_YEAR = 2001;
     const WORK_PLACE = 'cv-personalData-workPlace';
     const STOP_SMOKING_YEAR = 2006;

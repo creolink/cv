@@ -7,7 +7,6 @@
 
 namespace Application\Normalization;
 
-use Zend\I18n\Translator\Translator;
 use Zend\I18n\Translator\TranslatorInterface;
 
 class NormalizedTranslationService implements TranslatorInterface
@@ -45,7 +44,7 @@ class NormalizedTranslationService implements TranslatorInterface
     /**
      * @param Translator $translator
      */
-    public function __construct(Translator $translator)
+    public function __construct(TranslatorInterface $translator)
     {
         $this->translator = $translator;
     }

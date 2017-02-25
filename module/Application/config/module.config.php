@@ -5,18 +5,22 @@ namespace Application;
 use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
-use Zend\I18n\Translator\TranslatorServiceFactory;
-use Zend\I18n\Translator\Translator;
+use Zend\Mvc\I18n\TranslatorFactory;
+use Zend\Mvc\I18n\Translator;
+use Application\Controller\IndexController;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Normalization\NormalizedTranslationServiceFactory;
 use Application\I18n\LocalizationService;
 use Application\I18n\LocalizationServiceFactory;
 use Application\Config\Locale;
+use Zend\I18n\View\Helper\DateFormat;
+use Application\Normalization\NormalizedDateService;
+use Application\Normalization\NormalizedDateServiceFactory;
 
 return [
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            IndexController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
@@ -33,7 +37,7 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => IndexController::class,
                         'action'     => 'home',
                     ],
                 ],
@@ -46,7 +50,7 @@ return [
                         'subdomain' => Locale::ALLOWED_ROUTED_LOCALES,
                     ],
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => IndexController::class,
                         'locale' => Locale::DEFAULT_ROUTED_LOCALE,
                         'action'     => 'index',
                     ],
@@ -57,8 +61,10 @@ return [
     'service_manager' => [
         'factories' => [
             LocalizationService::class => LocalizationServiceFactory::class,
-            Translator::class => TranslatorServiceFactory::class,
+            Translator::class => TranslatorFactory::class,
             NormalizedTranslationService::class => NormalizedTranslationServiceFactory::class,
+            NormalizedDateService::class => NormalizedDateServiceFactory::class,
+//            DateFormat::class => InvokableFactory::class,
         ],
     ],
     'translator' => [
