@@ -8,11 +8,14 @@
 namespace Application\Normalization;
 
 use Zend\I18n\Translator\TranslatorInterface;
+use Zend\Mvc\I18n\Translator;
+use Application\Config\Locale;
 
 class NormalizedTranslationService implements TranslatorInterface
 {
     /**
      * Characters for normalization
+     * 
      * @var type 
      */
     private $chars = [
@@ -44,7 +47,7 @@ class NormalizedTranslationService implements TranslatorInterface
     /**
      * @param Translator $translator
      */
-    public function __construct(TranslatorInterface $translator)
+    public function __construct(Translator $translator)
     {
         $this->translator = $translator;
     }
@@ -87,6 +90,10 @@ class NormalizedTranslationService implements TranslatorInterface
      */
     private function normalize($message)
     {
+        if (Locale::LOCALE_PL === $this->translator->getLocale()) {
+            return $message;
+        }
+        
         return strtr(
             $message,
             $this->chars
