@@ -13,7 +13,6 @@ use Application\Normalization\NormalizedTranslationServiceFactory;
 use Application\I18n\LocalizationService;
 use Application\I18n\LocalizationServiceFactory;
 use Application\Config\Locale;
-use Zend\I18n\View\Helper\DateFormat;
 use Application\Normalization\NormalizedDateService;
 use Application\Normalization\NormalizedDateServiceFactory;
 
@@ -64,7 +63,6 @@ return [
             Translator::class => TranslatorFactory::class,
             NormalizedTranslationService::class => NormalizedTranslationServiceFactory::class,
             NormalizedDateService::class => NormalizedDateServiceFactory::class,
-//            DateFormat::class => InvokableFactory::class,
         ],
     ],
     'translator' => [
