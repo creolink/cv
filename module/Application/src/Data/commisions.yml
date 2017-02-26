@@ -34,7 +34,19 @@ positions:
       references: 'http://cv.creolink.pl/references/references_freepers.zip'
       contact: 'Krzysztof Rogalski, +48 42 / 239 41 77, +48 42 / 791 24 95 30'
       companyUrl: 'http://fripers.pl/'
-      
+
+    - name: 'cv-commisions-forweb-name'
+      company: 'Forweb s.c. M. Bodetko, T. Pawłowski'
+      dateStart: '2012/10/22'
+      dateEnd: '2012/12/31'
+      address: 'ul. Łagiewnicka 54/56, 91-463, Łódź'
+      country: 'cv-commisions-forweb-country'
+      description: 'cv-commisions-forweb-description'
+      examples: ''
+      references: ''
+      contact: 'Tomasz Pawlowski, (+48 42) 235 1000'
+      companyUrl: 'http://www.forweb.pl'
+
     - name: 'cv-commisions-gandalf2009-name'
       company: 'Księgarnia Internetowa Gandalf'
       dateStart: '2008/12/01'
@@ -96,10 +108,10 @@ positions:
       companyUrl: 'http://www.stawoz.pl/'
       
     - name: 'cv-commisions-arges-name'
-      company: 'Arges.pl'
+      company: 'ARGES Sp. z o.o.'
       dateStart: '2001/11/01'
       dateEnd: '2002/08/31'
-      address: ''
+      address: 'ul. Milionowa 21, 93-105 Łódź'
       country: 'cv-commisions-arges-country'
       description: 'cv-commisions-arges-description'
       examples: ''
@@ -109,17 +121,17 @@ positions:
       disabled: true
       
     - name: 'cv-commisions-gpl-name'
-      company: 'Gospodarstwo Pomocnicze Łodzianka'
+      company: 'Gospodarstwo Pomocnicze Łodzianka Łódzkiej Wojewódzkiej Komendy OHP w Łodzi'
       dateStart: '2001/10/01'
       dateEnd: '2001/11/30'
-      address: ''
+      address: 'ul. Sienkiewicza 63, 90-009 Łódź'
       country: 'cv-commisions-gpl-country'
       description: 'cv-commisions-gpl-description'
       examples: ''
       references: ''
       contact: ''
       companyUrl: ''
-      disabled: true
+      disabled: false
       
 #    - name: ''
 #      company: ''
