@@ -109,16 +109,6 @@ class CareerGoals extends AbstractSection
         );
     }
     
-//    /**
-//     * @return DateHelper
-//     */
-//    private function getDateHelper()
-//    {
-//        return new DateHelper(
-//            strtotime(PersonalData::BIRTH_DATE)
-//        );
-//    }
-    
     /**
      * @return SectionTitle
      */

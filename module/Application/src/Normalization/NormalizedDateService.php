@@ -9,10 +9,13 @@ namespace Application\Normalization;
 
 use \IntlDateFormatter;
 use Application\I18n\LocalizationService;
-use Zend\I18n\View\Helper\DateFormat;
+use \DateTime;
 
 class NormalizedDateService
 {
+    const LOCALIZED_DATE_PATTERN = 'd MMMM yyyy';
+    const LOCALIZED_MONTH_AND_YEAR = 'LLLL yyyy';
+    
     /**
      * @var LocalizationService
      */
@@ -23,12 +26,18 @@ class NormalizedDateService
      */
     private $formatter;
     
+    /**
+     * @param LocalizationService $localizationService
+     */
     public function __construct(
         LocalizationService $localizationService
     ) {
         $this->localizationService = $localizationService;
     }
     
+    /**
+     * Sets formatter
+     */
     public function setFormatter()
     {
         $this->formatter = new IntlDateFormatter(
@@ -41,13 +50,55 @@ class NormalizedDateService
     /**
      * Returns localized date with properly transformed month name
      * 
-     * @param  DateTime|int|array $date
+     * @param  DateTime|int|array|string $date
      * @return string
      */
-    public function getTransformedDate($date)
+    public function getLocalizedDate($date)
     {
-        $this->formatter->setPattern('d MMMM yyyy');
+        return $this->format(
+            self::LOCALIZED_DATE_PATTERN,
+            $date
+        );
+    }
+    
+    /**
+     * Returns localized month and year
+     * 
+     * @param  DateTime|int|array|string $date
+     * @return string
+     */
+    public function getMonthAndYear($date)
+    {
+        return $this->format(
+            self::LOCALIZED_MONTH_AND_YEAR,
+            $date
+        );
+    }
+    
+    /**
+     * @param  DateTime|int|array|string $date
+     * @return DateTime|int|array
+     */
+    private function createDate($date)
+    {
+        if (gettype($date) === 'string') {
+            $date = new DateTime($date);
+        }
         
-        return $this->formatter->format($date);
+        return $date;
+    }
+    
+    /**
+     * @param string $pattern
+     * @param DateTime|int|array $date
+     * @return string
+     */
+    private function format($pattern, $date)
+    {
+        $this->formatter->setPattern($pattern);
+        
+        return $this->formatter->format(
+            $this->createDate($date)
+        );
     }
 }

@@ -164,9 +164,15 @@ abstract class AbstractEmployment extends AbstractSection
      */
     private function getDate(EmploymentPosition $position)
     {
-        $dateEnd = $position->getDateEnd();
+        $dateStart = $this->localizeMonthAndYear(
+                $position->getDateStart()
+            );
         
-        return $position->getDateStart()
+        $dateEnd = $this->localizeMonthAndYear(
+                $position->getDateEnd()
+            );
+        
+        return $dateStart
             . self::SEPARATOR_MINUS
             . (false === empty($dateEnd) ? $dateEnd : $this->trans('cv-employment-date-present'))
             . ($position->isPartTime() ? self::SEPARATOR_COMMA . ' part time' : '');

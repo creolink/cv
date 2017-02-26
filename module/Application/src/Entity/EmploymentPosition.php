@@ -131,18 +131,7 @@ class EmploymentPosition implements EntityInterface
      */
     public function getDateStart()
     {
-//        return new \DateTime($this->dateStart);
-        
-//        $formatter = new IntlDateFormatter(
-//            'de_DE',
-//            IntlDateFormatter::FULL,
-//            IntlDateFormatter::FULL
-//        );
-//        $formatter->setPattern('MMMM yyyy');
-//
-//        return $formatter->format($date);
-
-        return (new \DateTime($this->dateStart))->format("F Y");
+        return new \DateTime($this->dateStart);
     }
     
     /**
@@ -159,7 +148,7 @@ class EmploymentPosition implements EntityInterface
     public function getDateEnd()
     {
         if (false === empty($this->dateEnd)) {
-            return (new \DateTime($this->dateEnd))->format("F Y");
+            return (new \DateTime($this->dateEnd));
         }
         
         return null;

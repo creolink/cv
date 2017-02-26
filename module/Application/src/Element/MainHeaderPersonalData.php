@@ -69,15 +69,12 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     {
         return [
             'Experience' => $this->createExperienceText(),
-//            'Date of birth' => DateHelper::getDate(
-//                PersonalData::BIRTH_DATE
-//            ),
-            'Date of birth' => $this->getTransformedDate(
+            'Date of birth' => $this->localizeDate(
                 new DateTime(PersonalData::BIRTH_DATE)
             ),
-            'Nationality' => PersonalData::NATIONALITY,
+            'Nationality' => $this->trans(PersonalData::NATIONALITY),
             'Address' => $this->createAddressText(),
-            'Workplace' => PersonalData::WORK_PLACE,
+            'Workplace' => $this->trans(PersonalData::WORK_PLACE),
         ];
     }
     

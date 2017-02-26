@@ -40,9 +40,19 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      * @param int $date
      * @return string
      */
-    protected function getTransformedDate($date)
+    protected function localizeDate($date)
     {
         return $this->tcpdf->getDate()
-            ->getTransformedDate($date);
+            ->getLocalizedDate($date);
+    }
+    
+    /**
+     * @param int $date
+     * @return string
+     */
+    protected function localizeMonthAndYear($date)
+    {
+        return $this->tcpdf->getDate()
+            ->getMonthAndYear($date);
     }
 }
