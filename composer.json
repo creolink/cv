@@ -19,7 +19,8 @@
         "zendframework/zend-test": "^3.0",
         "zendframework/zendframework": "^3.0",
         "zendframework/zend-mvc-i18n": "^1.0",
-        "zendframework/zend-servicemanager": "^3.2"
+        "zendframework/zend-servicemanager": "^3.2",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -119,9 +120,16 @@
         "serve": "php -S 0.0.0.0:8080 -t public/ public/index.php",
         "test": "phpunit"
     },
+    "repositories": [
+      {
+        "type" : "vcs",
+        "url" : "git@github.com:creolink/code_style.git"
+      }
+    ],
     "require-dev": {
         "phpunit/phpunit": "^5.7",
-        "zendframework/zend-developer-tools": "^1.1"
+        "zendframework/zend-developer-tools": "^1.1",
+        "creolink/code_style": "dev-develop"
     },
     "authors": [
         {
