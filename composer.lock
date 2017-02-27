@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2b8de1cc64872f3c747206af0d8386c",
+    "content-hash": "cf20a0c657eb4367922226f2d218e000",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -5570,6 +5570,55 @@
     ],
     "packages-dev": [
         {
+            "name": "creolink/code_style",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creolink/code_style.git",
+                "reference": "c051c1b4fc11867118c24410c92eb5d11c4c156b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creolink/code_style/zipball/c051c1b4fc11867118c24410c92eb5d11c4c156b",
+                "reference": "c051c1b4fc11867118c24410c92eb5d11c4c156b",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Joos",
+                    "email": "david.joos@escapestudios.com"
+                },
+                {
+                    "name": "Community contributors",
+                    "homepage": "https://github.com/escapestudios/Symfony2-coding-standard/graphs/contributors"
+                }
+            ],
+            "description": "CodeSniffer ruleset for the Symfony2 coding standard",
+            "homepage": "https://github.com/escapestudios/Symfony2-coding-standard",
+            "keywords": [
+                "Symfony2",
+                "coding standard",
+                "phpcs"
+            ],
+            "support": {
+                "source": "https://github.com/escapestudios/Symfony2-coding-standard",
+                "issues": "https://github.com/escapestudios/Symfony2-coding-standard/issues"
+            },
+            "time": "2017-02-27T19:46:21+00:00"
+        },
+        {
             "name": "zendframework/zend-developer-tools",
             "version": "1.1.1",
             "source": {
@@ -5609,21 +5658,6 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-        }
-    ],
-    "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "zendframework/zend-component-installer": 20,
-        "creolink/code_style": 20
-    },
-    "prefer-stable": true,
-    "prefer-lowest": false,
-    "platform": {
-        "php": "^5.6 || ^7.0"
-    },
-    "platform-dev": []
-}
                     "dev-master": "1.1-dev",
                     "dev-develop": "1.2-dev"
                 },
@@ -5660,3 +5694,18 @@
                 "zf2"
             ],
             "time": "2016-09-08T13:53:58+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "zendframework/zend-component-installer": 20,
+        "creolink/code_style": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.6 || ^7.0"
+    },
+    "platform-dev": []
+}
