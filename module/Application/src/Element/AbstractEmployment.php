@@ -174,8 +174,12 @@ abstract class AbstractEmployment extends AbstractSection
 
         return $dateStart
             . self::SEPARATOR_MINUS
-            . (false === empty($dateEnd) ? $dateEnd : $this->trans('cv-employment-date-present'))
-            . ($position->isPartTime() ? self::SEPARATOR_COMMA . ' part time' : '');
+            . (false === empty($dateEnd)
+                ? $dateEnd
+                : $this->trans('cv-employment-date-present'))
+            . ($position->isPartTime()
+                ? self::SEPARATOR_COMMA . $this->trans('cv-employment-date-partTime')
+                : '');
     }
 
     /**
@@ -225,7 +229,7 @@ abstract class AbstractEmployment extends AbstractSection
             $this->tcpdf->Cell(
                 self::REFERENCES_CELL_WIDTH,
                 self::REFERENCES_CELL_HEIGHT,
-                'References',
+                $this->trans('cv-employment-references'),
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT,
@@ -256,7 +260,7 @@ abstract class AbstractEmployment extends AbstractSection
             $this->tcpdf->Cell(
                 self::EXAMPLES_CELL_WIDTH - $margin,
                 self::EXAMPLES_CELL_HEIGHT,
-                'Examples',
+                $this->trans('cv-employment-examples'),
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT,
@@ -463,7 +467,7 @@ abstract class AbstractEmployment extends AbstractSection
         $text = '';
 
         if ($position->hasContact()) {
-            $text = 'Contact: ';
+            $text = $this->trans('cv-employment-contact');
             $text .= $position->getContact();
 
             if ($position->hasCompanyAddress()
@@ -485,7 +489,7 @@ abstract class AbstractEmployment extends AbstractSection
         $text = '';
 
         if ($position->hasCompanyAddress()) {
-            $text = 'Address: ';
+            $text = $this->trans('cv-employment-address');
 
             if ($position->hasAddress()) {
                 $text .= $this->trans(
