@@ -10,9 +10,9 @@ positions:
       references: 'http://cv.creolink.pl/references/references_tpnets.zip'
       contact: 'Piotr Marciniak, +48 42 / 636-98-96'
       companyUrl: 'http://tpnets.com/'
-      
+
     - name: 'cv-commisions-msPerfect-name'
-      company: 'Ms. Perfect Anita Luczynska'
+      company: 'Ms. Perfect Anita Łuczyńska'
       dateStart: '2015/07/01'
       dateEnd: '2015/08/31'
       address: 'Am Wall 54, 14532 Kleinmachnow'
@@ -22,9 +22,9 @@ positions:
       references: ''
       contact: 'Anita Łuczyńska, +49 163 8248005'
       companyUrl: 'http://www.msperfect.de/'
-      
+
     - name: 'cv-commisions-freepers-name'
-      company: 'Freepers Spolka Cywilna'
+      company: 'Freepers Spółka Cywilna'
       dateStart: '2013/02/01'
       dateEnd: '2015/07/31'
       address: 'Pomorska 41, 90-203, Łódź'
@@ -36,7 +36,7 @@ positions:
       companyUrl: 'http://fripers.pl/'
 
     - name: 'cv-commisions-forweb-name'
-      company: 'Forweb s.c. M. Bodetko, T. Pawłowski'
+      company: 'Forweb s.c., M. Bodetko, T. Pawłowski'
       dateStart: '2012/10/22'
       dateEnd: '2012/12/31'
       address: 'ul. Łagiewnicka 54/56, 91-463, Łódź'
@@ -44,7 +44,7 @@ positions:
       description: 'cv-commisions-forweb-description'
       examples: ''
       references: ''
-      contact: 'Tomasz Pawlowski, (+48 42) 235 1000'
+      contact: 'Tomasz Pawłowski, (+48 42) 235 1000'
       companyUrl: 'http://www.forweb.pl'
 
     - name: 'cv-commisions-gandalf2009-name'
@@ -58,7 +58,7 @@ positions:
       references: ''
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
-      
+
     - name: 'cv-commisions-stawoz2009-name'
       company: 'Stawoz sp z o.o.'
       dateStart: '2007/09/01'
@@ -70,7 +70,7 @@ positions:
       references: 'http://cv.creolink.pl/references/references_stawoz.zip'
       contact: 'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306'
       companyUrl: 'http://www.stawoz.pl/'
-      
+
     - name: 'cv-commisions-iizt-name'
       company: 'IIZT.com'
       dateStart: '2004/05/01'
@@ -82,7 +82,7 @@ positions:
       references: 'http://cv.creolink.pl/references/references_iizt.zip'
       contact: 'Todd Wilkinson, todd@sacramentomarketinglabs.com'
       companyUrl: 'https://www.iizt.com/'
-      
+
     - name: 'cv-commisions-gandalf2005-name'
       company: 'GANDALF Księgarnia Internetowa'
       dateStart: '2004/08/01'
@@ -94,7 +94,7 @@ positions:
       references: ''
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
-      
+
     - name: 'cv-commisions-stawoz2005-name'
       company: 'Stawoz sp z o.o.'
       dateStart: '2003/11/01'
@@ -106,7 +106,7 @@ positions:
       references: ''
       contact: 'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306'
       companyUrl: 'http://www.stawoz.pl/'
-      
+
     - name: 'cv-commisions-arges-name'
       company: 'ARGES Sp. z o.o.'
       dateStart: '2001/11/01'
@@ -119,7 +119,7 @@ positions:
       contact: ''
       companyUrl: ''
       disabled: true
-      
+
     - name: 'cv-commisions-gpl-name'
       company: 'Gospodarstwo Pomocnicze Łodzianka Łódzkiej Wojewódzkiej Komendy OHP w Łodzi'
       dateStart: '2001/10/01'
@@ -132,7 +132,7 @@ positions:
       contact: ''
       companyUrl: ''
       disabled: false
-      
+
 #    - name: ''
 #      company: ''
 #      dateStart: ''

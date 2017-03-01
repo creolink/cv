@@ -75,14 +75,13 @@ class AboutMe extends AbstractSection
      */
     private function getContent()
     {
-        return "I am married and we have " . (date("Y") - PersonalData::MAXIMUS_BIRTH_DATE) . " years old son. "
-            . "In 2015 we started new life in Germany. "
-            . "I don't smoke since " . (date("Y") - PersonalData::STOP_SMOKING_YEAR) . " years. "
-            . "In 2016, through regular diet and systematic training, I have lost 35 kg. "
-            . "I developed my own PHP framework and I used it in all my commissioned projects. "
-            . "I've got references from almost all companies I worked for. "
-            . "This CV is an example of my abilities."
-            . self::NEW_LINE;
+        return sprintf(
+            $this->trans(
+                'cv-aboutMe-content'
+            ),
+            $this->getMaximusAge(),
+            $this->getNoSmokingYears()
+        ) . self::NEW_LINE;
     }
 
     /**
@@ -93,9 +92,25 @@ class AboutMe extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('About me');
+        $sectionTitle->setTitle('cv-aboutMe-sectionTitle');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;
+    }
+
+    /**
+     * @return int
+     */
+    private function getMaximusAge()
+    {
+        return date("Y") - PersonalData::MAXIMUS_BIRTH_DATE;
+    }
+
+    /**
+     * @return int
+     */
+    private function getNoSmokingYears()
+    {
+        return date("Y") - PersonalData::STOP_SMOKING_YEAR;
     }
 }

@@ -1,13 +1,13 @@
 positions:
-    - { name: 'Organization', level: 5, strength: 5 }
-    - { name: 'Independence', level: 5, strength: 5 }
-    - { name: 'Reliability', level: 5, strength: 5 }
-    - { name: 'Cooperation', level: 4, strength: 5 }
-    - { name: 'Punctuality', level: 4, strength: 5 }
-    - { name: 'Management', level: 4, strength: 5 }
-    - { name: 'Leading', level: 4, strength: 5 }
-    - { name: 'Assertiveness', level: 4, strength: 5 }
-    - { name: 'Diligence', level: 4, strength: 5 }
-    - { name: 'Creativity', level: 3, strength: 5 }
-    - { name: 'Team Work', level: 4, strength: 5, disabled: true }
-    - { name: 'Work under time pressure', level: 4, strength: 5, disabled: true }
+    - { name: 'cv-personalTraits-organization', level: 5, strength: 5 }
+    - { name: 'cv-personalTraits-independence', level: 5, strength: 5 }
+    - { name: 'cv-personalTraits-reliability', level: 5, strength: 5 }
+    - { name: 'cv-personalTraits-cooperation', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-punctuality', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-management', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-leading', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-assertiveness', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-diligence', level: 4, strength: 5 }
+    - { name: 'cv-personalTraits-creativity', level: 3, strength: 5 }
+    - { name: 'cv-personalTraits-teamWork', level: 4, strength: 5, disabled: true }
+    - { name: 'cv-personalTraits-workUnderTimePressure', level: 4, strength: 5, disabled: true }
