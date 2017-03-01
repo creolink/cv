@@ -92,7 +92,11 @@ class AboutMe extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('cv-aboutMe-sectionTitle');
+        $sectionTitle->setTitle(
+            $this->trans(
+                'cv-aboutMe-sectionTitle'
+            )
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;
