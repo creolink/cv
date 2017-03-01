@@ -5616,7 +5616,7 @@
                 "source": "https://github.com/escapestudios/Symfony2-coding-standard",
                 "issues": "https://github.com/escapestudios/Symfony2-coding-standard/issues"
             },
-            "time": "2017-02-27T19:46:21+00:00"
+            "time": "2017-02-27 19:46:21"
         },
         {
             "name": "zendframework/zend-developer-tools",
