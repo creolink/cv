@@ -33,11 +33,10 @@ abstract class AbstractEmployment extends AbstractSection
     const REFERENCES_MARGIN = 5.5;
     const REFERENCES_CELL_WIDTH = 195;
     const REFERENCES_CELL_HEIGHT = 2.2;
+    const REFERENCES_CELL_PADDING = 6;
 
     const EXAMPLES_CELL_WIDTH = 195;
     const EXAMPLES_CELL_HEIGHT = 2.2;
-    const EXAMPLES_CELL_PADDING = 17;
-    const EXAMPLES_CELL_NO_PADDING = 0;
     const EXAMPLES_MARGIN = 5.5;
 
     const DOWNLOAD_ICON_MARGIN = 5.5;
@@ -253,7 +252,12 @@ abstract class AbstractEmployment extends AbstractSection
 
             $this->setDownloadDocumentText();
 
-            $margin = $position->hasReferences() ? self::EXAMPLES_CELL_PADDING : self::EXAMPLES_CELL_NO_PADDING;
+            $margin = 0;
+            if ($position->hasReferences()) {
+                $margin = $this->tcpdf->GetStringWidth(
+                    $this->trans('cv-employment-references')
+                ) + self::REFERENCES_CELL_PADDING;
+            }
 
             $this->tcpdf->SetXY($x, $y + self::EXAMPLES_MARGIN);
 
