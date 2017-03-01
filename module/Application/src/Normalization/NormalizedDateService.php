@@ -15,17 +15,17 @@ class NormalizedDateService
 {
     const LOCALIZED_DATE_PATTERN = 'd MMMM yyyy';
     const LOCALIZED_MONTH_AND_YEAR = 'LLLL yyyy';
-    
+
     /**
      * @var LocalizationService
      */
     private $localizationService;
-    
+
     /**
      * @var IntlDateFormatter
      */
     private $formatter;
-    
+
     /**
      * @param LocalizationService $localizationService
      */
@@ -34,7 +34,7 @@ class NormalizedDateService
     ) {
         $this->localizationService = $localizationService;
     }
-    
+
     /**
      * Sets formatter
      */
@@ -46,10 +46,10 @@ class NormalizedDateService
             IntlDateFormatter::FULL
         );
     }
-    
+
     /**
      * Returns localized date with properly transformed month name
-     * 
+     *
      * @param  DateTime|int|array|string $date
      * @return string
      */
@@ -60,10 +60,10 @@ class NormalizedDateService
             $date
         );
     }
-    
+
     /**
      * Returns localized month and year
-     * 
+     *
      * @param  DateTime|int|array|string $date
      * @return string
      */
@@ -74,7 +74,7 @@ class NormalizedDateService
             $date
         );
     }
-    
+
     /**
      * @param  DateTime|int|array|string $date
      * @return DateTime|int|array
@@ -84,10 +84,10 @@ class NormalizedDateService
         if (gettype($date) === 'string') {
             $date = new DateTime($date);
         }
-        
+
         return $date;
     }
-    
+
     /**
      * @param string $pattern
      * @param DateTime|int|array $date
@@ -96,7 +96,7 @@ class NormalizedDateService
     private function format($pattern, $date)
     {
         $this->formatter->setPattern($pattern);
-        
+
         return $this->formatter->format(
             $this->createDate($date)
         );

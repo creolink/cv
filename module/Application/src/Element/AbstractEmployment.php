@@ -17,59 +17,59 @@ use Application\Hydrator\Hydrator;
 abstract class AbstractEmployment extends AbstractSection
 {
     const SECTION_WIDTH = 197;
-    
+
     const FIRST_POSITION_MARGIN = -1;
     const NEXT_POSITION_MARGIN = 2;
-    
+
     const DATE_FONT_SIZE = 8;
     const DATE_CELL_WIDTH = 0;
     const DATE_CELL_HEIGHT = 6;
-    
+
     const NAME_MARGIN = 4.5;
     const NAME_FONT_SIZE = 9;
     const NAME_CELL_WIDTH = 150;
     const NAME_CELL_HEIGHT = 6;
-    
+
     const REFERENCES_MARGIN = 5.5;
     const REFERENCES_CELL_WIDTH = 195;
     const REFERENCES_CELL_HEIGHT = 2.2;
-    
+
     const EXAMPLES_CELL_WIDTH = 195;
     const EXAMPLES_CELL_HEIGHT = 2.2;
     const EXAMPLES_CELL_PADDING = 17;
     const EXAMPLES_CELL_NO_PADDING = 0;
     const EXAMPLES_MARGIN = 5.5;
-    
+
     const DOWNLOAD_ICON_MARGIN = 5.5;
     const DOWNLOAD_DOCUMENT_FONT_SIZE = 7;
-    
+
     const DESCRIPTION_MARGIN_X = 1.5;
     const DESCRIPTION_MARGIN_Y = 10;
     const DESCRIPTION_FONT_SIZE = 8;
     const DESCRIPTION_LINE_HEIGHT = 4;
-    
+
     const COMPANY_DATA_FONT_SIZE = 6.5;
     const COMPANY_DATA_MARGIN_Y = 0.5;
     const COMPANY_DATA_MARGIN_X = 1;
     const COMPANY_DATA_PADDING = 2.5;
-    
+
     const COMPANY_URL_MARGIN = 0.3;
     const COMPANY_URL_LINE_HEIGHT = 2;
-    
+
     const CONTACT_SEPARATOR = ', ';
     const CONTACT_CELL_HEIGHT = 2;
-    
+
     const SEPARATOR_COMMA = ', ';
     const SEPARATOR_MINUS = ' - ';
-    
+
     /**
      * @var float
      */
     private $companyUrlWidth = 0;
-    
+
     /**
      * Renders list of skills
-     * 
+     *
      * @param Hydrator $hydrator
      */
     protected function renderPositions(Hydrator $hydrator)
@@ -82,7 +82,7 @@ abstract class AbstractEmployment extends AbstractSection
             if ($position->isDisabled()) {
                 continue;
             }
-            
+
             $this->renderPosition(
                 $position,
                 $x,
@@ -90,7 +90,7 @@ abstract class AbstractEmployment extends AbstractSection
             );
         }
     }
-    
+
     /**
      * @param int $counter
      * @return float
@@ -101,7 +101,7 @@ abstract class AbstractEmployment extends AbstractSection
                 ? self::NEXT_POSITION_MARGIN + self::FIRST_POSITION_MARGIN
                 : self::FIRST_POSITION_MARGIN;
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -116,7 +116,7 @@ abstract class AbstractEmployment extends AbstractSection
         $this->renderDescription($position, $x, $y);
         $this->renderCompanyData($position, $x);
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -125,26 +125,26 @@ abstract class AbstractEmployment extends AbstractSection
     private function renderDateAndCompany(EmploymentPosition $position, $x, $y)
     {
         $this->tcpdf->SetXY($x, $y);
-        
+
         $this->tcpdf->SetTextColor(
             Color::TEXT_COLOR_MEDIUM_RED,
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::NORMAL,
             self::DATE_FONT_SIZE
         );
-        
+
         $this->tcpdf->Cell(
             self::DATE_CELL_WIDTH,
             self::DATE_CELL_HEIGHT,
             $this->getDateAndCompany($position)
         );
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @return string
@@ -157,7 +157,7 @@ abstract class AbstractEmployment extends AbstractSection
                 $position->getCompany()
             );
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @return string
@@ -165,19 +165,19 @@ abstract class AbstractEmployment extends AbstractSection
     private function getDate(EmploymentPosition $position)
     {
         $dateStart = $this->localizeMonthAndYear(
-                $position->getDateStart()
-            );
-        
+            $position->getDateStart()
+        );
+
         $dateEnd = $this->localizeMonthAndYear(
-                $position->getDateEnd()
-            );
-        
+            $position->getDateEnd()
+        );
+
         return $dateStart
             . self::SEPARATOR_MINUS
             . (false === empty($dateEnd) ? $dateEnd : $this->trans('cv-employment-date-present'))
             . ($position->isPartTime() ? self::SEPARATOR_COMMA . ' part time' : '');
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -186,19 +186,19 @@ abstract class AbstractEmployment extends AbstractSection
     private function renderPositionName(EmploymentPosition $position, $x, $y)
     {
         $this->tcpdf->SetXY($x, $y + self::NAME_MARGIN);
-        
+
         $this->tcpdf->SetTextColor(
             Color::TEXT_COLOR_MEDIUM_RED,
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahomaBold,
             Font::NORMAL,
             self::NAME_FONT_SIZE
         );
-        
+
         $this->tcpdf->Cell(
             self::NAME_CELL_WIDTH,
             self::NAME_CELL_HEIGHT,
@@ -207,7 +207,7 @@ abstract class AbstractEmployment extends AbstractSection
             )
         );
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -217,9 +217,9 @@ abstract class AbstractEmployment extends AbstractSection
     {
         if ($position->hasReferences()) {
             $references = $position->getReferences();
-            
+
             $this->setDownloadDocumentText();
-            
+
             $this->tcpdf->SetXY($x, $y + self::REFERENCES_MARGIN);
 
             $this->tcpdf->Cell(
@@ -232,11 +232,11 @@ abstract class AbstractEmployment extends AbstractSection
                 self::TRANSPARENT,
                 $references
             );
-            
+
             $this->renderDownloadIcon($y, $references);
         }
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -250,9 +250,9 @@ abstract class AbstractEmployment extends AbstractSection
             $this->setDownloadDocumentText();
 
             $margin = $position->hasReferences() ? self::EXAMPLES_CELL_PADDING : self::EXAMPLES_CELL_NO_PADDING;
-            
+
             $this->tcpdf->SetXY($x, $y + self::EXAMPLES_MARGIN);
-            
+
             $this->tcpdf->Cell(
                 self::EXAMPLES_CELL_WIDTH - $margin,
                 self::EXAMPLES_CELL_HEIGHT,
@@ -263,11 +263,11 @@ abstract class AbstractEmployment extends AbstractSection
                 self::TRANSPARENT,
                 $examples
             );
-            
+
             $this->renderDownloadIcon($y, $examples);
         }
     }
-    
+
     /**
      * Sets fonts color and size for downloadable documents
      *  like references or examples
@@ -286,10 +286,10 @@ abstract class AbstractEmployment extends AbstractSection
             self::DOWNLOAD_DOCUMENT_FONT_SIZE
         );
     }
-    
+
     /**
      * Renders save image with proper link
-     * 
+     *
      * @param float $y
      * @param type $link
      */
@@ -304,10 +304,10 @@ abstract class AbstractEmployment extends AbstractSection
             $link
         );
     }
-    
+
     /**
      * Renders description of position
-     * 
+     *
      * @param EmploymentPosition $position
      * @param float $x
      * @param float $y
@@ -318,19 +318,19 @@ abstract class AbstractEmployment extends AbstractSection
             $x + self::DESCRIPTION_MARGIN_X,
             $y + self::DESCRIPTION_MARGIN_Y
         );
-        
+
         $this->tcpdf->SetTextColor(
             Color::TEXT_COLOR_MEDIUM_RED,
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::NORMAL,
             self::DESCRIPTION_FONT_SIZE
         );
-        
+
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH,
             self::DESCRIPTION_LINE_HEIGHT,
@@ -340,10 +340,10 @@ abstract class AbstractEmployment extends AbstractSection
             . self::NEW_LINE
         );
     }
-    
+
     /**
      * Renders company data: address, phone, email, person, url, etc..
-     * 
+     *
      * @param EmploymentPosition $position
      * @param float $x
      * @param float $y
@@ -356,7 +356,7 @@ abstract class AbstractEmployment extends AbstractSection
                 Color::TEXT_COLOR_LIGHT_GREEN,
                 Color::TEXT_COLOR_LIGHT_BLUE
             );
-            
+
             $this->tcpdf->SetFont(
                 $this->tcpdf->tahoma,
                 Font::NORMAL,
@@ -370,20 +370,20 @@ abstract class AbstractEmployment extends AbstractSection
                 $x + self::COMPANY_DATA_MARGIN_X,
                 $y
             );
-            
+
             $this->renderContact(
                 $position,
                 $x + self::COMPANY_DATA_MARGIN_X,
                 $y
             );
-            
+
             $this->tcpdf->SetXY(
                 $x,
                 $y + self::COMPANY_DATA_PADDING
             );
         }
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -392,12 +392,12 @@ abstract class AbstractEmployment extends AbstractSection
     private function renderCompanyUrl(EmploymentPosition $position, $x, $y)
     {
         $this->companyUrlWidth = 0;
-        
+
         if ($position->hasCompanyUrl()) {
             $this->tcpdf->SetXY($x, $y);
-            
+
             $companyUrl = $position->getCompanyUrl();
-            
+
             $this->tcpdf->Cell(
                 self::SECTION_WIDTH,
                 self::COMPANY_URL_LINE_HEIGHT,
@@ -408,11 +408,11 @@ abstract class AbstractEmployment extends AbstractSection
                 self::TRANSPARENT,
                 $companyUrl
             );
-                
+
             $this->setCompanyUrlWidth($position);
         }
     }
-    
+
     /**
      * @param EmploymentPosition $position
      */
@@ -422,7 +422,7 @@ abstract class AbstractEmployment extends AbstractSection
             $position->getCompanyUrl()
         ) + self::COMPANY_URL_MARGIN;
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @param float $x
@@ -443,7 +443,7 @@ abstract class AbstractEmployment extends AbstractSection
             );
         }
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @return string
@@ -453,7 +453,7 @@ abstract class AbstractEmployment extends AbstractSection
         return $this->createContactText($position)
             . $this->createAddressText($position);
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @return string
@@ -465,7 +465,7 @@ abstract class AbstractEmployment extends AbstractSection
         if ($position->hasContact()) {
             $text = 'Contact: ';
             $text .= $position->getContact();
-            
+
             if ($position->hasCompanyAddress()
                 || ($position->hasCompanyUrl() && false === $position->hasCompanyAddress())
             ) {
@@ -475,7 +475,7 @@ abstract class AbstractEmployment extends AbstractSection
 
         return $text;
     }
-    
+
     /**
      * @param EmploymentPosition $position
      * @return string
@@ -483,7 +483,7 @@ abstract class AbstractEmployment extends AbstractSection
     private function createAddressText(EmploymentPosition $position)
     {
         $text = '';
-        
+
         if ($position->hasCompanyAddress()) {
             $text = 'Address: ';
 
@@ -492,7 +492,7 @@ abstract class AbstractEmployment extends AbstractSection
                     $position->getAddress()
                 );
             }
-            
+
             if ($position->hasAddress() && $position->hasCountry()) {
                 $text .= self::CONTACT_SEPARATOR;
             }
@@ -507,7 +507,7 @@ abstract class AbstractEmployment extends AbstractSection
                 $text .= self::CONTACT_SEPARATOR;
             }
         }
-        
+
         return $text;
     }
 }

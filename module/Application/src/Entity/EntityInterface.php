@@ -9,5 +9,5 @@ namespace Application\Entity;
 
 interface EntityInterface
 {
-    
+
 }

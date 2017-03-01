@@ -24,24 +24,24 @@ class QRCode extends AbstractPageDecorator
     const MODULE_WIDTH = 1;
     const MODILE_HEIGHT = 1;
     const ALIGN = 'M';
-    
+
     const BARCODE_TYPE = 'QRCODE,L';
     const BARCODE_WIDTH = 30;
     const BARCODE_HEIGHT = 30;
-    
+
     const PDF_CURSOR_X = 175;
     const PDF_CURSOR_Y = 240;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         return $this->renderQRCode();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -57,10 +57,10 @@ class QRCode extends AbstractPageDecorator
             $this->getStyles(),
             self::ALIGN
         );
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * @return string
      */
@@ -80,10 +80,10 @@ class QRCode extends AbstractPageDecorator
             . 'URL:' . PdfConfig::DOCUMENT_URL . "\n"
             . 'END:VCARD';
     }
-    
+
     /**
      * Returns styles for barcode
-     * 
+     *
      * @return array
      */
     private function getStyles()
@@ -95,7 +95,7 @@ class QRCode extends AbstractPageDecorator
             'fgcolor' => [
                 self::FONT_COLOR_RED,
                 self::FONT_COLOR_GREEN,
-                self::FONT_COLOR_BLUE
+                self::FONT_COLOR_BLUE,
             ],
             'bgcolor' => self::BACKGROUND_COLOR,
             'module_width' => self::MODULE_WIDTH,

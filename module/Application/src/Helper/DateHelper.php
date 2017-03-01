@@ -26,7 +26,7 @@ class DateHelper
         11 => array('listopad', 'listopada'),
         12 => array('grudzień', 'grudnia'),
     ];
-    
+
     /**
      * @param string $date
      * @return string
@@ -34,30 +34,31 @@ class DateHelper
     public static function getDate($date)
     {
         $currentLocale = setlocale(LC_TIME, "0");
-        
+
         $formatedDate = strftime(
-            "%d %B %Y", 
+            "%d %B %Y",
             strtotime($date)
         );
-        
+
         if (strpos($currentLocale, 'pl_PL') !== false) {
             return self::getPolishMonths(
                 $date,
                 $formatedDate
             );
         }
-        
+
         return $formatedDate;
     }
-    
+
     /**
+     * @param int $year
      * @return int
      */
     public static function getPassedYears($year)
     {
         return date("Y") - $year;
     }
-    
+
     /**
      * @param int $date
      * @param string $formatedDate
@@ -67,7 +68,7 @@ class DateHelper
     {
         $month = date("n", $date);
         $monthNames = $this->polishMonths[$month];
-        
+
         return str_replace(
             $monthNames[0],
             $monthNames[1],
@@ -75,4 +76,3 @@ class DateHelper
         );
     }
 }
-

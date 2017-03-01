@@ -21,17 +21,17 @@ class CurriculumVitaeBuilder extends AbstractBuilder
      * @var TcpdfInterface|CurriculumVitae
      */
     private $cv = null;
-    
+
     /**
      * @var NormalizedTranslationService
      */
     private $normalizedLocalization;
-    
+
     /**
      * @var NormalizedDateService
      */
     private $normalizedDate;
-    
+
     /**
      * @param NormalizedTranslationService $normalizedLocalization
      * @param NormalizedDateService $normalizedDate
@@ -42,17 +42,18 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     ) {
         $this->normalizedLocalization = $normalizedLocalization;
         $this->normalizedDate = $normalizedDate;
-        
+
         $this->cv = new CurriculumVitae();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function render() {
+    public function render()
+    {
         return $this->cv->outputPdf();
     }
-    
+
     /**
      * Configures PDF document
      */
@@ -67,7 +68,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
             $this->normalizedDate
         );
     }
-    
+
     /**
      * Generates main page
      */
@@ -76,10 +77,10 @@ class CurriculumVitaeBuilder extends AbstractBuilder
         $page = new MainPage(
             $this->cv
         );
-        
+
         $page->createPage();
     }
-    
+
     /**
      * Generates second page
      */
@@ -88,7 +89,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
         $page = new SecondPage(
             $this->cv
         );
-        
+
         $page->createPage();
     }
 }

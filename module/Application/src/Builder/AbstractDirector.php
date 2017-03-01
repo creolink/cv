@@ -12,10 +12,10 @@ use Application\Builder\AbstractBuilder;
 abstract class AbstractDirector
 {
     /**
-     * @var AbstractBuilder 
+     * @var AbstractBuilder
      */
     protected $builder = null;
-    
+
     /**
      * @param AbstractBuilder $builder
      */
@@ -23,15 +23,15 @@ abstract class AbstractDirector
     {
         $this->builder = $builder;
     }
-    
+
     /**
      * Builds document
      */
     abstract public function build();
-    
+
     /**
      * Renders document
-     * 
+     *
      * @return string
      */
     abstract public function render();

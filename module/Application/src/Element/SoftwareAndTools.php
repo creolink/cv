@@ -16,21 +16,21 @@ class SoftwareAndTools extends AbstractSkills
 {
     const CURSOR_X = 72.5;
     const CURSOR_Y = 77;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderKnownTools();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -39,17 +39,17 @@ class SoftwareAndTools extends AbstractSkills
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderPositions(
             new Hydrator(
                 Skill::class,
                 'software.yml'
             )
         );
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -60,7 +60,7 @@ class SoftwareAndTools extends AbstractSkills
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('Software, tools & skills');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

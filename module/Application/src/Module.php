@@ -23,7 +23,7 @@ class Module
     {
         $this->setYamlReader();
     }
-    
+
     /**
      * @return array
      */
@@ -31,7 +31,7 @@ class Module
     {
         return include __DIR__ . '/../config/module.config.php';
     }
-    
+
     /**
      * @return array
      */
@@ -43,19 +43,19 @@ class Module
             ],
         ];
     }
-    
+
     private function setYamlReader()
     {
         Factory::registerReader('yml', 'yaml');
-        
+
         $decoder = new Parser();
-        
+
         $reader  = Factory::getReaderPluginManager()
             ->get('yaml');
-        
+
         $reader->setYamlDecoder([
             $decoder,
-            'parse'
+            'parse',
         ]);
     }
 }

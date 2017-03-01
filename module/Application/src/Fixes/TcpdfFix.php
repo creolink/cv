@@ -19,6 +19,9 @@ class TcpdfFix extends TCPDF
      * Fixed annotations for urls in Chrome
      *
      * {@inheritDoc}
+     *
+     * This is part of oryginal class and it violates CS
+     * @codingStandardsIgnoreStart
      */
     protected function _putannotsobjs()
     {
@@ -654,19 +657,20 @@ class TcpdfFix extends TCPDF
             }
         } // end for each page
     }
+    // @codingStandardsIgnoreEnd
 
     /**
      * Fix for annotations for urls in Chrome
      *
      * @param array $pl
-     * @param int $annot_obj_id
+     * @param int $annotationObjectId
      * @param string $annots
      * @return string
      */
-    private function fixAnnotation(array $pl, $annot_obj_id = 0, $annots = '')
+    private function fixAnnotation(array $pl, $annotationObjectId = 0, $annots = '')
     {
         if (strtolower($pl['opt']['subtype']) !== 'link') {
-            $annots .= ' /Contents '.$this->_textstring($pl['txt'], $annot_obj_id);
+            $annots .= ' /Contents '.$this->_textstring($pl['txt'], $annotationObjectId);
         }
 
         return $annots;

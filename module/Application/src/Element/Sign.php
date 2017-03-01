@@ -16,9 +16,9 @@ class Sign extends AbstractPageDecorator
 {
     const CURSOR_X = 52;
     const CURSOR_Y = 260;
-    
+
     const FONT_SIZE = 7;
-    
+
     const SIGNATURE_LINE_WIDTH = 120;
     const SIGNATURE_MARGIN_Y = -5;
     const SIGNATURE_MARGIN_X = 15;
@@ -27,33 +27,33 @@ class Sign extends AbstractPageDecorator
     const CAPTION_MARGIN_Y = -7;
     const CAPTION_WIDTH = 112;
     const CAPTION_LINE_HEIGHT = 4;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderSign();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
     private function renderSign()
     {
         $this->configure();
-        
+
         $this->renderCaption();
-        
+
         $this->renderSignature();
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * Configures the element
      */
@@ -64,29 +64,29 @@ class Sign extends AbstractPageDecorator
             Color::DRAW_COLOR_BRIGHT_GREEN,
             Color::DRAW_COLOR_BRIGHT_BLUE
         );
-        
+
         $this->setSolidLine();
-        
+
         $this->tcpdf->SetTextColor(
             Color::TEXT_COLOR_MEDIUM_RED,
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->verdanaItalic,
             Font::ITALICT,
             self::FONT_SIZE
         );
     }
-    
+
     private function renderCaption()
     {
         $this->tcpdf->SetXY(
             self::CURSOR_X + self::CAPTION_MARGIN_X,
             self::CURSOR_Y + self::CAPTION_MARGIN_Y
         );
-        
+
         $this->tcpdf->MultiCell(
             self::CAPTION_WIDTH,
             self::CAPTION_LINE_HEIGHT,
@@ -95,7 +95,7 @@ class Sign extends AbstractPageDecorator
             self::ALIGN_LEFT
         );
     }
-    
+
     private function renderSignature()
     {
         $this->tcpdf->Line(
@@ -104,7 +104,7 @@ class Sign extends AbstractPageDecorator
             self::CURSOR_X + self::SIGNATURE_LINE_WIDTH,
             self::CURSOR_Y
         );
-        
+
         $this->tcpdf->renderImage(
             Image::SIGN,
             self::CURSOR_X + self::SIGNATURE_MARGIN_X,
@@ -113,7 +113,7 @@ class Sign extends AbstractPageDecorator
             Image::SIGN_HEIGHT
         );
     }
-    
+
     private function getContent()
     {
         return 'Should you find my knowledge and professional experience interesting and it could help in progress of your company, please contact with me by phone, by mail or by Skype.' . self::NEW_LINE;

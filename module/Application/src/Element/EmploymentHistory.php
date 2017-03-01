@@ -16,21 +16,21 @@ class EmploymentHistory extends AbstractEmployment
 {
     const CURSOR_X = 5;
     const CURSOR_Y = 143;
-    
+
     const SECTION_WIDTH = 200;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderEmploymentHistory();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -39,17 +39,17 @@ class EmploymentHistory extends AbstractEmployment
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderPositions(
             new Hydrator(
                 EmploymentPosition::class,
                 'contracts.yml'
             )
         );
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -60,7 +60,7 @@ class EmploymentHistory extends AbstractEmployment
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('Employment history, full & part time');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

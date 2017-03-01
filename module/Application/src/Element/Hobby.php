@@ -15,26 +15,26 @@ class Hobby extends AbstractSection
 {
     const CURSOR_X = 5;
     const CURSOR_Y = 251;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     const CELL_HEIGHT = 4;
     const CELL_PADDING = 1;
-    
+
     const FONT_SIZE = 7;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderHobby();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -43,12 +43,12 @@ class Hobby extends AbstractSection
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderContent();
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * Renders content of element
      */
@@ -59,7 +59,7 @@ class Hobby extends AbstractSection
             Font::NORMAL,
             self::FONT_SIZE
         );
-        
+
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH - self::CELL_PADDING,
             self::CELL_HEIGHT,
@@ -68,7 +68,7 @@ class Hobby extends AbstractSection
             self::ALIGN_LEFT
         );
     }
-    
+
     /**
      * @return string
      */
@@ -80,7 +80,7 @@ class Hobby extends AbstractSection
             . 'I also like to analize Stock Exchange and our investments.'
             . self::NEW_LINE;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -91,7 +91,7 @@ class Hobby extends AbstractSection
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('Hobby & Sport');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

@@ -21,10 +21,10 @@ abstract class AbstractSection extends AbstractPageDecorator
     const CELL_WIDTH = 0;
     const LINE_MARGIN = 6.2;
     const CURSOR_MARGIN_Y = 7;
-    
+
     /**
      * Renders section title
-     * 
+     *
      * @param SectionTitle $sectionTitle
      */
     protected function renderTitle(SectionTitle $sectionTitle)
@@ -35,7 +35,7 @@ abstract class AbstractSection extends AbstractPageDecorator
         $this->drawLineUnderTitle($sectionTitle);
         $this->setCursor($sectionTitle);
     }
-    
+
     /**
      * Sets colors for title
      */
@@ -46,20 +46,20 @@ abstract class AbstractSection extends AbstractPageDecorator
             Color::DRAW_COLOR_DARK_GREEN,
             Color::DRAW_COLOR_DARK_BLUE
         );
-        
+
         $this->tcpdf->SetFillColor(
             Color::FILL_COLOR_BRIGHT_RED,
             Color::FILL_COLOR_BRIGHT_GREEN,
             Color::FILL_COLOR_BRIGHT_BLUE
         );
-        
+
         $this->tcpdf->SetTextColor(
             Color::TEXT_COLOR_MEDIUM_RED,
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
     }
-    
+
     /**
      * Sets font for title
      */
@@ -71,7 +71,7 @@ abstract class AbstractSection extends AbstractPageDecorator
             self::FONT_SIZE
         );
     }
-    
+
     /**
      * @param SectionTitle $sectionTitle
      */
@@ -81,14 +81,14 @@ abstract class AbstractSection extends AbstractPageDecorator
             $sectionTitle->getCursorX() + self::TITLE_MARGIN,
             $sectionTitle->getCursorY()
         );
-        
+
         $this->tcpdf->Cell(
             self::CELL_WIDTH,
             self::CELL_HEIGHT,
             $sectionTitle->getTitle()
         );
     }
-    
+
     /**
      * @param SectionTitle $sectionTitle
      */
@@ -101,7 +101,7 @@ abstract class AbstractSection extends AbstractPageDecorator
             $sectionTitle->getCursorY() + self::LINE_MARGIN
         );
     }
-    
+
     /**
      * @param SectionTitle $sectionTitle
      */

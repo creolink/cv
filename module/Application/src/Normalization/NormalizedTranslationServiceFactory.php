@@ -25,7 +25,7 @@ class NormalizedTranslationServiceFactory extends AbstractBaseFactory
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $localizationService = $container->get(LocalizationService::class);
-        
+
         $translator = $container->get(Translator::class);
         $translator->setLocale($localizationService->getLocale())
             ->setFallbackLocale(Locale::DEFAULT_LOCALE);

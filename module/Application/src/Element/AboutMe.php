@@ -16,26 +16,26 @@ class AboutMe extends AbstractSection
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 251;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     const CELL_HEIGHT = 4;
     const CELL_PADDING = 1;
-    
+
     const FONT_SIZE = 7;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderAboutMe();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -44,12 +44,12 @@ class AboutMe extends AbstractSection
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderContent();
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * Renders content of element
      */
@@ -60,7 +60,7 @@ class AboutMe extends AbstractSection
             Font::NORMAL,
             self::FONT_SIZE
         );
-        
+
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH - self::CELL_PADDING,
             self::CELL_HEIGHT,
@@ -69,7 +69,7 @@ class AboutMe extends AbstractSection
             self::ALIGN_LEFT
         );
     }
-    
+
     /**
      * @return string
      */
@@ -84,7 +84,7 @@ class AboutMe extends AbstractSection
             . "This CV is an example of my abilities."
             . self::NEW_LINE;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -95,7 +95,7 @@ class AboutMe extends AbstractSection
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('About me');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

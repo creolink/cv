@@ -27,12 +27,12 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     public $tahomaBold = '';
     public $tahomaItalic = '';
     public $dejavu = '';
-    
+
     /**
      * @var NormalizedTranslationService
      */
     private $translator;
-    
+
     /**
      * @var NormalizedDateService
      */
@@ -45,27 +45,27 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     {
         return $this;
     }
-    
+
     /**
      * Injects translator service with normalization
-     * 
+     *
      * @param NormalizedTranslationService $translator
      */
     public function setTranslator(NormalizedTranslationService $translator)
     {
         $this->translator = $translator;
     }
-    
+
     /**
      * Injects date internalization service
-     * 
+     *
      * @param NormalizedDateService $dateService
      */
     public function setDateService(NormalizedDateService $dateService)
     {
         $this->dateService = $dateService;
     }
-    
+
     /**
      * @return NormalizedTranslationService
      */
@@ -73,7 +73,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     {
         return $this->translator;
     }
-    
+
     /**
      * @return NormalizedDateService
      */
@@ -81,10 +81,10 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     {
         return $this->dateService;
     }
-    
+
     /**
      * Overwrites default header and adds header only for 2nd page and later
-     * 
+     *
      * {@inheritDoc}
      */
     public function header()
@@ -92,47 +92,47 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         if ($this->getPage() > 1) {
             $this->SetTextColor(150, 150, 150);
             $this->SetDrawColor(150, 150, 150);
-            
+
             $x = 5;
             $y = 6;
-            
+
             $this->renderHeaderPhoto($x, $y - 1);
-            
+
             $this->SetXY($x + 6, $y);
             $this->SetFont($this->verdana, '', 6);
             $this->Write(4, PdfConfig::DOCUMENT_TITLE);
-            
+
             $x = $this->GetX();
             $this->renderIcon($this->GetX() + 2, $y, Image::PHONE, PersonalData::PHONE, PersonalData::PHONE_URL, 1);
             $this->renderIcon($this->GetX() + 13, $y, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
             $this->renderIcon($this->GetX() + 22, $y, Image::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL, 1);
-            
+
             $this->addPageNumber($y);
         }
     }
-    
+
     /**
      * Creates footer for all pages
-     * 
+     *
      * {@inheritDoc}
      */
-	public function footer()
+    public function footer()
     {
         $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
-        
+
         $y = -15;
-        
+
         $this->SetXY(5, $y);
         $this->SetFont($this->verdana, '', 6);
         $this->SetTextColor(150, 150, 150);
-        $this->MultiCell(200, 3, $text, 0, 'C', FALSE);
-        
+        $this->MultiCell(200, 3, $text, 0, 'C', false);
+
         $this->addPageNumber($y);
-	}
-    
+    }
+
     /**
      * Renders image icon
-     * 
+     *
      * @param float $x
      * @param float $y
      * @param string $image
@@ -143,13 +143,13 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     public function renderIcon($x, $y, $image, $text, $url, $move = 0)
     {
         $this->SetFont($this->verdana, '', 6);
-        
+
         $this->Image(PdfConfig::PATH_IMAGES . $image, $x, $y, 4, 4, 'PNG');
-        
+
         $this->SetXY($x + 4 + $move, $y - 1);
         $this->Cell(10, 6, $text, 0, 0, 'L', false, $url);
     }
-    
+
     /**
      * {@inheritDoc}
      */
@@ -168,14 +168,14 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 
     /**
      * Renders PDF document inline or as downloadable attachement
-     * 
+     *
      * @return string
      */
     public function outputPdf()
     {
         $this->Output(PdfConfig::FILE_NAME);
     }
-    
+
     /**
      * Configures PDF document parameters
      */
@@ -194,7 +194,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $this->setPrintHeader(true);
         $this->setPrintFooter(true);
     }
-    
+
     /**
      * Initialize used fonts
      */
@@ -207,7 +207,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $this->tahomaItalic = $this->registerFont('tahomai.ttf');
         $this->dejavu = $this->registerFont('DejaVuSansCondensed.ttf');
     }
-    
+
     /**
      * @param string $font
      * @return string
@@ -216,23 +216,23 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     {
         return TCPDF_FONTS::addTTFfont(PdfConfig::PATH_FONTS . $font, '', '', 32);
     }
-    
+
     /**
      * Adds Page number for CV
-     * 
+     *
      * @param float $y
      */
     private function addPageNumber($y)
     {
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
-        
+
         $this->Cell(214.5, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
     }
-    
+
     /**
      * Adds my photo in selected position
-     * 
+     *
      * @param float $x
      * @param float $y
      */
@@ -240,7 +240,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     {
         $width = 4.5;
         $height = 5.5;
-        
+
         $this->Image(PdfConfig::PATH_IMAGES . Image::PERSONAL_PHOTO, $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
         $this->Rect($x, $y, $width, $height);
     }

@@ -15,7 +15,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
 {
     const SPECIALITY_FONT_SIZE = 8;
     const SPECIALITY_PADDING_Y = 23;
-    
+
     /**
      * Renders speciality
      */
@@ -26,18 +26,18 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
             Color::TEXT_COLOR_MEDIUM_GREEN,
             Color::TEXT_COLOR_MEDIUM_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::NORMAL,
             self::SPECIALITY_FONT_SIZE
         );
-        
+
         $this->tcpdf->SetXY(
             self::TITLE_CURSOR_X + self::TITLE_PADDING,
             self::TITLE_CURSOR_Y + self::SPECIALITY_PADDING_Y
         );
-        
+
         $this->tcpdf->Cell(
             self::TITLE_CELL_WIDTH,
             self::TITLE_CELL_HEIGHT,

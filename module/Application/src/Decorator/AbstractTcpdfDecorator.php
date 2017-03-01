@@ -14,10 +14,10 @@ use Application\Model\TcpdfInterface;
 abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
 {
     /**
-     * @var CurriculumVitae|TcpdfInterface $tcpdf 
+     * @var CurriculumVitae|TcpdfInterface $tcpdf
      */
     protected $tcpdf;
-    
+
     /**
      * @param TcpdfInterface $tcpdf
      */
@@ -25,7 +25,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
     {
         $this->tcpdf = $tcpdf;
     }
-    
+
     /**
      * @param string $message
      * @return string
@@ -35,7 +35,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
         return $this->tcpdf->getTranslator()
             ->translate($message);
     }
-    
+
     /**
      * @param int $date
      * @return string
@@ -45,7 +45,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
         return $this->tcpdf->getDate()
             ->getLocalizedDate($date);
     }
-    
+
     /**
      * @param int $date
      * @return string

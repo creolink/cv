@@ -18,7 +18,7 @@ class NormalizedDateServiceFactory extends AbstractBaseFactory
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param null|array $options
-     * @return 
+     * @return NormalizedDateService
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
@@ -27,9 +27,9 @@ class NormalizedDateServiceFactory extends AbstractBaseFactory
         $normalizedDateService = new NormalizedDateService(
             $localizationService
         );
-        
+
         $normalizedDateService->setFormatter();
-        
+
         return $normalizedDateService;
     }
 }

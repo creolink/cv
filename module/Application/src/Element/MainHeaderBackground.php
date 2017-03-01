@@ -14,11 +14,11 @@ class MainHeaderBackground extends AbstractTcpdfDecorator
 {
     const BACKGROUND_CURSOR_X = 0;
     const BACKGROUND_CURSOR_Y = 0;
-    
+
     const BACKGROUND_WIDTH = 210;
     const BACKGROUND_HEIGHT = 45;
     const BACKGROUND_STYLE = 'F';
-    
+
     /**
      * Renders header background
      */
@@ -29,7 +29,7 @@ class MainHeaderBackground extends AbstractTcpdfDecorator
             Color::FILL_COLOR_BRIGHT_GREEN,
             Color::FILL_COLOR_BRIGHT_BLUE
         );
-        
+
         $this->tcpdf->Rect(
             self::BACKGROUND_CURSOR_X,
             self::BACKGROUND_CURSOR_Y,

@@ -14,11 +14,11 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
 {
     const FLAGS_CURSOR_X = 11;
     const FLAGS_CURSOR_Y = 6;
-    
+
     const FLAG_EN_MARGIN = 0;
     const FLAG_DE_MARGIN = 4;
     const FLAG_PL_MARGIN = 8;
-    
+
     /**
      * Renders flags / cv languages & urls
      */
@@ -29,23 +29,23 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             'en',
             self::FLAG_EN_MARGIN
         );
-        
+
         $this->renderFlag(
             Image::FLAG_DE,
             'de',
             self::FLAG_DE_MARGIN
         );
-        
+
         $this->renderFlag(
             Image::FLAG_PL,
             'pl',
             self::FLAG_PL_MARGIN
         );
     }
-    
+
     /**
      * Renders flag with url
-     * 
+     *
      * @param string $flag
      * @param string $language
      * @param float $margin
@@ -60,7 +60,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             Image::FLAG_HEIGHT,
             'http://' . $language . '.' . $_SERVER['SERVER_NAME'].'/'
         );
-        
+
         $this->tcpdf->Rect(
             self::FLAGS_CURSOR_X,
             self::FLAGS_CURSOR_Y + $margin,

@@ -15,7 +15,7 @@ class LocalizationService
      * @var string
      */
     private $locale;
-    
+
     /**
      * @var array
      */
@@ -24,7 +24,10 @@ class LocalizationService
         Locale::ROUTED_LOCALE_PL => Locale::LOCALE_PL,
         Locale::ROUTED_LOCALE_DE => Locale::LOCALE_DE,
     ];
-    
+
+    /**
+     * @param string $routedLocale
+     */
     public function __construct($routedLocale)
     {
         $this->locale = $routedLocale;

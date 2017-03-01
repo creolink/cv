@@ -24,7 +24,7 @@ abstract class AbstractBaseFactory implements FactoryInterface
         return $container->get('Application')
                 ->getMvcEvent();
     }
-    
+
     /**
      * @param ContainerInterface $container
      * @return RouteMatch
@@ -34,7 +34,7 @@ abstract class AbstractBaseFactory implements FactoryInterface
         return $this->getMvcEvent($container)
             ->getRouteMatch();
     }
-    
+
     /**
      * @param ContainerInterface $container
      * @return string

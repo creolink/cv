@@ -16,21 +16,21 @@ class Languages extends AbstractSkills
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 77;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderLanguages();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -46,10 +46,10 @@ class Languages extends AbstractSkills
                 'languages.yml'
             )
         );
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -60,7 +60,7 @@ class Languages extends AbstractSkills
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('Languages');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

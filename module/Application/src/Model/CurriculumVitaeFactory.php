@@ -28,7 +28,7 @@ class CurriculumVitaeFactory implements FactoryInterface
     {
         $normalizedTranslation = $container->get(NormalizedTranslationService::class);
         $normalizedDate = $container->get(NormalizedDateService::class);
-        
+
         $cvDirector = new CurriculumVitaeDirector(
             new CurriculumVitaeBuilder(
                 $normalizedTranslation,

@@ -20,15 +20,15 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
     const CONTACT_ICON_SKYPE_CURSOR_X = 123;
     const CONTACT_ICON_LINKED_IN_CURSOR_X = 152;
     const CONTACT_ICON_GOLDEN_LINE_CURSOR_X = 177;
-    
+
     const CONTACT_LINE_UP_CURSOR_X_START = 0;
     const CONTACT_LINE_UP_CURSOR_X_END = 210;
     const CONTACT_LINE_UP_CURSOR_Y = 39;
-    
+
     const CONTACT_LINE_DOWN_CURSOR_X_START = 0;
     const CONTACT_LINE_DOWN_CURSOR_X_END = 210;
     const CONTACT_LINE_DOWN_CURSOR_Y = 45;
-    
+
     /**
      * Renders contact icons
      */
@@ -39,12 +39,12 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             Color::TEXT_COLOR_DARK_GREEN,
             Color::TEXT_COLOR_DARK_BLUE
         );
-        
+
         $this->renderIcons();
-        
+
         $this->renderBorderLines();
     }
-    
+
     private function renderIcons()
     {
         $this->renderPhone();
@@ -53,7 +53,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         $this->renderLinkedIn();
         $this->renderGoldenLine();
     }
-    
+
     private function renderEmail()
     {
         $this->tcpdf->renderIcon(
@@ -64,7 +64,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             PersonalData::EMAIL_URL
         );
     }
-    
+
     private function renderSkype()
     {
         $this->tcpdf->renderIcon(
@@ -75,7 +75,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             PersonalData::SKYPE_URL
         );
     }
-    
+
     private function renderLinkedIn()
     {
         $this->tcpdf->renderIcon(
@@ -86,7 +86,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             PersonalData::LINKED_IN_URL
         );
     }
-    
+
     private function renderPhone()
     {
         $this->tcpdf->renderIcon(
@@ -97,7 +97,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             PersonalData::PHONE_URL
         );
     }
-    
+
     private function renderGoldenLine()
     {
         $this->tcpdf->renderIcon(
@@ -108,7 +108,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             PersonalData::GOLDEN_LINE_URL
         );
     }
-    
+
     private function renderBorderLines()
     {
         $this->tcpdf->Line(
@@ -117,7 +117,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             self::CONTACT_LINE_UP_CURSOR_X_END,
             self::CONTACT_LINE_UP_CURSOR_Y
         );
-        
+
         $this->tcpdf->Line(
             self::CONTACT_LINE_DOWN_CURSOR_X_START,
             self::CONTACT_LINE_DOWN_CURSOR_Y,

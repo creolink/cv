@@ -15,8 +15,8 @@ class NormalizedTranslationService implements TranslatorInterface
 {
     /**
      * Characters for normalization
-     * 
-     * @var type 
+     *
+     * @var type
      */
     private $chars = [
         'ę' => 'e',
@@ -38,12 +38,12 @@ class NormalizedTranslationService implements TranslatorInterface
         'Ć' => 'C',
         'Ń' => 'N',
     ];
-    
+
     /**
      * @var Translator
      */
     private $translator;
-    
+
     /**
      * @param Translator $translator
      */
@@ -51,7 +51,7 @@ class NormalizedTranslationService implements TranslatorInterface
     {
         $this->translator = $translator;
     }
-    
+
     /**
      * {@inheritDoc}
      */
@@ -61,7 +61,7 @@ class NormalizedTranslationService implements TranslatorInterface
             $this->translator->translate($message)
         );
     }
-    
+
     /**
      * {@inheritDoc}
      */
@@ -82,10 +82,10 @@ class NormalizedTranslationService implements TranslatorInterface
             )
         );
     }
-    
+
     /**
      * Removes polish letters from string
-     * 
+     *
      * @param string $message
      */
     private function normalize($message)
@@ -93,7 +93,7 @@ class NormalizedTranslationService implements TranslatorInterface
         if (Locale::LOCALE_PL === $this->translator->getLocale()) {
             return $message;
         }
-        
+
         return strtr(
             $message,
             $this->chars

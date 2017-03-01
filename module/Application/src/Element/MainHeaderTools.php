@@ -16,7 +16,7 @@ class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleI
 {
     const TOOLS_PADDING = 27;
     const TOOLS_FONT_SIZE = 6;
-    
+
     /**
      * Renders infromation about used tools to create CV
      */
@@ -27,18 +27,18 @@ class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleI
             Color::TEXT_COLOR_LIGHT_GREEN,
             Color::TEXT_COLOR_LIGHT_BLUE
         );
-        
+
         $this->tcpdf->SetXY(
             self::TITLE_CURSOR_X + self::TITLE_PADDING,
             self::TITLE_CURSOR_Y + self::TOOLS_PADDING
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahoma,
             Font::NORMAL,
             self::TOOLS_FONT_SIZE
         );
-        
+
         $this->tcpdf->Cell(
             self::TITLE_CELL_WIDTH,
             self::TITLE_CELL_HEIGHT,

@@ -17,7 +17,7 @@ class BaseController extends AbstractActionController
 {
     /**
      * @param string $className
-     * 
+     *
      * @return mixed Entry
      */
     protected function getService($className)
@@ -27,7 +27,7 @@ class BaseController extends AbstractActionController
             ->getServiceManager()
             ->get($className);
     }
-    
+
     /**
      * @return NormalizedTranslationService
      */
@@ -35,7 +35,7 @@ class BaseController extends AbstractActionController
     {
         return $this->getService(NormalizedTranslationService::class);
     }
-    
+
     /**
      * @return Translator
      */
@@ -43,7 +43,7 @@ class BaseController extends AbstractActionController
     {
         return $this->getService(Translator::class);
     }
-    
+
     /**
      * @return CurriculumVitaeDirector
      */

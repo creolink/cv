@@ -14,7 +14,7 @@ class MainHeaderDownload extends AbstractTcpdfDecorator
 {
     const DOWNLOAD_CURSOR_X = 12;
     const DOWNLOAD_CURSOR_Y = 18;
-    
+
     /**
      * Renders download button
      */
@@ -28,7 +28,7 @@ class MainHeaderDownload extends AbstractTcpdfDecorator
                 Image::DOWNLOAD_WIDTH,
                 Image::DOWNLOAD_HEIGHT,
                 'http://'.$_SERVER['HTTP_HOST'].'/?download'
-            ); 
+            );
         }
     }
 }

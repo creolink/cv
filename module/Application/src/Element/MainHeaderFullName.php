@@ -15,21 +15,21 @@ use Application\Config\Font;
 class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTitleInterface
 {
     const FULL_NAME_FONT_SIZE = 30;
-    
+
     const LASTNAME_PADDING = 11;
-    
+
     /**
      * Renders CV title
      */
     public function renderTitle()
     {
         $this->configureTitle();
-        
+
         $this->renderName();
-        
+
         $this->renderLastname();
     }
-    
+
     /**
      * Configures CV title
      */
@@ -40,14 +40,14 @@ class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTit
             Color::TEXT_COLOR_DARK_GREEN,
             Color::TEXT_COLOR_DARK_BLUE
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->tahomaBold,
             Font::NORMAL,
             self::FULL_NAME_FONT_SIZE
         );
     }
-    
+
     /**
      * Renders name
      */
@@ -70,7 +70,7 @@ class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTit
             self::ALIGN_CENTER
         );
     }
-    
+
     /**
      * Renders lastname
      */
@@ -80,7 +80,7 @@ class MainHeaderFullName extends AbstractTcpdfDecorator implements MainHeaderTit
             self::TITLE_CURSOR_X,
             self::TITLE_CURSOR_Y + self::LASTNAME_PADDING
         );
-        
+
         $this->tcpdf->Cell(
             self::TITLE_CELL_WIDTH,
             self::TITLE_CELL_HEIGHT,
