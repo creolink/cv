@@ -14,7 +14,7 @@ class Locale
     const DEFAULT_LOCALE = 'en_GB';
     const DEFAULT_ROUTED_LOCALE = 'en';
 
-    const ALLOWED_ROUTED_LOCALES = 'pl|en|de';
+    const ALLOWED_ROUTED_LOCALES = 'pl|en|de|xx';
 
     const LOCALE_EN = 'en_GB';
     const ROUTED_LOCALE_EN = 'en';
@@ -24,4 +24,7 @@ class Locale
 
     const LOCALE_PL = 'pl_PL';
     const ROUTED_LOCALE_PL = 'pl';
+
+    const LOCALE_XX = 'xx_XX';
+    const ROUTED_LOCALE_XX = 'xx';
 }

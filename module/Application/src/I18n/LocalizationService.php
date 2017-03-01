@@ -23,6 +23,7 @@ class LocalizationService
         Locale::ROUTED_LOCALE_EN => Locale::LOCALE_EN,
         Locale::ROUTED_LOCALE_PL => Locale::LOCALE_PL,
         Locale::ROUTED_LOCALE_DE => Locale::LOCALE_DE,
+        Locale::ROUTED_LOCALE_XX => Locale::LOCALE_XX,
     ];
 
     /**
@@ -38,6 +39,14 @@ class LocalizationService
      */
     public function getLocale()
     {
+        if (empty($this->locale)) {
+            $this->locale = Locale::DEFAULT_ROUTED_LOCALE;
+        }
+
+        if (false === isset($this->locales[$this->locale])) {
+            $this->locale = Locale::DEFAULT_ROUTED_LOCALE;
+        }
+
         return $this->locales[$this->locale];
     }
 }
