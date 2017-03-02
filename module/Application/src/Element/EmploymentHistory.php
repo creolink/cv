@@ -58,7 +58,9 @@ class EmploymentHistory extends AbstractEmployment
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Employment history, full & part time');
+        $sectionTitle->setTitle(
+            $this->trans('cv-employmentHistory-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;

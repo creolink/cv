@@ -116,6 +116,7 @@ class Sign extends AbstractPageDecorator
 
     private function getContent()
     {
-        return 'Should you find my knowledge and professional experience interesting and it could help in progress of your company, please contact with me by phone, by mail or by Skype.' . self::NEW_LINE;
+        return $this->trans('cv-sign-content')
+            . self::NEW_LINE;
     }
 }

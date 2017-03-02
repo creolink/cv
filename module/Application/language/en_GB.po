@@ -232,6 +232,74 @@ msgstr "Contact: "
 msgid "cv-employment-address"
 msgstr "Address: "
 
+msgid "cv-mainHeader-mostRecentVersion"
+msgstr "most recent version cv.creolink.pl"
+
+msgid "cv-mainHeader-speciality"
+msgstr "WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER"
+
+msgid "cv-mainHeader-tools"
+msgstr "cv created in PHP7 with ZF3 & TCPDF"
+
+msgid "cv-technicalSkills-sectionTitle"
+msgstr "Technical experience"
+
+msgid "cv-sign-content"
+msgstr "Should you find my knowledge and professional experience interesting and it could help in progress of your company, please contact with me by phone, by mail or by Skype."
+
+msgid "cv-mainHeader-personalData-experience"
+msgstr "Experience"
+
+msgid "cv-mainHeader-personalData-birthDate"
+msgstr "Birth date"
+
+msgid "cv-mainHeader-personalData-nationality"
+msgstr "Nationality"
+
+msgid "cv-mainHeader-personalData-address"
+msgstr "Address"
+
+msgid "cv-mainHeader-personalData-workplace"
+msgstr "Workplace"
+
+msgid "cv-mainHeader-personalData-years"
+msgstr "%s years"
+
+msgid "cv-careerGoals-sectionTitle"
+msgstr "Career goals"
+
+msgid "cv-careerGoals-content"
+msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (%s years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
+
+msgid "cv-commisionedJobs-sectionTitle"
+msgstr "Additional, commissioned & freelance jobs"
+
+msgid "cv-education-sectionTitle"
+msgstr "Education & courses"
+
+msgid "cv-education-content"
+msgstr ""
+"2013 - 2015 intensive English & German course,\r\n"
+"2012 professional course of Information Security Administrator with certificate\r\n"
+"2012 professional Google Analytics training,\r\n"
+"since 2012 driving license category B,\r\n"
+"further past: studies at the Lodz University of Technology (computer science, 3 years)"
+
+msgid "cv-employmentHistory-sectionTitle"
+msgstr "Employment history, full & part time"
+
+msgid "cv-expectations-sectionTitle"
+msgstr "Expectations"
+
+msgid "cv-expectations-content"
+msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+
+msgid "cv-hobby-sectionTitle"
+msgstr "Hobby & Sport"
+
+msgid "cv-hobby-content"
+msgstr "My free time I spend playing board games \"Civilization Through the Ages\" or \"Robinson Crusoe: Adventure on the Cursed Island\". I like to watch sf & adventure films as well as TV series. My favourite are \"Battlestar Galactica\" & \"The Last of the Mohicans\". When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
+
 msgid ""
 msgstr ""
 

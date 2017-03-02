@@ -43,7 +43,7 @@ class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
 
         $this->tcpdf->Write(
             self::INFO_FONT_SIZE,
-            'most recent version cv.creolink.pl',
+            $this->trans('cv-mainHeader-mostRecentVersion'),
             PdfConfig::DOCUMENT_URL
         );
     }

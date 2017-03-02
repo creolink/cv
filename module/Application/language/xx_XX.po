@@ -166,22 +166,135 @@ msgstr "cv-contract-gandalf2008-country"
 msgid "cv-contract-gandalf2008-description"
 msgstr "cv-contract-gandalf2008-description"
 
+msgid "cv-languages-polish"
+msgstr "cv-languages-polish"
 
-msgid ""
-msgstr ""
+msgid "cv-languages-english"
+msgstr "cv-languages-english"
 
-msgid ""
-msgstr ""
+msgid "cv-languages-german"
+msgstr "cv-languages-german"
 
-msgid ""
-msgstr ""
+msgid "cv-personalTraits-organization"
+msgstr "cv-personalTraits-organization"
 
-msgid ""
-msgstr ""
+msgid "cv-personalTraits-independence"
+msgstr "cv-personalTraits-independence"
 
-msgid ""
-msgstr ""
+msgid "cv-personalTraits-reliability"
+msgstr "cv-personalTraits-reliability"
+
+msgid "cv-personalTraits-cooperation"
+msgstr "cv-personalTraits-cooperation"
+
+msgid "cv-personalTraits-punctuality"
+msgstr "cv-personalTraits-punctuality"
+
+msgid "cv-personalTraits-management"
+msgstr "cv-personalTraits-management"
+
+msgid "cv-personalTraits-leading"
+msgstr "cv-personalTraits-leading"
+
+msgid "cv-personalTraits-assertiveness"
+msgstr "cv-personalTraits-assertiveness"
+
+msgid "cv-personalTraits-diligence"
+msgstr "cv-personalTraits-diligence"
+
+msgid "cv-personalTraits-creativity"
+msgstr "cv-personalTraits-creativity"
+
+msgid "cv-personalTraits-teamWork"
+msgstr "cv-personalTraits-teamWork"
+
+msgid "cv-personalTraits-workUnderTimePressure"
+msgstr "cv-personalTraits-workUnderTimePressure"
+
+msgid "cv-aboutMe-sectionTitle"
+msgstr "cv-aboutMe-sectionTitle"
+
+msgid "cv-aboutMe-content"
+msgstr "cv-aboutMe-content"
+
+msgid "cv-employment-date-partTime"
+msgstr "cv-employment-date-partTime"
+
+msgid "cv-employment-references"
+msgstr "cv-employment-references"
+
+msgid "cv-employment-examples"
+msgstr "cv-employment-examples"
 
+msgid "cv-employment-contact"
+msgstr "cv-employment-contact"
+
+msgid "cv-employment-address"
+msgstr "cv-employment-address"
+
+msgid "cv-mainHeader-mostRecentVersion"
+msgstr "cv-mainHeader-mostRecentVersion"
+
+msgid "cv-mainHeader-speciality"
+msgstr "cv-mainHeader-speciality"
+
+msgid "cv-mainHeader-tools"
+msgstr "cv-mainHeader-tools"
+
+msgid "cv-technicalSkills-sectionTitle"
+msgstr "cv-technicalSkills-sectionTitle"
+
+msgid "cv-sign-content"
+msgstr "cv-sign-content"
+
+msgid "cv-mainHeader-personalData-experience"
+msgstr "cv-mainHeader-personalData-experience"
+
+msgid "cv-mainHeader-personalData-birthDate"
+msgstr "cv-mainHeader-personalData-birthDate"
+
+msgid "cv-mainHeader-personalData-nationality"
+msgstr "cv-mainHeader-personalData-nationality"
+
+msgid "cv-mainHeader-personalData-address"
+msgstr "cv-mainHeader-personalData-address"
+
+msgid "cv-mainHeader-personalData-workplace"
+msgstr "cv-mainHeader-personalData-workplace"
+
+msgid "cv-mainHeader-personalData-years"
+msgstr "cv-mainHeader-personalData-years"
+
+msgid "cv-careerGoals-sectionTitle"
+msgstr "cv-careerGoals-sectionTitle"
+
+msgid "cv-careerGoals-content"
+msgstr "cv-careerGoals-content"
+
+msgid "cv-commisionedJobs-sectionTitle"
+msgstr "cv-commisionedJobs-sectionTitle"
+
+msgid "cv-education-sectionTitle"
+msgstr "cv-education-sectionTitle"
+
+msgid "cv-education-content"
+msgstr "cv-education-content"
+
+msgid "cv-employmentHistory-sectionTitle"
+msgstr "cv-employmentHistory-sectionTitle"
+
+msgid "cv-expectations-sectionTitle"
+msgstr "cv-expectations-sectionTitle"
+
+msgid "cv-expectations-content"
+msgstr "cv-expectations-content"
+
+msgid "cv-hobby-sectionTitle"
+msgstr "cv-hobby-sectionTitle"
+
+msgid "cv-hobby-content"
+msgstr "cv-hobby-content"
+
 msgid ""
 msgstr ""
 
@@ -1135,4 +1248,5 @@ msgstr ""
 
 msgid ""
 msgstr ""
+
 

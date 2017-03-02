@@ -87,10 +87,6 @@ class CareerGoals extends AbstractSection
      */
     private function renderContent()
     {
-        $workedYears = DateHelper::getPassedYears(
-            PersonalData::WORK_START_YEAR
-        );
-
         $this->tcpdf->SetFont(
             $this->tcpdf->verdanaItalic,
             Font::ITALICT,
@@ -105,7 +101,7 @@ class CareerGoals extends AbstractSection
         $this->tcpdf->MultiCell(
             self::CONTENT_CELL_WIDTH,
             self::CONTENT_CELL_HEIGHT,
-            "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (" . $workedYears . " years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company.\r\n"
+            $this->getContent()
         );
     }
 
@@ -117,9 +113,32 @@ class CareerGoals extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Career goals');
+        $sectionTitle->setTitle(
+            $this->trans('cv-careerGoals-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;
+    }
+
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return sprintf(
+            $this->trans('cv-careerGoals-content'),
+            $this->getWorkedYears()
+        ) . self::NEW_LINE;
+    }
+
+    /**
+     * @return int
+     */
+    private function getWorkedYears()
+    {
+        return DateHelper::getPassedYears(
+            PersonalData::WORK_START_YEAR
+        );
     }
 }

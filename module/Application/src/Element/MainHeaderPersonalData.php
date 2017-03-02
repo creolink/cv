@@ -55,7 +55,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
 
         foreach ($this->getSortedPositions() as $name => $text) {
             $this->renderPersonalDataRow(
-                $name,
+                $this->trans($name),
                 $text,
                 $this->tcpdf->GetY() + self::POSITION_MARGIN
             );
@@ -68,13 +68,13 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     private function getSortedPositions()
     {
         return [
-            'Experience' => $this->createExperienceText(),
-            'Date of birth' => $this->localizeDate(
+            'cv-mainHeader-personalData-experience' => $this->createExperienceText(),
+            'cv-mainHeader-personalData-birthDate' => $this->localizeDate(
                 new DateTime(PersonalData::BIRTH_DATE)
             ),
-            'Nationality' => $this->trans(PersonalData::NATIONALITY),
-            'Address' => $this->createAddressText(),
-            'Workplace' => $this->trans(PersonalData::WORK_PLACE),
+            'cv-mainHeader-personalData-nationality' => $this->trans(PersonalData::NATIONALITY),
+            'cv-mainHeader-personalData-address' => $this->createAddressText(),
+            'cv-mainHeader-personalData-workplace' => $this->trans(PersonalData::WORK_PLACE),
         ];
     }
 
@@ -83,9 +83,12 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
      */
     private function createExperienceText()
     {
-        return DateHelper::getPassedYears(
-            PersonalData::WORK_START_YEAR
-        ) . ' years';
+        return sprintf(
+            $this->trans('cv-mainHeader-personalData-years'),
+            DateHelper::getPassedYears(
+                PersonalData::WORK_START_YEAR
+            )
+        );
     }
 
     /**

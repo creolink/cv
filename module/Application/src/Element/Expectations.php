@@ -73,7 +73,7 @@ class Expectations extends AbstractSection
      */
     private function getContent()
     {
-        return "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+        return $this->trans('cv-expectations-content')
             . self::NEW_LINE;
     }
 
@@ -85,7 +85,9 @@ class Expectations extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Expectations');
+        $sectionTitle->setTitle(
+            $this->trans('cv-expectations-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;

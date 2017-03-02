@@ -56,7 +56,9 @@ class CommisionedJobs extends AbstractEmployment
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Additional, commisioned & freelance jobs');
+        $sectionTitle->setTitle(
+            $this->trans('cv-commisionedJobs-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;

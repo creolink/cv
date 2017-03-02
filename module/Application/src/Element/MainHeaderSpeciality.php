@@ -21,17 +21,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
      */
     public function renderSpeciality()
     {
-        $this->tcpdf->SetTextColor(
-            Color::TEXT_COLOR_MEDIUM_RED,
-            Color::TEXT_COLOR_MEDIUM_GREEN,
-            Color::TEXT_COLOR_MEDIUM_BLUE
-        );
-
-        $this->tcpdf->SetFont(
-            $this->tcpdf->tahoma,
-            Font::NORMAL,
-            self::SPECIALITY_FONT_SIZE
-        );
+        $this->configure();
 
         $this->tcpdf->SetXY(
             self::TITLE_CURSOR_X + self::TITLE_PADDING,
@@ -42,12 +32,32 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
             self::TITLE_CELL_WIDTH,
             self::TITLE_CELL_HEIGHT,
             mb_strtoupper(
-                'WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER',
+                $this->trans(
+                    'cv-mainHeader-speciality'
+                ),
                 self::ENCODING
             ),
             self::BORDER_NONE,
             self::CELL_LINE_NONE,
             self::ALIGN_RIGHT
+        );
+    }
+
+    /**
+     * Configures element
+     */
+    private function configure()
+    {
+        $this->tcpdf->SetTextColor(
+            Color::TEXT_COLOR_MEDIUM_RED,
+            Color::TEXT_COLOR_MEDIUM_GREEN,
+            Color::TEXT_COLOR_MEDIUM_BLUE
+        );
+
+        $this->tcpdf->SetFont(
+            $this->tcpdf->tahoma,
+            Font::NORMAL,
+            self::SPECIALITY_FONT_SIZE
         );
     }
 }

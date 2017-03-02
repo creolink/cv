@@ -58,7 +58,9 @@ class TechnicalSkills extends AbstractSkills
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Technical experience');
+        $sectionTitle->setTitle(
+            $this->trans('cv-technicalSkills-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;
