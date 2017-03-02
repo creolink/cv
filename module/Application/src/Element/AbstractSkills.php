@@ -99,12 +99,16 @@ abstract class AbstractSkills extends AbstractSection
             self::POSITION_FONT_SIZE
         );
 
+        $name = $this->trans(
+            $position->getName()
+        );
+
         $this->tcpdf->Cell(
             $this->tcpdf->GetStringWidth(
-                $position->getName()
+                $name
             ),
             self::POSITION_CELL_HEIGHT,
-            $position->getName()
+            $name
         );
 
         $this->renderExperienceTime($position);
