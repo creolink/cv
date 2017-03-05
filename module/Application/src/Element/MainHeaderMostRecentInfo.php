@@ -14,8 +14,10 @@ use Application\Config\PdfConfig;
 
 class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
 {
-    const INFO_CURSOR_X = 17.3;
-    const INFO_CURSOR_Y = 40.3;
+    const INFO_CURSOR_X = 17.4;
+    const INFO_CURSOR_Y = 42.0;
+    const INFO_CELL_WIDTH = 33;
+    const INFO_CELL_HEIGHT = 2;
 
     const INFO_FONT_SIZE = 6;
 
@@ -31,11 +33,22 @@ class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
             self::INFO_CURSOR_Y
         );
 
-        $this->tcpdf->Write(
-            self::INFO_FONT_SIZE,
+        $this->tcpdf->Cell(
+            self::INFO_CELL_WIDTH,
+            self::INFO_CELL_HEIGHT,
             $this->trans('cv-mainHeader-mostRecentVersion'),
+            self::BORDER_NONE,
+            self::CELL_LINE_NONE,
+            self::ALIGN_CENTER,
+            self::TRANSPARENT,
             PdfConfig::DOCUMENT_URL
         );
+
+//        $this->tcpdf->Write(
+//            self::INFO_FONT_SIZE,
+//            $this->trans('cv-mainHeader-mostRecentVersion'),
+//            PdfConfig::DOCUMENT_URL
+//        );
     }
 
     /**

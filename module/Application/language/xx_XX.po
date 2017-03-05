@@ -226,6 +226,9 @@ msgstr "cv-employment-date-partTime"
 msgid "cv-employment-references"
 msgstr "cv-employment-references"
 
+msgid "cv-employment-recommendations"
+msgstr "cv-employment-recommendations"
+
 msgid "cv-employment-examples"
 msgstr "cv-employment-examples"
 

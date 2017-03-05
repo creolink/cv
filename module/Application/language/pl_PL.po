@@ -37,16 +37,16 @@ msgid "cv-commisions-tpnets-description"
 msgstr "Design and development of dedicated, proprietary B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5 basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Online, remote work. Development and modernization of application. Technical supervision."
 
 msgid "cv-commisions-msPerfect-name"
-msgstr "Web Designer / B2C project"
+msgstr "Projektant stron internetowych / projekt B2C"
 
 msgid "cv-commisions-msPerfect-country"
-msgstr "Germany"
+msgstr "Niemcy"
 
 msgid "cv-commisions-msPerfect-description"
 msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS with Bootstrap library."
 
 msgid "cv-commisions-freepers-name"
-msgstr "Software designer / B2C & B2E, eCommerce project"
+msgstr "Projektant oprogramowania / B2C & B2E, eCommerce project"
 
 msgid "cv-commisions-freepers-country"
 msgstr "Poland"
@@ -55,7 +55,7 @@ msgid "cv-commisions-freepers-description"
 msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
-msgstr "PHP Coder / B2C & B2E project"
+msgstr "Programista PHP / B2C & B2E project"
 
 msgid "cv-commisions-forweb-country"
 msgstr "Poland"
@@ -64,7 +64,7 @@ msgid "cv-commisions-forweb-description"
 msgstr "Redevelopment of E-BOK system - electronic B2C office for customers of Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery, CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast and movies. Refactoring and improvement of Intranet B2E system."
 
 msgid "cv-commisions-gandalf2009-name"
-msgstr "PHP Web Developer / B2C project"
+msgstr "Programista PHP stron internetowych / B2C project"
 
 msgid "cv-commisions-gandalf2009-country"
 msgstr "Poland"
@@ -73,7 +73,7 @@ msgid "cv-commisions-gandalf2009-description"
 msgstr "Brand improvement through implementation of proprietary online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)"
 
 msgid "cv-commisions-stawoz2009-name"
-msgstr "Portal Designer & PHP Developer / B2B project"
+msgstr "Projektant portali & Programista PHP / B2B project"
 
 msgid "cv-commisions-stawoz2009-country"
 msgstr "Poland"
@@ -82,7 +82,7 @@ msgid "cv-commisions-stawoz2009-description"
 msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. maintenance, development and supervision of portals. (portals are closed)"
 
 msgid "cv-commisions-iizt-name"
-msgstr "PHP Programmer & Web Developer / Freelancer"
+msgstr "Programista PHP i Developer stron internetowych / Freelancer"
 
 msgid "cv-commisions-iizt-country"
 msgstr "The Netherlands"
@@ -91,7 +91,7 @@ msgid "cv-commisions-iizt-description"
 msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
 
 msgid "cv-commisions-gandalf2005-name"
-msgstr "Web Developer & Designer, PHP Coder / B2E & B2C project"
+msgstr "Projektant stron WWW, Programista PHP / B2E & B2C project"
 
 msgid "cv-commisions-gandalf2005-country"
 msgstr "Poland"
@@ -223,7 +223,10 @@ msgid "cv-employment-date-partTime"
 msgstr "part time"
 
 msgid "cv-employment-references"
-msgstr "References"
+msgstr "Referencje"
+
+msgid "cv-employment-recommendations"
+msgstr "Rekomendacje"
 
 msgid "cv-employment-examples"
 msgstr "Examples"
@@ -235,7 +238,7 @@ msgid "cv-employment-address"
 msgstr "Address: "
 
 msgid "cv-mainHeader-mostRecentVersion"
-msgstr "most recent version cv.creolink.pl"
+msgstr "najnowsza wersja cv.creolink.pl"
 
 msgid "cv-mainHeader-speciality"
 msgstr "WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER"

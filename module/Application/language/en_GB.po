@@ -226,6 +226,9 @@ msgstr "part time"
 msgid "cv-employment-references"
 msgstr "References"
 
+msgid "cv-employment-recommendations"
+msgstr "Recommendations"
+
 msgid "cv-employment-examples"
 msgstr "Examples"
 
