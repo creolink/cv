@@ -68,7 +68,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
      */
     public function calculatePointX()
     {
-        return self::TITLE_CURSOR_X + (self::TITLE_CELL_WIDTH - $this->getWidth()) / 2;
+        return self::TITLE_CURSOR_X + (self::TITLE_CELL_WIDTH - $this->getWidth()) / 2 + self::TITLE_PADDING;
     }
 
     /**
