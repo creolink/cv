@@ -19,7 +19,6 @@ class Education extends AbstractSection
     const SECTION_WIDTH = 65;
 
     const CELL_HEIGHT = 4;
-    const CELL_PADDING = 1;
 
     const FONT_SIZE = 7;
 
@@ -61,7 +60,7 @@ class Education extends AbstractSection
         );
 
         $this->tcpdf->MultiCell(
-            self::SECTION_WIDTH - self::CELL_PADDING,
+            self::SECTION_WIDTH,
             self::CELL_HEIGHT,
             $this->getContent(),
             self::BORDER_NONE,

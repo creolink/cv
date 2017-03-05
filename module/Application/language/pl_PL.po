@@ -49,7 +49,7 @@ msgid "cv-commisions-freepers-name"
 msgstr "Projektant oprogramowania / B2C & B2E, eCommerce project"
 
 msgid "cv-commisions-freepers-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-freepers-description"
 msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
@@ -58,7 +58,7 @@ msgid "cv-commisions-forweb-name"
 msgstr "Programista PHP / B2C & B2E project"
 
 msgid "cv-commisions-forweb-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-forweb-description"
 msgstr "Redevelopment of E-BOK system - electronic B2C office for customers of Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery, CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast and movies. Refactoring and improvement of Intranet B2E system."
@@ -67,7 +67,7 @@ msgid "cv-commisions-gandalf2009-name"
 msgstr "Programista PHP stron internetowych / B2C project"
 
 msgid "cv-commisions-gandalf2009-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-gandalf2009-description"
 msgstr "Brand improvement through implementation of proprietary online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)"
@@ -76,7 +76,7 @@ msgid "cv-commisions-stawoz2009-name"
 msgstr "Projektant portali & Programista PHP / B2B project"
 
 msgid "cv-commisions-stawoz2009-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-stawoz2009-description"
 msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. maintenance, development and supervision of portals. (portals are closed)"
@@ -85,7 +85,7 @@ msgid "cv-commisions-iizt-name"
 msgstr "Programista PHP i Developer stron internetowych / Freelancer"
 
 msgid "cv-commisions-iizt-country"
-msgstr "The Netherlands"
+msgstr "Holandia"
 
 msgid "cv-commisions-iizt-description"
 msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
@@ -94,133 +94,136 @@ msgid "cv-commisions-gandalf2005-name"
 msgstr "Projektant stron WWW, Programista PHP / B2E & B2C project"
 
 msgid "cv-commisions-gandalf2005-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-gandalf2005-description"
 msgstr "Design, programming and implementation of dedicated, proprietary eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce applications. Modernization and development of the system. Service and support."
 
 msgid "cv-commisions-stawoz2005-name"
-msgstr "Portal Designer & PHP Developer / B2B project"
+msgstr "Projektant portalu & Programista PHP / B2B project"
 
 msgid "cv-commisions-stawoz2005-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-stawoz2005-description"
 msgstr "Design and creation of proprietary system of web portals with CMS about environmental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals."
 
 msgid "cv-commisions-arges-name"
-msgstr "Junior PHP developer"
+msgstr "Młodszy programista PHP"
 
 msgid "cv-commisions-arges-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-arges-description"
-msgstr "PHP programmer, software developer. Creation of CMS for several companies. PHP, MySQL and JS tasks."
+msgstr "Programista PHP, projektant oprogramowania. Tworzenie systemów zarządzania treścią dla wielu firm. Zadania PHP, MySQL oraz JS."
 
 msgid "cv-commisions-gpl-name"
-msgstr "IT Specialist"
+msgstr "Informatyk"
 
 msgid "cv-commisions-gpl-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-commisions-gpl-description"
 msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
-msgstr "...present"
+msgstr "...aktualnie"
 
 msgid "cv-contract-auto1-name"
-msgstr "Software Engineer / B2B project"
+msgstr "Inżynier oprogramowania / projekt B2B"
 
 msgid "cv-contract-auto1-country"
-msgstr "Germany"
+msgstr "Niemcy"
 
 msgid "cv-contract-auto1-description"
 msgstr "Responsibility for development of new, company flagship product. Building applications with Elastic Search, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
 
 msgid "cv-contract-gandalf-name"
-msgstr "IT Manager / B2E & B2C, eCommerce complex solution"
+msgstr "Kierownik IT / kompleksowe rozwiązanie B2E & B2C, eCommerce"
 
 msgid "cv-contract-gandalf-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-contract-gandalf-description"
 msgstr "Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Employees management, budget controlling, reporting, API integration, optimization of business processes, SEO & SEM analysis, load tests with Apache JMeter, performance and acceptance tests, code refactoring, integration with external web applications through SOAP & OAuth. Duties of the Information Security Administrator."
 
 msgid "cv-contract-forweb-name"
-msgstr "PHP coder with Project Manager responsibilities / B2E, B2B & B2C system for ISP"
+msgstr "Programista PHP z obowiązkami Menadżera projektów / B2E, B2B & B2C system dla ISP"
 
 msgid "cv-contract-forweb-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-contract-forweb-description"
 msgstr "Design, development & implementation of dedicated, proprietary B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
 
 msgid "cv-contract-gandalf2008-name"
-msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce project"
+msgstr "Główny programista PHP, Informatyk / projekt B2E & B2C eCommerce"
 
 msgid "cv-contract-gandalf2008-country"
-msgstr "Poland"
+msgstr "Polska"
 
 msgid "cv-contract-gandalf2008-description"
 msgstr "Maintenance, development and modernization of dedicated, proprietary CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
 
 msgid "cv-languages-polish"
-msgstr "Polish, mother language"
+msgstr "Polski, język ojczysty"
 
 msgid "cv-languages-english"
-msgstr "English (C1), prof. proficiency"
+msgstr "Angielski (C1), biegłość zawodowa"
 
 msgid "cv-languages-german"
-msgstr "German (B1), communicative"
+msgstr "Niemiecki (B1), komunikatywny"
 
 msgid "cv-languages-russian"
-msgstr "Russian (A1), "
+msgstr "Rosyjski (A1), podstawowy"
 
 msgid "cv-personalTraits-organization"
-msgstr "Organization"
+msgstr "Organizacja"
 
 msgid "cv-personalTraits-independence"
-msgstr "Independence"
+msgstr "Niezależność"
 
 msgid "cv-personalTraits-reliability"
-msgstr "Reliability"
+msgstr "Wiarygodność"
+
+msgid "cv-personalTraits-solidity"
+msgstr "Rzetelność"
 
 msgid "cv-personalTraits-cooperation"
-msgstr "Cooperation"
+msgstr "Współpraca"
 
 msgid "cv-personalTraits-punctuality"
-msgstr "Punctuality"
+msgstr "Punktualność"
 
 msgid "cv-personalTraits-management"
-msgstr "Management"
+msgstr "Zarządzanie"
 
 msgid "cv-personalTraits-leading"
-msgstr "Leading"
+msgstr "Kierowanie zespołem"
 
 msgid "cv-personalTraits-assertiveness"
-msgstr "Assertiveness"
+msgstr "Asertywność"
 
 msgid "cv-personalTraits-diligence"
-msgstr "Diligence"
+msgstr "Pracowitość"
 
 msgid "cv-personalTraits-creativity"
-msgstr "Creativity"
+msgstr "Kreatywność"
 
 msgid "cv-personalTraits-teamWork"
-msgstr "Team Work"
+msgstr "Praca zespołowa"
 
 msgid "cv-personalTraits-workUnderTimePressure"
-msgstr "Work under time pressure"
+msgstr "Praca pod presją czasu"
 
 msgid "cv-aboutMe-sectionTitle"
-msgstr "About me"
+msgstr "O mnie"
 
 msgid "cv-aboutMe-content"
-msgstr "I am married and we have %s years old son. In 2015 we started new life in Germany. I don't smoke since %s years. In 2016, through systematic diet and training, I've lost 35 kg. I developed my own PHP framework and I used it in all my commissioned projects. I've got recomendations from almost all companies I worked for. This CV is an example of my abilities."
+msgstr "Jestem żonaty i mamy %s-letniego syna. W 2015 rozpoczęliśmy nowe życie w Niemczech. Nie palę od %s lat. W 2016, dzięki systematycznej diecie i treningowi schudłem 35kg. Zaprojektowałem framework, którego używałem we wszystkich zleconych projektach. Posiadam rekomendacje od większości firm, z którymi pracowałem. To CV jest próbką moich umiejętności."
 
 msgid "cv-employment-date-partTime"
-msgstr "part time"
+msgstr "pól etatu"
 
 msgid "cv-employment-references"
 msgstr "Referencje"
@@ -229,13 +232,13 @@ msgid "cv-employment-recommendations"
 msgstr "Rekomendacje"
 
 msgid "cv-employment-examples"
-msgstr "Examples"
+msgstr "Przykłady"
 
 msgid "cv-employment-contact"
-msgstr "Contact: "
+msgstr "Kontakt: "
 
 msgid "cv-employment-address"
-msgstr "Address: "
+msgstr "Adres: "
 
 msgid "cv-mainHeader-mostRecentVersion"
 msgstr "najnowsza wersja cv.creolink.pl"
@@ -244,60 +247,60 @@ msgid "cv-mainHeader-speciality"
 msgstr "PROGRAMISTA WWW, SPECJALISTA PHP & MANAGER PROJEKTÓW"
 
 msgid "cv-mainHeader-tools"
-msgstr "CV created using PHP7 with ZF3 & TCPDF"
+msgstr "CV zaprojektowane w PHP 7 wraz ZF3 & TCPDF"
 
 msgid "cv-technicalSkills-sectionTitle"
-msgstr "Technical experience"
+msgstr "Doświadczenie techniczne"
 
 msgid "cv-sign-content"
 msgstr "Should you find my knowledge and professional experience interesting and it could help in progress of your company, please contact with me by phone, by mail or by Skype."
 
 msgid "cv-mainHeader-personalData-experience"
-msgstr "Experience"
+msgstr "Doświadczenie"
 
 msgid "cv-mainHeader-personalData-birthDate"
-msgstr "Birth date"
+msgstr "Data urodzenia"
 
 msgid "cv-mainHeader-personalData-nationality"
-msgstr "Nationality"
+msgstr "Narodowość"
 
 msgid "cv-mainHeader-personalData-address"
-msgstr "Address"
+msgstr "Adres"
 
 msgid "cv-mainHeader-personalData-workplace"
-msgstr "Workplace"
+msgstr "Miejsce pracy"
 
 msgid "cv-mainHeader-personalData-years"
-msgstr "%s years"
+msgstr "%s lat"
 
 msgid "cv-careerGoals-sectionTitle"
-msgstr "Career goals"
+msgstr "Cele zawodowe"
 
 msgid "cv-careerGoals-recipent"
-msgstr "Dear Sir or Madam"
+msgstr "Szanowni Państwo"
 
 msgid "cv-careerGoals-content"
 msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (%s years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
 
 msgid "cv-commisionedJobs-sectionTitle"
-msgstr "Additional, commissioned & freelance jobs"
+msgstr "Dodatkowe, zlecone prace oraz freelancing"
 
 msgid "cv-education-sectionTitle"
-msgstr "Education & courses"
+msgstr "Edukacja & kursy"
 
 msgid "cv-education-content"
 msgstr ""
-"2013 - 2015 intensive English & German course,\r\n"
-"2012 professional course of Information Security Administrator with certificate\r\n"
-"2012 professional Google Analytics training,\r\n"
-"since 2012 driving license category B,\r\n"
-"further past: studies at the Lodz University of Technology (Computer Science, 3 years)"
+"2013 - 2015 szybki kurs Angielskiego i Niemieckiego,\r\n"
+"2012 profesjonalny kurs dla ABI z certyfikatem\r\n"
+"2012 profesjonalny trening Google Analytics,\r\n"
+"od 2012 prawo jazdy kategorii B,\r\n"
+"dalsza przeszłość: studia na Politechnice Łódzkiej (Informatyka, 3 lata)"
 
 msgid "cv-employmentHistory-sectionTitle"
-msgstr "Employment history, full & part time"
+msgstr "Historia zatrudnienia, pełny i pół etatu"
 
 msgid "cv-expectations-sectionTitle"
-msgstr "Expectations"
+msgstr "Oczekiwania"
 
 msgid "cv-expectations-content"
 msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
@@ -309,13 +312,16 @@ msgid "cv-hobby-content"
 msgstr "My free time I spend playing board games \"Civilization Through the Ages\" or \"Robinson Crusoe: Adventure on the Cursed Island\". I like to watch sf & adventure films as well as TV series. My favourites are \"Battlestar Galactica\" & \"The Last of the Mohicans\". When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
 
 msgid "cv-softwareTools-sectionTitle"
-msgstr "Software, tools & skills"
+msgstr "Umiejętności i narzędzia"
 
 msgid "cv-languages-sectionTitle"
-msgstr "Languages"
+msgstr "Języki"
 
 msgid "cv-skills-shortcut-months"
 msgstr "(%sm)"
 
 msgid "cv-skills-shortcut-years"
 msgstr "(%sy)"
+
+msgid "cv-personality-sectionTitle"
+msgstr "Osobowość"

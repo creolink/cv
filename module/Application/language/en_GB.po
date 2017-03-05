@@ -187,6 +187,9 @@ msgstr "Independence"
 msgid "cv-personalTraits-reliability"
 msgstr "Reliability"
 
+msgid "cv-personalTraits-solidity"
+msgstr "Solidity"
+
 msgid "cv-personalTraits-cooperation"
 msgstr "Cooperation"
 
@@ -245,7 +248,7 @@ msgid "cv-mainHeader-speciality"
 msgstr "WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER"
 
 msgid "cv-mainHeader-tools"
-msgstr "CV created using PHP7 with ZF3 & TCPDF"
+msgstr "CV created using PHP 7 with ZF3 & TCPDF"
 
 msgid "cv-technicalSkills-sectionTitle"
 msgstr "Technical experience"
@@ -320,3 +323,6 @@ msgstr "(%sm)"
 
 msgid "cv-skills-shortcut-years"
 msgstr "(%sy)"
+
+msgid "cv-personality-sectionTitle"
+msgstr "Personality"
