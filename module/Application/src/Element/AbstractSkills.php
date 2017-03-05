@@ -243,8 +243,16 @@ abstract class AbstractSkills extends AbstractSection
      */
     private function createExperienceText($years = 1)
     {
-        $time = $years < 1 ? ceil(12 * $years) . 'cv-skills-shortcut-months' : $years . 'cv-skills-shortcut-years';
+        if ($years < 1) {
+            return sprintf(
+                'cv-skills-shortcut-months',
+                ceil(12 * $years)
+            );
+        }
 
-        return '(' . $time . ')';
+        return sprintf(
+            'cv-skills-shortcut-years',
+            $years
+        );
     }
 }

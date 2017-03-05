@@ -10,6 +10,7 @@ namespace Application\Controller;
 
 use Application\Controller\BaseController;
 use Zend\Http\Response;
+use Application\Config\Locale;
 
 class IndexController extends BaseController
 {
@@ -32,7 +33,7 @@ class IndexController extends BaseController
     {
         return $this->redirect()->toRoute(
             'subdomain',
-            ['locale' => 'en']
+            ['locale' => Locale::DEFAULT_ROUTED_LOCALE]
         );
     }
 }

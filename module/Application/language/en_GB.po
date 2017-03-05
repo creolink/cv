@@ -310,10 +310,10 @@ msgid "cv-languages-sectionTitle"
 msgstr "Languages"
 
 msgid "cv-skills-shortcut-months"
-msgstr "m"
+msgstr "(%sm)"
 
 msgid "cv-skills-shortcut-years"
-msgstr "y"
+msgstr "(%sy)"
 
 msgid ""
 msgstr ""
