@@ -13,88 +13,95 @@ class EmploymentPosition implements EntityInterface
 {
     /**
      * Name of position
-     * 
+     *
      * @var string
      */
     private $name = '';
-    
+
     /**
      * Date of start work
-     * 
+     *
      * @var string
      */
     private $dateStart;
-    
+
     /**
      * Date of finish work
-     * 
+     *
      * @var string
      */
     private $dateEnd;
-    
+
     /**
      * Company name
-     * 
+     *
      * @var string
      */
     private $company = '';
-    
+
     /**
      * Company address
-     * 
+     *
      * @var string
      */
     private $address = '';
-    
+
+    /**
+     * Company country
+     *
+     * @var string
+     */
+    private $country = '';
+
     /**
      * Description of position
-     * 
+     *
      * @var string
      */
     private $description = '';
-    
+
     /**
      * Examples url
-     * 
+     *
      * @var string
      */
     private $examples = '';
-    
+
     /**
      * References url
-     * 
+     *
      * @var string
      */
     private $references = '';
-    
+
     /**
      * Contact data
-     * 
+     *
      * @var string
      */
     private $contact = '';
-    
+
     /**
      * Company url
-     * 
+     *
      * @var string
      */
     private $companyUrl = '';
-    
+
     /**
      * Part time job flag
-     * 
+     *
      * @var bool
      */
     private $partTime = false;
 
     /**
      * Sets position as disabled
-     * 
+     *
      * @var bool
      */
     private $disabled = false;
-    
+
     /**
      * @param string $name
      */
@@ -102,7 +109,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->name = $name;
     }
-    
+
     /**
      * @return string
      */
@@ -110,7 +117,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->name;
     }
-    
+
     /**
      * @param string $dateStart
      */
@@ -118,15 +125,15 @@ class EmploymentPosition implements EntityInterface
     {
         $this->dateStart = $dateStart;
     }
-    
+
     /**
      * @return \DateTime
      */
     public function getDateStart()
     {
-        return (new \DateTime($this->dateStart))->format("F Y");
+        return new \DateTime($this->dateStart);
     }
-    
+
     /**
      * @param string $dateEnd
      */
@@ -134,19 +141,19 @@ class EmploymentPosition implements EntityInterface
     {
         $this->dateEnd = $dateEnd;
     }
-    
+
     /**
      * @return \DateTime|null
      */
     public function getDateEnd()
     {
         if (false === empty($this->dateEnd)) {
-            return (new \DateTime($this->dateEnd))->format("F Y");
+            return (new \DateTime($this->dateEnd));
         }
-        
+
         return null;
     }
-    
+
     /**
      * @param string $company
      */
@@ -154,7 +161,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->company = $company;
     }
-    
+
     /**
      * @return string
      */
@@ -162,7 +169,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->company;
     }
-    
+
     /**
      * @param string $address
      */
@@ -170,7 +177,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->address = $address;
     }
-    
+
     /**
      * @return string
      */
@@ -178,7 +185,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->address;
     }
-    
+
     /**
      * @return bool
      */
@@ -186,7 +193,31 @@ class EmploymentPosition implements EntityInterface
     {
         return false === empty($this->address);
     }
-    
+
+    /**
+     * @param string $country
+     */
+    public function setCountry($country = '')
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasCountry()
+    {
+        return false === empty($this->country);
+    }
+
     /**
      * @param string $description
      */
@@ -194,7 +225,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->description = $description;
     }
-    
+
     /**
      * @return string
      */
@@ -202,7 +233,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->description;
     }
-    
+
     /**
      * @param string $examples
      */
@@ -210,7 +241,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->examples = $examples;
     }
-    
+
     /**
      * @return string
      */
@@ -218,7 +249,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->examples;
     }
-    
+
     /**
      * @return bool
      */
@@ -226,7 +257,7 @@ class EmploymentPosition implements EntityInterface
     {
         return false === empty($this->examples);
     }
-    
+
     /**
      * @param string $references
      */
@@ -234,7 +265,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->references = $references;
     }
-    
+
     /**
      * @return string
      */
@@ -242,7 +273,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->references;
     }
-    
+
     /**
      * @return bool
      */
@@ -250,7 +281,7 @@ class EmploymentPosition implements EntityInterface
     {
         return false === empty($this->references);
     }
-    
+
     /**
      * @param string $contact
      */
@@ -258,7 +289,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->contact = $contact;
     }
-    
+
     /**
      * @return string
      */
@@ -266,7 +297,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->contact;
     }
-    
+
     /**
      * @return bool
      */
@@ -274,7 +305,7 @@ class EmploymentPosition implements EntityInterface
     {
         return false === empty($this->contact);
     }
-    
+
     /**
      * @param string $companyUrl
      */
@@ -282,7 +313,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->companyUrl = $companyUrl;
     }
-    
+
     /**
      * @return string
      */
@@ -290,7 +321,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->companyUrl;
     }
-    
+
     /**
      * @return bool
      */
@@ -298,15 +329,27 @@ class EmploymentPosition implements EntityInterface
     {
         return false === empty($this->companyUrl);
     }
-    
+
     /**
      * @return bool
      */
     public function hasCompanyData()
     {
-        return $this->hasCompanyUrl() || $this->hasAddress() || $this->hasContact();
+        return $this->hasCompanyUrl()
+            || $this->hasAddress()
+            || $this->hasContact()
+            || $this->hasCountry();
     }
-    
+
+    /**
+     * @return bool
+     */
+    public function hasCompanyAddress()
+    {
+        return $this->hasAddress()
+            || $this->hasCountry();
+    }
+
     /**
      * @param bool $partTime
      */
@@ -314,7 +357,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->partTime = $partTime;
     }
-    
+
     /**
      * @return bool
      */
@@ -322,7 +365,7 @@ class EmploymentPosition implements EntityInterface
     {
         return $this->partTime;
     }
-    
+
     /**
      * @param bool $disabled
      */
@@ -330,7 +373,7 @@ class EmploymentPosition implements EntityInterface
     {
         $this->disabled = $disabled;
     }
-    
+
     /**
      * @return bool
      */

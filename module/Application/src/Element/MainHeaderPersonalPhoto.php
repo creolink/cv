@@ -18,7 +18,7 @@ class MainHeaderPersonalPhoto extends AbstractTcpdfDecorator
     const PERSONAL_PHOTO_CURSOR_Y = 5;
     const PERSONAL_PHOTO_WIDTH = 30;
     const PERSONAL_PHOTO_HEIGHT = 37;
-    
+
     /**
      * Renders personal photo in header
      */
@@ -38,7 +38,7 @@ class MainHeaderPersonalPhoto extends AbstractTcpdfDecorator
             self::PERSONAL_PHOTO_HEIGHT,
             PersonalData::EMAIL_URL
         );
-        
+
         $this->tcpdf->Rect(
             self::PERSONAL_PHOTO_CURSOR_X,
             self::PERSONAL_PHOTO_CURSOR_Y,

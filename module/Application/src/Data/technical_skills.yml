@@ -14,6 +14,6 @@ positions:
     - { name: 'Elastic Search, Solr, Sphinx', level: 2, experience: 2 }
     - { name: 'React, Typescript', level: 2, experience: 1 }
     - { name: 'MsSQL, PostgreSQL', level: 2, experience: 1, disabled: true }
-    - { name: 'ZF 1 & 2', level: 1, experience: 0.7 }
+    - { name: 'ZF 1/2/3', level: 1, experience: 0.7 }
     - { name: 'BDD, Behat', level: 1, experience: 0.5 }
     - { name: 'Perl, Python, Java, C#, C++', level: 1, experience: 0.2 }

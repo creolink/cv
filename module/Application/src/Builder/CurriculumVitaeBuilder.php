@@ -12,25 +12,48 @@ use Application\Builder\MainPage;
 use Application\Builder\SecondPage;
 use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
+use Application\Normalization\NormalizedTranslationService;
+use Application\Normalization\NormalizedDateService;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
     /**
-     * @var TcpdfInterface
+     * @var TcpdfInterface|CurriculumVitae
      */
     private $cv = null;
-    
-    public function __construct() {
+
+    /**
+     * @var NormalizedTranslationService
+     */
+    private $normalizedLocalization;
+
+    /**
+     * @var NormalizedDateService
+     */
+    private $normalizedDate;
+
+    /**
+     * @param NormalizedTranslationService $normalizedLocalization
+     * @param NormalizedDateService $normalizedDate
+     */
+    public function __construct(
+        NormalizedTranslationService $normalizedLocalization,
+        NormalizedDateService $normalizedDate
+    ) {
+        $this->normalizedLocalization = $normalizedLocalization;
+        $this->normalizedDate = $normalizedDate;
+
         $this->cv = new CurriculumVitae();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function render() {
-        return $this->cv->renderPdf();
+    public function render()
+    {
+        return $this->cv->outputPdf();
     }
-    
+
     /**
      * Configures PDF document
      */
@@ -38,8 +61,14 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     {
         $this->cv->configure();
         $this->cv->initFonts();
+        $this->cv->setTranslator(
+            $this->normalizedLocalization
+        );
+        $this->cv->setDateService(
+            $this->normalizedDate
+        );
     }
-    
+
     /**
      * Generates main page
      */
@@ -48,10 +77,10 @@ class CurriculumVitaeBuilder extends AbstractBuilder
         $page = new MainPage(
             $this->cv
         );
-        
+
         $page->createPage();
     }
-    
+
     /**
      * Generates second page
      */
@@ -60,7 +89,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
         $page = new SecondPage(
             $this->cv
         );
-        
+
         $page->createPage();
     }
 }

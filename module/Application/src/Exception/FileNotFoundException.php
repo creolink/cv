@@ -9,5 +9,5 @@ namespace Application\Exception;
 
 class FileNotFoundException extends \Exception
 {
-    
+
 }

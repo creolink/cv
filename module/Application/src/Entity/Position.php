@@ -13,32 +13,32 @@ class Position implements EntityInterface
 {
     /**
      * Name of skill
-     * 
+     *
      * @var string
      */
     private $name = '';
 
     /**
      * Level of skill
-     * 
+     *
      * @var int
      */
     private $level = 1;
-    
+
     /**
      * Best strength of skill
      *
-     * @var type 
+     * @var type
      */
     private $strength = 4;
 
     /**
      * Sets skill as disabled
-     * 
+     *
      * @var bool
      */
     private $disabled = false;
-    
+
     /**
      * @param string $name
      */
@@ -46,7 +46,7 @@ class Position implements EntityInterface
     {
         $this->name = $name;
     }
-    
+
     /**
      * @return string
      */
@@ -54,7 +54,7 @@ class Position implements EntityInterface
     {
         return $this->name;
     }
-    
+
     /**
      * @param int $level
      */
@@ -62,7 +62,7 @@ class Position implements EntityInterface
     {
         $this->level = $level;
     }
-    
+
     /**
      * @return int
      */
@@ -70,7 +70,7 @@ class Position implements EntityInterface
     {
         return $this->level;
     }
-    
+
     /**
      * @param int $strength
      */
@@ -78,7 +78,7 @@ class Position implements EntityInterface
     {
         $this->strength = $strength;
     }
-    
+
     /**
      * @return int
      */
@@ -94,7 +94,7 @@ class Position implements EntityInterface
     {
         $this->disabled = $disabled;
     }
-    
+
     /**
      * @return bool
      */

@@ -17,13 +17,13 @@ use Application\Hydrator\Hydrator;
 abstract class AbstractSkills extends AbstractSection
 {
     const FIRST_LINE_MARGIN = -1;
-    
+
     const POSITION_NEXT_LINE = 3.6;
     const POSITION_PADDING = 2.3;
     const POSITION_MARGIN = 1.5;
     const POSITION_FONT_SIZE = 8;
     const POSITION_CELL_HEIGHT = 6;
-    
+
     const CIRCLE_CENTER_POINT_MARGIN = 3.2;
     const CIRCLE_RADIUS = 1.3;
     const CIRCLE_MARGIN = 3.5;
@@ -32,17 +32,17 @@ abstract class AbstractSkills extends AbstractSection
     const CIRCLE_STYLE = '';
     const CIRCLE_ANGLE_START = 0;
     const CIRCLE_ANGLE_END = 360;
-    
+
     const FILLED_CIRCLE_RADIUS = 0.9;
     const FILLED_CIRCLE_STYLE = 'F';
-    
+
     const EXPERIENCE_FONT_SIZE = 5;
     const EXPERIENCE_MARGIN_Y = -0.15;
     const EXPERIENCE_MARGIN_X = 1;
-    
+
     /**
      * Renders list of skills
-     * 
+     *
      * @param Hydrator $hydrator
      */
     protected function renderPositions(Hydrator $hydrator)
@@ -56,19 +56,19 @@ abstract class AbstractSkills extends AbstractSection
             if ($position->isDisabled()) {
                 continue;
             }
-            
+
             $this->renderCircles(
                 $position,
                 $x,
                 $this->getCircleCenter($y, $counter++)
             );
-            
+
             $this->renderPosition(
                 $position
             );
         }
     }
-    
+
     /**
      * @param float $y
      * @param int $counter
@@ -80,10 +80,10 @@ abstract class AbstractSkills extends AbstractSection
             + (self::POSITION_NEXT_LINE * $counter)
             + self::CIRCLE_CENTER_POINT_MARGIN;
     }
-    
+
     /**
      * Renders position with circles on left
-     * 
+     *
      * @param Position|Skill $position
      */
     private function renderPosition(Position $position)
@@ -92,24 +92,28 @@ abstract class AbstractSkills extends AbstractSection
             $this->tcpdf->GetX() + self::POSITION_MARGIN,
             $this->tcpdf->getY()
         );
-        
+
         $this->tcpdf->SetFont(
             $this->tcpdf->verdana,
             Font::NORMAL,
             self::POSITION_FONT_SIZE
         );
 
-        $this->tcpdf->Cell(
-            $this->tcpdf->GetStringWidth(
-                $position->getName()
-            ),
-            self::POSITION_CELL_HEIGHT,
+        $name = $this->trans(
             $position->getName()
         );
-        
+
+        $this->tcpdf->Cell(
+            $this->tcpdf->GetStringWidth(
+                $name
+            ),
+            self::POSITION_CELL_HEIGHT,
+            $name
+        );
+
         $this->renderExperienceTime($position);
     }
-    
+
     /**
      * @param Position $position
      */
@@ -120,13 +124,13 @@ abstract class AbstractSkills extends AbstractSection
                 $this->tcpdf->GetX() + self::EXPERIENCE_MARGIN_X,
                 $this->tcpdf->getY() + self::EXPERIENCE_MARGIN_Y
             );
-            
+
             $this->tcpdf->SetFont(
                 $this->tcpdf->verdanaItalic,
                 Font::NORMAL,
                 self::EXPERIENCE_FONT_SIZE
             );
-            
+
             $this->tcpdf->Cell(
                 $this->tcpdf->GetStringWidth(
                     $position->getExperience()
@@ -138,10 +142,10 @@ abstract class AbstractSkills extends AbstractSection
             );
         }
     }
-    
+
     /**
      * Renders filled circle
-     * 
+     *
      * @param Position $position
      * @param float $x
      * @param float $y
@@ -153,7 +157,7 @@ abstract class AbstractSkills extends AbstractSection
                 $x + (self::CIRCLE_MARGIN * $counter),
                 $y
             );
-            
+
             if ($position->getLevel() > $counter) {
                 $this->renderFilledCircle(
                     $x + (self::CIRCLE_MARGIN * $counter),
@@ -161,16 +165,16 @@ abstract class AbstractSkills extends AbstractSection
                 );
             }
         }
-        
+
         $this->tcpdf->setY(
             $y - self::CIRCLE_CENTER_POINT_MARGIN,
             false
         );
     }
-    
+
     /**
      * Renders circle
-     * 
+     *
      * @param float $x
      * @param float $y
      */
@@ -185,13 +189,13 @@ abstract class AbstractSkills extends AbstractSection
             self::CIRCLE_STYLE,
             $this->getCircleLineStyle()
         );
-        
+
         $this->tcpdf->SetXY($x, $y);
     }
-    
+
     /**
      * Renders filled circle
-     * 
+     *
      * @param float $x
      * @param float $y
      */
@@ -208,14 +212,14 @@ abstract class AbstractSkills extends AbstractSection
             [
                 Color::FILL_COLOR_DARK_RED,
                 Color::FILL_COLOR_DARK_GREEN,
-                Color::FILL_COLOR_DARK_BLUE
+                Color::FILL_COLOR_DARK_BLUE,
             ]
         );
     }
-    
+
     /**
      * Returns line style for circle
-     * 
+     *
      * @return array
      */
     private function getCircleLineStyle()
@@ -226,21 +230,29 @@ abstract class AbstractSkills extends AbstractSection
             'color' => [
                 Color::DRAW_COLOR_DARK_RED,
                 Color::DRAW_COLOR_DARK_GREEN,
-                Color::DRAW_COLOR_DARK_BLUE
-            ]
+                Color::DRAW_COLOR_DARK_BLUE,
+            ],
         ];
     }
-    
+
     /**
      * Creates experience text with proper number of years or month
-     * 
+     *
      * @param float $years
      * @return string
      */
     private function createExperienceText($years = 1)
     {
-        $time = $years < 1 ? ceil(12 * $years) . 'm' : $years . 'y';
-        
-        return '(' . $time . ')';
+        if ($years < 1) {
+            return sprintf(
+                'cv-skills-shortcut-months',
+                ceil(12 * $years)
+            );
+        }
+
+        return sprintf(
+            'cv-skills-shortcut-years',
+            $years
+        );
     }
 }

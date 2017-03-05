@@ -23,7 +23,7 @@ class SecondPage extends AbstractPage
         $page = new CommisionedJobs($page);
         $page = new QRCode($page);
         $page = new Sign($page);
-        
+
         return $page->addElements();
     }
 }

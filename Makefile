@@ -35,7 +35,7 @@ phpcov:
 coverage: fixtures phpunit-coverage behat-coverage phpcov
 
 phpmd:
-	bin/phpmd src/ xml vendor/wkda/php-code-style/phpmd-ruleset.xml --reportfile build/phpmd.xml --suffixes php --exclude Resources,Tests
+	bin/phpmd src/ xml vendor/creolink/code_style/phpmd-ruleset.xml --reportfile build/phpmd.xml --suffixes php --exclude Resources,Tests
 
 phpcs:
 	phpcs --ignore=fixtures --standard=vendor/creolink/code_style/Symfony2 module
@@ -44,7 +44,7 @@ php7cc:
 	bin/php7cc --except=vendor app/ src/ --verbose
 
 phplint:
-	find app/ src/ vendor/wkda/ -name "*.php" ! -path "*cache*" ! -path "*Test*" -print0 -exec php -l {} 2>&1 > /dev/null \;
+	find app/ src/ -name "*.php" ! -path "*cache*" ! -path "*Test*" -print0 -exec php -l {} 2>&1 > /dev/null \;
 
 rm-cache:
 	rm -fR app/cache/*

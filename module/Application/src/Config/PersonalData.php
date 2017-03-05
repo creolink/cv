@@ -11,18 +11,18 @@ class PersonalData
 {
     const NAME = 'Jakub';
     const LASTNAME = 'Łuczyński';
-    
-    const COUNTRY = 'Germany';
+
+    const COUNTRY = 'cv-personalData-country';
     const STREET = 'Am Wall 54';
     const CITY = 'Kleinmachnow';
     const POST_CODE = '14532';
 
-    const NATIONALITY = 'Polish';    
-    const BIRTH_DATE = '01/19/1979';
+    const NATIONALITY = 'cv-personalData-nationality';
+    const BIRTH_DATE = '1979/01/19';
     const WORK_START_YEAR = 2001;
-    const WORK_PLACE = 'Berlin, Potsdam';
+    const WORK_PLACE = 'cv-personalData-workPlace';
     const STOP_SMOKING_YEAR = 2006;
-    
+
     const PHONE = '+49 1521 7786892';
     const PHONE_URL = 'tel:04915217786892';
     const EMAIL = 'jakub.luczynski@gmail.com';
@@ -33,10 +33,10 @@ class PersonalData
     const SKYPE_URL = 'skype:luczynski.jakub';
     const GOLDEN_LINE = '/jakub-luczynski';
     const GOLDEN_LINE_URL = 'http://www.goldenline.pl/jakub-luczynski/';
-    
-    const TITLE = 'PHP Developer';
-    
+
+    const TITLE = 'cv-personalData-title';
+
     const GITHUB = 'https://github.com/creolink/cv';
-    
+
     const MAXIMUS_BIRTH_DATE = 2005;
 }

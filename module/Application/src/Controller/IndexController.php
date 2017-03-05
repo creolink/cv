@@ -8,23 +8,32 @@
 
 namespace Application\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Application\Builder\CurriculumVitaeBuilder;
-use Application\Builder\CurriculumVitaeDirector;
+use Application\Controller\BaseController;
+use Zend\Http\Response;
+use Application\Config\Locale;
 
-class IndexController extends AbstractActionController
+class IndexController extends BaseController
 {
     /**
      * @return string
      */
     public function indexAction()
     {
-        $cvDirector = new CurriculumVitaeDirector(
-            new CurriculumVitaeBuilder()
+        return $this->getCurriculumVitae()
+            ->build()
+            ->render();
+    }
+
+    /**
+     * Home page - auto redirect to english site
+     *
+     * @return Response
+     */
+    public function homeAction()
+    {
+        return $this->redirect()->toRoute(
+            'subdomain',
+            ['locale' => Locale::DEFAULT_ROUTED_LOCALE]
         );
-        
-        $cvDirector->build();
-        
-        return $cvDirector->render();
     }
 }

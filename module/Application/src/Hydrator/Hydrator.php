@@ -16,26 +16,30 @@ use Zend\Config\Factory;
 class Hydrator
 {
     const PATH = '/../Data/';
-    
+
     /**
      * @var string
      */
     private $entity;
-    
+
     /**
      * @var string
      */
     private $file;
-    
+
+    /**
+     * @param string $entity
+     * @param string $file
+     */
     public function __construct($entity, $file)
     {
         $this->file = $file;
         $this->entity = $entity;
     }
-    
+
     /**
      * Returns list of entities
-     * 
+     *
      * @return EntityInterface[]
      */
     public function getList()
@@ -43,39 +47,45 @@ class Hydrator
         $list = [];
 
         $this->validateClass();
-        
+
         foreach ($this->getFileData() as $record) {
             $list[] = $this->getEntity($record);
         }
-        
+
         return $list;
     }
-    
+
     /**
      * Hydrates entity
-     * 
+     *
      * @param array $data
      * @return EntityInterface
      */
     public function getEntity($data)
     {
-        return $this->getHydrator()->hydrate($data, new $this->entity);
+        $entity = $this->entity;
+
+        return $this->getHydrator()
+            ->hydrate(
+                $data,
+                new $entity()
+            );
     }
-    
+
     /**
      * @return array
      */
     private function getFileData()
     {
         $path = __DIR__ . self::PATH . $this->file;
-        
+
         $this->validateFile($path);
-        
+
         $config = Factory::fromFile($path);
-        
+
         return $config['positions'];
     }
-    
+
     /**
      * @return ZendHydrator
      */
@@ -83,10 +93,10 @@ class Hydrator
     {
         return new ZendHydrator();
     }
-    
+
     /**
      * Validates class name
-     * 
+     *
      * @throws EntityNotFoundException
      */
     private function validateClass()
@@ -100,10 +110,10 @@ class Hydrator
             );
         }
     }
-    
+
     /**
      * Validates file name
-     * 
+     *
      * @param string $path
      * @throws EntityNotFoundException
      */

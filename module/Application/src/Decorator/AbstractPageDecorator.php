@@ -15,7 +15,7 @@ abstract class AbstractPageDecorator extends AbstractTcpdfDecorator implements T
     const LINE_WIDTH = 0.2;
     const LINE_DASH = '1';
     const LINE_SOLID = '0';
-    
+
     /**
      * {@inheritDoc}
      */
@@ -28,10 +28,10 @@ abstract class AbstractPageDecorator extends AbstractTcpdfDecorator implements T
     {
         $this->tcpdf->SetLineStyle([
             'width' => self::LINE_WIDTH,
-            'dash' => self::LINE_DASH
+            'dash' => self::LINE_DASH,
         ]);
     }
-    
+
     /**
      * Sets solid line style
      */
@@ -39,7 +39,7 @@ abstract class AbstractPageDecorator extends AbstractTcpdfDecorator implements T
     {
         $this->tcpdf->SetLineStyle([
             'width' => self::LINE_WIDTH,
-            'dash' => self::LINE_SOLID
+            'dash' => self::LINE_SOLID,
         ]);
     }
 }

@@ -10,11 +10,6 @@ namespace Application\Helper;
 class DateHelper
 {
     /**
-     * @var int
-     */
-    private $date = 0;
-    
-    /**
      * @var array
      */
     private $polishMonths = [
@@ -31,49 +26,53 @@ class DateHelper
         11 => array('listopad', 'listopada'),
         12 => array('grudzień', 'grudnia'),
     ];
-    
-    /**
-     * @param int $date
-     */
-    public function __construct($date)
-    {
-        $this->date = $date;
-    }
-    
-    /**
-     * @return int
-     */
-    public function getPassedYears($year)
-    {
-        return date("Y") - $year;
-    }
-    
-    /**
-     * @return string
-     */
-    public function getDate()
-    {
-        $currentLocale = setlocale(LC_TIME, "0");
-        
-        $formatedDate = strftime("%d %B %Y", $this->date);
-        
-        if (strpos($currentLocale, 'pl_PL') !== false) {
-            return $this->getPolishMonths($formatedDate);
-        }
-        
-        return $formatedDate;
-    }
-    
+
     /**
      * @param string $date
      * @return string
      */
-    private function getPolishMonths($date = '')
+    public static function getDate($date)
     {
-        $month = date("n", $this->date);
+        $currentLocale = setlocale(LC_TIME, "0");
+
+        $formatedDate = strftime(
+            "%d %B %Y",
+            strtotime($date)
+        );
+
+        if (strpos($currentLocale, 'pl_PL') !== false) {
+            return self::getPolishMonths(
+                $date,
+                $formatedDate
+            );
+        }
+
+        return $formatedDate;
+    }
+
+    /**
+     * @param int $year
+     * @return int
+     */
+    public static function getPassedYears($year)
+    {
+        return date("Y") - $year;
+    }
+
+    /**
+     * @param int $date
+     * @param string $formatedDate
+     * @return string
+     */
+    private static function getPolishMonths($date, $formatedDate = '')
+    {
+        $month = date("n", $date);
         $monthNames = $this->polishMonths[$month];
-        
-        return str_replace($monthNames[0], $monthNames[1], $date);
+
+        return str_replace(
+            $monthNames[0],
+            $monthNames[1],
+            $formatedDate
+        );
     }
 }
-

@@ -22,26 +22,26 @@ class MainHeader extends AbstractPageDecorator
 {
     const CURSOR_X = 0;
     const CURSOR_Y = 0;
-    
+
     const LINE_WIDTH = 0.1;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         return $this->renderMainHeader();
     }
-    
+
     /**
      * Creates Main CV Header
      */
     private function renderMainHeader()
     {
         $this->configure();
-        
+
         $this->renderBackground();
         $this->renderTitle();
         $this->renderFlags();
@@ -50,10 +50,10 @@ class MainHeader extends AbstractPageDecorator
         $this->renderPersonalPhoto();
         $this->renderMostRecentInfo();
         $this->renderPersonalData();
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * Configures header element
      */
@@ -63,18 +63,18 @@ class MainHeader extends AbstractPageDecorator
             self::CURSOR_X,
             self::CURSOR_Y
         );
-        
+
         $this->tcpdf->SetLineWidth(
             self::LINE_WIDTH
         );
-        
+
         $this->tcpdf->SetDrawColor(
             Color::DRAW_COLOR_BRIGHT_RED,
             Color::DRAW_COLOR_BRIGHT_GREEN,
             Color::DRAW_COLOR_BRIGHT_BLUE
         );
     }
-    
+
     /**
      * Renders header background
      */
@@ -83,7 +83,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderBackground = new MainHeaderBackground($this->tcpdf);
         $mainHeaderBackground->renderBackground();
     }
-    
+
     /**
      * Renders CV title
      */
@@ -91,12 +91,12 @@ class MainHeader extends AbstractPageDecorator
     {
         $mainHeaderFullName = new MainHeaderFullName($this->tcpdf);
         $mainHeaderFullName->renderTitle();
-        
+
         $mainHeaderSpeciality = new MainHeaderSpeciality($this->tcpdf);
         $mainHeaderSpeciality->renderSpeciality();
-        
-        $MainHeaderTools = new MainHeaderTools($this->tcpdf);
-        $MainHeaderTools->renderTools();
+
+        $mainHeaderTools = new MainHeaderTools($this->tcpdf);
+        $mainHeaderTools->renderTools();
     }
 
     /**
@@ -107,7 +107,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderFlags = new MainHeaderFlags($this->tcpdf);
         $mainHeaderFlags->renderFlags();
     }
-    
+
     /**
      * Renders download button
      */
@@ -116,7 +116,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderDownload = new MainHeaderDownload($this->tcpdf);
         $mainHeaderDownload->renderDownloadButton();
     }
-    
+
     /**
      * Renders contact icons
      */
@@ -125,7 +125,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderIcons = new MainHeaderIcons($this->tcpdf);
         $mainHeaderIcons->renderContactData();
     }
-    
+
     /**
      * Renders personal photo in header
      */
@@ -134,7 +134,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderPersonalPhoto = new MainHeaderPersonalPhoto($this->tcpdf);
         $mainHeaderPersonalPhoto->renderPersonalPhoto();
     }
-    
+
     /**
      * Renders information about most recent CV
      */
@@ -143,7 +143,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderMostRecentInfo = new MainHeaderMostRecentInfo($this->tcpdf);
         $mainHeaderMostRecentInfo->renderMostRecentInfo();
     }
-    
+
     /**
      * Renders personal data column
      */

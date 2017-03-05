@@ -37,7 +37,7 @@ class MainPage extends AbstractPage
         $page = new Education($page);
         $page = new Hobby($page);
         $page = new AboutMe($page);
-        
+
         return $page->addElements();
     }
 }

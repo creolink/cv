@@ -13,6 +13,9 @@ use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 class IndexControllerTest extends AbstractHttpControllerTestCase
 {
+    /**
+     * Setup
+     */
     public function setUp()
     {
         // The module configuration should still be applicable for tests.
@@ -29,6 +32,9 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         parent::setUp();
     }
 
+    /**
+     * @test
+     */
     public function testIndexActionCanBeAccessed()
     {
         $this->dispatch('/', 'GET');
@@ -39,12 +45,18 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchedRouteName('home');
     }
 
+    /**
+     * @test
+     */
     public function testIndexActionViewModelTemplateRenderedWithinLayout()
     {
         $this->dispatch('/', 'GET');
         $this->assertQuery('.container .jumbotron');
     }
 
+    /**
+     * @test
+     */
     public function testInvalidRouteDoesNotCrash()
     {
         $this->dispatch('/invalid/route', 'GET');

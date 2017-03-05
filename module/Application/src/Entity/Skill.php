@@ -13,7 +13,7 @@ class Skill extends Position
 {
     /**
      * Time of experience in years
-     * 
+     *
      * @var float
      */
     private $experience = 0;
@@ -25,7 +25,7 @@ class Skill extends Position
     {
         $this->experience = $experience;
     }
-    
+
     /**
      * @return float
      */

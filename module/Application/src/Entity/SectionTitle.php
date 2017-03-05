@@ -11,32 +11,32 @@ class SectionTitle
 {
     /**
      * Title of section
-     * 
+     *
      * @var string
      */
     private $title = '';
-    
+
     /**
      * Starting cursor X position
-     * 
+     *
      * @var float
      */
     private $cursorX = 0;
-    
+
     /**
      * Starting cursor Y position
-     * 
+     *
      * @var type
      */
     private $cursorY = 0;
-    
+
     /**
      * Width of section
-     * 
+     *
      * @var float
      */
     private $width = 65;
-    
+
     /**
      * @param string $title
      */
@@ -44,7 +44,7 @@ class SectionTitle
     {
         $this->title = $title;
     }
-    
+
     /**
      * @return string
      */
@@ -52,7 +52,7 @@ class SectionTitle
     {
         return $this->title;
     }
-    
+
     /**
      * @param float $cursorX
      */
@@ -60,7 +60,7 @@ class SectionTitle
     {
         $this->cursorX = $cursorX;
     }
-    
+
     /**
      * @return float
      */
@@ -68,7 +68,7 @@ class SectionTitle
     {
         return $this->cursorX;
     }
-    
+
     /**
      * @param float $cursorY
      */
@@ -76,7 +76,7 @@ class SectionTitle
     {
         $this->cursorY = $cursorY;
     }
-    
+
     /**
      * @return float
      */
@@ -84,7 +84,7 @@ class SectionTitle
     {
         return $this->cursorY;
     }
-    
+
     /**
      * @param float $width
      */
@@ -92,7 +92,7 @@ class SectionTitle
     {
         $this->width = $width;
     }
-    
+
     /**
      * @return float
      */

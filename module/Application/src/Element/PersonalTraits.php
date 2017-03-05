@@ -16,21 +16,21 @@ class PersonalTraits extends AbstractSkills
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 98.6;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderPersonalSkills();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -46,10 +46,10 @@ class PersonalTraits extends AbstractSkills
                 'personal_traits.yml'
             )
         );
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -60,7 +60,7 @@ class PersonalTraits extends AbstractSkills
         $sectionTitle->setCursorY(self::CURSOR_Y);
         $sectionTitle->setTitle('Personality');
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }

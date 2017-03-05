@@ -19,6 +19,8 @@ class CurriculumVitaeDirector extends AbstractDirector
         $this->builder->configure();
         $this->builder->generateMainPage();
         $this->builder->generateSecondPage();
+
+        return $this;
     }
 
     /**

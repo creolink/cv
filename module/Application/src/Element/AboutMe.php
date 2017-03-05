@@ -16,26 +16,26 @@ class AboutMe extends AbstractSection
 {
     const CURSOR_X = 140;
     const CURSOR_Y = 251;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     const CELL_HEIGHT = 4;
     const CELL_PADDING = 1;
-    
+
     const FONT_SIZE = 7;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderAboutMe();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -44,12 +44,12 @@ class AboutMe extends AbstractSection
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderContent();
-        
+
         return $this->tcpdf;
     }
-    
+
     /**
      * Renders content of element
      */
@@ -60,7 +60,7 @@ class AboutMe extends AbstractSection
             Font::NORMAL,
             self::FONT_SIZE
         );
-        
+
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH - self::CELL_PADDING,
             self::CELL_HEIGHT,
@@ -69,22 +69,21 @@ class AboutMe extends AbstractSection
             self::ALIGN_LEFT
         );
     }
-    
+
     /**
      * @return string
      */
     private function getContent()
     {
-        return "I am married and we have " . (date("Y") - PersonalData::MAXIMUS_BIRTH_DATE) . " years old son. "
-            . "In 2015 we started new life in Germany. "
-            . "I don't smoke since " . (date("Y") - PersonalData::STOP_SMOKING_YEAR) . " years. "
-            . "In 2016, through regular diet and systematic training, I have lost 35 kg. "
-            . "I developed my own PHP framework and I used it in all my commissioned projects. "
-            . "I've got references from almost all companies I worked for. "
-            . "This CV is an example of my abilities."
-            . self::NEW_LINE;
+        return sprintf(
+            $this->trans(
+                'cv-aboutMe-content'
+            ),
+            $this->getMaximusAge(),
+            $this->getNoSmokingYears()
+        ) . self::NEW_LINE;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -93,9 +92,29 @@ class AboutMe extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('About me');
+        $sectionTitle->setTitle(
+            $this->trans(
+                'cv-aboutMe-sectionTitle'
+            )
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
+    }
+
+    /**
+     * @return int
+     */
+    private function getMaximusAge()
+    {
+        return date("Y") - PersonalData::MAXIMUS_BIRTH_DATE;
+    }
+
+    /**
+     * @return int
+     */
+    private function getNoSmokingYears()
+    {
+        return date("Y") - PersonalData::STOP_SMOKING_YEAR;
     }
 }

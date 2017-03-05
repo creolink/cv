@@ -16,17 +16,17 @@ abstract class AbstractPage
     const MARGIN_LEFT = 1;
     const MARGIN_TOP = 1;
     const MARGIN_RIGHT = 1;
-    
+
     const CURSOR_X = 0;
     const CURSOR_Y = 0;
-    
+
     const FONT_SIZE = 8;
-    
+
     /**
      * @var TcpdfInterface|CurriculumVitae
      */
     protected $tcpdf;
-    
+
     /**
      * @param TcpdfInterface $tcpdf
      */
@@ -34,31 +34,31 @@ abstract class AbstractPage
     {
         $this->tcpdf = $tcpdf;
     }
-    
+
     /**
      * @return TcpdfInterface
      */
     public function createPage()
     {
         $this->tcpdf->AddPage();
-        
+
         $this->setMargins();
         $this->setTextColor();
         $this->setFont();
         $this->setCursor();
-        
+
         return $this->createElements(
             $this->tcpdf
         );
     }
-    
+
     /**
      * @param TcpdfInterface $page
-     * 
+     *
      * @return TcpdfInterface
      */
     abstract public function createElements(TcpdfInterface $page);
-    
+
     /**
      * Sets default font for page
      */
@@ -70,7 +70,7 @@ abstract class AbstractPage
             self::FONT_SIZE
         );
     }
-    
+
     /**
      * Sets default cursor position on page
      */
@@ -81,7 +81,7 @@ abstract class AbstractPage
             self::CURSOR_Y
         );
     }
-    
+
     /**
      * Sets default text color for page
      */
@@ -93,7 +93,7 @@ abstract class AbstractPage
             Color::TEXT_COLOR_DARK_BLUE
         );
     }
-    
+
     /**
      * Sets default margins for page
      */

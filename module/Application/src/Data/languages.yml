@@ -1,4 +1,4 @@
 positions:
-    - { name: 'Polish, mother language', level: 5, strength: 5 }
-    - { name: 'English (C1), prof. proficiency', level: 4, strength: 5 }
-    - { name: 'German (B1), communicative', level: 2, strength: 5 }
+    - { name: 'cv-languages-polish', level: 5, strength: 5 }
+    - { name: 'cv-languages-english', level: 4, strength: 5 }
+    - { name: 'cv-languages-german', level: 2, strength: 5 }

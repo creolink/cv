@@ -14,26 +14,26 @@ class Expectations extends AbstractSection
 {
     const CURSOR_X = 5;
     const CURSOR_Y = 263;
-    
+
     const SECTION_WIDTH = 65;
-    
+
     const CELL_HEIGHT = 4;
     const CELL_PADDING = 1;
-    
+
     const FONT_SIZE = 7;
-    
+
     /**
      * {@inheritDoc}
      */
     public function addElements()
     {
         $this->tcpdf = $this->tcpdf->addElements();
-        
+
         $this->setSolidLine();
-        
+
         return $this->renderExpectations();
     }
-    
+
     /**
      * @return TcpdfInterface
      */
@@ -42,12 +42,12 @@ class Expectations extends AbstractSection
         $this->renderTitle(
             $this->createSectionTitle()
         );
-        
+
         $this->renderContent();
 
         return $this->tcpdf;
     }
-    
+
     /**
      * Renders content of element
      */
@@ -58,7 +58,7 @@ class Expectations extends AbstractSection
             Font::NORMAL,
             self::FONT_SIZE
         );
-        
+
         $this->tcpdf->MultiCell(
             self::SECTION_WIDTH - self::CELL_PADDING,
             self::CELL_HEIGHT,
@@ -67,16 +67,16 @@ class Expectations extends AbstractSection
             self::ALIGN_LEFT
         );
     }
-    
+
     /**
      * @return string
      */
     private function getContent()
     {
-        return "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+        return $this->trans('cv-expectations-content')
             . self::NEW_LINE;
     }
-    
+
     /**
      * @return SectionTitle
      */
@@ -85,9 +85,11 @@ class Expectations extends AbstractSection
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Expectations');
+        $sectionTitle->setTitle(
+            $this->trans('cv-expectations-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
-        
+
         return $sectionTitle;
     }
 }
