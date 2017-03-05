@@ -58,7 +58,9 @@ class SoftwareAndTools extends AbstractSkills
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Software, tools & skills');
+        $sectionTitle->setTitle(
+            $this->trans('cv-softwareTools-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;

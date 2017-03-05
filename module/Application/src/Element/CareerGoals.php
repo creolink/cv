@@ -76,7 +76,7 @@ class CareerGoals extends AbstractSection
         $this->tcpdf->Cell(
             self::RECIPIENT_CELL_WIDTH,
             self::RECIPIENT_CELL_HEIGHT,
-            'Dear Sir or Madam'
+            $this->trans('cv-careerGoals-recipent')
         );
 
         $this->tcpdf->Ln();

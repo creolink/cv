@@ -58,7 +58,9 @@ class Languages extends AbstractSkills
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
         $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle('Languages');
+        $sectionTitle->setTitle(
+            $this->trans('cv-languages-sectionTitle')
+        );
         $sectionTitle->setWidth(self::SECTION_WIDTH);
 
         return $sectionTitle;
