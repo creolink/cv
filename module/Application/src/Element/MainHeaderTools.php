@@ -11,6 +11,7 @@ use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\PersonalData;
 use Application\Config\Color;
 use Application\Config\Font;
+use Application\Element\MainHeaderSpeciality;
 
 class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleInterface
 {
@@ -19,18 +20,20 @@ class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleI
 
     /**
      * Renders infromation about used tools to create CV
+     *
+     * @param MainHeaderSpeciality $mainHeaderSpeciality
      */
-    public function renderTools()
+    public function renderTools(MainHeaderSpeciality $mainHeaderSpeciality)
     {
         $this->configure();
 
         $this->tcpdf->SetXY(
-            self::TITLE_CURSOR_X + self::TITLE_PADDING,
+            $mainHeaderSpeciality->calculatePointX(),
             self::TITLE_CURSOR_Y + self::TOOLS_PADDING
         );
 
         $this->tcpdf->Cell(
-            self::TITLE_CELL_WIDTH,
+            $mainHeaderSpeciality->getWidth(),
             self::TITLE_CELL_HEIGHT,
             $this->trans('cv-mainHeader-tools'),
             self::BORDER_NONE,

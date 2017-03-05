@@ -17,6 +17,11 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
     const SPECIALITY_PADDING_Y = 23;
 
     /**
+     * @var float Width of the cell with generated content
+     */
+    private $width = 0;
+
+    /**
      * Renders speciality
      */
     public function renderSpeciality()
@@ -24,23 +29,46 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
         $this->configure();
 
         $this->tcpdf->SetXY(
-            self::TITLE_CURSOR_X + self::TITLE_PADDING,
+            $this->calculatePointX(),
             self::TITLE_CURSOR_Y + self::SPECIALITY_PADDING_Y
         );
 
         $this->tcpdf->Cell(
-            self::TITLE_CELL_WIDTH,
+            $this->getWidth(),
             self::TITLE_CELL_HEIGHT,
-            mb_strtoupper(
-                $this->trans(
-                    'cv-mainHeader-speciality'
-                ),
-                self::ENCODING
-            ),
+            $this->getContent(),
             self::BORDER_NONE,
             self::CELL_LINE_NONE,
             self::ALIGN_RIGHT
         );
+    }
+
+    /**
+     * Calculates width of cell
+     *
+     * @return float
+     */
+    public function getWidth()
+    {
+        if ($this->width > 0) {
+            return $this->width;
+        }
+
+        $this->width = $this->tcpdf->GetStringWidth(
+            $this->getContent()
+        );
+
+        return $this->width;
+    }
+
+    /**
+     * Calculates start point of drawing the cell
+     *
+     * @return float
+     */
+    public function calculatePointX()
+    {
+        return self::TITLE_CURSOR_X + (self::TITLE_CELL_WIDTH - $this->getWidth()) / 2;
     }
 
     /**
@@ -58,6 +86,19 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
             $this->tcpdf->tahoma,
             Font::NORMAL,
             self::SPECIALITY_FONT_SIZE
+        );
+    }
+
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return mb_strtoupper(
+            $this->trans(
+                'cv-mainHeader-speciality'
+            ),
+            self::ENCODING
         );
     }
 }

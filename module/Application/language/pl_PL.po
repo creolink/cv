@@ -241,7 +241,7 @@ msgid "cv-mainHeader-mostRecentVersion"
 msgstr "najnowsza wersja cv.creolink.pl"
 
 msgid "cv-mainHeader-speciality"
-msgstr "WEB DEVELOPER, PHP SPECIALIST & PROJECT MANAGER"
+msgstr "PROGRAMISTA WWW, SPECJALISTA PHP & MANAGER PROJEKTÓW"
 
 msgid "cv-mainHeader-tools"
 msgstr "CV created using PHP7 with ZF3 & TCPDF"

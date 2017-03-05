@@ -96,7 +96,7 @@ class MainHeader extends AbstractPageDecorator
         $mainHeaderSpeciality->renderSpeciality();
 
         $mainHeaderTools = new MainHeaderTools($this->tcpdf);
-        $mainHeaderTools->renderTools();
+        $mainHeaderTools->renderTools($mainHeaderSpeciality);
     }
 
     /**
