@@ -9,14 +9,11 @@ namespace Application\Element;
 
 use Application\Element\EmploymentDocuments;
 use Application\Entity\EmploymentPosition;
+use Application\Element\EmploymentReferencesInterface;
+use Application\Element\EmploymentRecommendationInterface;
 
-class EmploymentExamples extends EmploymentDocuments
+class EmploymentExamples extends EmploymentDocuments implements EmploymentReferencesInterface, EmploymentRecommendationInterface
 {
-    const REFERENCES_MARGIN = 5.5;
-    const REFERENCES_CELL_WIDTH = 195;
-    const REFERENCES_CELL_HEIGHT = 2.2;
-    const REFERENCES_CELL_PADDING = 6;
-
     const DOWNLOAD_ICON_MARGIN = 5.5;
     const DOWNLOAD_DOCUMENT_FONT_SIZE = 7;
 
@@ -61,10 +58,17 @@ class EmploymentExamples extends EmploymentDocuments
     private function calculateMargin(EmploymentPosition $position)
     {
         $margin = 0;
+
         if ($position->hasReferences()) {
-            $margin = $this->tcpdf->GetStringWidth(
+            $margin += $this->tcpdf->GetStringWidth(
                 $this->trans('cv-employment-references')
             ) + self::REFERENCES_CELL_PADDING;
+        }
+
+        if ($position->hasRecommendation()) {
+            $margin += $this->tcpdf->GetStringWidth(
+                $this->trans('cv-employment-recommendations')
+            ) + self::RECOMMENDATION_CELL_PADDING;
         }
 
         return $margin;

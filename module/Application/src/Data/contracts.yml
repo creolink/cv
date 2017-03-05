@@ -8,6 +8,7 @@ positions:
       description: 'cv-contract-auto1-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: '+49 30 / 201 63 405'
       companyUrl: 'http://www.auto1.com'
 
@@ -19,7 +20,8 @@ positions:
       country: 'cv-contract-gandalf-country'
       description: 'cv-contract-gandalf-description'
       examples: 'http://cv.creolink.pl/examples/gandalf.zip'
-      references: 'http://cv.creolink.pl/references/references_gandalf.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_gandalf.zip'
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
 
@@ -31,7 +33,8 @@ positions:
       country: 'cv-contract-forweb-country'
       description: 'cv-contract-forweb-description'
       examples: 'http://cv.creolink.pl/examples/forweb.zip'
-      references: 'http://cv.creolink.pl/references/references_forweb.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_forweb.zip'
       contact: 'Tomasz Pawłowski, (+48 42) 235 1000'
       companyUrl: 'http://www.forweb.pl'
 
@@ -44,6 +47,7 @@ positions:
       description: 'cv-contract-gandalf2008-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
       partTime: true
