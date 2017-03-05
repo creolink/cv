@@ -33,7 +33,7 @@ class EmploymentRecommendation extends EmploymentDocuments implements Employment
             $this->tcpdf->Cell(
                 self::RECOMMENDATION_CELL_WIDTH,
                 self::RECOMMENDATION_CELL_HEIGHT,
-                $this->trans('cv-employment-recommendation'),
+                $this->trans('cv-employment-recommendations'),
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT,
