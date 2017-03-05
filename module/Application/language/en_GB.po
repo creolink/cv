@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Poland"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Coder / B2C & B2E project"
