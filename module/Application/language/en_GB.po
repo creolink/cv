@@ -137,7 +137,7 @@ msgid "cv-contract-auto1-country"
 msgstr "Germany"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with Elastic Search, Symfony 2 / 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of unit tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
+msgstr "Responsibility for development of new, company flagship product. Building applications with Elastic Search, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
 
 msgid "cv-contract-gandalf-name"
 msgstr "IT Manager / B2E & B2C, eCommerce complex solution"
@@ -268,6 +268,9 @@ msgstr "%s years"
 msgid "cv-careerGoals-sectionTitle"
 msgstr "Career goals"
 
+msgid "cv-careerGoals-recipent"
+msgstr "Dear Sir or Madam"
+
 msgid "cv-careerGoals-content"
 msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (%s years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
 
@@ -300,20 +303,17 @@ msgstr "Hobby & Sport"
 msgid "cv-hobby-content"
 msgstr "My free time I spend playing board games \"Civilization Through the Ages\" or \"Robinson Crusoe: Adventure on the Cursed Island\". I like to watch sf & adventure films as well as TV series. My favourite are \"Battlestar Galactica\" & \"The Last of the Mohicans\". When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
 
-msgid ""
-msgstr ""
+msgid "cv-softwareTools-sectionTitle"
+msgstr "Software, tools & skills"
 
-msgid ""
-msgstr ""
+msgid "cv-languages-sectionTitle"
+msgstr "Languages"
 
-msgid ""
-msgstr ""
+msgid "cv-skills-shortcut-months"
+msgstr "m"
 
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
+msgid "cv-skills-shortcut-years"
+msgstr "y"
 
 msgid ""
 msgstr ""
