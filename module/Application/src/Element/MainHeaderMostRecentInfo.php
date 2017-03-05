@@ -43,12 +43,6 @@ class MainHeaderMostRecentInfo extends AbstractTcpdfDecorator
             self::TRANSPARENT,
             PdfConfig::DOCUMENT_URL
         );
-
-//        $this->tcpdf->Write(
-//            self::INFO_FONT_SIZE,
-//            $this->trans('cv-mainHeader-mostRecentVersion'),
-//            PdfConfig::DOCUMENT_URL
-//        );
     }
 
     /**
