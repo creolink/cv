@@ -1,4 +1,6 @@
 positions:
-    - { name: 'cv-languages-polish', level: 5, strength: 5 }
-    - { name: 'cv-languages-english', level: 4, strength: 5 }
-    - { name: 'cv-languages-german', level: 2, strength: 5 }
+    - { name: 'cv-languages-polish', level: 4, strength: 4 }
+    - { name: 'cv-languages-english', level: 3, strength: 4 }
+    - { name: 'cv-languages-german', level: 1, strength: 4 }
+
+    - { name: 'cv-languages-russian', level: 0.5, strength: 4, disabled: true }

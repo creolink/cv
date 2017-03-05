@@ -9,11 +9,12 @@ positions:
     - { name: 'SOLID, Clean code, KISS, DRY', level: 3, experience: 4 }
     - { name: 'Symfony 2 & 3', level: 3, experience: 4 }
     - { name: 'Design patterns: MVC, DI, ...', level: 3, experience: 4 }
-    - { name: 'TDD, PHPUnit', level: 3, experience: 2 }
-    - { name: 'Sass, Less', level: 2, experience: 2, disabled: true }
+    - { name: 'TDD, PHPUnit', level: 3, experience: 3 }
     - { name: 'Elastic Search, Solr, Sphinx', level: 2, experience: 2 }
     - { name: 'React, Typescript', level: 2, experience: 1 }
-    - { name: 'MsSQL, PostgreSQL', level: 2, experience: 1, disabled: true }
-    - { name: 'ZF 1/2/3', level: 1, experience: 0.7 }
+    - { name: 'ZF 1..3', level: 1, experience: 0.7 }
     - { name: 'BDD, Behat', level: 1, experience: 0.5 }
     - { name: 'Perl, Python, Java, C#, C++', level: 1, experience: 0.2 }
+
+    - { name: 'Sass, Less', level: 2, experience: 2, disabled: true }
+    - { name: 'MsSQL, PostgreSQL', level: 2, experience: 1, disabled: true }

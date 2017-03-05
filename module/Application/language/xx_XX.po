@@ -175,6 +175,9 @@ msgstr "cv-languages-english"
 msgid "cv-languages-german"
 msgstr "cv-languages-german"
 
+msgid "cv-languages-russian"
+msgstr "cv-languages-russian"
+
 msgid "cv-personalTraits-organization"
 msgstr "cv-personalTraits-organization"
 
