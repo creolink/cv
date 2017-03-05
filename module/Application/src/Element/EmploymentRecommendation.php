@@ -9,9 +9,9 @@ namespace Application\Element;
 
 use Application\Element\EmploymentDocuments;
 use Application\Entity\EmploymentPosition;
-use Application\Element\EmploymentReferencesInterface;
+use Application\Element\EmploymentRecommendationInterface;
 
-class EmploymentReferences extends EmploymentDocuments implements EmploymentReferencesInterface
+class EmploymentRecommendation extends EmploymentDocuments implements EmploymentRecommendationInterface
 {
     const DOWNLOAD_ICON_MARGIN = 5.5;
     const DOWNLOAD_DOCUMENT_FONT_SIZE = 7;
@@ -21,27 +21,27 @@ class EmploymentReferences extends EmploymentDocuments implements EmploymentRefe
      * @param float $x
      * @param float $y
      */
-    public function renderReferences(EmploymentPosition $position, $x, $y)
+    public function renderRecommendation(EmploymentPosition $position, $x, $y)
     {
-        if ($position->hasReferences()) {
-            $references = $position->getReferences();
+        if ($position->hasRecommendation()) {
+            $recommendation = $position->getRecommendation();
 
             $this->configure();
 
-            $this->tcpdf->SetXY($x, $y + self::REFERENCES_MARGIN);
+            $this->tcpdf->SetXY($x, $y + self::RECOMMENDATION_MARGIN);
 
             $this->tcpdf->Cell(
-                self::REFERENCES_CELL_WIDTH,
-                self::REFERENCES_CELL_HEIGHT,
-                $this->trans('cv-employment-references'),
+                self::RECOMMENDATION_CELL_WIDTH,
+                self::RECOMMENDATION_CELL_HEIGHT,
+                $this->trans('cv-employment-recommendation'),
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
                 self::ALIGN_RIGHT,
                 self::TRANSPARENT,
-                $references
+                $recommendation
             );
 
-            $this->renderDownloadIcon($y, $references);
+            $this->renderDownloadIcon($y, $recommendation);
         }
     }
 }

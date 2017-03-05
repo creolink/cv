@@ -75,6 +75,14 @@ class EmploymentPosition implements EntityInterface
     private $references = '';
 
     /**
+     * References url
+     *
+     * @var string
+     */
+    private $recommendation = '';
+
+
+    /**
      * Contact data
      *
      * @var string
@@ -280,6 +288,30 @@ class EmploymentPosition implements EntityInterface
     public function hasReferences()
     {
         return false === empty($this->references);
+    }
+
+    /**
+     * @param string $recommendation
+     */
+    public function setRecommendation($recommendation = '')
+    {
+        $this->recommendation = $recommendation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRecommendation()
+    {
+        return $this->recommendation;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasRecommendation()
+    {
+        return false === empty($this->recommendation);
     }
 
     /**

@@ -17,6 +17,7 @@ use Application\Element\EmploymentReferences;
 use Application\Element\EmploymentExamples;
 use Application\Element\EmploymentDescription;
 use Application\Element\EmploymentCompanyData;
+use Application\Element\EmploymentRecommendation;
 
 abstract class AbstractEmployment extends AbstractSection
 {
@@ -71,6 +72,7 @@ abstract class AbstractEmployment extends AbstractSection
         $this->renderCompanyName($position, $x, $y);
         $this->renderPositionName($position, $x, $y);
         $this->renderReferences($position, $x, $y);
+        $this->renderRecommendation($position, $x, $y);
         $this->renderExamples($position, $x, $y);
         $this->renderDescription($position, $x, $y);
         $this->renderCompanyData($position, $x, $y);
@@ -142,6 +144,22 @@ abstract class AbstractEmployment extends AbstractSection
         $employmentReferences = new EmploymentReferences($this->tcpdf);
 
         $employmentReferences->renderReferences(
+            $position,
+            $x,
+            $y
+        );
+    }
+
+    /**
+     * @param EmploymentPosition $position
+     * @param float $x
+     * @param float $y
+     */
+    private function renderRecommendation(EmploymentPosition $position, $x, $y)
+    {
+        $employmentExamples = new EmploymentRecommendation($this->tcpdf);
+
+        $employmentExamples->renderRecommendation(
             $position,
             $x,
             $y

@@ -7,7 +7,8 @@ positions:
       country: 'cv-commisions-tpnets-country'
       description: 'cv-commisions-tpnets-description'
       examples: 'http://cv.creolink.pl/examples/tpnets.zip'
-      references: 'http://cv.creolink.pl/references/references_tpnets.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_tpnets.zip'
       contact: 'Piotr Marciniak, +48 42 / 636-98-96'
       companyUrl: 'http://tpnets.com/'
 
@@ -20,6 +21,7 @@ positions:
       description: 'cv-commisions-msPerfect-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Anita Łuczyńska, +49 163 8248005'
       companyUrl: 'http://www.msperfect.de/'
 
@@ -31,7 +33,8 @@ positions:
       country: 'cv-commisions-freepers-country'
       description: 'cv-commisions-freepers-description'
       examples: 'http://cv.creolink.pl/examples/freepers.zip'
-      references: 'http://cv.creolink.pl/references/references_freepers.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_freepers.zip'
       contact: 'Krzysztof Rogalski, +48 42 / 239 41 77, +48 42 / 791 24 95 30'
       companyUrl: 'http://fripers.pl/'
 
@@ -44,6 +47,7 @@ positions:
       description: 'cv-commisions-forweb-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Tomasz Pawłowski, (+48 42) 235 1000'
       companyUrl: 'http://www.forweb.pl'
 
@@ -56,6 +60,7 @@ positions:
       description: 'cv-commisions-gandalf2009-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
 
@@ -67,7 +72,8 @@ positions:
       country: 'cv-commisions-stawoz2009-country'
       description: 'cv-commisions-stawoz2009-description'
       examples: ''
-      references: 'http://cv.creolink.pl/references/references_stawoz.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_stawoz.zip'
       contact: 'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306'
       companyUrl: 'http://www.stawoz.pl/'
 
@@ -79,7 +85,8 @@ positions:
       country: 'cv-commisions-iizt-country'
       description: 'cv-commisions-iizt-description'
       examples: ''
-      references: 'http://cv.creolink.pl/references/references_iizt.zip'
+      references: ''
+      recommendation: 'http://cv.creolink.pl/recommendations/recommendations_iizt.zip'
       contact: 'Todd Wilkinson, todd@sacramentomarketinglabs.com'
       companyUrl: 'https://www.iizt.com/'
 
@@ -92,6 +99,7 @@ positions:
       description: 'cv-commisions-gandalf2005-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Anetta Wilczyńska, +48 42 / 252 39 23'
       companyUrl: 'http://www.gandalf.com.pl'
 
@@ -104,6 +112,7 @@ positions:
       description: 'cv-commisions-stawoz2005-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: 'Stanisław Woźnica, +48 42 / 673 57 05, +48 42 / 602 290 306'
       companyUrl: 'http://www.stawoz.pl/'
 
@@ -116,6 +125,7 @@ positions:
       description: 'cv-commisions-arges-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: ''
       companyUrl: ''
       disabled: true
@@ -129,6 +139,7 @@ positions:
       description: 'cv-commisions-gpl-description'
       examples: ''
       references: ''
+      recommendation: ''
       contact: ''
       companyUrl: ''
       disabled: false
