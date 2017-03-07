@@ -137,7 +137,7 @@ msgid "cv-contract-auto1-country"
 msgstr "Germany"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with Elastic Search, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
+msgstr "Responsibility for development of new, company flagship product. Building applications with ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
 
 msgid "cv-contract-gandalf-name"
 msgstr "IT Manager / B2E & B2C, eCommerce complex solution"
@@ -304,7 +304,7 @@ msgid "cv-expectations-sectionTitle"
 msgstr "Expectations"
 
 msgid "cv-expectations-content"
-msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 60.000 Euro gross / yearly. Elastic and flexible starting and ending working hours, 40h weekly."
 
 msgid "cv-hobby-sectionTitle"
 msgstr "Hobby & Sport"

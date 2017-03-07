@@ -34,7 +34,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Polska"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Design and development of dedicated, proprietary B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5 basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Online, remote work. Development and modernization of application. Technical supervision."
+msgstr "Zaprojektowanie i wykonanie dedykowanego, autorskiego systemu B2E & B2C dla ISP (zarządzanie sieciami oraz VoIP, klientami, elektroniczne biuro obsługi klienta, automatyczne fakturowanie, raportowanie). Programowanie z MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Wykorzystanie mojego własnego framework-a MVC. Integracja z serwisami Google (OAuth). Praca zdalna. Rozwój i modernizacja aplikacji."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Projektant stron internetowych / projekt B2C"
@@ -43,7 +43,7 @@ msgid "cv-commisions-msPerfect-country"
 msgstr "Niemcy"
 
 msgid "cv-commisions-msPerfect-description"
-msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS with Bootstrap library."
+msgstr "Zaprojektowanie responsywnej strony WWW firmy sprzątającej. Wykonanie projektu graficznego. Programowanie z PHP, JavaScript oraz wykorzystanie CSS z biblioteką Bootstrap."
 
 msgid "cv-commisions-freepers-name"
 msgstr "Projektant oprogramowania / B2C & B2E, eCommerce project"
@@ -52,7 +52,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Polska"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Zaprojektowanie i wykonanie dedykowanego, autorskiego systemu zawierającego moduły CMS oraz CRM. Kompleksowa implementacja rozwiązania RWD wraz z konfiguracją serwera opartego o Linux, Nginx oraz Percona Server. Wykorzystanie framework-a MVC mojego autorstwa. Programowanie z PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integracja z zewnętrznymi API opartymi o SOAP i REST. Doradztwo, coaching. Dokumentacja projektu."
 
 msgid "cv-commisions-forweb-name"
 msgstr "Programista PHP / B2C & B2E project"
@@ -61,7 +61,7 @@ msgid "cv-commisions-forweb-country"
 msgstr "Polska"
 
 msgid "cv-commisions-forweb-description"
-msgstr "Redevelopment of E-BOK system - electronic B2C office for customers of Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery, CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast and movies. Refactoring and improvement of Intranet B2E system."
+msgstr "Przebudowa systemu E-BOK - elektronicznego systemu B2C dla klientów firmy świadczącej usługi internetowe. Kodowanie w PHP, MySQL, PostgreSQL, JavaScript z jQuery, CSS. Obsługa bazy danych zawierającej miliony rekordów rozmów telefonicznych VoIP. Implementacja oprogramowania odpowiedzialnego za zamawianie programów IPTV. Refaktoryzacja oraz doskonalenie wewnętrznego systemu B2E."
 
 msgid "cv-commisions-gandalf2009-name"
 msgstr "Programista PHP stron internetowych / B2C project"
@@ -70,7 +70,7 @@ msgid "cv-commisions-gandalf2009-country"
 msgstr "Polska"
 
 msgid "cv-commisions-gandalf2009-description"
-msgstr "Brand improvement through implementation of proprietary online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)"
+msgstr "Rozwój marki poprzez zaprojektowanie, wykonanie i wdrożenie dedykowanego sklepu internetowego przeznaczonego na urządzenia mobilne http://gandalf.mobi/. Aktualizacja wewnętrznego systemu Intranet z modułami CMS i CRM."
 
 msgid "cv-commisions-stawoz2009-name"
 msgstr "Projektant portali & Programista PHP / B2B project"
@@ -79,7 +79,7 @@ msgid "cv-commisions-stawoz2009-country"
 msgstr "Polska"
 
 msgid "cv-commisions-stawoz2009-description"
-msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. maintenance, development and supervision of portals. (portals are closed)"
+msgstr "Wykonanie i wdrożenie nowych dedykowanych aplikacji portali internetowych wraz z systemem do zarządzania treścią o profilu ekologicznym, ppoż i bhp . Przebudowa portalu http://www.ppozbhp.pl/. Aktywne pozycjonowanie w wyszukiwarkach Google, Yahoo, Bing, Infoseek. Obsługa techniczna, rozwijanie oraz nadzór nad portalami. (portale są zamknięte)"
 
 msgid "cv-commisions-iizt-name"
 msgstr "Programista PHP i Developer stron internetowych / Freelancer"
@@ -88,7 +88,7 @@ msgid "cv-commisions-iizt-country"
 msgstr "Holandia"
 
 msgid "cv-commisions-iizt-description"
-msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
+msgstr "Wykonywanie projektów WWW dla holenderskiej grupy IIZT - blogi, systemy zarządzania treścią - programowanie z PHP, MySQL, JavaScript, CSS, HTML/XHTML. Praca zdalna."
 
 msgid "cv-commisions-gandalf2005-name"
 msgstr "Projektant stron WWW, Programista PHP / B2E & B2C project"
@@ -97,7 +97,7 @@ msgid "cv-commisions-gandalf2005-country"
 msgstr "Polska"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, programming and implementation of dedicated, proprietary eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce applications. Modernization and development of the system. Service and support."
+msgstr "Zaprojektowanie, wykonanie i wdrożenie dedykowanego, autorskiego oprogramowania eCommerce. Zaprojektowanie i wdrożenie dedykowanego systemu Intranet z modułami CMS i CRM dla sklepu Internetowego. Modernizacja i rozwijanie aplikacji. Serwis i wsparcie przy zmianach."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Projektant portalu & Programista PHP / B2B project"
@@ -106,7 +106,7 @@ msgid "cv-commisions-stawoz2005-country"
 msgstr "Polska"
 
 msgid "cv-commisions-stawoz2005-description"
-msgstr "Design and creation of proprietary system of web portals with CMS about environmental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals."
+msgstr "Zaprojektowanie, wdrożenie i obsługa dedykowanego portalu internetowego o profilu BHP i PPOŻ. Wykorzystanie PHP, MySQL, XHTML, CSS, JS. Aktywne pozycjonowanie w wyszukiwarce Google z bardzo dobrymi rezultatami. Konserwacja, rozwijanie i nadzór nad portalem. (portal zamknięty)"
 
 msgid "cv-commisions-arges-name"
 msgstr "Młodszy programista PHP"
@@ -124,7 +124,7 @@ msgid "cv-commisions-gpl-country"
 msgstr "Polska"
 
 msgid "cv-commisions-gpl-description"
-msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
+msgstr "Implementacja księgowych programów komputerowych 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
 msgstr "...aktualnie"
@@ -136,7 +136,7 @@ msgid "cv-contract-auto1-country"
 msgstr "Niemcy"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with Elastic Search, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
+msgstr "Odpowiedzialność za wdrożenie nowego produktu flagowego firmy. Budowanie aplikacji z wykorzystaniem ElasticSearch, Symfony 2 & 3, serwisów Java, Json, Node.js, React.js, Typescript i Silex. Implementacja testów jednostkowych PHPUnit oraz Behat. Przegląd kodów, refaktoryzacja. Tworzenie technicznej dokumentacji projektu z wykorzystaniem Confluence."
 
 msgid "cv-contract-gandalf-name"
 msgstr "Kierownik IT / kompleksowe rozwiązanie B2E & B2C, eCommerce"
@@ -303,13 +303,13 @@ msgid "cv-expectations-sectionTitle"
 msgstr "Oczekiwania"
 
 msgid "cv-expectations-content"
-msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 55.000 Euro gross / yearly. Elastic and flexible working hours, 40h weekly."
+msgstr "Umowa na czas nieokreślony w pełnym wymiarze godzin. Stanowisko starszego programisty PHP (Backend / Full Stack) z pensją na poziomie 60tys Euro brutto rocznie. Elastyczne godziny rozpoczęcia i zakończenia pracy, 40h tygodniowo."
 
 msgid "cv-hobby-sectionTitle"
 msgstr "Hobby & Sport"
 
 msgid "cv-hobby-content"
-msgstr "My free time I spend playing board games \"Civilization Through the Ages\" or \"Robinson Crusoe: Adventure on the Cursed Island\". I like to watch sf & adventure films as well as TV series. My favourites are \"Battlestar Galactica\" & \"The Last of the Mohicans\". When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
+msgstr "Mój wolny czas poświęcam na gry planszowe \"Cywilizacja poprzez wieki\" lub \"Robinson Crusoe: Przygoda na przeklętej wyspie\". Lubię oglądać filmy oraz seriale. Moimi ulubionymi sa \"Battlestar Galactica\" oraz \"Ostatni Mohikanin\". Jeśli mam możliwość gram w piłkę lub ping-ponga. Lubię również analizować Giełdę Papierów Wartościowych oraz nasze inwestycje."
 
 msgid "cv-softwareTools-sectionTitle"
 msgstr "Umiejętności i narzędzia"
