@@ -30,7 +30,7 @@ class QRCode extends AbstractPageDecorator
     const BARCODE_HEIGHT = 30;
 
     const PDF_CURSOR_X = 175;
-    const PDF_CURSOR_Y = 240;
+    const PDF_CURSOR_Y = 245;
 
     /**
      * {@inheritDoc}

@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Poland"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, authorial application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Linux Server configuration using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Design and development of dedicated, authorial application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Configuration of Linux server using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Coder / B2C & B2E project"
@@ -281,7 +281,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Dear Sir or Madam"
 
 msgid "cv-careerGoals-content"
-msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many %s years of experience as programmer in project design & development as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
+msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have %s years of experience as programmer in project design & development as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Additional, commissioned & freelance jobs"
