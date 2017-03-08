@@ -35,7 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Poland"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Design and development of dedicated, proprietary B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5 basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Online, remote work. Development and modernization of application. Technical supervision."
+msgstr "Design and development of dedicated, authorial B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Modernization of application. Technical supervision. Online, remote work."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Web Designer / B2C project"
@@ -44,7 +44,7 @@ msgid "cv-commisions-msPerfect-country"
 msgstr "Germany"
 
 msgid "cv-commisions-msPerfect-description"
-msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS with Bootstrap library."
+msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS using Bootstrap library."
 
 msgid "cv-commisions-freepers-name"
 msgstr "Software designer / B2C & B2E, eCommerce project"
@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Poland"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, proprietary application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution with server based on Linux, Nginx, Percona Server and my own fast and flexible framework based on MVC, PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API using SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Design and development of dedicated, authorial application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Linux Server configuration using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Coder / B2C & B2E project"
@@ -62,7 +62,7 @@ msgid "cv-commisions-forweb-country"
 msgstr "Poland"
 
 msgid "cv-commisions-forweb-description"
-msgstr "Redevelopment of E-BOK system - electronic B2C office for customers of Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery, CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast and movies. Refactoring and improvement of Intranet B2E system."
+msgstr "Redevelopment of E-BOK system - electronic B2C office for Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery and CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast. Refactoring and improvements of Intranet B2E System."
 
 msgid "cv-commisions-gandalf2009-name"
 msgstr "PHP Web Developer / B2C project"
@@ -71,7 +71,7 @@ msgid "cv-commisions-gandalf2009-country"
 msgstr "Poland"
 
 msgid "cv-commisions-gandalf2009-description"
-msgstr "Brand improvement through implementation of proprietary online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)"
+msgstr "Brand improvement through implementation of authorial online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)."
 
 msgid "cv-commisions-stawoz2009-name"
 msgstr "Portal Designer & PHP Developer / B2B project"
@@ -80,7 +80,7 @@ msgid "cv-commisions-stawoz2009-country"
 msgstr "Poland"
 
 msgid "cv-commisions-stawoz2009-description"
-msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. maintenance, development and supervision of portals. (portals are closed)"
+msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. Maintenance, development and supervision of work. (portals are closed)"
 
 msgid "cv-commisions-iizt-name"
 msgstr "PHP Programmer & Web Developer / Freelancer"
@@ -89,7 +89,7 @@ msgid "cv-commisions-iizt-country"
 msgstr "The Netherlands"
 
 msgid "cv-commisions-iizt-description"
-msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems - programming with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
+msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems. Coding with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
 
 msgid "cv-commisions-gandalf2005-name"
 msgstr "Web Developer & Designer, PHP Coder / B2E & B2C project"
@@ -98,7 +98,7 @@ msgid "cv-commisions-gandalf2005-country"
 msgstr "Poland"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, programming and implementation of dedicated, proprietary eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce applications. Modernization and development of the system. Service and support."
+msgstr "Design, programming and implementation of dedicated, authorial eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce application. Modernization and development of the system. Service and support."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Portal Designer & PHP Developer / B2B project"
@@ -107,7 +107,7 @@ msgid "cv-commisions-stawoz2005-country"
 msgstr "Poland"
 
 msgid "cv-commisions-stawoz2005-description"
-msgstr "Design and creation of proprietary system of web portals with CMS about environmental, fire and safety subjects (using PHP, MySQL, XHTML, CSS, JS). Active positioning in Google with very good results, maintenance, development and supervision of portals."
+msgstr "Design and development of CMS system & web portal with classified ads for companies dedicated environmental, fire and safety subjects. Use of PHP, MySQL, XHTML, CSS, JS. Active positioning in Google with very good results, maintenance, development and supervision."
 
 msgid "cv-commisions-arges-name"
 msgstr "Junior PHP developer"
@@ -116,7 +116,7 @@ msgid "cv-commisions-arges-country"
 msgstr "Poland"
 
 msgid "cv-commisions-arges-description"
-msgstr "PHP programmer, software developer. Creation of CMS for several companies. PHP, MySQL and JS tasks."
+msgstr "PHP programmer, software developer. Creation of Content Management Systems for several companies. PHP, MySQL and JavaScript tasks."
 
 msgid "cv-commisions-gpl-name"
 msgstr "IT Specialist"
@@ -137,7 +137,7 @@ msgid "cv-contract-auto1-country"
 msgstr "Germany"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence."
+msgstr "Responsibility for development of new, company flagship product. Building applications with ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence. Team work."
 
 msgid "cv-contract-gandalf-name"
 msgstr "IT Manager / B2E & B2C, eCommerce complex solution"
@@ -146,7 +146,7 @@ msgid "cv-contract-gandalf-country"
 msgstr "Poland"
 
 msgid "cv-contract-gandalf-description"
-msgstr "Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Employees management, budget controlling, reporting, API integration, optimization of business processes, SEO & SEM analysis, load tests with Apache JMeter, performance and acceptance tests, code refactoring, integration with external web applications through SOAP & OAuth. Duties of the Information Security Administrator."
+msgstr "Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Moreover employees management, budget controlling, reporting, API integration, optimization of business processes, SEO & SEM analysis, load tests with Apache JMeter, performance and acceptance tests, code refactoring. Integration with external web applications through SOAP & OAuth. Duties of the Information Security Administrator."
 
 msgid "cv-contract-forweb-name"
 msgstr "PHP coder with Project Manager responsibilities / B2E, B2B & B2C system for ISP"
@@ -155,7 +155,7 @@ msgid "cv-contract-forweb-country"
 msgstr "Poland"
 
 msgid "cv-contract-forweb-description"
-msgstr "Design, development & implementation of dedicated, proprietary B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
+msgstr "Design, development & implementation of dedicated, authorial B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
 
 msgid "cv-contract-gandalf2008-name"
 msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce project"
@@ -164,7 +164,7 @@ msgid "cv-contract-gandalf2008-country"
 msgstr "Poland"
 
 msgid "cv-contract-gandalf2008-description"
-msgstr "Maintenance, development and modernization of dedicated, proprietary CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
+msgstr "Maintenance, development and modernization of dedicated, authorial CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
 
 msgid "cv-languages-polish"
 msgstr "Polish, mother language"
@@ -281,7 +281,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Dear Sir or Madam"
 
 msgid "cv-careerGoals-content"
-msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many years of experience as programmer in project design & development (%s years) as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
+msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many %s years of experience as programmer in project design & development as well as team coordinator and project manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Additional, commissioned & freelance jobs"
@@ -304,13 +304,13 @@ msgid "cv-expectations-sectionTitle"
 msgstr "Expectations"
 
 msgid "cv-expectations-content"
-msgstr "Full time contract as Senior PHP Backend / Full Stack Developer position with salary 60.000 Euro gross / yearly. Elastic and flexible starting and ending working hours, 40h weekly."
+msgstr "Unlimited full time contract as Senior PHP Backend or Full Stack Developer. Position with salary 60.000 Euro gross / yearly. Flexible starting and ending working hours, static 40h weekly."
 
 msgid "cv-hobby-sectionTitle"
 msgstr "Hobby & Sport"
 
 msgid "cv-hobby-content"
-msgstr "My free time I spend playing board games \"Civilization Through the Ages\" or \"Robinson Crusoe: Adventure on the Cursed Island\". I like to watch sf & adventure films as well as TV series. My favourites are \"Battlestar Galactica\" & \"The Last of the Mohicans\". When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
+msgstr "My free time I spend playing board games 'Civilization Through the Ages' or 'Robinson Crusoe: Adventure on the Cursed Island'. I like to watch sf & adventure films as well as TV series. My favourites are 'Battlestar Galactica' & 'The Last of the Mohicans'. When I have possibility I play football or table tennis. I also like to analyse Stock Exchange and our investments."
 
 msgid "cv-softwareTools-sectionTitle"
 msgstr "Software, tools & skills"
