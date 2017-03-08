@@ -88,7 +88,7 @@ msgid "cv-commisions-iizt-country"
 msgstr "Holandia"
 
 msgid "cv-commisions-iizt-description"
-msgstr "Wykonywanie projektów WWW dla holenderskiej grupy IIZT - blogi, systemy zarządzania treścią - programowanie z PHP, MySQL, JavaScript, CSS, HTML/XHTML. Praca zdalna."
+msgstr "Wykonywanie projektów WWW dla holenderskiej grupy IIZT - blogi, systemy zarządzania treścią. Programowanie z PHP, MySQL, JavaScript, CSS, HTML/XHTML. Praca zdalna."
 
 msgid "cv-commisions-gandalf2005-name"
 msgstr "Projektant stron WWW, Programista PHP / B2E & B2C project"
@@ -145,7 +145,7 @@ msgid "cv-contract-gandalf-country"
 msgstr "Polska"
 
 msgid "cv-contract-gandalf-description"
-msgstr "Nadzór nad kompleksowym rozwiazaniem eCommerce. Organizacja pracy oraz planowanie zadan z wykorzystaniem SVN i Trac. Implementacja nowych rozwiazan technicznych Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Zarzadzanie pracownikami, kontrola budzetu, raportowanie, integracja z zewnetrznymi API poprzez SOAP i OAuth, optymalizacja procesow biznesowych, analizy SEO i SEM, testy obciazeniowe (Apache JMeter), jakosciowe i wydajnosciowe testy akceptacyjne, refaktoryzacja kodow. Wykonywanie obowiązków Administratora Bezpieczeństwa Informacji (ABI)."
+msgstr "Nadzór nad kompleksowym rozwiązaniem eCommerce. Organizacja pracy oraz planowanie zadań z wykorzystaniem SVN i Trac. Implementacja nowych rozwiązań technicznych, takich jak Percona Server, Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Ponadto: zarządzanie pracownikami, kontrola budżetu, raportowanie, integracja z zewnętrznymi API poprzez SOAP i OAuth, optymalizacja procesów biznesowych, analizy SEO i SEM, testy obciążeniowe (Apache JMeter), jakościowe i wydajnościowe testy akceptacyjne, refaktoryzacja. Wykonywanie obowiązków Administratora Bezpieczeństwa Informacji."
 
 msgid "cv-contract-forweb-name"
 msgstr "Programista PHP z obowiązkami Menadżera projektów / B2E, B2B & B2C system dla ISP"
@@ -154,7 +154,7 @@ msgid "cv-contract-forweb-country"
 msgstr "Polska"
 
 msgid "cv-contract-forweb-description"
-msgstr "Zaprojektowanie, wykonanie i implementacja dedykowanego, autorskiego systemu B2E, B2B & B2C dla ISP (demo http://mms.4web.pl/). Koordynacja zadan w dziale IT. Raportowanie i dokumentacja. Komunikacja oraz spotkania z klientami. Analizy, testy i integracja systemow. Optymalizacja i refaktoryzacja kodow. Programowanie z MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Nadzor i utrzymanie istniejacych aplikacji."
+msgstr "Zaprojektowanie, wykonanie i implementacja dedykowanego, autorskiego systemu B2E, B2B & B2C dla ISP (demo http://mms.4web.pl/). Koordynacja zadań w dziale IT. Raportowanie i dokumentacja. Komunikacja oraz spotkania z klientami. Analizy, testy i integracja systemów. Optymalizacja i refaktoryzacja kodów. Programowanie z MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Nadzór i utrzymanie istniejących aplikacji."
 
 msgid "cv-contract-gandalf2008-name"
 msgstr "Główny programista PHP, Informatyk / projekt B2E & B2C eCommerce"
@@ -163,7 +163,7 @@ msgid "cv-contract-gandalf2008-country"
 msgstr "Polska"
 
 msgid "cv-contract-gandalf2008-description"
-msgstr "Nadzor, rozwoj i modernizacja dedykowanego, autorskiego, opartego na moim framework-u, systemu eCommerce z modulami CMR & CMS. Kodowanie, optymalizacja i refaktoryzacja, analizy techniczne. Wdrozenie nowych rozwiazan technicznych opartych o PHP, Lighttpd, MySQL. Integracja z zewnetrzymy aplikacjami z wykorzystaniem SOAP, Rest, XML, CSV. Projektowanie UI. Analizy i optymalizacja procesow SEO i SEM. Nadzor techniczny."
+msgstr "Nadzór, rozwój i modernizacja dedykowanego, autorskiego systemu eCommerce z modułami CRM & CMS, opartego na moim framework-u. Kodowanie, optymalizacja i refaktoryzacja, analizy techniczne. Wdrożenie nowych rozwiązań technicznych opartych o PHP, Lighttpd, MySQL. Integracja z zewnętrznymi aplikacjami z wykorzystaniem SOAP, Rest, XML, CSV. Projektowanie UI. Analizy i optymalizacja procesów SEO i SEM. Nadzór techniczny."
 
 msgid "cv-languages-polish"
 msgstr "Polski, język ojczysty"
@@ -220,7 +220,7 @@ msgid "cv-aboutMe-sectionTitle"
 msgstr "O mnie"
 
 msgid "cv-aboutMe-content"
-msgstr "Jestem żonaty i mamy %s-letniego syna. W 2015 rozpoczęliśmy nowe życie w Niemczech. Nie palę od %s lat. W 2016, dzięki systematycznej diecie i treningowi schudłem 35kg. Zaprojektowałem framework, którego używałem we wszystkich zleconych projektach. Posiadam rekomendacje od większości firm, z którymi pracowałem. To CV jest próbką moich umiejętności."
+msgstr "Jestem żonaty i mamy %s-letniego syna. W 2015 rozpoczęliśmy nowe życie w Niemczech. Nie palę od %s lat. W 2016, dzięki systematycznej diecie i treningowi, schudłem 35kg. Zaprojektowałem własny framework i wykorzystałem go we wszystkich zleconych projektach. Posiadam rekomendacje od większości firm, z którymi pracowałem. To CV jest próbką moich umiejętności."
 
 msgid "cv-employment-date-partTime"
 msgstr "pól etatu"
@@ -253,7 +253,7 @@ msgid "cv-technicalSkills-sectionTitle"
 msgstr "Doświadczenie techniczne"
 
 msgid "cv-sign-content"
-msgstr "Jesli zainteresowalo Panstwa moje doswiadczenie zawodowe i mogloby pomoc w rozwoju Panstwa firmy, prosze o kontakt za posrednictwem mail-a, telefonu lub Skype-a."
+msgstr "Jeśli zainteresowało Państwa moje doświadczenie zawodowe i mogę pomoc w rozwoju Państwa firmy, proszę o kontakt za pośrednictwem mail-a, telefonu lub Skype-a."
 
 msgid "cv-mainHeader-personalData-experience"
 msgstr "Doświadczenie"
@@ -280,7 +280,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Szanowni Państwo"
 
 msgid "cv-careerGoals-content"
-msgstr "Jestem full stack developer-em. Moja pasja jest projektowanie i programowanie w jezyku PHP. Posiadam %s lat doswiadczenia jako programista oraz projektant systemow oraz koordynator zespoli i manager projektu (6 lat). Najlepiej czuje sie jako projektant i programista duzych rozwiazan eCommerce oraz aplikacji B2E, B2B, B2C. Lubie kazdy rodzaj zadan - latwe i wymagajace. Chetnie przyjmuje wyzwania oparte o nowe technologie. Jestem bardzo dobrze zorganizowany, dokladny i elastyczny w pracy zespolowej. Jestem takze doceniany za prace niezalezna i zdalna. Moim celem jest zdobycie stanowiska Managera IT w miedzynarodowej firmie."
+msgstr "Jestem FullStack developer-em. Moją pasją jest projektowanie i programowanie w języku PHP. Posiadam %s lat doświadczenia jako programista, projektant systemów oraz 6 lat jako koordynator zespołu i manager projektu. Najlepiej czuję się jako projektant i programista dużych rozwiązań eCommerce oraz aplikacji B2E, B2B, B2C. Lubię każdy rodzaj zadań - łatwe i wymagające. Chętnie przyjmuję wyzwania oparte o nowe technologie. Jestem bardzo dobrze zorganizowany, dokładny i elastyczny w pracy zespołowej. Jestem także doceniany za prace niezależną i zdalną. Moim celem jest zdobycie stanowiska Managera IT w międzynarodowej firmie."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Dodatkowe, zlecone prace oraz freelancing"
@@ -309,7 +309,7 @@ msgid "cv-hobby-sectionTitle"
 msgstr "Hobby & Sport"
 
 msgid "cv-hobby-content"
-msgstr "Mój wolny czas poświęcam na gry planszowe \"Cywilizacja poprzez wieki\" lub \"Robinson Crusoe: Przygoda na przeklętej wyspie\". Lubię oglądać filmy oraz seriale. Moimi ulubionymi sa \"Battlestar Galactica\" oraz \"Ostatni Mohikanin\". Jeśli mam możliwość gram w piłkę lub ping-ponga. Lubię również analizować Giełdę Papierów Wartościowych oraz nasze inwestycje."
+msgstr "Mój wolny czas poświęcam na gry planszowe \"Cywilizacja poprzez wieki\" lub \"Robinson Crusoe: Przygoda na przeklętej wyspie\". Lubię oglądać seriale oraz filmy SF. Moimi ulubionymi są \"Battlestar Galactica\" oraz \"Ostatni Mohikanin\". Jeśli mam możliwość gram w piłkę lub ping-ponga. Lubię również analizować Giełdę Papierów Wartościowych oraz nasze inwestycje."
 
 msgid "cv-softwareTools-sectionTitle"
 msgstr "Umiejętności i narzędzia"
