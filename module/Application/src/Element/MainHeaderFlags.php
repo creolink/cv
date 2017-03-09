@@ -9,6 +9,7 @@ namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\Image;
+use Application\Config\PdfConfig;
 
 class MainHeaderFlags extends AbstractTcpdfDecorator
 {
@@ -58,7 +59,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             self::FLAGS_CURSOR_Y + $margin,
             Image::FLAG_WIDTH,
             Image::FLAG_HEIGHT,
-            'http://' . $language . '.' . $_SERVER['SERVER_NAME'].'/'
+            'http://' . $language . '.' . PdfConfig::SERVER_NAME
         );
 
         $this->tcpdf->Rect(
