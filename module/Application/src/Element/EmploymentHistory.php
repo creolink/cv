@@ -15,7 +15,7 @@ use Application\Hydrator\Hydrator;
 class EmploymentHistory extends AbstractEmployment
 {
     const CURSOR_X = 5;
-    const CURSOR_Y = 143;
+    const CURSOR_Y = 144;
 
     const SECTION_WIDTH = 200;
 

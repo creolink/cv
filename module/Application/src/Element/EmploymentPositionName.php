@@ -14,7 +14,7 @@ use Application\Config\Font;
 
 class EmploymentPositionName extends AbstractTcpdfDecorator
 {
-    const NAME_MARGIN = 4.5;
+    const NAME_MARGIN = 4.2;
     const NAME_FONT_SIZE = 9;
     const NAME_CELL_WIDTH = 150;
     const NAME_CELL_HEIGHT = 6;
@@ -54,8 +54,8 @@ class EmploymentPositionName extends AbstractTcpdfDecorator
         );
 
         $this->tcpdf->SetFont(
-            $this->tcpdf->tahomaBold,
-            Font::NORMAL,
+            $this->tcpdf->dejavu,
+            Font::BOLD,
             self::NAME_FONT_SIZE
         );
     }

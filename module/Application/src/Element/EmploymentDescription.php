@@ -17,7 +17,7 @@ class EmploymentDescription extends AbstractTcpdfDecorator
     const SECTION_WIDTH = 197;
 
     const DESCRIPTION_MARGIN_X = 1.5;
-    const DESCRIPTION_MARGIN_Y = 10;
+    const DESCRIPTION_MARGIN_Y = 9;
     const DESCRIPTION_FONT_SIZE = 8;
     const DESCRIPTION_LINE_HEIGHT = 4;
 
