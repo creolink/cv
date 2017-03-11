@@ -23,8 +23,8 @@ abstract class AbstractEmployment extends AbstractSection
 {
     const SECTION_WIDTH = 197;
 
-    const FIRST_POSITION_MARGIN = -1;
-    const NEXT_POSITION_MARGIN = 2;
+    const FIRST_POSITION_MARGIN = -0.5;
+    const NEXT_POSITION_MARGIN = 2.5;
 
     /**
      * Renders list of skills
