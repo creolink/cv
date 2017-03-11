@@ -17,8 +17,7 @@ class PdfConfig
     const DOCUMENT_AUTHOR = 'Jakub Łuczyński';
     const DOCUMENT_CREATOR = 'Jakub Łuczyński, powered by TCPDF';
     const DOCUMENT_URL = 'http://cv.creolink.pl';
+    const DOCUMENT_HOST = 'cv.creolink.pl';
 
     const FILE_NAME = 'jakub.luczynski.cv.pdf';
-
-    const SERVER_NAME = 'cv.creolink.pl';
 }
