@@ -17,14 +17,13 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
     const SECTION_WIDTH = 197;
 
     const COMPANY_URL_MARGIN = 0.3;
-    const COMPANY_URL_LINE_HEIGHT = 2;
 
     const COMPANY_DATA_FONT_SIZE = 6.5;
-    const COMPANY_DATA_MARGIN_Y = 0.5;
+    const COMPANY_DATA_MARGIN_Y = 0.2;
     const COMPANY_DATA_MARGIN_X = 1;
     const COMPANY_DATA_PADDING = 2.5;
 
-    const CONTACT_CELL_HEIGHT = 2;
+    const CONTACT_CELL_HEIGHT = 1;
     const CONTACT_SEPARATOR = ', ';
 
     /**
@@ -97,7 +96,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
 
             $this->tcpdf->Cell(
                 self::SECTION_WIDTH,
-                self::COMPANY_URL_LINE_HEIGHT,
+                self::CONTACT_CELL_HEIGHT,
                 $companyUrl,
                 self::BORDER_NONE,
                 self::CELL_LINE_NONE,
