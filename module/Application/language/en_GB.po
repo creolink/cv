@@ -35,7 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Poland"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Design and development of dedicated, authorial B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Modernization of application. Technical supervision. Online, remote work."
+msgstr "Design and development of dedicated, copyrighted B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Modernization of application. Technical supervision. Online, remote work."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Web Designer / B2C project"
@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Poland"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, authorial application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Configuration of Linux server using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Design and development of dedicated, copyrighted application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Configuration of Linux server using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Coder / B2C & B2E project"
@@ -71,7 +71,7 @@ msgid "cv-commisions-gandalf2009-country"
 msgstr "Poland"
 
 msgid "cv-commisions-gandalf2009-description"
-msgstr "Brand improvement through implementation of authorial online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)."
+msgstr "Brand improvement through implementation of copyrighted online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)."
 
 msgid "cv-commisions-stawoz2009-name"
 msgstr "Portal Designer & PHP Developer / B2B project"
@@ -98,7 +98,7 @@ msgid "cv-commisions-gandalf2005-country"
 msgstr "Poland"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, programming and implementation of dedicated, authorial eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce application. Modernization and development of the system. Service and support."
+msgstr "Design, programming and implementation of dedicated, copyrighted eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce application. Modernization and development of the system. Service and support."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Portal Designer & PHP Developer / B2B project"
@@ -155,7 +155,7 @@ msgid "cv-contract-forweb-country"
 msgstr "Poland"
 
 msgid "cv-contract-forweb-description"
-msgstr "Design, development & implementation of dedicated, authorial B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
+msgstr "Design, development & implementation of dedicated, copyrighted B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
 
 msgid "cv-contract-gandalf2008-name"
 msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce project"
@@ -164,7 +164,7 @@ msgid "cv-contract-gandalf2008-country"
 msgstr "Poland"
 
 msgid "cv-contract-gandalf2008-description"
-msgstr "Maintenance, development and modernization of dedicated, authorial CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
+msgstr "Maintenance, development and modernization of dedicated, copyrighted CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
 
 msgid "cv-languages-polish"
 msgstr "Polish, mother language"
