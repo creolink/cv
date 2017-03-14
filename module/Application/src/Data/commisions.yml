@@ -131,7 +131,7 @@ positions:
       disabled: true
 
     - name: 'cv-commisions-gpl-name'
-      company: 'Gospodarstwo Pomocnicze Łodzianka Łódzkiej Wojewódzkiej Komendy OHP w Łodzi'
+      company: 'Gospodarstwo Pomocnicze Łodzianka Łódzkiej Wojewódzkiej Komendy OHP'
       dateStart: '2001/10/01'
       dateEnd: '2001/11/30'
       address: 'ul. Sienkiewicza 63, 90-009 Łódź'
