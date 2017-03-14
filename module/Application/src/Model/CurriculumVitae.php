@@ -107,7 +107,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
             $this->renderIcon($this->GetX() + 13, $y, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
             $this->renderIcon($this->GetX() + 22, $y, Image::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL, 1);
 
-            $this->addPageNumber($y);
+            $this->renderPageNumber($y);
         }
     }
 
@@ -132,7 +132,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
             false
         );
 
-        $this->addPageNumber($y);
+        $this->renderPageNumber($y);
     }
 
     /**
@@ -219,7 +219,9 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     private function registerFont($font)
     {
-        return TCPDF_FONTS::addTTFfont(PdfConfig::PATH_FONTS . $font, '', '', 32);
+        return TCPDF_FONTS::addTTFfont(
+            PdfConfig::PATH_FONTS . $font
+        );
     }
 
     /**
@@ -227,7 +229,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      *
      * @param float $y
      */
-    private function addPageNumber($y)
+    private function renderPageNumber($y)
     {
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
@@ -247,6 +249,5 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $height = 5.5;
 
         $this->Image(PdfConfig::PATH_IMAGES . Image::PERSONAL_PHOTO, $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
-        $this->Rect($x, $y, $width, $height);
     }
 }

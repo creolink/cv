@@ -328,4 +328,6 @@ msgid "cv-personality-sectionTitle"
 msgstr "Persönlichkeit"
 
 msgid "cv-footer-recruitmentAgreement"
-msgstr "Ich bin einverstanden, dass meine in diesem Arbeitsangebot enthaltenen personalen Daten durch die Firma für die Rekrutierungszwecke verwendet werden\r\n(gemäß dem Gesetz vom 29.08.1997 über den Schutz der Personaldaten, Gesetzblatt von 2002, Nr. 101, Pos. 926 mit späteren Änderungen)."
+msgstr ""
+"Ich bin einverstanden, dass meine in diesem Arbeitsangebot enthaltenen personalen Daten durch die Firma für die Rekrutierungszwecke verwendet werden\r\n"
+"(gemäß dem Gesetz vom 29.08.1997 über den Schutz der Personaldaten, Gesetzblatt von 2002, Nr. 101, Pos. 926 mit späteren Änderungen)."
