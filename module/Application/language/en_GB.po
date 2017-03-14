@@ -98,7 +98,7 @@ msgid "cv-commisions-gandalf2005-country"
 msgstr "Poland"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, programming and implementation of dedicated, copyrighted eCommerce software http://www.gandalf.com.pl/. Design and implementation of dedicated Intranet system (CMS / CRM) for eCommerce application. Modernization and development of the system. Service and support."
+msgstr "Design, programming and implementation of dedicated, copyrighted eCommerce software http://www.gandalf.com.pl/ with dedicated Intranet system (CMS / CRM). Modernization and development of the system. Service and support."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Portal Designer & PHP Developer / B2B project"
