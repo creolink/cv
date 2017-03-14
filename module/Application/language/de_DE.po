@@ -80,7 +80,7 @@ msgid "cv-commisions-stawoz2009-country"
 msgstr "Polen"
 
 msgid "cv-commisions-stawoz2009-description"
-msgstr "Design and implementation of new, dedicated web portals about environmental, fire and safety subjects: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Refactoring of http://www.ppozbhp.pl/. Active positioning in search engines like Google, Yahoo, Bing, Infoseek. Maintenance, development and supervision of work. (portals are closed)"
+msgstr "Design und Implementierung neue, gewidmet Webportale für Umwelt-, Brand- und Sicherheitsthemen: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Re-entwicklung von http://www.ppozbhp.pl/. Aktive Positionierung in Suchmaschinen wie Google, Yahoo, Bing, Infoseek. Erhaltung, Entwicklung und Überwachung der Arbeit. (Portale sind geschlossen)"
 
 msgid "cv-commisions-iizt-name"
 msgstr "PHP Programmierer & Webenwickler / Freiberufler"
@@ -89,7 +89,7 @@ msgid "cv-commisions-iizt-country"
 msgstr "Niederlande"
 
 msgid "cv-commisions-iizt-description"
-msgstr "Websites development for Dutch group IIZT.com - blogs, content management systems. Coding with PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote work."
+msgstr "Webseitenentwicklung für die niederländische Gruppe IIZT.com - Blogs, Content Management Systeme. Kodierung mit PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote Arbeit."
 
 msgid "cv-commisions-gandalf2005-name"
 msgstr "Webenwickler & Designer, PHP Codierer / B2E & B2C Projekt"
