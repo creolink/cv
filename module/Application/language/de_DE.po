@@ -35,8 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Polen"
 
 msgid "cv-commisions-tpnets-description"
-msgstr ""
-msgstr "Design and development of dedicated, copyrighted B2E & B2C system for ISP (network & VoIP management, customer relationship management, electronic customer office, automatic invoicing, reporting). Coding with MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Basing on my own, MVC framework and template system. Integration with Google Services (OAuth). Modernization of application. Technical supervision. Online, remote work."
+msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet e-commerce B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Anwendung von meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Webdesigner / B2C Projekt"
@@ -45,7 +44,7 @@ msgid "cv-commisions-msPerfect-country"
 msgstr "Deutschland"
 
 msgid "cv-commisions-msPerfect-description"
-msgstr "Design of responsive corporate website for cleaning company. Creation of graphic layout, coding with PHP, JavaScript and CSS using Bootstrap library."
+msgstr "Entwerfen der reaktionsfähigen Website für die Reinigung Geschäft. Erstellung der Grafik Layout. Kodierung mit PHP, JavaScript und CSS, einsetzen die Bootstrap Bibliothek."
 
 msgid "cv-commisions-freepers-name"
 msgstr "Software designer / B2C & B2E, eCommerce Projekt"
