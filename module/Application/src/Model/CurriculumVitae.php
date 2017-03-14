@@ -126,7 +126,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $this->MultiCell(
             200,
             3,
-            $this->translator->trans('cv-footer-recruitmentAgreement'),
+            $this->translator->translate('cv-footer-recruitmentAgreement'),
             0,
             'C',
             false
