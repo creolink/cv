@@ -146,16 +146,16 @@ msgid "cv-contract-gandalf-country"
 msgstr "Polen"
 
 msgid "cv-contract-gandalf-description"
-msgstr "Supervision of complex eCommerce & Intranet system. Organisation of work and tasks scheduling through SVN & Trac. Implementation of new technical solutions like Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Moreover employees management, budget controlling, reporting, API integration, optimization of business processes, SEO & SEM analysis, load tests with Apache JMeter, performance and acceptance tests, code refactoring. Integration with external web applications through SOAP & OAuth. Duties of the Information Security Administrator."
+msgstr "Betreuung des komplexen eCommerce & Intranet Systems. Arbeitsorganisation und Aufgabenplanung durch SVN und Trac. Implementierung neuer technischer Lösungen wie Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Außerdem Angestellten Management, Budgetkontrolle, Berichterstattung, API-Integration, Geschäftsprozessoptimierung, SEO & SEM Untersuchung, Belastungsproben mit Apache JMeter, Leistungstest und Abnahmeversuche, code Re-entwicklung. Integration mit externen Webanwendungen durch SOAP & OAuth. Pflichten des Informationssicherheit Administrators."
 
 msgid "cv-contract-forweb-name"
-msgstr "PHP coder with Projekt Manager responsibilities / B2E, B2B & B2C system for ISP"
+msgstr "PHP-Coder mit Projektmanager Verantwortlichkeiten / B2E, B2B & B2C System für ISP"
 
 msgid "cv-contract-forweb-country"
 msgstr "Polen"
 
 msgid "cv-contract-forweb-description"
-msgstr "Design, development & implementation of dedicated, copyrighted B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
+msgstr "Design, Entwicklung und Implementierung eines gewidmet, urheberrechtlich geschützten B2E, B2B & B2C Systems für ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Aufgaben koordination von der IT-Fachbereich. Berichterstattung und Dokumentation. Kommunikation und Treffen mit Kunden. Untersuchung, Tests und Systemintegrationen. Optimierung und Reentwicklung, Kodierung mit MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Überwachung und Wartung bestehender Anwendungen."
 
 msgid "cv-contract-gandalf2008-name"
 msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce Projekt"
