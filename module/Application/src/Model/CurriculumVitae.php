@@ -118,14 +118,19 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     public function footer()
     {
-        $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
-
         $y = -15;
 
         $this->SetXY(5, $y);
         $this->SetFont($this->verdana, '', 6);
         $this->SetTextColor(150, 150, 150);
-        $this->MultiCell(200, 3, $text, 0, 'C', false);
+        $this->MultiCell(
+            200,
+            3,
+            $this->translator->trans('cv-footer-recruitmentAgreement'),
+            0,
+            'C',
+            false
+        );
 
         $this->addPageNumber($y);
     }

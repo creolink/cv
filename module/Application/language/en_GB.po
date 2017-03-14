@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Poland"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, copyrighted application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Configuration of Linux server using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
+msgstr "Design and development of dedicated, copyrighted application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution, based on my own, fast and flexible, MVC framework. Configuration of Linux server using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Project documentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Coder / B2C & B2E project"
@@ -62,7 +62,7 @@ msgid "cv-commisions-forweb-country"
 msgstr "Poland"
 
 msgid "cv-commisions-forweb-description"
-msgstr "Redevelopment of E-BOK system - electronic B2C office for Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery and CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast. Refactoring and improvements of Intranet B2E System."
+msgstr "Redevelopment of electronic B2C office system for Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery and CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV broadcasts. Refactoring and improvements of Intranet B2E System."
 
 msgid "cv-commisions-gandalf2009-name"
 msgstr "PHP Web Developer / B2C project"
@@ -326,3 +326,6 @@ msgstr "(%sy)"
 
 msgid "cv-personality-sectionTitle"
 msgstr "Personality"
+
+msgid "cv-footer-recruitmentAgreement"
+msgstr "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments)."

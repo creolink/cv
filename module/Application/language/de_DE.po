@@ -35,7 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Polen"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet e-commerce B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Anwendung von meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
+msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Anwendung von meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Webdesigner / B2C Projekt"
@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Polen"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Design and development of dedicated, copyrighted application of eCommerce system with CMS and CRM modules. Comprehensive implementation of RWD solution based on my own, fast and flexible, MVC framework. Linux Server configuration using Nginx and Percona Server. Coding with PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration with external systems & API through SOAP or REST. Advising, coaching. Projekt documentation."
+msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet eCommerce System mit CMS und CRM Module. Umfassende Implementierung der RWD-Lösung, basiert auf meinem eigenen, schnellen und flexibel, MVC-Framework. Konfiguration des Linux-Servers mit Nginx und Percona Server. Kodierung mit PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration mit external Systeme & API mithilfe SOAP oder REST. Beratung, Coaching. Projektdokumentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Codierer / B2C & B2E Projekt"
@@ -62,7 +62,7 @@ msgid "cv-commisions-forweb-country"
 msgstr "Polen"
 
 msgid "cv-commisions-forweb-description"
-msgstr "Redevelopment of E-BOK system - electronic B2C office for Internet Service Provider company. Coding in PHP, MySQL, PostgreSQL, JavaScript with jQuery and CSS. Handling database with millions of records of VoIP calls. Implementation of software responsible for ordering of IPTV telecast. Refactoring and improvements of Intranet B2E System."
+msgstr "Sanierung des elektronischen B2C-Bürosysteme für das Internet Service Provider Unternehmen. Kodierung mit PHP, MySQL, PostgreSQL, JavaScript, jQuery und CSS. Bedienung von Datenbank mit Millionen Datensätzen von VoIP-Anrufe. Implementierung der Software für die Bestellung von IPTV-Sendungen. Refactoring und Verbesserung des Intranet B2E Systems."
 
 msgid "cv-commisions-gandalf2009-name"
 msgstr "PHP Webentwickler / B2C Projekt"
@@ -71,10 +71,10 @@ msgid "cv-commisions-gandalf2009-country"
 msgstr "Polen"
 
 msgid "cv-commisions-gandalf2009-description"
-msgstr "Brand improvement through implementation of copyrighted online shop dedicated for mobile devices. Updates of internal Intranet system (CRM / CMS)."
+msgstr "Marken Verbesserung durch Implementierung von urheberrechtlich geschütztem Online-Shop für mobile Geräte. Aktualisierung des internen Intranet Systems (CRM / CMS)."
 
 msgid "cv-commisions-stawoz2009-name"
-msgstr "Portal Designer & PHP Entwickler / B2B Projekt"
+msgstr "Portal-Designer & PHP Entwickler / B2B Projekt"
 
 msgid "cv-commisions-stawoz2009-country"
 msgstr "Polen"
@@ -326,3 +326,6 @@ msgstr "(%sJ)"
 
 msgid "cv-personality-sectionTitle"
 msgstr "Persönlichkeit"
+
+msgid "cv-footer-recruitmentAgreement"
+msgstr "Ich bin einverstanden, dass meine in diesem Arbeitsangebot enthaltenen personalen Daten durch die Firma für die Rekrutierungszwecke verwendet werden\r\n(gemäß dem Gesetz vom 29.08.1997 über den Schutz der Personaldaten, Gesetzblatt von 2002, Nr. 101, Pos. 926 mit späteren Änderungen)."
