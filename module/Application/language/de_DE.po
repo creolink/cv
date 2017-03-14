@@ -107,7 +107,7 @@ msgid "cv-commisions-stawoz2005-country"
 msgstr "Polen"
 
 msgid "cv-commisions-stawoz2005-description"
-msgstr "Design and development of CMS system & web portal with classified ads for companies dedicated environmental, fire and safety subjects. Use of PHP, MySQL, XHTML, CSS, JS. Active positioning in Google with very good results, maintenance, development and supervision."
+msgstr "Entwerfen und Entwicklung von CMS-System & Web-Portal mit Kleinanzeigen für Unternehmen gewidmet Umwelt-, Feuer-und Sicherheits-Themen. Benutzung PHP, MySQL, XHTML, CSS, JS. Aktive Positionierung in Google mit sehr guten Ergebnissen, Unterstützung, Entwicklung und Überwachung."
 
 msgid "cv-commisions-arges-name"
 msgstr "Junior PHP Entwickler"
@@ -116,7 +116,7 @@ msgid "cv-commisions-arges-country"
 msgstr "Polen"
 
 msgid "cv-commisions-arges-description"
-msgstr "PHP programmer, software developer. Creation of Content Management Systems for several companies. PHP, MySQL and JavaScript tasks."
+msgstr "PHP-Programmierer, Software Entwickler. Erstellung von Content Management Systemen für mehrere Unternehmen. PHP, MySQL und JavaScript Aufgaben."
 
 msgid "cv-commisions-gpl-name"
 msgstr "IT Spezialist"
@@ -125,10 +125,10 @@ msgid "cv-commisions-gpl-country"
 msgstr "Polen"
 
 msgid "cv-commisions-gpl-description"
-msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
+msgstr "Implementierung der Buchhaltungssoftware 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
-msgstr "...present"
+msgstr "...immer noch"
 
 msgid "cv-contract-auto1-name"
 msgstr "Software Engineer / B2B Projekt"
@@ -137,7 +137,7 @@ msgid "cv-contract-auto1-country"
 msgstr "Deutschland"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & Projekt documentation using Confluence. Team work."
+msgstr "Verantwortung für die Entwicklung von neuen, Firmen-Flaggschiff-Produkt. Softwareentwicklung mit ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript und Silex. Implementierung von Unit und Behat Tests. Code Überprüfung und Refactoring. Erstellung einer Technischen & Projektdokumentation mit Confluence. Teamarbeit."
 
 msgid "cv-contract-gandalf-name"
 msgstr "IT Leiter / B2E & B2C, eCommerce Komplexlösung"
