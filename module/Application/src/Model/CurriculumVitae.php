@@ -107,7 +107,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
             $this->renderIcon($this->GetX() + 13, $y, Image::EMAIL, PersonalData::EMAIL, PersonalData::EMAIL_URL, 1);
             $this->renderIcon($this->GetX() + 22, $y, Image::SKYPE, PersonalData::SKYPE, PersonalData::SKYPE_URL, 1);
 
-            $this->addPageNumber($y);
+            $this->renderPageNumber($y);
         }
     }
 
@@ -118,16 +118,21 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     public function footer()
     {
-        $text = "I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the\r\nPersonal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).";
-
         $y = -15;
 
         $this->SetXY(5, $y);
         $this->SetFont($this->verdana, '', 6);
         $this->SetTextColor(150, 150, 150);
-        $this->MultiCell(200, 3, $text, 0, 'C', false);
+        $this->MultiCell(
+            200,
+            3,
+            $this->translator->translate('cv-footer-recruitmentAgreement'),
+            0,
+            'C',
+            false
+        );
 
-        $this->addPageNumber($y);
+        $this->renderPageNumber($y);
     }
 
     /**
@@ -214,7 +219,9 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     private function registerFont($font)
     {
-        return TCPDF_FONTS::addTTFfont(PdfConfig::PATH_FONTS . $font, '', '', 32);
+        return TCPDF_FONTS::addTTFfont(
+            PdfConfig::PATH_FONTS . $font
+        );
     }
 
     /**
@@ -222,7 +229,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      *
      * @param float $y
      */
-    private function addPageNumber($y)
+    private function renderPageNumber($y)
     {
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
@@ -242,6 +249,5 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $height = 5.5;
 
         $this->Image(PdfConfig::PATH_IMAGES . Image::PERSONAL_PHOTO, $x, $y, $width, $height, 'PNG', PdfConfig::DOCUMENT_URL);
-        $this->Rect($x, $y, $width, $height);
     }
 }

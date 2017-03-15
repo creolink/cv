@@ -1,13 +1,17 @@
 positions:
-    - { name: 'cv-personalTraits-organization', level: 5, strength: 5 }
-    - { name: 'cv-personalTraits-independence', level: 5, strength: 5 }
-    - { name: 'cv-personalTraits-reliability', level: 5, strength: 5 }
-    - { name: 'cv-personalTraits-cooperation', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-punctuality', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-management', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-leading', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-assertiveness', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-diligence', level: 4, strength: 5 }
-    - { name: 'cv-personalTraits-creativity', level: 3, strength: 5 }
-    - { name: 'cv-personalTraits-teamWork', level: 4, strength: 5, disabled: true }
-    - { name: 'cv-personalTraits-workUnderTimePressure', level: 4, strength: 5, disabled: true }
+    - { name: 'cv-personalTraits-selfDiscipline', level: 4, strength: 4 }
+    - { name: 'cv-personalTraits-organization', level: 4, strength: 4 }
+    - { name: 'cv-personalTraits-independence', level: 4, strength: 4 }
+    - { name: 'cv-personalTraits-solidity', level: 4, strength: 4 }
+    - { name: 'cv-personalTraits-cooperation', level: 3, strength: 4 }
+    - { name: 'cv-personalTraits-punctuality', level: 3, strength: 4 }
+    - { name: 'cv-personalTraits-directive', level: 3, strength: 4 }
+    - { name: 'cv-personalTraits-assertiveness', level: 3, strength: 4 }
+    - { name: 'cv-personalTraits-diligence', level: 3, strength: 4 }
+    - { name: 'cv-personalTraits-creativity', level: 2, strength: 4 }
+
+    - { name: 'cv-personalTraits-management', level: 3, strength: 4, disabled: true }
+    - { name: 'cv-personalTraits-leading', level: 3, strength: 4, disabled: true }
+    - { name: 'cv-personalTraits-reliability', level: 4, strength: 4, disabled: true }
+    - { name: 'cv-personalTraits-teamWork', level: 3, strength: 4, disabled: true }
+    - { name: 'cv-personalTraits-workUnderTimePressure', level: 3, strength: 4, disabled: true }

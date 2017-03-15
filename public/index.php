@@ -3,11 +3,18 @@
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
-if ($_SERVER['APPLICATION_ENV'] === 'development') {
+$applicationEnvironment = 'production';
+if (!empty($_SERVER['APPLICATION_ENV'])) {
+    $applicationEnvironment = $_SERVER['APPLICATION_ENV'];
+}
+
+define('APPLICATION_ENV', $applicationEnvironment);
+define('DEVELOPMENT_ENV', 'development');
+
+if (APPLICATION_ENV === DEVELOPMENT_ENV) {
     error_reporting(E_ALL);
     ini_set("display_errors", true);
     ini_set('display_startup_errors', true);
-    define('APPLICATION_ENV', $_SERVER['APPLICATION_ENV']);
 }
 
 /**
@@ -28,7 +35,7 @@ if (php_sapi_name() === 'cli-server') {
 // Composer autoloading
 include __DIR__ . '/../vendor/autoload.php';
 
-if (! class_exists(Application::class)) {
+if (!class_exists(Application::class)) {
     throw new RuntimeException(
         "Unable to load application.\n"
         . "- Type `composer install` if you are developing locally.\n"

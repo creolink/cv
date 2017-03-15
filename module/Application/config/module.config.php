@@ -13,6 +13,7 @@ use Application\Normalization\NormalizedTranslationServiceFactory;
 use Application\I18n\LocalizationService;
 use Application\I18n\LocalizationServiceFactory;
 use Application\Config\Locale;
+use Application\Helper\ServerResolver;
 use Application\Normalization\NormalizedDateService;
 use Application\Normalization\NormalizedDateServiceFactory;
 
@@ -44,7 +45,7 @@ return [
             'subdomain' => [
                 'type' => Hostname::class,
                 'options' => [
-                    'route'    => ':' . Locale::ROUTER_LOCALE_PARAM . '.' . $_SERVER['SERVER_NAME'],
+                    'route'    => ':' . Locale::ROUTER_LOCALE_PARAM . '.' . ServerResolver::getName(),
                     'constraints' => [
                         'subdomain' => Locale::ALLOWED_ROUTED_LOCALES,
                     ],

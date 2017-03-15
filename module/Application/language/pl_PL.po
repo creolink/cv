@@ -15,5 +15,324 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid "Skeleton Application"
-msgstr "Szkielet Aplikacji"
+msgid "cv-personalData-country"
+msgstr "Niemcy"
+
+msgid "cv-personalData-nationality"
+msgstr "Polak"
+
+msgid "cv-personalData-workPlace"
+msgstr "Berlin, Poczdam"
+
+msgid "cv-personalData-title"
+msgstr "Programista PHP"
+
+msgid "cv-commisions-tpnets-name"
+msgstr "Projektant systemu & Główny programista PHP / projekt B2E & B2C"
+
+msgid "cv-commisions-tpnets-country"
+msgstr "Polska"
+
+msgid "cv-commisions-tpnets-description"
+msgstr "Zaprojektowanie i wykonanie dedykowanego, autorskiego systemu B2E & B2C dla ISP (zarządzanie sieciami oraz VoIP, klientami, elektroniczne biuro obsługi klienta, automatyczne fakturowanie, raportowanie). Programowanie z MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Wykorzystanie mojego własnego framework-a MVC. Integracja z serwisami Google (OAuth). Praca zdalna. Rozwój i modernizacja aplikacji."
+
+msgid "cv-commisions-msPerfect-name"
+msgstr "Projektant stron internetowych / projekt B2C"
+
+msgid "cv-commisions-msPerfect-country"
+msgstr "Niemcy"
+
+msgid "cv-commisions-msPerfect-description"
+msgstr "Zaprojektowanie responsywnej strony WWW firmy sprzątającej. Wykonanie projektu graficznego. Programowanie z PHP, JavaScript oraz wykorzystanie CSS z biblioteką Bootstrap."
+
+msgid "cv-commisions-freepers-name"
+msgstr "Projektant oprogramowania / B2C & B2E, eCommerce project"
+
+msgid "cv-commisions-freepers-country"
+msgstr "Polska"
+
+msgid "cv-commisions-freepers-description"
+msgstr "Zaprojektowanie i wykonanie dedykowanego, autorskiego systemu zawierającego moduły CMS oraz CRM. Kompleksowa implementacja rozwiązania RWD wraz z konfiguracją serwera opartego o Linux, Nginx oraz Percona Server. Wykorzystanie framework-a MVC mojego autorstwa. Programowanie z PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integracja z zewnętrznymi API opartymi o SOAP i REST. Doradztwo, coaching. Dokumentacja projektu."
+
+msgid "cv-commisions-forweb-name"
+msgstr "Programista PHP / B2C & B2E project"
+
+msgid "cv-commisions-forweb-country"
+msgstr "Polska"
+
+msgid "cv-commisions-forweb-description"
+msgstr "Przebudowa systemu E-BOK - elektronicznego systemu B2C firmy świadczącej usługi internetowe. Kodowanie w PHP, MySQL, PostgreSQL, JavaScript z jQuery, CSS. Obsługa bazy danych zawierającej miliony rekordów rozmów telefonicznych VoIP. Implementacja oprogramowania odpowiedzialnego za zamawianie programów IPTV. Refaktoryzacja oraz doskonalenie wewnętrznego systemu B2E."
+
+msgid "cv-commisions-gandalf2009-name"
+msgstr "Programista PHP stron internetowych / B2C project"
+
+msgid "cv-commisions-gandalf2009-country"
+msgstr "Polska"
+
+msgid "cv-commisions-gandalf2009-description"
+msgstr "Rozwój marki poprzez zaprojektowanie, wykonanie i wdrożenie dedykowanego sklepu internetowego przeznaczonego na urządzenia mobilne http://gandalf.mobi/. Aktualizacja wewnętrznego systemu Intranet z modułami CMS i CRM."
+
+msgid "cv-commisions-stawoz2009-name"
+msgstr "Projektant portali & Programista PHP / B2B project"
+
+msgid "cv-commisions-stawoz2009-country"
+msgstr "Polska"
+
+msgid "cv-commisions-stawoz2009-description"
+msgstr "Wykonanie i wdrożenie nowych dedykowanych aplikacji portali internetowych wraz z systemem do zarządzania treścią o profilu ekologicznym, PPOŻ i BHP. Przebudowa portalu http://www.ppozbhp.pl. Aktywne pozycjonowanie w wyszukiwarkach Google, Yahoo, Bing, Infoseek. Obsługa techniczna, rozwijanie oraz nadzór nad portalami. (portale są zamknięte)"
+
+msgid "cv-commisions-iizt-name"
+msgstr "Programista PHP i Developer stron internetowych / Freelancer"
+
+msgid "cv-commisions-iizt-country"
+msgstr "Holandia"
+
+msgid "cv-commisions-iizt-description"
+msgstr "Wykonywanie projektów WWW dla holenderskiej grupy IIZT - blogi, systemy zarządzania treścią. Programowanie z PHP, MySQL, JavaScript, CSS, HTML/XHTML. Praca zdalna."
+
+msgid "cv-commisions-gandalf2005-name"
+msgstr "Projektant stron WWW, Programista PHP / B2E & B2C project"
+
+msgid "cv-commisions-gandalf2005-country"
+msgstr "Polska"
+
+msgid "cv-commisions-gandalf2005-description"
+msgstr "Zaprojektowanie, wykonanie i wdrożenie dedykowanego, autorskiego oprogramowania eCommerce. Zaprojektowanie i wdrożenie dedykowanego systemu Intranet z modułami CMS i CRM dla sklepu Internetowego. Modernizacja i rozwijanie aplikacji. Serwis i wsparcie przy zmianach."
+
+msgid "cv-commisions-stawoz2005-name"
+msgstr "Projektant portalu & Programista PHP / B2B project"
+
+msgid "cv-commisions-stawoz2005-country"
+msgstr "Polska"
+
+msgid "cv-commisions-stawoz2005-description"
+msgstr "Zaprojektowanie, wdrożenie i obsługa dedykowanego portalu internetowego o profilu BHP i PPOŻ. Wykorzystanie PHP, MySQL, XHTML, CSS, JS. Aktywne pozycjonowanie w wyszukiwarce Google z bardzo dobrymi rezultatami. Konserwacja, rozwijanie i nadzór nad portalem. (portal zamknięty)"
+
+msgid "cv-commisions-arges-name"
+msgstr "Młodszy programista PHP"
+
+msgid "cv-commisions-arges-country"
+msgstr "Polska"
+
+msgid "cv-commisions-arges-description"
+msgstr "Programista PHP, projektant oprogramowania. Tworzenie systemów zarządzania treścią dla wielu stron internetowych. Zadania PHP, MySQL oraz JavaScript."
+
+msgid "cv-commisions-gpl-name"
+msgstr "Informatyk"
+
+msgid "cv-commisions-gpl-country"
+msgstr "Polska"
+
+msgid "cv-commisions-gpl-description"
+msgstr "Implementacja księgowych programów komputerowych 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
+
+msgid "cv-employment-date-present"
+msgstr "...wciąż"
+
+msgid "cv-contract-auto1-name"
+msgstr "Inżynier oprogramowania / projekt B2B"
+
+msgid "cv-contract-auto1-country"
+msgstr "Niemcy"
+
+msgid "cv-contract-auto1-description"
+msgstr "Odpowiedzialność za wdrożenie nowego produktu flagowego firmy. Budowanie aplikacji z wykorzystaniem ElasticSearch, Symfony 2 & 3, serwisów Java, Json, Node.js, React.js, Typescript i Silex. Implementacja testów jednostkowych PHPUnit oraz Behat. Przegląd kodów, refaktoryzacja. Tworzenie technicznej dokumentacji projektu z wykorzystaniem Confluence."
+
+msgid "cv-contract-gandalf-name"
+msgstr "Kierownik IT / kompleksowe rozwiązanie B2E & B2C, eCommerce"
+
+msgid "cv-contract-gandalf-country"
+msgstr "Polska"
+
+msgid "cv-contract-gandalf-description"
+msgstr "Nadzór nad kompleksowym rozwiązaniem eCommerce. Organizacja pracy oraz planowanie zadań z wykorzystaniem SVN i Trac. Implementacja nowych rozwiązań technicznych, takich jak Percona Server, Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Ponadto: zarządzanie pracownikami, kontrola budżetu, raportowanie, integracja z zewnętrznymi API poprzez SOAP i OAuth, optymalizacja procesów biznesowych, analizy SEO i SEM, testy obciążeniowe (Apache JMeter), jakościowe i wydajnościowe testy akceptacyjne, refaktoryzacja. Wykonywanie obowiązków Administratora Bezpieczeństwa Informacji."
+
+msgid "cv-contract-forweb-name"
+msgstr "Programista PHP z obowiązkami Menadżera projektów / B2E, B2B & B2C system dla ISP"
+
+msgid "cv-contract-forweb-country"
+msgstr "Polska"
+
+msgid "cv-contract-forweb-description"
+msgstr "Zaprojektowanie, wykonanie i implementacja dedykowanego, autorskiego systemu B2E, B2B & B2C dla ISP (demo http://mms.4web.pl/). Koordynacja zadań w dziale IT. Raportowanie i dokumentacja. Komunikacja oraz spotkania z klientami. Analizy, testy i integracja systemów. Optymalizacja i refaktoryzacja kodów. Programowanie z MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Nadzór i utrzymanie istniejących aplikacji."
+
+msgid "cv-contract-gandalf2008-name"
+msgstr "Informatyk, Główny programista PHP / projekt B2E & B2C eCommerce"
+
+msgid "cv-contract-gandalf2008-country"
+msgstr "Polska"
+
+msgid "cv-contract-gandalf2008-description"
+msgstr "Nadzór, rozwój i modernizacja dedykowanego, autorskiego systemu eCommerce z modułami CRM & CMS, opartego na moim framework-u. Kodowanie, optymalizacja i refaktoryzacja, analizy techniczne. Wdrożenie nowych rozwiązań technicznych opartych o PHP, Lighttpd, MySQL. Integracja z zewnętrznymi aplikacjami z wykorzystaniem SOAP, Rest, XML, CSV. Projektowanie UI. Analizy i optymalizacja procesów SEO i SEM. Nadzór techniczny."
+
+msgid "cv-languages-polish"
+msgstr "Polski, język ojczysty"
+
+msgid "cv-languages-english"
+msgstr "Angielski (C1), biegłość zawodowa"
+
+msgid "cv-languages-german"
+msgstr "Niemiecki (B1), komunikatywny"
+
+msgid "cv-languages-russian"
+msgstr "Rosyjski (A1), podstawowy"
+
+msgid "cv-personalTraits-selfDiscipline"
+msgstr "Zdyscyplinowany"
+
+msgid "cv-personalTraits-organization"
+msgstr "Zorganizowany"
+
+msgid "cv-personalTraits-directive"
+msgstr "Dyrektywny"
+
+msgid "cv-personalTraits-independence"
+msgstr "Niezależny"
+
+msgid "cv-personalTraits-reliability"
+msgstr "Wiarygodny"
+
+msgid "cv-personalTraits-solidity"
+msgstr "Rzetelny"
+
+msgid "cv-personalTraits-cooperation"
+msgstr "Współpracujący"
+
+msgid "cv-personalTraits-punctuality"
+msgstr "Punktualny"
+
+msgid "cv-personalTraits-management"
+msgstr "Zarządzanie"
+
+msgid "cv-personalTraits-leading"
+msgstr "Kierowanie zespołem"
+
+msgid "cv-personalTraits-assertiveness"
+msgstr "Asertywny"
+
+msgid "cv-personalTraits-diligence"
+msgstr "Pracowity"
+
+msgid "cv-personalTraits-creativity"
+msgstr "Kreatywny"
+
+msgid "cv-personalTraits-teamWork"
+msgstr "Pracujący zespołowo"
+
+msgid "cv-personalTraits-workUnderTimePressure"
+msgstr "Praca pod presją czasu"
+
+msgid "cv-aboutMe-sectionTitle"
+msgstr "O mnie"
+
+msgid "cv-aboutMe-content"
+msgstr "Jestem żonaty i mamy %s-letniego syna. W 2015 rozpoczęliśmy nowe życie w Niemczech. Nie palę od %s lat. W 2016, dzięki systematycznej diecie i treningowi, schudłem 35kg. Zaprojektowałem własny framework i wykorzystałem go we wszystkich zleconych projektach. Posiadam rekomendacje od większości firm, z którymi pracowałem. To CV jest próbką moich umiejętności."
+
+msgid "cv-employment-date-partTime"
+msgstr "pól etatu"
+
+msgid "cv-employment-references"
+msgstr "Referencje"
+
+msgid "cv-employment-recommendations"
+msgstr "Rekomendacje"
+
+msgid "cv-employment-examples"
+msgstr "Przykłady"
+
+msgid "cv-employment-contact"
+msgstr "Kontakt: "
+
+msgid "cv-employment-address"
+msgstr "Adres: "
+
+msgid "cv-mainHeader-mostRecentVersion"
+msgstr "najnowsza wersja cv.creolink.pl"
+
+msgid "cv-mainHeader-speciality"
+msgstr "PROGRAMISTA WWW, SPECJALISTA PHP & MANAGER PROJEKTÓW"
+
+msgid "cv-mainHeader-tools"
+msgstr "CV zaprojektowane w PHP 7 wraz ZF3 & TCPDF"
+
+msgid "cv-technicalSkills-sectionTitle"
+msgstr "Doświadczenie techniczne"
+
+msgid "cv-sign-content"
+msgstr "Jeśli zainteresowało Państwa moje doświadczenie zawodowe i mogę pomoc w rozwoju Państwa firmy, proszę o kontakt za pośrednictwem mail-a, telefonu lub Skype-a."
+
+msgid "cv-mainHeader-personalData-experience"
+msgstr "Doświadczenie"
+
+msgid "cv-mainHeader-personalData-birthDate"
+msgstr "Data urodzenia"
+
+msgid "cv-mainHeader-personalData-nationality"
+msgstr "Narodowość"
+
+msgid "cv-mainHeader-personalData-address"
+msgstr "Adres"
+
+msgid "cv-mainHeader-personalData-workplace"
+msgstr "Miejsce pracy"
+
+msgid "cv-mainHeader-personalData-years"
+msgstr "%s lat"
+
+msgid "cv-careerGoals-sectionTitle"
+msgstr "Cele zawodowe"
+
+msgid "cv-careerGoals-recipent"
+msgstr "Szanowni Państwo"
+
+msgid "cv-careerGoals-content"
+msgstr "Jestem FullStack developer-em. Moją pasją jest projektowanie i programowanie w języku PHP. Posiadam %s lat doświadczenia jako programista, projektant systemów oraz 6 lat jako koordynator zespołu i manager projektu. Najlepiej czuję się jako projektant i programista dużych rozwiązań eCommerce oraz aplikacji B2E, B2B, B2C. Lubię każdy rodzaj zadań - łatwe i wymagające. Chętnie przyjmuję wyzwania oparte o nowe technologie. Jestem bardzo dobrze zorganizowany, dokładny i elastyczny w pracy zespołowej. Jestem także doceniany za prace niezależną i zdalną. Moim celem jest zdobycie stanowiska Managera IT w międzynarodowej firmie."
+
+msgid "cv-commisionedJobs-sectionTitle"
+msgstr "Dodatkowe, zlecone prace oraz freelancing"
+
+msgid "cv-education-sectionTitle"
+msgstr "Edukacja & kursy"
+
+msgid "cv-education-content"
+msgstr ""
+"2013 - 2015 szybki kurs Angielskiego i Niemieckiego,\r\n"
+"2012 profesjonalny kurs dla ABI z certyfikatem\r\n"
+"2012 profesjonalny trening Google Analytics,\r\n"
+"od 2012 prawo jazdy kategorii B,\r\n"
+"dalsza przeszłość: studia na Politechnice Łódzkiej (Informatyka, 3 lata)"
+
+msgid "cv-employmentHistory-sectionTitle"
+msgstr "Historia zatrudnienia, pełny i pół etatu"
+
+msgid "cv-expectations-sectionTitle"
+msgstr "Oczekiwania"
+
+msgid "cv-expectations-content"
+msgstr "Umowa na czas nieokreślony w pełnym wymiarze godzin. Stanowisko starszego programisty PHP (Backend / Full Stack) z pensją na poziomie 60tys Euro brutto rocznie. Elastyczne godziny rozpoczęcia i zakończenia pracy, 40h tygodniowo."
+
+msgid "cv-hobby-sectionTitle"
+msgstr "Hobby & Sport"
+
+msgid "cv-hobby-content"
+msgstr "Mój wolny czas poświęcam na gry planszowe \"Cywilizacja poprzez wieki\" lub \"Robinson Crusoe: Przygoda na przeklętej wyspie\". Lubię oglądać seriale oraz filmy SF. Moimi ulubionymi są \"Battlestar Galactica\" oraz \"Ostatni Mohikanin\". Jeśli mam możliwość gram w piłkę lub ping-ponga. Lubię również analizować Giełdę Papierów Wartościowych oraz nasze inwestycje."
+
+msgid "cv-softwareTools-sectionTitle"
+msgstr "Umiejętności i narzędzia"
+
+msgid "cv-languages-sectionTitle"
+msgstr "Języki"
+
+msgid "cv-skills-shortcut-months"
+msgstr "(%sm)"
+
+msgid "cv-skills-shortcut-years"
+msgstr "(%sy)"
+
+msgid "cv-personality-sectionTitle"
+msgstr "Cechy personalne"
+
+msgid "cv-footer-recruitmentAgreement"
+msgstr ""
+"Wyrażam zgodę na przetwarzanie moich danych osobowych na potrzeby niezbędne do procesu realizacji rekrutacji\r\n"
+"(zgodnie z ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. z 2002r. Nr 101, poz. 926 ze zm.)"

@@ -245,13 +245,13 @@ abstract class AbstractSkills extends AbstractSection
     {
         if ($years < 1) {
             return sprintf(
-                'cv-skills-shortcut-months',
+                $this->trans('cv-skills-shortcut-months'),
                 ceil(12 * $years)
             );
         }
 
         return sprintf(
-            'cv-skills-shortcut-years',
+            $this->trans('cv-skills-shortcut-years'),
             $years
         );
     }
