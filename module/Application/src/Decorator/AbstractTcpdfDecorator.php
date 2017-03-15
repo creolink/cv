@@ -10,6 +10,7 @@ namespace Application\Decorator;
 use Application\Model\CurriculumVitae;
 use Application\Decorator\TcpdfDecoratorInterface;
 use Application\Model\TcpdfInterface;
+use \DateTime;
 
 abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
 {
@@ -30,27 +31,27 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      * @param string $message
      * @return string
      */
-    protected function trans($message)
+    protected function trans(string $message)
     {
         return $this->tcpdf->getTranslator()
             ->translate($message);
     }
 
     /**
-     * @param int $date
+     * @param DateTime|int|array|string $date
      * @return string
      */
-    protected function localizeDate($date)
+    protected function localizeDate(DateTime $date)
     {
         return $this->tcpdf->getDate()
             ->getLocalizedDate($date);
     }
 
     /**
-     * @param int $date
+     * @param DateTime|int|array|string $date
      * @return string
      */
-    protected function localizeMonthAndYear($date)
+    protected function localizeMonthAndYear(DateTime $date)
     {
         return $this->tcpdf->getDate()
             ->getMonthAndYear($date);

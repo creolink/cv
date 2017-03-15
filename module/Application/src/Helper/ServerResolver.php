@@ -11,6 +11,9 @@ use Application\Config\PdfConfig;
 
 class ServerResolver
 {
+    /**
+     * @return string
+     */
     public static function getName()
     {
         return (APPLICATION_ENV === DEVELOPMENT_ENV)

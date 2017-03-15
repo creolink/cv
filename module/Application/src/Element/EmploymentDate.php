@@ -99,13 +99,12 @@ class EmploymentDate extends AbstractTcpdfDecorator
      */
     private function getFinishDate(EmploymentPosition $position)
     {
-        $dateEnd = $this->localizeMonthAndYear(
-            $position->getDateEnd()
-        );
+        $dateEnd = $position->getDateEnd();
 
         return false === empty($dateEnd)
-            ? $dateEnd
-            : $this->trans('cv-employment-date-present');
+            ? $this->localizeMonthAndYear(
+                $position->getDateEnd()
+            ) : $this->trans('cv-employment-date-present');
     }
 
     /**

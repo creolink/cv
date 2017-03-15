@@ -20,7 +20,7 @@ class BaseController extends AbstractActionController
      *
      * @return mixed Entry
      */
-    protected function getService($className)
+    protected function getService(string $className)
     {
         return $this->getEvent()
             ->getApplication()
