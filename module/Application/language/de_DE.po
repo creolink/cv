@@ -227,7 +227,7 @@ msgid "cv-aboutMe-sectionTitle"
 msgstr "Über mich"
 
 msgid "cv-aboutMe-content"
-msgstr "I am married and we have %s years old son. In 2015 we started new life in Deutschland. I don't smoke since %s years. In 2016, through systematic diet and training, I've lost 35 kg. I developed my own PHP framework and I used it in all my commissioned Projekts. I've got recomendations from almost all companies I worked for. This CV is an example of my abilities."
+msgstr "Ich bin verheiratet und wir haben %s alter Sohn. In 2015 wir begann einen neuen Leben in Deutschland. Seit %s rauche ich nicht. In 2016, durch systematisch Diät und Ausbildung, habe ich 35 kg abgenommen. Ich habe meines eigenes PHP Framework entwickelt. Ich habe die Empfehlungen von fast allen Firmen bekommen. Dieser Lebenslauf ist ein Beispiel meinen Fähigkeiten."
 
 msgid "cv-employment-date-partTime"
 msgstr "Teilzeit"
