@@ -227,7 +227,7 @@ msgid "cv-aboutMe-sectionTitle"
 msgstr "Über mich"
 
 msgid "cv-aboutMe-content"
-msgstr "Ich bin verheiratet und wir haben %s alter Sohn. In 2015 wir begann einen neuen Leben in Deutschland. Seit %s rauche ich nicht. In 2016, durch systematisch Diät und Ausbildung, habe ich 35 kg abgenommen. Ich habe meines eigenes PHP Framework entwickelt. Ich habe die Empfehlungen von fast allen Firmen bekommen. Dieser Lebenslauf ist ein Beispiel meinen Fähigkeiten."
+msgstr "Ich bin verheiratet und wir haben %s Jahre alt Sohn. In 2015 wir begann einen neuen Leben in Deutschland. Seit %s rauche ich nicht. In 2016, durch systematisch Diät und Ausbildung, habe ich 35 kg abgenommen. Ich habe mein eigenes PHP Framework entwickelt. Ich habe die Empfehlungen von fast allen Firmen bekommen. Dieser Lebenslauf ist ein Beispiel meinen Fähigkeiten."
 
 msgid "cv-employment-date-partTime"
 msgstr "Teilzeit"
@@ -248,7 +248,7 @@ msgid "cv-employment-address"
 msgstr "Adresse: "
 
 msgid "cv-mainHeader-mostRecentVersion"
-msgstr "most recent version cv.creolink.pl"
+msgstr "neueste Version cv.creolink.pl"
 
 msgid "cv-mainHeader-speciality"
 msgstr "WEB ENTWICKLER, PHP SPEZIALIST & PROJEKTMANAGER"
@@ -260,7 +260,7 @@ msgid "cv-technicalSkills-sectionTitle"
 msgstr "Technisheerfahrung"
 
 msgid "cv-sign-content"
-msgstr "Should you find my knowledge and professional experience interesting and it could help in progress of your company, please contact with me by phone, by mail or by Skype."
+msgstr "Sollten Sie mein Wissen und meine Berufserfahrung interessant finden und es würde bei der laufnahme Ihres unternehmens helfen, bitte kontaktieren Sie mich per Telefon, per E-mail oder Skype."
 
 msgid "cv-mainHeader-personalData-experience"
 msgstr "Erfahrung"
@@ -284,10 +284,10 @@ msgid "cv-careerGoals-sectionTitle"
 msgstr "Karriereziele"
 
 msgid "cv-careerGoals-recipent"
-msgstr "Dear Sir or Madam"
+msgstr "Sehr geehrte Damen und Herren"
 
 msgid "cv-careerGoals-content"
-msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have many %s years of experience as programmer in Projekt design & development as well as team coordinator and Projekt manager (6 years). I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web Projekts. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
+msgstr "Ich bin Full-Stack Entwickler. Meine Passion ist Systemdesign und Codierung in PHP-Sprache. Ich habe %s Jahre Ehrfahrung als Entwickler in Projektentwurf und Entwicklung sowie als Teamkoordinator und Projektleiter (6 Jahre). Ich fühle mich am besten als Entwickler von großen B2E, B2B, B2C eCommerce Web-Projekts. Ich mag alle Sorten von Aufgaben, einfach und herausfordernd. Ich akzeptiere gerne Herausforderungen, basiert auf  die neuen technischen Lösungen. Ich bin sehr gut organisiert, gründlich und flexibel in Teamarbeit. Ich bin auch für unabhängige und online Arbeit geschätzt. Mein zukünftiges Ziel ist es, ein Manager der IT-Abteilung im internationalen Unternehmen zu werden."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Zusätzliche, beauftragte & freiberufliche Jobs"
