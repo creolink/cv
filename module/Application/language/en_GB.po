@@ -128,7 +128,7 @@ msgid "cv-commisions-gpl-description"
 msgstr "Implementation of accounting software 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
-msgstr "...present"
+msgstr "...until now"
 
 msgid "cv-contract-auto1-name"
 msgstr "Software Engineer / B2B project"
@@ -158,7 +158,7 @@ msgid "cv-contract-forweb-description"
 msgstr "Design, development & implementation of dedicated, copyrighted B2E, B2B & B2C system for ISP (demo at http://mms.4web.pl/, http://demo.4web.pl/). Coordination of tasks of IT Section. Reporting and documentation. Communication and meetings with customers. Analysis, tests and system integrations. Optimization and refactoring, coding with MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Supervision and maintenance of existing applications."
 
 msgid "cv-contract-gandalf2008-name"
-msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce project"
+msgstr "IT Specialist, PHP Lead Developer / B2E & B2C eCommerce project"
 
 msgid "cv-contract-gandalf2008-country"
 msgstr "Poland"
@@ -173,43 +173,49 @@ msgid "cv-languages-english"
 msgstr "English (C1), prof. proficiency"
 
 msgid "cv-languages-german"
-msgstr "German (B1), communicative"
+msgstr "German (B1), kommunikativ"
 
 msgid "cv-languages-russian"
-msgstr "Russian (A1), "
+msgstr "Russian (A1), beginner"
+
+msgid "cv-personalTraits-selfDiscipline"
+msgstr "Self-disciplined"
 
 msgid "cv-personalTraits-organization"
-msgstr "Organization"
+msgstr "Organized"
+
+msgid "cv-personalTraits-directive"
+msgstr "Directive"
 
 msgid "cv-personalTraits-independence"
-msgstr "Independence"
+msgstr "Independent"
 
 msgid "cv-personalTraits-reliability"
-msgstr "Reliability"
+msgstr "Reliable"
 
 msgid "cv-personalTraits-solidity"
-msgstr "Solidity"
+msgstr "Solid"
 
 msgid "cv-personalTraits-cooperation"
-msgstr "Cooperation"
+msgstr "Cooperative"
 
 msgid "cv-personalTraits-punctuality"
-msgstr "Punctuality"
+msgstr "Punctual"
 
 msgid "cv-personalTraits-management"
 msgstr "Management"
 
 msgid "cv-personalTraits-leading"
-msgstr "Leading"
+msgstr "Leader"
 
 msgid "cv-personalTraits-assertiveness"
-msgstr "Assertiveness"
+msgstr "Assertiv"
 
 msgid "cv-personalTraits-diligence"
-msgstr "Diligence"
+msgstr "Diligent"
 
 msgid "cv-personalTraits-creativity"
-msgstr "Creativity"
+msgstr "Creative"
 
 msgid "cv-personalTraits-teamWork"
 msgstr "Team Work"

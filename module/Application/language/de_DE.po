@@ -35,7 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Polen"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Anwendung von meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
+msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Einsatz meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Webdesigner / B2C Projekt"
@@ -83,7 +83,7 @@ msgid "cv-commisions-stawoz2009-description"
 msgstr "Design und Implementierung neue, gewidmet Webportale für Umwelt-, Brand- und Sicherheitsthemen: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Re-entwicklung von http://www.ppozbhp.pl/. Aktive Positionierung in Suchmaschinen wie Google, Yahoo, Bing, Infoseek. Erhaltung, Entwicklung und Überwachung der Arbeit. (Portale sind geschlossen)"
 
 msgid "cv-commisions-iizt-name"
-msgstr "PHP Programmierer & Webenwickler / Freiberufler"
+msgstr "PHP Programmierer & Webentwickler / Freiberufler"
 
 msgid "cv-commisions-iizt-country"
 msgstr "Niederlande"
@@ -92,13 +92,13 @@ msgid "cv-commisions-iizt-description"
 msgstr "Webseitenentwicklung für die niederländische Gruppe IIZT.com - Blogs, Content Management Systeme. Kodierung mit PHP, MySQL, JavaScript, CSS, HTML/XHTML. Online, remote Arbeit."
 
 msgid "cv-commisions-gandalf2005-name"
-msgstr "Webenwickler & Designer, PHP Codierer / B2E & B2C Projekt"
+msgstr "Webentwickler und Designer, PHP Codierer / B2E & B2C Projekt"
 
 msgid "cv-commisions-gandalf2005-country"
 msgstr "Polen"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, Programmierung und Implementierung gewidmet, die urheberrechtlich geschützten eCommerce Software http://www.gandalf.com.pl/ und gewidmet Intranet-System (CMS / CRM). Modernisierung und Entwicklung des Systems. Service und Unterstützung."
+msgstr "Design, Programmierung und Implementierung gewidmet, das urheberrechtlich geschützten eCommerce Software http://www.gandalf.com.pl/ und gewidmet Intranet-System (CMS / CRM). Modernisierung und Entwicklung des Systems. Service und Unterstützung."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Portal Designer & PHP Developer / B2B Projekt"
@@ -116,7 +116,7 @@ msgid "cv-commisions-arges-country"
 msgstr "Polen"
 
 msgid "cv-commisions-arges-description"
-msgstr "PHP-Programmierer, Software Entwickler. Erstellung von Content Management Systemen für mehrere Unternehmen. PHP, MySQL und JavaScript Aufgaben."
+msgstr "PHP-Programmierer, Softwareentwickler. Erstellung von Content Management Systemen für mehrere Unternehmen. PHP, MySQL und JavaScript Aufgaben."
 
 msgid "cv-commisions-gpl-name"
 msgstr "IT Spezialist"
@@ -128,7 +128,7 @@ msgid "cv-commisions-gpl-description"
 msgstr "Implementierung der Buchhaltungssoftware 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
-msgstr "...immer noch"
+msgstr "...bisher"
 
 msgid "cv-contract-auto1-name"
 msgstr "Software Engineer / B2B Projekt"
@@ -140,13 +140,13 @@ msgid "cv-contract-auto1-description"
 msgstr "Verantwortung für die Entwicklung von neuen, Firmen-Flaggschiff-Produkt. Softwareentwicklung mit ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript und Silex. Implementierung von Unit und Behat Tests. Code Überprüfung und Refactoring. Erstellung einer Technischen & Projektdokumentation mit Confluence. Teamarbeit."
 
 msgid "cv-contract-gandalf-name"
-msgstr "IT Leiter / B2E & B2C, eCommerce Komplexlösung"
+msgstr "IT Leiter / B2E & B2C, eCommerce komplexe Lösung"
 
 msgid "cv-contract-gandalf-country"
 msgstr "Polen"
 
 msgid "cv-contract-gandalf-description"
-msgstr "Betreuung des komplexen eCommerce & Intranet Systems. Arbeitsorganisation und Aufgabenplanung durch SVN und Trac. Implementierung neuer technischer Lösungen wie Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Außerdem Angestellten Management, Budgetkontrolle, Berichterstattung, Geschäftsprozessoptimierung, SEO & SEM Untersuchung, Belastungsproben, Leistungstest und Abnahmeversuche, code Re-entwicklung. Integration mit externen API durch SOAP & OAuth. Pflichten des Informationssicherheit Administrators."
+msgstr "Betreuung des komplexen eCommerce & Intranet Systems. Arbeitsorganisation und Aufgabenplanung durch SVN und Trac. Implementierung neuer technischer Lösungen wie Percona Server & Galera Cluster, Solr, PHP-FPM, APC, Nginx, VMware ESX. Außerdem Angestellten Management, Budgetkontrolle, Berichterstattung, Geschäftsprozessoptimierung, SEO & SEM Untersuchung, Belastungsproben, Leistungstest und Abnahmeversuche, code refactoring. Integration mit externen API durch SOAP & OAuth. Pflichten des Informationssicherheit Administrators."
 
 msgid "cv-contract-forweb-name"
 msgstr "PHP-Coder mit Projektmanager Verantwortlichkeiten / B2E, B2B & B2C System für ISP"
@@ -155,31 +155,37 @@ msgid "cv-contract-forweb-country"
 msgstr "Polen"
 
 msgid "cv-contract-forweb-description"
-msgstr "Design, Entwicklung und Implementierung eines gewidmet, urheberrechtlich geschützten B2E, B2B & B2C Systems für ISP. Aufgaben koordination von der IT-Fachbereich. Berichterstattung und Dokumentation. Kommunikation und Treffen mit Kunden. Untersuchung, Tests und Systemintegrationen. Optimierung und Reentwicklung, Kodierung mit MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Überwachung und Wartung bestehender Anwendungen."
+msgstr "Design, Entwicklung und Implementierung eines gewidmet, urheberrechtlich geschützten B2E, B2B & B2C Systems für ISP. Aufgaben koordination der IT-Fachbereich. Berichterstattung und Dokumentation. Kommunikation und Treffen mit Kunden. Untersuchung, Tests und Systemintegrationen. Optimierung und Reentwicklung, Kodierung mit MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Überwachung und Wartung bestehender Anwendungen."
 
 msgid "cv-contract-gandalf2008-name"
-msgstr "PHP lead developer, IT Specialist / B2E & B2C eCommerce Projekt"
+msgstr "IT Spezialist, PHP Hauptentwickler / B2E & B2C eCommerce Projekt"
 
 msgid "cv-contract-gandalf2008-country"
 msgstr "Polen"
 
 msgid "cv-contract-gandalf2008-description"
-msgstr "Maintenance, development and modernization of dedicated, copyrighted CRM & CMS eCommerce system based on my own MVC framework. Coding, optimization and refactoring, technical analysis. Implementation of new technical solutions based on PHP, Lighttpd, MySQL. Integration with external API using SOAP, Rest, XML, CSV. UI & Web design. Analysis and optimisation of SEO & SEM processes. Technical supervision."
+msgstr "Instandhaltung, Entwicklung und Modernisierung eines gewidmet, urheberrechtlich geschützten, CRM & CMS eCommerce System basiert auf meinem eigenen MVC-Framework. Codierung, Optimierung und Refactoring, technische Analyse. Umsetzung neuer technischer Lösungen wie PHP, Lighttpd, MySQL. Integration external API using SOAP, Rest, XML, CSV. UI & Web Design. Analyse und Optimierung den SEO & SEM-Prozessen. Technische Steuerung."
 
 msgid "cv-languages-polish"
-msgstr "Polisch, Muttersprache"
+msgstr "Polnisch, Muttersprache"
 
 msgid "cv-languages-english"
 msgstr "Englisch (C1), Prof. Kenntnisse"
 
 msgid "cv-languages-german"
-msgstr "Deutsch (B1), gesprächig"
+msgstr "Deutsch (B1), Gesprächig"
 
 msgid "cv-languages-russian"
-msgstr "Russisch (A1), "
+msgstr "Russisch (A1), Anfänger"
+
+msgid "cv-personalTraits-selfDiscipline"
+msgstr "Selbstdiszipliniert"
 
 msgid "cv-personalTraits-organization"
-msgstr "Organisation"
+msgstr "Organization"
+
+msgid "cv-personalTraits-directive"
+msgstr "Directive"
 
 msgid "cv-personalTraits-independence"
 msgstr "Selbständigkeit"
@@ -245,7 +251,7 @@ msgid "cv-mainHeader-mostRecentVersion"
 msgstr "most recent version cv.creolink.pl"
 
 msgid "cv-mainHeader-speciality"
-msgstr "WEB DEVELOPER, PHP SPECIALIST & Projekt MANAGER"
+msgstr "WEB ENTWICKLER, PHP SPEZIALIST & PROJEKTMANAGER"
 
 msgid "cv-mainHeader-tools"
 msgstr "CV created using PHP 7 with ZF3 & TCPDF"

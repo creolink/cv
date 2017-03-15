@@ -127,7 +127,7 @@ msgid "cv-commisions-gpl-description"
 msgstr "Implementacja księgowych programów komputerowych 'Kadry - Płace', 'Płatnik - przekaz elektroniczny'"
 
 msgid "cv-employment-date-present"
-msgstr "...aktualnie"
+msgstr "...wciąż"
 
 msgid "cv-contract-auto1-name"
 msgstr "Inżynier oprogramowania / projekt B2B"
@@ -157,7 +157,7 @@ msgid "cv-contract-forweb-description"
 msgstr "Zaprojektowanie, wykonanie i implementacja dedykowanego, autorskiego systemu B2E, B2B & B2C dla ISP (demo http://mms.4web.pl/). Koordynacja zadań w dziale IT. Raportowanie i dokumentacja. Komunikacja oraz spotkania z klientami. Analizy, testy i integracja systemów. Optymalizacja i refaktoryzacja kodów. Programowanie z MySQL, MSSQL, PostgreSQL, PHP, Perl, Python. Nadzór i utrzymanie istniejących aplikacji."
 
 msgid "cv-contract-gandalf2008-name"
-msgstr "Główny programista PHP, Informatyk / projekt B2E & B2C eCommerce"
+msgstr "Informatyk, Główny programista PHP / projekt B2E & B2C eCommerce"
 
 msgid "cv-contract-gandalf2008-country"
 msgstr "Polska"
@@ -177,8 +177,14 @@ msgstr "Niemiecki (B1), komunikatywny"
 msgid "cv-languages-russian"
 msgstr "Rosyjski (A1), podstawowy"
 
+msgid "cv-personalTraits-selfDiscipline"
+msgstr "Zdyscyplinowany"
+
 msgid "cv-personalTraits-organization"
 msgstr "Organizacja"
+
+msgid "cv-personalTraits-directive"
+msgstr "Dyrektywność"
 
 msgid "cv-personalTraits-independence"
 msgstr "Niezależność"
