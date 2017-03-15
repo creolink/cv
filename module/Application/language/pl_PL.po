@@ -181,25 +181,25 @@ msgid "cv-personalTraits-selfDiscipline"
 msgstr "Zdyscyplinowany"
 
 msgid "cv-personalTraits-organization"
-msgstr "Organizacja"
+msgstr "Zorganizowany"
 
 msgid "cv-personalTraits-directive"
-msgstr "Dyrektywność"
+msgstr "Dyrektywny"
 
 msgid "cv-personalTraits-independence"
-msgstr "Niezależność"
+msgstr "Niezależny"
 
 msgid "cv-personalTraits-reliability"
-msgstr "Wiarygodność"
+msgstr "Wiarygodny"
 
 msgid "cv-personalTraits-solidity"
-msgstr "Rzetelność"
+msgstr "Rzetelny"
 
 msgid "cv-personalTraits-cooperation"
-msgstr "Współpraca"
+msgstr "Współpracujący"
 
 msgid "cv-personalTraits-punctuality"
-msgstr "Punktualność"
+msgstr "Punktualny"
 
 msgid "cv-personalTraits-management"
 msgstr "Zarządzanie"
@@ -208,16 +208,16 @@ msgid "cv-personalTraits-leading"
 msgstr "Kierowanie zespołem"
 
 msgid "cv-personalTraits-assertiveness"
-msgstr "Asertywność"
+msgstr "Asertywny"
 
 msgid "cv-personalTraits-diligence"
-msgstr "Pracowitość"
+msgstr "Pracowity"
 
 msgid "cv-personalTraits-creativity"
-msgstr "Kreatywność"
+msgstr "Kreatywny"
 
 msgid "cv-personalTraits-teamWork"
-msgstr "Praca zespołowa"
+msgstr "Pracujący zespołowo"
 
 msgid "cv-personalTraits-workUnderTimePressure"
 msgstr "Praca pod presją czasu"
