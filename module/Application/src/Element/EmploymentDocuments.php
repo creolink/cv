@@ -41,7 +41,7 @@ class EmploymentDocuments extends AbstractTcpdfDecorator
      * @param float $y
      * @param type $link
      */
-    protected function renderDownloadIcon($y, $link = '')
+    protected function renderDownloadIcon(float $y, string $link = '')
     {
         $this->tcpdf->renderImage(
             Image::DOWNLOAD,

@@ -54,7 +54,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param int $counter
      * @return float
      */
-    private function calculatePositionMargin($counter = 0)
+    private function calculatePositionMargin(int $counter = 0)
     {
         return ($counter) > 0
                 ? self::NEXT_POSITION_MARGIN + self::FIRST_POSITION_MARGIN
@@ -66,7 +66,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderPosition(EmploymentPosition $position, $x, $y)
+    private function renderPosition(EmploymentPosition $position, float $x, float $y)
     {
         $this->renderDate($position, $x, $y);
         $this->renderCompanyName($position, $x, $y);
@@ -83,7 +83,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderDate(EmploymentPosition $position, $x, $y)
+    private function renderDate(EmploymentPosition $position, float $x, float $y)
     {
         $this->getEmploymentDate()
             ->renderDate(
@@ -98,7 +98,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderCompanyName(EmploymentPosition $position, $x, $y)
+    private function renderCompanyName(EmploymentPosition $position, float $x, float $y)
     {
         $employmentCompany = new EmploymentCompanyName($this->tcpdf);
 
@@ -123,7 +123,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderPositionName(EmploymentPosition $position, $x, $y)
+    private function renderPositionName(EmploymentPosition $position, float $x, float $y)
     {
         $employmentPositionName = new EmploymentPositionName($this->tcpdf);
 
@@ -139,7 +139,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderReferences(EmploymentPosition $position, $x, $y)
+    private function renderReferences(EmploymentPosition $position, float $x, float $y)
     {
         $employmentReferences = new EmploymentReferences($this->tcpdf);
 
@@ -155,7 +155,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderRecommendation(EmploymentPosition $position, $x, $y)
+    private function renderRecommendation(EmploymentPosition $position, float $x, float $y)
     {
         $employmentExamples = new EmploymentRecommendation($this->tcpdf);
 
@@ -171,7 +171,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderExamples(EmploymentPosition $position, $x, $y)
+    private function renderExamples(EmploymentPosition $position, float $x, float $y)
     {
         $employmentExamples = new EmploymentExamples($this->tcpdf);
 
@@ -189,7 +189,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderDescription(EmploymentPosition $position, $x, $y)
+    private function renderDescription(EmploymentPosition $position, float $x, float $y)
     {
         $employmentDescription = new EmploymentDescription($this->tcpdf);
 
@@ -207,7 +207,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderCompanyData(EmploymentPosition $position, $x, $y)
+    private function renderCompanyData(EmploymentPosition $position, float $x, float $y)
     {
         $employmentCompanyData = new EmploymentCompanyData($this->tcpdf);
 

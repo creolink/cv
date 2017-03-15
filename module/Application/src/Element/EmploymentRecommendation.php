@@ -21,7 +21,7 @@ class EmploymentRecommendation extends EmploymentDocuments implements Employment
      * @param float $x
      * @param float $y
      */
-    public function renderRecommendation(EmploymentPosition $position, $x, $y)
+    public function renderRecommendation(EmploymentPosition $position, float $x, float $y)
     {
         if ($position->hasRecommendation()) {
             $recommendation = $position->getRecommendation();

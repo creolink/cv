@@ -31,7 +31,7 @@ class Hydrator
      * @param string $entity
      * @param string $file
      */
-    public function __construct($entity, $file)
+    public function __construct(string $entity, string $file)
     {
         $this->file = $file;
         $this->entity = $entity;
@@ -61,7 +61,7 @@ class Hydrator
      * @param array $data
      * @return EntityInterface
      */
-    public function getEntity($data)
+    public function getEntity(array $data)
     {
         $entity = $this->entity;
 
@@ -117,7 +117,7 @@ class Hydrator
      * @param string $path
      * @throws EntityNotFoundException
      */
-    private function validateFile($path)
+    private function validateFile(string $path)
     {
         if (false === file_exists($path)) {
             throw new FileNotFoundException(

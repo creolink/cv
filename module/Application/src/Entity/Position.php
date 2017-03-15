@@ -42,7 +42,7 @@ class Position implements EntityInterface
     /**
      * @param string $name
      */
-    public function setName($name = '')
+    public function setName(string $name = '')
     {
         $this->name = $name;
     }
@@ -58,7 +58,7 @@ class Position implements EntityInterface
     /**
      * @param int $level
      */
-    public function setLevel($level)
+    public function setLevel(int $level)
     {
         $this->level = $level;
     }
@@ -74,7 +74,7 @@ class Position implements EntityInterface
     /**
      * @param int $strength
      */
-    public function setStrength($strength = 4)
+    public function setStrength(int $strength = 4)
     {
         $this->strength = $strength;
     }
@@ -90,7 +90,7 @@ class Position implements EntityInterface
     /**
      * @param bool $disabled
      */
-    public function setDisabled($disabled = false)
+    public function setDisabled(bool $disabled = false)
     {
         $this->disabled = $disabled;
     }

@@ -134,7 +134,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
      * @param string $text
      * @param float $y
      */
-    private function renderPersonalDataRow($name, $text, $y)
+    private function renderPersonalDataRow(string $name, string $text, float $y)
     {
         $this->renderPersonalDataBox($y);
         $this->renderPersonalDataBoxTitle($name, $y);
@@ -145,7 +145,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     /**
      * @param float $y
      */
-    private function renderPersonalDataBox($y)
+    private function renderPersonalDataBox(float $y)
     {
         $this->tcpdf->RoundedRect(
             self::CURSOR_X,
@@ -164,7 +164,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
      * @param string $name
      * @param float $y
      */
-    private function renderPersonalDataBoxTitle($name, $y)
+    private function renderPersonalDataBoxTitle(string $name, float $y)
     {
         $this->tcpdf->SetXY(
             self::CURSOR_X + self::DATA_BOX_TITLE_PADDING_X,
@@ -182,7 +182,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
      * @param string $text
      * @param float $y
      */
-    private function renderPersonalDataText($text, $y)
+    private function renderPersonalDataText(string $text, float $y)
     {
         $this->tcpdf->SetXY(
             $this->tcpdf->getX() + self::DATA_TEXT_MARGIN_X,

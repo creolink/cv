@@ -22,7 +22,7 @@ class EmploymentReferences extends EmploymentDocuments implements EmploymentRefe
      * @param float $x
      * @param float $y
      */
-    public function renderReferences(EmploymentPosition $position, $x, $y)
+    public function renderReferences(EmploymentPosition $position, float $x, float $y)
     {
         if ($position->hasReferences()) {
             $references = $position->getReferences();

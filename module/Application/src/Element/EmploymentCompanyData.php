@@ -36,7 +36,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param float $x
      * @param float $y
      */
-    public function renderCompanyData(EmploymentPosition $position, $x, $y)
+    public function renderCompanyData(EmploymentPosition $position, float $x, float $y)
     {
         if ($position->hasCompanyData()) {
             $this->configure();
@@ -85,7 +85,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param float $x
      * @param float $y
      */
-    private function renderCompanyUrl(EmploymentPosition $position, $x, $y)
+    private function renderCompanyUrl(EmploymentPosition $position, float $x, float $y)
     {
         $this->companyUrlWidth = 0;
 
@@ -124,7 +124,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param float $x
      * @param float $y
      */
-    private function renderContact(EmploymentPosition $position, $x, $y)
+    private function renderContact(EmploymentPosition $position, float $x, float $y)
     {
         if ($position->hasContact() || $position->hasCompanyAddress()) {
             $this->tcpdf->SetXY($x, $y);

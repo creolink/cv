@@ -21,7 +21,7 @@ class Skill extends Position
     /**
      * @param float $experience
      */
-    public function setExperience($experience = 0)
+    public function setExperience(float $experience = 0)
     {
         $this->experience = $experience;
     }

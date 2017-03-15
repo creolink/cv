@@ -26,7 +26,7 @@ class EmploymentExamples extends EmploymentDocuments implements EmploymentRefere
      * @param float $x
      * @param float $y
      */
-    public function renderExamples(EmploymentPosition $position, $x, $y)
+    public function renderExamples(EmploymentPosition $position, float $x, float $y)
     {
         if ($position->hasExamples()) {
             $examples = $position->getExamples();

@@ -26,7 +26,7 @@ class EmploymentDescription extends AbstractTcpdfDecorator
      * @param float $x
      * @param float $y
      */
-    public function renderDescription(EmploymentPosition $position, $x, $y)
+    public function renderDescription(EmploymentPosition $position, float $x, float $y)
     {
         $this->configure();
 

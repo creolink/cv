@@ -40,7 +40,7 @@ class SectionTitle
     /**
      * @param string $title
      */
-    public function setTitle($title = '')
+    public function setTitle(string $title = '')
     {
         $this->title = $title;
     }
@@ -56,7 +56,7 @@ class SectionTitle
     /**
      * @param float $cursorX
      */
-    public function setCursorX($cursorX)
+    public function setCursorX(float $cursorX)
     {
         $this->cursorX = $cursorX;
     }
@@ -72,7 +72,7 @@ class SectionTitle
     /**
      * @param float $cursorY
      */
-    public function setCursorY($cursorY)
+    public function setCursorY(float $cursorY)
     {
         $this->cursorY = $cursorY;
     }
@@ -88,7 +88,7 @@ class SectionTitle
     /**
      * @param float $width
      */
-    public function setWidth($width)
+    public function setWidth(float $width)
     {
         $this->width = $width;
     }

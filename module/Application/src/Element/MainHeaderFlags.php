@@ -51,7 +51,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
      * @param string $language
      * @param float $margin
      */
-    private function renderFlag($flag = '', $language = '', $margin = 0)
+    private function renderFlag(string $flag = '', string $language = '', float $margin = 0)
     {
         $this->tcpdf->renderImage(
             $flag,

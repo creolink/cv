@@ -27,7 +27,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param float $x
      * @param float $y
      */
-    public function renderDate(EmploymentPosition $position, $x, $y)
+    public function renderDate(EmploymentPosition $position, float $x, float $y)
     {
         $this->configure();
 

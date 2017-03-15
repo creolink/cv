@@ -145,8 +145,14 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @param string $url
      * @param float $move
      */
-    public function renderIcon($x, $y, $image, $text, $url, $move = 0)
-    {
+    public function renderIcon(
+        float $x,
+        float $y,
+        string $image,
+        string $text,
+        string $url,
+        float $move = 0
+    ) {
         $this->SetFont($this->verdana, '', 6);
 
         $this->Image(PdfConfig::PATH_IMAGES . $image, $x, $y, 4, 4, 'PNG');
@@ -156,10 +162,24 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Renders Image
+     *
+     * @param string $file
+     * @param float $x
+     * @param float $y
+     * @param float $w
+     * @param float $h
+     * @param string $link
+     * @return type
      */
-    public function renderImage($file, $x, $y, $w, $h, $link = '')
-    {
+    public function renderImage(
+        string $file,
+        float $x,
+        float $y,
+        float $w,
+        float $h,
+        string $link = ''
+    ) {
         return $this->Image(
             PdfConfig::PATH_IMAGES . $file,
             $x,
@@ -217,7 +237,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @param string $font
      * @return string
      */
-    private function registerFont($font)
+    private function registerFont(string $font)
     {
         return TCPDF_FONTS::addTTFfont(
             PdfConfig::PATH_FONTS . $font
@@ -229,7 +249,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      *
      * @param float $y
      */
-    private function renderPageNumber($y)
+    private function renderPageNumber(float $y)
     {
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
@@ -243,7 +263,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @param float $x
      * @param float $y
      */
-    private function renderHeaderPhoto($x, $y)
+    private function renderHeaderPhoto(float $x, float $y)
     {
         $width = 4.5;
         $height = 5.5;

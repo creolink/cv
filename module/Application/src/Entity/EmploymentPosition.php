@@ -113,7 +113,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $name
      */
-    public function setName($name = '')
+    public function setName(string $name = '')
     {
         $this->name = $name;
     }
@@ -129,7 +129,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $dateStart
      */
-    public function setDateStart($dateStart = '')
+    public function setDateStart(string $dateStart = '')
     {
         $this->dateStart = $dateStart;
     }
@@ -143,9 +143,9 @@ class EmploymentPosition implements EntityInterface
     }
 
     /**
-     * @param string $dateEnd
+     * @param string|null $dateEnd
      */
-    public function setDateEnd($dateEnd = '')
+    public function setDateEnd(string $dateEnd = null)
     {
         $this->dateEnd = $dateEnd;
     }
@@ -165,7 +165,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $company
      */
-    public function setCompany($company = '')
+    public function setCompany(string $company = '')
     {
         $this->company = $company;
     }
@@ -181,7 +181,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $address
      */
-    public function setAddress($address = '')
+    public function setAddress(string $address = '')
     {
         $this->address = $address;
     }
@@ -205,7 +205,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $country
      */
-    public function setCountry($country = '')
+    public function setCountry(string $country = '')
     {
         $this->country = $country;
     }
@@ -229,7 +229,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $description
      */
-    public function setDescription($description = '')
+    public function setDescription(string $description = '')
     {
         $this->description = $description;
     }
@@ -245,7 +245,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $examples
      */
-    public function setExamples($examples = '')
+    public function setExamples(string $examples = '')
     {
         $this->examples = $examples;
     }
@@ -269,7 +269,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $references
      */
-    public function setReferences($references = '')
+    public function setReferences(string $references = '')
     {
         $this->references = $references;
     }
@@ -293,7 +293,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $recommendation
      */
-    public function setRecommendation($recommendation = '')
+    public function setRecommendation(string $recommendation = '')
     {
         $this->recommendation = $recommendation;
     }
@@ -317,7 +317,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $contact
      */
-    public function setContact($contact = '')
+    public function setContact(string $contact = '')
     {
         $this->contact = $contact;
     }
@@ -341,7 +341,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param string $companyUrl
      */
-    public function setCompanyUrl($companyUrl = '')
+    public function setCompanyUrl(string $companyUrl = '')
     {
         $this->companyUrl = $companyUrl;
     }
@@ -385,7 +385,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param bool $partTime
      */
-    public function setPartTime($partTime = false)
+    public function setPartTime(bool $partTime = false)
     {
         $this->partTime = $partTime;
     }
@@ -401,7 +401,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @param bool $disabled
      */
-    public function setDisabled($disabled = false)
+    public function setDisabled(bool $disabled = false)
     {
         $this->disabled = $disabled;
     }

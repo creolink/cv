@@ -29,7 +29,7 @@ class LocalizationService
     /**
      * @param string $routedLocale
      */
-    public function __construct($routedLocale)
+    public function __construct(string $routedLocale)
     {
         $this->locale = $routedLocale;
     }

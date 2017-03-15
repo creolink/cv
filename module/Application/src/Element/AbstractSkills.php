@@ -74,7 +74,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param int $counter
      * @return float
      */
-    private function getCircleCenter($y, $counter)
+    private function getCircleCenter(float $y, int $counter)
     {
         return $y
             + (self::POSITION_NEXT_LINE * $counter)
@@ -150,7 +150,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderCircles(Position $position, $x, $y)
+    private function renderCircles(Position $position, float $x, float $y)
     {
         for ($counter = 0; $counter < $position->getStrength(); $counter++) {
             $this->renderCircle(
@@ -178,7 +178,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderCircle($x, $y)
+    private function renderCircle(float $x, float $y)
     {
         $this->tcpdf->Circle(
             $x,
@@ -199,7 +199,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $x
      * @param float $y
      */
-    private function renderFilledCircle($x, $y)
+    private function renderFilledCircle(float $x, float $y)
     {
         $this->tcpdf->Circle(
             $x,
@@ -241,7 +241,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $years
      * @return string
      */
-    private function createExperienceText($years = 1)
+    private function createExperienceText(float $years = 1)
     {
         if ($years < 1) {
             return sprintf(
