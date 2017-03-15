@@ -330,7 +330,7 @@ msgid "cv-skills-shortcut-years"
 msgstr "(%sy)"
 
 msgid "cv-personality-sectionTitle"
-msgstr "Osobowość"
+msgstr "Cechy personalne"
 
 msgid "cv-footer-recruitmentAgreement"
 msgstr ""

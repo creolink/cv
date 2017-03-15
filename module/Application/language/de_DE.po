@@ -182,40 +182,40 @@ msgid "cv-personalTraits-selfDiscipline"
 msgstr "Selbstdiszipliniert"
 
 msgid "cv-personalTraits-organization"
-msgstr "Organization"
+msgstr "Organisiert"
 
 msgid "cv-personalTraits-directive"
-msgstr "Directive"
+msgstr "Direktive"
 
 msgid "cv-personalTraits-independence"
-msgstr "Selbständigkeit"
+msgstr "Unabhängig"
 
 msgid "cv-personalTraits-reliability"
-msgstr "Zuverlässigkeit"
+msgstr "Zuverlässig"
 
 msgid "cv-personalTraits-solidity"
-msgstr "Solidität"
+msgstr "Solide"
 
 msgid "cv-personalTraits-cooperation"
-msgstr "Zusammenarbeit"
+msgstr "Kooperative"
 
 msgid "cv-personalTraits-punctuality"
-msgstr "Pünktlichkeit"
+msgstr "Pünktlich"
 
 msgid "cv-personalTraits-management"
 msgstr "Management"
 
 msgid "cv-personalTraits-leading"
-msgstr "Leitung"
+msgstr "Führer"
 
 msgid "cv-personalTraits-assertiveness"
-msgstr "Durchsetzungsfähigkeit"
+msgstr "Durchsetzungsfähig"
 
 msgid "cv-personalTraits-diligence"
-msgstr "Sorgfalt"
+msgstr "Fleißig"
 
 msgid "cv-personalTraits-creativity"
-msgstr "Kreativität"
+msgstr "Kreative"
 
 msgid "cv-personalTraits-teamWork"
 msgstr "Teamarbeit"
@@ -331,7 +331,7 @@ msgid "cv-skills-shortcut-years"
 msgstr "(%sJ)"
 
 msgid "cv-personality-sectionTitle"
-msgstr "Persönlichkeit"
+msgstr "Charaktereigenschaften"
 
 msgid "cv-footer-recruitmentAgreement"
 msgstr ""

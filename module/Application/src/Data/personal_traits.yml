@@ -1,5 +1,5 @@
 positions:
-    - { name: 'cv-personalTraits-selfDiscipline ', level: 4, strength: 4 }
+    - { name: 'cv-personalTraits-selfDiscipline', level: 4, strength: 4 }
     - { name: 'cv-personalTraits-organization', level: 4, strength: 4 }
     - { name: 'cv-personalTraits-independence', level: 4, strength: 4 }
     - { name: 'cv-personalTraits-solidity', level: 4, strength: 4 }

@@ -209,7 +209,7 @@ msgid "cv-personalTraits-leading"
 msgstr "Leader"
 
 msgid "cv-personalTraits-assertiveness"
-msgstr "Assertiv"
+msgstr "Assertive"
 
 msgid "cv-personalTraits-diligence"
 msgstr "Diligent"
@@ -331,7 +331,7 @@ msgid "cv-skills-shortcut-years"
 msgstr "(%sy)"
 
 msgid "cv-personality-sectionTitle"
-msgstr "Personality"
+msgstr "Personal traits"
 
 msgid "cv-footer-recruitmentAgreement"
 msgstr ""
