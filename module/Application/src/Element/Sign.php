@@ -14,18 +14,18 @@ use Application\Config\Font;
 
 class Sign extends AbstractPageDecorator
 {
-    const CURSOR_X = 45;
+    const CURSOR_X = 30;
     const CURSOR_Y = 260;
 
     const FONT_SIZE = 7;
 
-    const SIGNATURE_LINE_WIDTH = 125;
+    const SIGNATURE_LINE_WIDTH = 140;
     const SIGNATURE_MARGIN_Y = -5;
     const SIGNATURE_MARGIN_X = 15;
 
     const CAPTION_MARGIN_X = 4.5;
     const CAPTION_MARGIN_Y = -7;
-    const CAPTION_WIDTH = 120;
+    const CAPTION_WIDTH = 135;
     const CAPTION_LINE_HEIGHT = 4;
 
     /**

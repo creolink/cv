@@ -260,7 +260,7 @@ msgid "cv-technicalSkills-sectionTitle"
 msgstr "Technisheerfahrung"
 
 msgid "cv-sign-content"
-msgstr "Sollten Sie mein Wissen und meine Berufserfahrung interessant finden und es würde bei der laufnahme Ihres unternehmens helfen, bitte kontaktieren Sie mich per Telefon, per E-mail oder Skype."
+msgstr "Sollten Sie mein Wissen und meine Berufserfahrung interessant finden und es würde bei der laufnahme Ihres Unternehmens helfen, bitte kontaktieren Sie mich per Telefon, per E-mail oder Skype."
 
 msgid "cv-mainHeader-personalData-experience"
 msgstr "Erfahrung"
