@@ -38,8 +38,10 @@ class MainHeader extends AbstractPageDecorator
 
     /**
      * Creates Main CV Header
+     *
+     * @return TcpdfInterface
      */
-    private function renderMainHeader()
+    private function renderMainHeader(): TcpdfInterface
     {
         $this->configure();
 

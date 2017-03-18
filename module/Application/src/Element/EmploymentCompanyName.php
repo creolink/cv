@@ -61,7 +61,7 @@ class EmploymentCompanyName extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function getCompany(EmploymentPosition $position)
+    private function getCompany(EmploymentPosition $position): string
     {
         return $this->trans(
             $position->getCompany()

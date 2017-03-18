@@ -50,7 +50,7 @@ class Position implements EntityInterface
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -66,7 +66,7 @@ class Position implements EntityInterface
     /**
      * @return int
      */
-    public function getLevel()
+    public function getLevel(): int
     {
         return $this->level;
     }
@@ -82,7 +82,7 @@ class Position implements EntityInterface
     /**
      * @return int
      */
-    public function getStrength()
+    public function getStrength(): int
     {
         return $this->strength;
     }
@@ -98,7 +98,7 @@ class Position implements EntityInterface
     /**
      * @return bool
      */
-    public function isDisabled()
+    public function isDisabled(): bool
     {
         return $this->disabled;
     }

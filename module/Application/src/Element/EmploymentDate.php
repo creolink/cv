@@ -44,7 +44,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return float
      */
-    public function getWidth(EmploymentPosition $position)
+    public function getWidth(EmploymentPosition $position): float
     {
         return $this->tcpdf->GetStringWidth(
             $this->getDate($position)
@@ -73,7 +73,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function getDate(EmploymentPosition $position)
+    private function getDate(EmploymentPosition $position): string
     {
         return $this->getStartDate($position)
             . self::SEPARATOR_MINUS
@@ -86,7 +86,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function getStartDate(EmploymentPosition $position)
+    private function getStartDate(EmploymentPosition $position): string
     {
         return $this->localizeMonthAndYear(
             $position->getDateStart()
@@ -97,7 +97,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function getFinishDate(EmploymentPosition $position)
+    private function getFinishDate(EmploymentPosition $position): string
     {
         $dateEnd = $position->getDateEnd();
 
@@ -111,7 +111,7 @@ class EmploymentDate extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function getPartTime(EmploymentPosition $position)
+    private function getPartTime(EmploymentPosition $position): string
     {
         return $position->isPartTime()
             ? self::SEPARATOR_COMMA . $this->trans('cv-employment-date-partTime')

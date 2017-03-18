@@ -39,7 +39,7 @@ class Hobby extends AbstractSection
     /**
      * @return TcpdfInterface
      */
-    private function renderHobby()
+    private function renderHobby(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -73,7 +73,7 @@ class Hobby extends AbstractSection
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return $this->trans('cv-hobby-content')
             . self::NEW_LINE;
@@ -82,7 +82,7 @@ class Hobby extends AbstractSection
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

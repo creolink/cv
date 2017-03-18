@@ -35,7 +35,7 @@ class SoftwareAndTools extends AbstractSkills
     /**
      * @return TcpdfInterface
      */
-    private function renderKnownTools()
+    private function renderKnownTools(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -54,7 +54,7 @@ class SoftwareAndTools extends AbstractSkills
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

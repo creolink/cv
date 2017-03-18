@@ -29,7 +29,7 @@ class Skill extends Position
     /**
      * @return float
      */
-    public function getExperience()
+    public function getExperience(): float
     {
         return $this->experience;
     }

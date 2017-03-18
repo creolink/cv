@@ -44,7 +44,7 @@ class Sign extends AbstractPageDecorator
     /**
      * @return TcpdfInterface
      */
-    private function renderSign()
+    private function renderSign(): TcpdfInterface
     {
         $this->configure();
 
@@ -81,6 +81,9 @@ class Sign extends AbstractPageDecorator
         );
     }
 
+    /**
+     * Renders signature text
+     */
     private function renderCaption()
     {
         $this->tcpdf->SetXY(
@@ -97,6 +100,9 @@ class Sign extends AbstractPageDecorator
         );
     }
 
+    /**
+     * Renders signature image
+     */
     private function renderSignature()
     {
         $this->tcpdf->Line(
@@ -115,7 +121,10 @@ class Sign extends AbstractPageDecorator
         );
     }
 
-    private function getContent()
+    /**
+     * @return string
+     */
+    private function getContent(): string
     {
         return $this->trans('cv-sign-content')
             . self::NEW_LINE;

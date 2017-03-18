@@ -53,7 +53,7 @@ class NormalizedDateService
      * @param  DateTime|int|array|string $date
      * @return string
      */
-    public function getLocalizedDate(DateTime $date)
+    public function getLocalizedDate(DateTime $date): string
     {
         return $this->format(
             self::LOCALIZED_DATE_PATTERN,
@@ -67,7 +67,7 @@ class NormalizedDateService
      * @param  DateTime|int|array|string $date
      * @return string
      */
-    public function getMonthAndYear(DateTime $date)
+    public function getMonthAndYear(DateTime $date): string
     {
         return $this->format(
             self::LOCALIZED_MONTH_AND_YEAR,
@@ -79,7 +79,7 @@ class NormalizedDateService
      * @param  DateTime|int|array|string $date
      * @return DateTime|int|array
      */
-    private function createDate(DateTime $date)
+    private function createDate(DateTime $date): DateTime
     {
         if (gettype($date) === 'string') {
             $date = new DateTime($date);
@@ -93,7 +93,7 @@ class NormalizedDateService
      * @param DateTime|int|array $date
      * @return string
      */
-    private function format(string $pattern, DateTime $date)
+    private function format(string $pattern, DateTime $date): string
     {
         $this->formatter->setPattern($pattern);
 

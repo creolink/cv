@@ -48,7 +48,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
      *
      * @return float
      */
-    public function getWidth()
+    public function getWidth(): float
     {
         if ($this->width > 0) {
             return $this->width;
@@ -66,7 +66,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
      *
      * @return float
      */
-    public function calculatePointX()
+    public function calculatePointX(): float
     {
         return self::TITLE_CURSOR_X
             + (self::TITLE_CELL_WIDTH - $this->getWidth()) / 2
@@ -94,7 +94,7 @@ class MainHeaderSpeciality extends AbstractTcpdfDecorator implements MainHeaderT
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return mb_strtoupper(
             $this->trans(

@@ -87,8 +87,9 @@ class NormalizedTranslationService implements TranslatorInterface
      * Removes polish letters from string
      *
      * @param string $message
+     * @return string
      */
-    private function normalize($message)
+    private function normalize($message): string
     {
         if (Locale::LOCALE_PL === $this->translator->getLocale()) {
             return $message;

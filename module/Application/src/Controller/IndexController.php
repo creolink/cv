@@ -85,7 +85,7 @@ class IndexController extends BaseController
             'Expires' => 'Sat, 26 Jul 1997 05:00:00 GMT',
             'Last-Modified' => gmdate('D, d M Y H:i:s').' GMT',
             'Content-Disposition' => 'inline; filename="' . basename(PdfConfig::FILE_NAME). '"',
-            'Content-Length' => strlen($pdf)
+            'Content-Length' => strlen($pdf),
         ];
     }
 }

@@ -19,7 +19,7 @@ abstract class AbstractBaseFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @return MvcEvent
      */
-    protected function getMvcEvent(ContainerInterface $container)
+    protected function getMvcEvent(ContainerInterface $container): MvcEvent
     {
         return $container->get('Application')
                 ->getMvcEvent();
@@ -29,7 +29,7 @@ abstract class AbstractBaseFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @return RouteMatch
      */
-    protected function getRouteMatch(ContainerInterface $container)
+    protected function getRouteMatch(ContainerInterface $container): RouteMatch
     {
         return $this->getMvcEvent($container)
             ->getRouteMatch();
@@ -39,7 +39,7 @@ abstract class AbstractBaseFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @return string
      */
-    protected function getLocale(ContainerInterface $container)
+    protected function getLocale(ContainerInterface $container): string
     {
         return $this->getRouteMatch($container)
             ->getParam(Locale::ROUTER_LOCALE_PARAM);

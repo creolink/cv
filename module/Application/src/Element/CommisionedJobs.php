@@ -33,7 +33,7 @@ class CommisionedJobs extends AbstractEmployment
     /**
      * @return TcpdfInterface
      */
-    private function renderCommisionedJobs()
+    private function renderCommisionedJobs(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -52,7 +52,7 @@ class CommisionedJobs extends AbstractEmployment
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

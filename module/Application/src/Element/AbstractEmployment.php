@@ -113,7 +113,7 @@ abstract class AbstractEmployment extends AbstractSection
     /**
      * @return EmploymentDate
      */
-    private function getEmploymentDate()
+    private function getEmploymentDate(): EmploymentDate
     {
         return new EmploymentDate($this->tcpdf);
     }

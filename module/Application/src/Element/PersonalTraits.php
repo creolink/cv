@@ -35,7 +35,7 @@ class PersonalTraits extends AbstractSkills
     /**
      * @return TcpdfInterface
      */
-    private function renderPersonalSkills()
+    private function renderPersonalSkills(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -54,7 +54,7 @@ class PersonalTraits extends AbstractSkills
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

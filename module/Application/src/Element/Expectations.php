@@ -38,7 +38,7 @@ class Expectations extends AbstractSection
     /**
      * @return TcpdfInterface
      */
-    private function renderExpectations()
+    private function renderExpectations(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -72,7 +72,7 @@ class Expectations extends AbstractSection
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return $this->trans('cv-expectations-content')
             . self::NEW_LINE;
@@ -81,7 +81,7 @@ class Expectations extends AbstractSection
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

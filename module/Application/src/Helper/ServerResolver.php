@@ -14,7 +14,7 @@ class ServerResolver
     /**
      * @return string
      */
-    public static function getName()
+    public static function getName(): string
     {
         return (APPLICATION_ENV === DEVELOPMENT_ENV)
             ? $_SERVER['SERVER_NAME']

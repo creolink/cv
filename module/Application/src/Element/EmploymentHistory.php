@@ -35,7 +35,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * @return TcpdfInterface
      */
-    private function renderEmploymentHistory()
+    private function renderEmploymentHistory(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -54,7 +54,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

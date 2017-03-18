@@ -74,7 +74,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param int $counter
      * @return float
      */
-    private function getCircleCenter(float $y, int $counter)
+    private function getCircleCenter(float $y, int $counter): float
     {
         return $y
             + (self::POSITION_NEXT_LINE * $counter)
@@ -222,7 +222,7 @@ abstract class AbstractSkills extends AbstractSection
      *
      * @return array
      */
-    private function getCircleLineStyle()
+    private function getCircleLineStyle(): array
     {
         return [
             'width' => self::CIRCLE_LINE_WIDTH,
@@ -241,7 +241,7 @@ abstract class AbstractSkills extends AbstractSection
      * @param float $years
      * @return string
      */
-    private function createExperienceText(float $years = 1)
+    private function createExperienceText(float $years = 1): string
     {
         if ($years < 1) {
             return sprintf(
