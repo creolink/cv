@@ -121,7 +121,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -137,7 +137,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return \DateTime
      */
-    public function getDateStart()
+    public function getDateStart(): \DateTime
     {
         return new \DateTime($this->dateStart);
     }
@@ -173,7 +173,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getCompany()
+    public function getCompany(): string
     {
         return $this->company;
     }
@@ -189,7 +189,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getAddress()
+    public function getAddress(): string
     {
         return $this->address;
     }
@@ -197,7 +197,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasAddress()
+    public function hasAddress(): bool
     {
         return false === empty($this->address);
     }
@@ -213,7 +213,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getCountry()
+    public function getCountry(): string
     {
         return $this->country;
     }
@@ -221,7 +221,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasCountry()
+    public function hasCountry(): bool
     {
         return false === empty($this->country);
     }
@@ -237,7 +237,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -253,7 +253,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getExamples()
+    public function getExamples(): string
     {
         return $this->examples;
     }
@@ -261,7 +261,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasExamples()
+    public function hasExamples(): bool
     {
         return false === empty($this->examples);
     }
@@ -277,7 +277,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getReferences()
+    public function getReferences(): string
     {
         return $this->references;
     }
@@ -285,7 +285,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasReferences()
+    public function hasReferences(): bool
     {
         return false === empty($this->references);
     }
@@ -301,7 +301,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getRecommendation()
+    public function getRecommendation(): string
     {
         return $this->recommendation;
     }
@@ -309,7 +309,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasRecommendation()
+    public function hasRecommendation(): bool
     {
         return false === empty($this->recommendation);
     }
@@ -325,7 +325,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getContact()
+    public function getContact(): string
     {
         return $this->contact;
     }
@@ -333,7 +333,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasContact()
+    public function hasContact(): bool
     {
         return false === empty($this->contact);
     }
@@ -349,7 +349,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return string
      */
-    public function getCompanyUrl()
+    public function getCompanyUrl(): string
     {
         return $this->companyUrl;
     }
@@ -357,7 +357,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasCompanyUrl()
+    public function hasCompanyUrl(): bool
     {
         return false === empty($this->companyUrl);
     }
@@ -365,7 +365,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasCompanyData()
+    public function hasCompanyData(): bool
     {
         return $this->hasCompanyUrl()
             || $this->hasAddress()
@@ -376,7 +376,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function hasCompanyAddress()
+    public function hasCompanyAddress(): bool
     {
         return $this->hasAddress()
             || $this->hasCountry();
@@ -393,7 +393,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function isPartTime()
+    public function isPartTime(): bool
     {
         return $this->partTime;
     }
@@ -409,7 +409,7 @@ class EmploymentPosition implements EntityInterface
     /**
      * @return bool
      */
-    public function isDisabled()
+    public function isDisabled(): bool
     {
         return $this->disabled;
     }

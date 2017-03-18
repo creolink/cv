@@ -144,7 +144,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function createCompanyData(EmploymentPosition $position)
+    private function createCompanyData(EmploymentPosition $position): string
     {
         return $this->createContactText($position)
             . $this->createAddressText($position);
@@ -154,7 +154,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function createContactText(EmploymentPosition $position)
+    private function createContactText(EmploymentPosition $position): string
     {
         $text = '';
 
@@ -178,7 +178,7 @@ class EmploymentCompanyData extends AbstractTcpdfDecorator
      * @param EmploymentPosition $position
      * @return string
      */
-    private function createAddressText(EmploymentPosition $position)
+    private function createAddressText(EmploymentPosition $position): string
     {
         $text = '';
 

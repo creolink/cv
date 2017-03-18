@@ -11,6 +11,7 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Image;
 use Application\Config\Color;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class Sign extends AbstractPageDecorator
 {
@@ -31,7 +32,7 @@ class Sign extends AbstractPageDecorator
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -43,7 +44,7 @@ class Sign extends AbstractPageDecorator
     /**
      * @return TcpdfInterface
      */
-    private function renderSign()
+    private function renderSign(): TcpdfInterface
     {
         $this->configure();
 
@@ -80,6 +81,9 @@ class Sign extends AbstractPageDecorator
         );
     }
 
+    /**
+     * Renders signature text
+     */
     private function renderCaption()
     {
         $this->tcpdf->SetXY(
@@ -96,6 +100,9 @@ class Sign extends AbstractPageDecorator
         );
     }
 
+    /**
+     * Renders signature image
+     */
     private function renderSignature()
     {
         $this->tcpdf->Line(
@@ -114,7 +121,10 @@ class Sign extends AbstractPageDecorator
         );
     }
 
-    private function getContent()
+    /**
+     * @return string
+     */
+    private function getContent(): string
     {
         return $this->trans('cv-sign-content')
             . self::NEW_LINE;

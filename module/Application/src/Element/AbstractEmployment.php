@@ -54,7 +54,7 @@ abstract class AbstractEmployment extends AbstractSection
      * @param int $counter
      * @return float
      */
-    private function calculatePositionMargin(int $counter = 0)
+    private function calculatePositionMargin(int $counter = 0): float
     {
         return ($counter) > 0
                 ? self::NEXT_POSITION_MARGIN + self::FIRST_POSITION_MARGIN
@@ -113,7 +113,7 @@ abstract class AbstractEmployment extends AbstractSection
     /**
      * @return EmploymentDate
      */
-    private function getEmploymentDate()
+    private function getEmploymentDate(): EmploymentDate
     {
         return new EmploymentDate($this->tcpdf);
     }

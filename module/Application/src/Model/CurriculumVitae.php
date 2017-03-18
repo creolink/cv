@@ -41,7 +41,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         return $this;
     }
@@ -69,7 +69,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     /**
      * @return NormalizedTranslationService
      */
-    public function getTranslator()
+    public function getTranslator(): NormalizedTranslationService
     {
         return $this->translator;
     }
@@ -77,7 +77,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     /**
      * @return NormalizedDateService
      */
-    public function getDate()
+    public function getDate(): NormalizedDateService
     {
         return $this->dateService;
     }
@@ -170,7 +170,6 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @param float $w
      * @param float $h
      * @param string $link
-     * @return type
      */
     public function renderImage(
         string $file,
@@ -180,7 +179,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         float $h,
         string $link = ''
     ) {
-        return $this->Image(
+        $this->Image(
             PdfConfig::PATH_IMAGES . $file,
             $x,
             $y,
@@ -196,9 +195,9 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      *
      * @return string
      */
-    public function outputPdf()
+    public function outputPdf(): string
     {
-        $this->Output(PdfConfig::FILE_NAME);
+        return $this->Output(PdfConfig::FILE_NAME, 'S');
     }
 
     /**
@@ -237,7 +236,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @param string $font
      * @return string
      */
-    private function registerFont(string $font)
+    private function registerFont(string $font): string
     {
         return TCPDF_FONTS::addTTFfont(
             PdfConfig::PATH_FONTS . $font

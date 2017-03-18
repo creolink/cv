@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Entity\SectionTitle;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class Education extends AbstractSection
 {
@@ -25,7 +26,7 @@ class Education extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -37,7 +38,7 @@ class Education extends AbstractSection
     /**
      * @return TcpdfInterface
      */
-    private function renderEducation()
+    private function renderEducation(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -71,7 +72,7 @@ class Education extends AbstractSection
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return $this->trans('cv-education-content')
             . self::NEW_LINE;
@@ -80,7 +81,7 @@ class Education extends AbstractSection
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

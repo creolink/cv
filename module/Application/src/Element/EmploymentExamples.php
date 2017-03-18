@@ -55,7 +55,7 @@ class EmploymentExamples extends EmploymentDocuments implements EmploymentRefere
      *
      * @return float
      */
-    private function calculateMargin(EmploymentPosition $position)
+    private function calculateMargin(EmploymentPosition $position): float
     {
         $margin = 0;
 

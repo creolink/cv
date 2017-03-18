@@ -11,6 +11,7 @@ use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Skill;
 use Application\Hydrator\Hydrator;
+use Application\Model\TcpdfInterface;
 
 class SoftwareAndTools extends AbstractSkills
 {
@@ -22,7 +23,7 @@ class SoftwareAndTools extends AbstractSkills
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -34,7 +35,7 @@ class SoftwareAndTools extends AbstractSkills
     /**
      * @return TcpdfInterface
      */
-    private function renderKnownTools()
+    private function renderKnownTools(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -53,7 +54,7 @@ class SoftwareAndTools extends AbstractSkills
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

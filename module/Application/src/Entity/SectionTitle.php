@@ -48,7 +48,7 @@ class SectionTitle
     /**
      * @return string
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
@@ -64,7 +64,7 @@ class SectionTitle
     /**
      * @return float
      */
-    public function getCursorX()
+    public function getCursorX(): float
     {
         return $this->cursorX;
     }
@@ -80,7 +80,7 @@ class SectionTitle
     /**
      * @return float
      */
-    public function getCursorY()
+    public function getCursorY(): float
     {
         return $this->cursorY;
     }
@@ -96,7 +96,7 @@ class SectionTitle
     /**
      * @return float
      */
-    public function getWidth()
+    public function getWidth(): float
     {
         return $this->width;
     }

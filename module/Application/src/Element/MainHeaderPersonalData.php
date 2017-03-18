@@ -65,7 +65,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     /**
      * @return array
      */
-    private function getSortedPositions()
+    private function getSortedPositions(): array
     {
         return [
             'cv-mainHeader-personalData-experience' => $this->createExperienceText(),
@@ -81,7 +81,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     /**
      * @return string
      */
-    private function createExperienceText()
+    private function createExperienceText(): string
     {
         return sprintf(
             $this->trans('cv-mainHeader-personalData-years'),
@@ -94,7 +94,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     /**
      * @return string
      */
-    private function createAddressText()
+    private function createAddressText(): string
     {
         return PersonalData::STREET . self::NEW_LINE
             . PersonalData::POST_CODE . ' ' . PersonalData::CITY . self::NEW_LINE

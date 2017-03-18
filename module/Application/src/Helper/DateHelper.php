@@ -31,7 +31,7 @@ class DateHelper
      * @param string $date
      * @return string
      */
-    public static function getDate(string $date)
+    public static function getDate(string $date): string
     {
         $currentLocale = setlocale(LC_TIME, "0");
 
@@ -54,7 +54,7 @@ class DateHelper
      * @param int $year
      * @return int
      */
-    public static function getPassedYears(int $year)
+    public static function getPassedYears(int $year): int
     {
         return date("Y") - $year;
     }
@@ -64,7 +64,7 @@ class DateHelper
      * @param string $formatedDate
      * @return string
      */
-    private static function getPolishMonths(int $date, string $formatedDate = '')
+    private static function getPolishMonths(int $date, string $formatedDate = ''): string
     {
         $month = date("n", $date);
         $monthNames = $this->polishMonths[$month];

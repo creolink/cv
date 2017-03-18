@@ -11,6 +11,7 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
+use Application\Model\TcpdfInterface;
 
 class QRCode extends AbstractPageDecorator
 {
@@ -35,7 +36,7 @@ class QRCode extends AbstractPageDecorator
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -45,7 +46,7 @@ class QRCode extends AbstractPageDecorator
     /**
      * @return TcpdfInterface
      */
-    private function renderQRCode()
+    private function renderQRCode(): TcpdfInterface
     {
         $this->tcpdf->write2DBarcode(
             $this->getBarcodeData(),
@@ -64,7 +65,7 @@ class QRCode extends AbstractPageDecorator
     /**
      * @return string
      */
-    private function getBarcodeData()
+    private function getBarcodeData(): string
     {
         return 'BEGIN:VCARD'. "\n"
             . 'VERSION:2.1' . "\n"
@@ -86,7 +87,7 @@ class QRCode extends AbstractPageDecorator
      *
      * @return array
      */
-    private function getStyles()
+    private function getStyles(): array
     {
         return [
             'border' => self::BORDER,

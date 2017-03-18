@@ -42,7 +42,7 @@ class Hydrator
      *
      * @return EntityInterface[]
      */
-    public function getList()
+    public function getList(): array
     {
         $list = [];
 
@@ -61,7 +61,7 @@ class Hydrator
      * @param array $data
      * @return EntityInterface
      */
-    public function getEntity(array $data)
+    public function getEntity(array $data): EntityInterface
     {
         $entity = $this->entity;
 
@@ -75,7 +75,7 @@ class Hydrator
     /**
      * @return array
      */
-    private function getFileData()
+    private function getFileData(): array
     {
         $path = __DIR__ . self::PATH . $this->file;
 
@@ -89,7 +89,7 @@ class Hydrator
     /**
      * @return ZendHydrator
      */
-    private function getHydrator()
+    private function getHydrator(): ZendHydrator
     {
         return new ZendHydrator();
     }

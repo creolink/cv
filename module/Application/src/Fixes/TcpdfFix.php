@@ -667,7 +667,7 @@ class TcpdfFix extends TCPDF
      * @param string $annots
      * @return string
      */
-    private function fixAnnotation(array $pl, int $annotationObjectId = 0, string $annots = '')
+    private function fixAnnotation(array $pl, int $annotationObjectId = 0, string $annots = ''): string
     {
         if (strtolower($pl['opt']['subtype']) !== 'link') {
             $annots .= ' /Contents '.$this->_textstring($pl['txt'], $annotationObjectId);

@@ -12,6 +12,7 @@ use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
 use Application\Entity\SectionTitle;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class CareerGoals extends AbstractSection
 {
@@ -33,7 +34,7 @@ class CareerGoals extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -45,7 +46,7 @@ class CareerGoals extends AbstractSection
     /**
      * @return TcpdfInterface
      */
-    private function renderCareerGoals()
+    private function renderCareerGoals(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -108,7 +109,7 @@ class CareerGoals extends AbstractSection
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
@@ -124,7 +125,7 @@ class CareerGoals extends AbstractSection
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return sprintf(
             $this->trans('cv-careerGoals-content'),
@@ -135,7 +136,7 @@ class CareerGoals extends AbstractSection
     /**
      * @return int
      */
-    private function getWorkedYears()
+    private function getWorkedYears(): int
     {
         return DateHelper::getPassedYears(
             PersonalData::WORK_START_YEAR

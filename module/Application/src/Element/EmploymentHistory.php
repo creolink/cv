@@ -11,6 +11,7 @@ use Application\Element\AbstractEmployment;
 use Application\Entity\SectionTitle;
 use Application\Entity\EmploymentPosition;
 use Application\Hydrator\Hydrator;
+use Application\Model\TcpdfInterface;
 
 class EmploymentHistory extends AbstractEmployment
 {
@@ -22,7 +23,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -34,7 +35,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * @return TcpdfInterface
      */
-    private function renderEmploymentHistory()
+    private function renderEmploymentHistory(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -53,7 +54,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);

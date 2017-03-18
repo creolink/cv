@@ -11,6 +11,7 @@ use Application\Element\AbstractSection;
 use Application\Config\PersonalData;
 use Application\Config\Font;
 use Application\Entity\SectionTitle;
+use Application\Model\TcpdfInterface;
 
 class AboutMe extends AbstractSection
 {
@@ -27,7 +28,7 @@ class AboutMe extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
@@ -39,7 +40,7 @@ class AboutMe extends AbstractSection
     /**
      * @return TcpdfInterface
      */
-    private function renderAboutMe()
+    private function renderAboutMe(): TcpdfInterface
     {
         $this->renderTitle(
             $this->createSectionTitle()
@@ -73,7 +74,7 @@ class AboutMe extends AbstractSection
     /**
      * @return string
      */
-    private function getContent()
+    private function getContent(): string
     {
         return sprintf(
             $this->trans(
@@ -87,7 +88,7 @@ class AboutMe extends AbstractSection
     /**
      * @return SectionTitle
      */
-    private function createSectionTitle()
+    private function createSectionTitle(): SectionTitle
     {
         $sectionTitle = new SectionTitle();
         $sectionTitle->setCursorX(self::CURSOR_X);
@@ -105,7 +106,7 @@ class AboutMe extends AbstractSection
     /**
      * @return int
      */
-    private function getMaximusAge()
+    private function getMaximusAge(): int
     {
         return date("Y") - PersonalData::MAXIMUS_BIRTH_DATE;
     }
@@ -113,7 +114,7 @@ class AboutMe extends AbstractSection
     /**
      * @return int
      */
-    private function getNoSmokingYears()
+    private function getNoSmokingYears(): int
     {
         return date("Y") - PersonalData::STOP_SMOKING_YEAR;
     }

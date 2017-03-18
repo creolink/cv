@@ -37,7 +37,7 @@ class LocalizationService
     /**
      * @return string
      */
-    public function getLocale()
+    public function getLocale(): string
     {
         if (empty($this->locale)) {
             $this->locale = Locale::DEFAULT_ROUTED_LOCALE;

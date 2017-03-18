@@ -12,5 +12,5 @@ interface TcpdfInterface
     /**
      * return TcpdfInterface
      */
-    public function addElements();
+    public function addElements(): TcpdfInterface;
 }

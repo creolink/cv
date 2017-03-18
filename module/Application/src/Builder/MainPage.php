@@ -25,7 +25,7 @@ class MainPage extends AbstractPage
     /**
      * {@inheritDoc}
      */
-    public function createElements(TcpdfInterface $page)
+    public function createElements(TcpdfInterface $page): TcpdfInterface
     {
         $page = new MainHeader($page);
         $page = new CareerGoals($page);

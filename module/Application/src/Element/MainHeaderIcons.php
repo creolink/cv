@@ -30,7 +30,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
     const CONTACT_LINE_DOWN_CURSOR_Y = 45;
 
     /**
-     * Renders contact icons
+     * Renders all contact data
      */
     public function renderContactData()
     {
@@ -45,6 +45,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         $this->renderBorderLines();
     }
 
+    /**
+     * Renders contact icons
+     */
     private function renderIcons()
     {
         $this->renderPhone();
@@ -54,6 +57,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         $this->renderGoldenLine();
     }
 
+    /**
+     * Renders email icon and email
+     */
     private function renderEmail()
     {
         $this->tcpdf->renderIcon(
@@ -65,6 +71,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         );
     }
 
+    /**
+     * Renders Skype icon and url
+     */
     private function renderSkype()
     {
         $this->tcpdf->renderIcon(
@@ -76,6 +85,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         );
     }
 
+    /**
+     * Renders LinkedIn icon and url
+     */
     private function renderLinkedIn()
     {
         $this->tcpdf->renderIcon(
@@ -87,6 +99,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         );
     }
 
+    /**
+     * Renders phone icon and phone
+     */
     private function renderPhone()
     {
         $this->tcpdf->renderIcon(
@@ -98,6 +113,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         );
     }
 
+    /**
+     * Renders GoldenLine icon and url
+     */
     private function renderGoldenLine()
     {
         $this->tcpdf->renderIcon(
@@ -109,6 +127,9 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
         );
     }
 
+    /**
+     * Renders lines
+     */
     private function renderBorderLines()
     {
         $this->tcpdf->Line(

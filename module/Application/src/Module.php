@@ -27,7 +27,7 @@ class Module
     /**
      * @return array
      */
-    public function getConfig()
+    public function getConfig(): array
     {
         return include __DIR__ . '/../config/module.config.php';
     }
@@ -35,7 +35,7 @@ class Module
     /**
      * @return array
      */
-    public function getServiceConfig()
+    public function getServiceConfig(): array
     {
         return [
             'factories' => [
@@ -44,6 +44,9 @@ class Module
         ];
     }
 
+    /**
+     * Inits Yaml reader & decoder
+     */
     private function setYamlReader()
     {
         Factory::registerReader('yml', 'yaml');

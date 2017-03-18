@@ -26,13 +26,15 @@ abstract class AbstractDirector
 
     /**
      * Builds document
+     *
+     * @return AbstractDirector
      */
-    abstract public function build();
+    abstract public function build(): AbstractDirector;
 
     /**
      * Renders document
      *
      * @return string
      */
-    abstract public function render();
+    abstract public function render(): string;
 }
