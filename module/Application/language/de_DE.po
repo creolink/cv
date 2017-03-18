@@ -254,7 +254,7 @@ msgid "cv-mainHeader-speciality"
 msgstr "WEB ENTWICKLER, PHP SPEZIALIST & PROJEKTMANAGER"
 
 msgid "cv-mainHeader-tools"
-msgstr "CV created using PHP 7 with ZF3 & TCPDF"
+msgstr "CV erschafft mit PHP 7 und ZF3 & TCPDF"
 
 msgid "cv-technicalSkills-sectionTitle"
 msgstr "Technisheerfahrung"
