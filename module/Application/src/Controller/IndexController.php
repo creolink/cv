@@ -36,7 +36,7 @@ class IndexController extends BaseController
      *
      * @return Response
      */
-    public function homeAction()
+    public function homeAction(): Response
     {
         return $this->redirect()->toRoute(
             'subdomain',
