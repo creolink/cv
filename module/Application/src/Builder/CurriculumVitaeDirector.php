@@ -14,7 +14,7 @@ class CurriculumVitaeDirector extends AbstractDirector
     /**
      * {@inheritDoc}
      */
-    public function build()
+    public function build(): AbstractDirector
     {
         $this->builder->configure();
         $this->builder->generateMainPage();
@@ -26,7 +26,7 @@ class CurriculumVitaeDirector extends AbstractDirector
     /**
      * {@inheritDoc}
      */
-    public function render()
+    public function render(): string
     {
         return $this->builder->render();
     }

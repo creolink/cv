@@ -18,7 +18,7 @@ class SecondPage extends AbstractPage
     /**
      * {@inheritDoc}
      */
-    public function createElements(TcpdfInterface $page)
+    public function createElements(TcpdfInterface $page): TcpdfInterface
     {
         $page = new CommisionedJobs($page);
         $page = new QRCode($page);

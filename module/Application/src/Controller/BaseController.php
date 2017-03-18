@@ -16,6 +16,30 @@ use Application\Builder\CurriculumVitaeDirector;
 class BaseController extends AbstractActionController
 {
     /**
+     * @return NormalizedTranslationService
+     */
+    protected function getNormalizationService(): NormalizedTranslationService
+    {
+        return $this->getService(NormalizedTranslationService::class);
+    }
+
+    /**
+     * @return Translator
+     */
+    protected function getTranslator(): Translator
+    {
+        return $this->getService(Translator::class);
+    }
+
+    /**
+     * @return CurriculumVitaeDirector
+     */
+    protected function getCurriculumVitae(): CurriculumVitaeDirector
+    {
+        return $this->getService(CurriculumVitae::class);
+    }
+
+    /**
      * @param string $className
      *
      * @return mixed Entry
@@ -26,29 +50,5 @@ class BaseController extends AbstractActionController
             ->getApplication()
             ->getServiceManager()
             ->get($className);
-    }
-
-    /**
-     * @return NormalizedTranslationService
-     */
-    protected function getNormalizationService()
-    {
-        return $this->getService(NormalizedTranslationService::class);
-    }
-
-    /**
-     * @return Translator
-     */
-    protected function getTranslator()
-    {
-        return $this->getService(Translator::class);
-    }
-
-    /**
-     * @return CurriculumVitaeDirector
-     */
-    protected function getCurriculumVitae()
-    {
-        return $this->getService(CurriculumVitae::class);
     }
 }

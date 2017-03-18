@@ -38,7 +38,7 @@ abstract class AbstractPage
     /**
      * @return TcpdfInterface
      */
-    public function createPage()
+    public function createPage(): TcpdfInterface
     {
         $this->tcpdf->AddPage();
 
@@ -57,7 +57,7 @@ abstract class AbstractPage
      *
      * @return TcpdfInterface
      */
-    abstract public function createElements(TcpdfInterface $page);
+    abstract public function createElements(TcpdfInterface $page): TcpdfInterface;
 
     /**
      * Sets default font for page

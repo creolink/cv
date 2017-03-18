@@ -12,5 +12,5 @@ abstract class AbstractBuilder
     /**
      * @return string
      */
-    abstract public function render();
+    abstract public function render(): string;
 }

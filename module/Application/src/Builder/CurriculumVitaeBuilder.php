@@ -49,7 +49,7 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     /**
      * {@inheritDoc}
      */
-    public function render()
+    public function render(): string
     {
         return $this->cv->outputPdf();
     }
