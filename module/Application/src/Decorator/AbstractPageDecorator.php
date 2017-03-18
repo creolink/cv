@@ -19,7 +19,7 @@ abstract class AbstractPageDecorator extends AbstractTcpdfDecorator implements T
     /**
      * {@inheritDoc}
      */
-    abstract public function addElements();
+    abstract public function addElements(): TcpdfInterface;
 
     /**
      * Sets dashed line style

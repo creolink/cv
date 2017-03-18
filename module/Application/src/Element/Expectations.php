@@ -9,6 +9,7 @@ namespace Application\Element;
 
 use Application\Element\AbstractSection;
 use Application\Entity\SectionTitle;
+use Application\Model\TcpdfInterface;
 
 class Expectations extends AbstractSection
 {
@@ -25,7 +26,7 @@ class Expectations extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

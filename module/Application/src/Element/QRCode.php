@@ -11,6 +11,7 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\PersonalData;
 use Application\Config\PdfConfig;
 use Application\Config\Image;
+use Application\Model\TcpdfInterface;
 
 class QRCode extends AbstractPageDecorator
 {
@@ -35,7 +36,7 @@ class QRCode extends AbstractPageDecorator
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

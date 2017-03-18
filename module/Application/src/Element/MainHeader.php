@@ -17,6 +17,7 @@ use Application\Element\MainHeaderIcons;
 use Application\Element\MainHeaderMostRecentInfo;
 use Application\Element\MainHeaderBackground;
 use Application\Element\MainHeaderPersonalData;
+use Application\Model\TcpdfInterface;
 
 class MainHeader extends AbstractPageDecorator
 {
@@ -28,7 +29,7 @@ class MainHeader extends AbstractPageDecorator
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

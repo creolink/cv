@@ -11,6 +11,7 @@ use Application\Element\AbstractEmployment;
 use Application\Entity\SectionTitle;
 use Application\Entity\EmploymentPosition;
 use Application\Hydrator\Hydrator;
+use Application\Model\TcpdfInterface;
 
 class EmploymentHistory extends AbstractEmployment
 {
@@ -22,7 +23,7 @@ class EmploymentHistory extends AbstractEmployment
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

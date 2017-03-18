@@ -41,7 +41,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         return $this;
     }
@@ -198,7 +198,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     public function outputPdf()
     {
-        $this->Output(PdfConfig::FILE_NAME);
+        return $this->Output(PdfConfig::FILE_NAME, 'S');
     }
 
     /**

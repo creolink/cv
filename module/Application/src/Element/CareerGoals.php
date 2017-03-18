@@ -12,6 +12,7 @@ use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
 use Application\Entity\SectionTitle;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class CareerGoals extends AbstractSection
 {
@@ -33,7 +34,7 @@ class CareerGoals extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

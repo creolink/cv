@@ -11,6 +11,7 @@ use Application\Decorator\AbstractPageDecorator;
 use Application\Config\Image;
 use Application\Config\Color;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class Sign extends AbstractPageDecorator
 {
@@ -31,7 +32,7 @@ class Sign extends AbstractPageDecorator
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

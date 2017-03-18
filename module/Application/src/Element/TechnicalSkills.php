@@ -11,6 +11,7 @@ use Application\Element\AbstractSkills;
 use Application\Entity\SectionTitle;
 use Application\Entity\Skill;
 use Application\Hydrator\Hydrator;
+use Application\Model\TcpdfInterface;
 
 class TechnicalSkills extends AbstractSkills
 {
@@ -22,7 +23,7 @@ class TechnicalSkills extends AbstractSkills
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 

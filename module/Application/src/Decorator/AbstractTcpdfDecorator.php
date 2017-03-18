@@ -31,7 +31,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      * @param string $message
      * @return string
      */
-    protected function trans(string $message)
+    protected function trans(string $message): string
     {
         return $this->tcpdf->getTranslator()
             ->translate($message);
@@ -41,7 +41,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      * @param DateTime|int|array|string $date
      * @return string
      */
-    protected function localizeDate(DateTime $date)
+    protected function localizeDate(DateTime $date): string
     {
         return $this->tcpdf->getDate()
             ->getLocalizedDate($date);
@@ -51,7 +51,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      * @param DateTime|int|array|string $date
      * @return string
      */
-    protected function localizeMonthAndYear(DateTime $date)
+    protected function localizeMonthAndYear(DateTime $date): string
     {
         return $this->tcpdf->getDate()
             ->getMonthAndYear($date);

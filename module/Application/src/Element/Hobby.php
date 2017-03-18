@@ -10,6 +10,7 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Entity\SectionTitle;
 use Application\Config\Font;
+use Application\Model\TcpdfInterface;
 
 class Hobby extends AbstractSection
 {
@@ -26,7 +27,7 @@ class Hobby extends AbstractSection
     /**
      * {@inheritDoc}
      */
-    public function addElements()
+    public function addElements(): TcpdfInterface
     {
         $this->tcpdf = $this->tcpdf->addElements();
 
