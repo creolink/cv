@@ -19,5 +19,5 @@ class PdfConfig
     const DOCUMENT_URL = 'http://cv.creolink.pl';
     const DOCUMENT_HOST = 'cv.creolink.pl';
 
-    const FILE_NAME = 'jakub.luczynski.cv.pdf';
+    const FILE_NAME = 'jakub.luczynski.cv.%s.pdf';
 }

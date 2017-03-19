@@ -20,10 +20,10 @@ class LocalizationService
      * @var array
      */
     private $locales = [
-        Locale::ROUTED_LOCALE_EN => Locale::LOCALE_EN,
-        Locale::ROUTED_LOCALE_PL => Locale::LOCALE_PL,
-        Locale::ROUTED_LOCALE_DE => Locale::LOCALE_DE,
-        Locale::ROUTED_LOCALE_XX => Locale::LOCALE_XX,
+        Locale::LANGUAGE_EN => Locale::LOCALE_EN,
+        Locale::LANGUAGE_PL => Locale::LOCALE_PL,
+        Locale::LANGUAGE_DE => Locale::LOCALE_DE,
+        Locale::LANGUAGE_XX => Locale::LOCALE_XX,
     ];
 
     /**
@@ -40,11 +40,11 @@ class LocalizationService
     public function getLocale(): string
     {
         if (empty($this->locale)) {
-            $this->locale = Locale::DEFAULT_ROUTED_LOCALE;
+            $this->locale = Locale::DEFAULT_LANGUAGE;
         }
 
         if (false === isset($this->locales[$this->locale])) {
-            $this->locale = Locale::DEFAULT_ROUTED_LOCALE;
+            $this->locale = Locale::DEFAULT_LANGUAGE;
         }
 
         return $this->locales[$this->locale];

@@ -20,6 +20,11 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
     protected $tcpdf;
 
     /**
+     * @var type
+     */
+    protected $isDownloaded = false;
+
+    /**
      * @param TcpdfInterface $tcpdf
      */
     public function __construct(TcpdfInterface $tcpdf)
@@ -43,7 +48,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      */
     protected function localizeDate(DateTime $date): string
     {
-        return $this->tcpdf->getDate()
+        return $this->tcpdf->getDateService()
             ->getLocalizedDate($date);
     }
 
@@ -53,7 +58,7 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
      */
     protected function localizeMonthAndYear(DateTime $date): string
     {
-        return $this->tcpdf->getDate()
+        return $this->tcpdf->getDateService()
             ->getMonthAndYear($date);
     }
 }

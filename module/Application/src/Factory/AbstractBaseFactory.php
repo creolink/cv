@@ -42,6 +42,6 @@ abstract class AbstractBaseFactory implements FactoryInterface
     protected function getLocale(ContainerInterface $container): string
     {
         return $this->getRouteMatch($container)
-            ->getParam(Locale::ROUTER_LOCALE_PARAM);
+            ->getParam(Locale::ROUTER_LANGUAGE_PARAM);
     }
 }

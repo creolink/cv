@@ -45,6 +45,11 @@ class NormalizedTranslationService implements TranslatorInterface
     private $translator;
 
     /**
+     * @var string
+     */
+    private $language = Locale::DEFAULT_LANGUAGE;
+
+    /**
      * @param Translator $translator
      */
     public function __construct(Translator $translator)
@@ -81,6 +86,22 @@ class NormalizedTranslationService implements TranslatorInterface
                 $locale
             )
         );
+    }
+
+    /**
+     * @param string $language
+     */
+    public function setLanguage(string $language)
+    {
+        $this->language = $language;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage(): string
+    {
+        return $this->language;
     }
 
     /**

@@ -20,14 +20,14 @@ class MainHeaderDownload extends AbstractTcpdfDecorator
      */
     public function renderDownloadButton()
     {
-        if (false === $this->tcpdf->isDownloaded) {
+        if (false === $this->isDownloaded) {
             $this->tcpdf->renderImage(
                 Image::DOWNLOAD,
                 self::DOWNLOAD_CURSOR_X,
                 self::DOWNLOAD_CURSOR_Y,
                 Image::DOWNLOAD_WIDTH,
                 Image::DOWNLOAD_HEIGHT,
-                'http://'.$_SERVER['HTTP_HOST'].'/?download'
+                'http://'.$_SERVER['HTTP_HOST'].'/download'
             );
         }
     }
