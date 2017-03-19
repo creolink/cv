@@ -10,7 +10,6 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Helper\DateHelper;
 use Application\Config\PersonalData;
-use Application\Entity\SectionTitle;
 use Application\Config\Font;
 use Application\Model\TcpdfInterface;
 
@@ -49,7 +48,7 @@ class CareerGoals extends AbstractSection
     private function renderCareerGoals(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-careerGoals-sectionTitle')
         );
 
         $this->renderRecipient();
@@ -104,22 +103,6 @@ class CareerGoals extends AbstractSection
             self::CONTENT_CELL_HEIGHT,
             $this->getContent()
         );
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans('cv-careerGoals-sectionTitle')
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 
     /**

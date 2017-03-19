@@ -8,7 +8,6 @@
 namespace Application\Element;
 
 use Application\Element\AbstractEmployment;
-use Application\Entity\SectionTitle;
 use Application\Entity\EmploymentPosition;
 use Application\Hydrator\Hydrator;
 use Application\Model\TcpdfInterface;
@@ -38,7 +37,7 @@ class EmploymentHistory extends AbstractEmployment
     private function renderEmploymentHistory(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-employmentHistory-sectionTitle')
         );
 
         $this->renderPositions(
@@ -49,21 +48,5 @@ class EmploymentHistory extends AbstractEmployment
         );
 
         return $this->tcpdf;
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans('cv-employmentHistory-sectionTitle')
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 }
