@@ -23,7 +23,26 @@ class IndexController extends BaseController
     {
         $pdf = $this->getPdf();
 
-        $this->setHeaders($pdf);
+        $this->setHeaders(
+            $this->getPdfHeaders($pdf)
+        );
+
+        $this->getResponse()
+            ->setContent($pdf);
+
+        return $this->response;
+    }
+
+    /**
+     * @return Response
+     */
+    public function downloadAction(): Response
+    {
+        $pdf = $this->getPdf();
+
+        $this->setHeaders(
+            $this->getPdfHeaders($pdf, true)
+        );
 
         $this->getResponse()
             ->setContent($pdf);
@@ -39,8 +58,8 @@ class IndexController extends BaseController
     public function homeAction(): Response
     {
         return $this->redirect()->toRoute(
-            'subdomain',
-            ['locale' => Locale::DEFAULT_ROUTED_LOCALE]
+            'language',
+            [Locale::ROUTER_LANGUAGE_PARAM => Locale::DEFAULT_LANGUAGE]
         );
     }
 
@@ -57,15 +76,13 @@ class IndexController extends BaseController
     /**
      * Sets headers
      *
-     * @param string $pdf
+     * @param array $pdfHeaders
      */
-    private function setHeaders(string $pdf)
+    private function setHeaders(array $pdfHeaders)
     {
         $headers = new Headers();
         $headers->clearHeaders();
-        $headers->addHeaders(
-            $this->getPdfHeaders($pdf)
-        );
+        $headers->addHeaders($pdfHeaders);
 
         $this->getResponse()->setHeaders(
             $headers
@@ -74,18 +91,43 @@ class IndexController extends BaseController
 
     /**
      * @param string $pdf
+     * @param bool $isAttachment
      * @return array
      */
-    private function getPdfHeaders(string $pdf): array
+    private function getPdfHeaders(string $pdf, bool $isAttachment = false): array
     {
-        return [
+        $contentDisposition = $isAttachment ? 'attachment' : 'inline';
+
+        $headers = [
             'Content-type' => 'application/pdf',
             'Cache-Control' => 'private, must-revalidate, post-check=0, pre-check=0, max-age=1',
             'Pragma' => 'public',
             'Expires' => 'Sat, 26 Jul 1997 05:00:00 GMT',
             'Last-Modified' => gmdate('D, d M Y H:i:s').' GMT',
-            'Content-Disposition' => 'inline; filename="' . basename(PdfConfig::FILE_NAME). '"',
+            'Content-Disposition' => $contentDisposition . '; filename="' . $this->getFileName(). '"',
             'Content-Length' => strlen($pdf),
         ];
+
+        if (true === $isAttachment) {
+            $headers['Content-Transfer-Encoding'] = 'binary';
+        }
+
+        return $headers;
+    }
+
+    /**
+     * @return string
+     */
+    private function getFileName(): string
+    {
+        return basename(
+            sprintf(
+                PdfConfig::FILE_NAME,
+                $this->params()->fromRoute(
+                    Locale::ROUTER_LANGUAGE_PARAM,
+                    Locale::DEFAULT_LANGUAGE
+                )
+            )
+        );
     }
 }

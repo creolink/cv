@@ -3,6 +3,7 @@
 namespace Application;
 
 use Zend\Router\Http\Literal;
+use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
 use Zend\Mvc\I18n\TranslatorFactory;
@@ -35,24 +36,48 @@ return [
             'home' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/',
+                    'route' => '/',
                     'defaults' => [
                         'controller' => IndexController::class,
-                        'action'     => 'home',
+                        'action' => 'home',
                     ],
                 ],
             ],
-            'subdomain' => [
+            'language' => [
                 'type' => Hostname::class,
                 'options' => [
-                    'route'    => ':' . Locale::ROUTER_LOCALE_PARAM . '.' . ServerResolver::getName(),
+                    'route' => ':' . Locale::ROUTER_LANGUAGE_PARAM . '.' . ServerResolver::getName(),
                     'constraints' => [
-                        'subdomain' => Locale::ALLOWED_ROUTED_LOCALES,
+                        Locale::ROUTER_LANGUAGE_PARAM => Locale::ROUTER_ALLOWED_LANGUAGES,
                     ],
                     'defaults' => [
                         'controller' => IndexController::class,
-                        'locale' => Locale::DEFAULT_ROUTED_LOCALE,
+                        Locale::ROUTER_LANGUAGE_PARAM => Locale::DEFAULT_LANGUAGE,
                         'action'     => 'index',
+                    ],
+                ],
+                'may_terminate' => true,
+                'child_routes' => [
+                    'language-home' => [
+                        'type' => Literal::class,
+                        'options' => [
+                            'route' => '/',
+                            'defaults' => [
+                                'controller' => IndexController::class,
+                                'action' => 'index',
+                            ],
+                        ],
+                    ],
+                    'download' => [
+                        'type' => Literal::class,
+                        'options' => [
+                            'route' => '/download',
+                            'defaults' => [
+                                'controller' => IndexController::class,
+                                'action' => 'download',
+                            ],
+                        ],
+                        'may_terminate' => true,
                     ],
                 ],
             ],
