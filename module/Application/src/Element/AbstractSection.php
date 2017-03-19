@@ -23,6 +23,23 @@ abstract class AbstractSection extends AbstractPageDecorator
     const CURSOR_MARGIN_Y = 7;
 
     /**
+     * @param string $title
+     * @return SectionTitle
+     */
+    protected function createSection(string $title): SectionTitle
+    {
+        $sectionTitle = new SectionTitle();
+        $sectionTitle->setCursorX(static::CURSOR_X);
+        $sectionTitle->setCursorY(static::CURSOR_Y);
+        $sectionTitle->setTitle(
+            $this->trans($title)
+        );
+        $sectionTitle->setWidth(static::SECTION_WIDTH);
+
+        return $sectionTitle;
+    }
+
+    /**
      * Renders section title
      *
      * @param SectionTitle $sectionTitle

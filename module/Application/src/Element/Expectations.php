@@ -8,7 +8,6 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSection;
-use Application\Entity\SectionTitle;
 use Application\Model\TcpdfInterface;
 
 class Expectations extends AbstractSection
@@ -41,7 +40,7 @@ class Expectations extends AbstractSection
     private function renderExpectations(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-expectations-sectionTitle')
         );
 
         $this->renderContent();
@@ -76,21 +75,5 @@ class Expectations extends AbstractSection
     {
         return $this->trans('cv-expectations-content')
             . self::NEW_LINE;
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans('cv-expectations-sectionTitle')
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 }

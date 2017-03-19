@@ -8,7 +8,6 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSkills;
-use Application\Entity\SectionTitle;
 use Application\Entity\Position;
 use Application\Hydrator\Hydrator;
 use Application\Model\TcpdfInterface;
@@ -38,7 +37,7 @@ class Languages extends AbstractSkills
     private function renderLanguages(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-languages-sectionTitle')
         );
 
         $this->renderPositions(
@@ -49,21 +48,5 @@ class Languages extends AbstractSkills
         );
 
         return $this->tcpdf;
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans('cv-languages-sectionTitle')
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 }

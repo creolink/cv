@@ -8,7 +8,6 @@
 namespace Application\Element;
 
 use Application\Element\AbstractSection;
-use Application\Entity\SectionTitle;
 use Application\Config\Font;
 use Application\Model\TcpdfInterface;
 
@@ -42,7 +41,7 @@ class Hobby extends AbstractSection
     private function renderHobby(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-hobby-sectionTitle')
         );
 
         $this->renderContent();
@@ -77,21 +76,5 @@ class Hobby extends AbstractSection
     {
         return $this->trans('cv-hobby-content')
             . self::NEW_LINE;
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans('cv-hobby-sectionTitle')
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 }

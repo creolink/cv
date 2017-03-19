@@ -10,7 +10,6 @@ namespace Application\Element;
 use Application\Element\AbstractSection;
 use Application\Config\PersonalData;
 use Application\Config\Font;
-use Application\Entity\SectionTitle;
 use Application\Model\TcpdfInterface;
 
 class AboutMe extends AbstractSection
@@ -43,7 +42,7 @@ class AboutMe extends AbstractSection
     private function renderAboutMe(): TcpdfInterface
     {
         $this->renderTitle(
-            $this->createSectionTitle()
+            $this->createSection('cv-aboutMe-sectionTitle')
         );
 
         $this->renderContent();
@@ -83,24 +82,6 @@ class AboutMe extends AbstractSection
             $this->getMaximusAge(),
             $this->getNoSmokingYears()
         ) . self::NEW_LINE;
-    }
-
-    /**
-     * @return SectionTitle
-     */
-    private function createSectionTitle(): SectionTitle
-    {
-        $sectionTitle = new SectionTitle();
-        $sectionTitle->setCursorX(self::CURSOR_X);
-        $sectionTitle->setCursorY(self::CURSOR_Y);
-        $sectionTitle->setTitle(
-            $this->trans(
-                'cv-aboutMe-sectionTitle'
-            )
-        );
-        $sectionTitle->setWidth(self::SECTION_WIDTH);
-
-        return $sectionTitle;
     }
 
     /**
