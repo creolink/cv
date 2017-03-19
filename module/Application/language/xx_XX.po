@@ -318,3 +318,9 @@ msgstr "cv-skills-shortcut-years"
 
 msgid "cv-personality-sectionTitle"
 msgstr "cv-personality-sectionTitle"
+
+msgid "cv-footer-recruitmentAgreement"
+msgstr "cv-footer-recruitmentAgreement"
+
+msgid "cv-pageNumber"
+msgstr "cv-pageNumber"

@@ -35,7 +35,7 @@ msgid "cv-commisions-tpnets-country"
 msgstr "Polen"
 
 msgid "cv-commisions-tpnets-description"
-msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Einsatz meinem eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
+msgstr "Entwurf und Entwicklung urheberrechtlich geschützt, gewidmeter B2E & B2C System für ISP (Netzwerk & VoIP Verwaltung, Kundenbeziehungsmanagement, Elektronisches Kundenbüro, Automatische Rechnungsstellung, Berichterstattung). Kodierung mit MySQL, PHP5, JavaScript (jQuery, Ajax), CSS, HTML5. Einsatz meines eigenen, MVC-Framework und Template-System. Integrierung mit Google Services (OAuth). Modernisierung von Software. Technische Steuerung. Online, remote Arbeit."
 
 msgid "cv-commisions-msPerfect-name"
 msgstr "Webdesigner / B2C Projekt"
@@ -44,7 +44,7 @@ msgid "cv-commisions-msPerfect-country"
 msgstr "Deutschland"
 
 msgid "cv-commisions-msPerfect-description"
-msgstr "Entwerfen der reaktionsfähigen Website für die Reinigung Geschäft. Erstellung der Grafik Layout. Kodierung mit PHP, JavaScript und CSS, einsetzen die Bootstrap Bibliothek."
+msgstr "Entwurf einer reaktionsfähigen Website für ein Reinigungsgeschäft. Erstellung des Grafik Layout. Kodierung mit PHP, JavaScript und CSS, Einsatz einer Bootstrap Bibliothek."
 
 msgid "cv-commisions-freepers-name"
 msgstr "Software designer / B2C & B2E, eCommerce Projekt"
@@ -53,7 +53,7 @@ msgid "cv-commisions-freepers-country"
 msgstr "Polen"
 
 msgid "cv-commisions-freepers-description"
-msgstr "Entwerfen und Entwicklung urheberrechtlich geschützt, gewidmet eCommerce System mit CMS und CRM Module. Umfassende Implementierung der RWD-Lösung, basiert auf meinem eigenen, schnellen und flexibel, MVC-Framework. Konfiguration des Linux-Servers mit Nginx und Percona Server. Kodierung mit PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration mit external Systeme & API mithilfe SOAP oder REST. Beratung, Coaching. Projektdokumentation."
+msgstr "Entwurf und Entwicklung eines urheberrechtlich geschützt und gewidmeten eCommerce System mit CMS und CRM Module. Umfassende Implementierung der RWDLösung, basiert auf meinem eigenen, schnellen und flexiblen, MVC-Framework. Konfiguration des Linux-Servers mit Nginx und Percona Server. Kodierung mit PHP5 OOP, MySQL, HTML5, CSS, JS (jQuery), Python. Integration mit externen Systemen & API mit Hilfe von SOAP oder REST. Beratung, Coaching. Projektdokumentation."
 
 msgid "cv-commisions-forweb-name"
 msgstr "PHP Codierer / B2C & B2E Projekt"
@@ -62,7 +62,9 @@ msgid "cv-commisions-forweb-country"
 msgstr "Polen"
 
 msgid "cv-commisions-forweb-description"
-msgstr "Sanierung des elektronischen B2C-Bürosysteme für das Internet Service Provider Unternehmen. Kodierung mit PHP, MySQL, PostgreSQL, JavaScript, jQuery und CSS. Bedienung von Datenbank mit Millionen Datensätzen von VoIP-Anrufe. Implementierung der Software für die Bestellung von IPTV-Sendungen. Refactoring und Verbesserung des Intranet B2E Systems."
+msgstr ""
+"Sanierung des elektronischen B2C-Bürosystems für das Internet Service Provider Unternehmen. Kodierung mit PHP, MySQL, PostgreSQL, JavaScript, jQuery und CSS. Bedienung einer Datenbank mit Millionen Datensätzen von VoIP-Telefonie. Implementierung der Software für die Bestellung von IPTV-Sendungen.\n"
+"Refactoring und Verbesserung des Intranet B2E Systems."
 
 msgid "cv-commisions-gandalf2009-name"
 msgstr "PHP Webentwickler / B2C Projekt"
@@ -80,7 +82,7 @@ msgid "cv-commisions-stawoz2009-country"
 msgstr "Polen"
 
 msgid "cv-commisions-stawoz2009-description"
-msgstr "Design und Implementierung neue, gewidmet Webportale für Umwelt-, Brand- und Sicherheitsthemen: http://www.portal-ppoz.pl/, http://www.portal-bhp.pl/, http://www.portal-ekologia.pl/. Re-entwicklung von http://www.ppozbhp.pl/. Aktive Positionierung in Suchmaschinen wie Google, Yahoo, Bing, Infoseek. Erhaltung, Entwicklung und Überwachung der Arbeit. (Portale sind geschlossen)"
+msgstr "Design und Implementierung neuer, gewidmeter Webportale für Umwelt-, Brand- und Sicherheitsthemen: http://www.portal-ppoz.pl/, http://www.portalbhp.pl/, http://www.portal-ekologia.pl/. Re-Entwicklung von http://www.ppozbhp.pl/. Aktive Positionierung in Suchmaschinen wie Google, Yahoo, Bing, Infoseek. Erhaltung, Entwicklung und Überwachung der Arbeit. (Portale sind geschlossen)"
 
 msgid "cv-commisions-iizt-name"
 msgstr "PHP Programmierer & Webentwickler / Freiberufler"
@@ -98,7 +100,7 @@ msgid "cv-commisions-gandalf2005-country"
 msgstr "Polen"
 
 msgid "cv-commisions-gandalf2005-description"
-msgstr "Design, Programmierung und Implementierung gewidmet, das urheberrechtlich geschützten eCommerce Software http://www.gandalf.com.pl/ und gewidmet Intranet-System (CMS / CRM). Modernisierung und Entwicklung des Systems. Service und Unterstützung."
+msgstr "Design, Programmierung und Implementierung gewidmeter, urheberrechtlich geschützter eCommerce Software http://www.gandalf.com.pl/ und gewidmetes Intranet-System (CMS / CRM). Modernisierung und Entwicklung des Systems. Service und Unterstützung."
 
 msgid "cv-commisions-stawoz2005-name"
 msgstr "Portal Designer & PHP Developer / B2B Projekt"
@@ -107,7 +109,7 @@ msgid "cv-commisions-stawoz2005-country"
 msgstr "Polen"
 
 msgid "cv-commisions-stawoz2005-description"
-msgstr "Entwerfen und Entwicklung von CMS-System & Web-Portal mit Kleinanzeigen für Unternehmen gewidmet Umwelt-, Feuer-und Sicherheits-Themen. Benutzung PHP, MySQL, XHTML, CSS, JS. Aktive Positionierung in Google mit sehr guten Ergebnissen, Unterstützung, Entwicklung und Überwachung."
+msgstr "Entwurf und Entwicklung von CMS-System & Web-Portal mit Kleinanzeigen für Unternehmen, gewidmet für Umwelt-, Feuer-und Sicherheits-Themen. Benutzung PHP, MySQL, XHTML, CSS, JS. Aktive Positionierung in Google mit sehr guten Ergebnissen, Unterstützung, Entwicklung und Überwachung."
 
 msgid "cv-commisions-arges-name"
 msgstr "Junior PHP Entwickler"
@@ -227,7 +229,7 @@ msgid "cv-aboutMe-sectionTitle"
 msgstr "Über mich"
 
 msgid "cv-aboutMe-content"
-msgstr "Ich bin verheiratet und wir haben %s Jahre alt Sohn. In 2015 wir begann einen neuen Leben in Deutschland. Seit %s rauche ich nicht. In 2016, durch systematisch Diät und Ausbildung, habe ich 35 kg abgenommen. Ich habe mein eigenes PHP Framework entwickelt. Ich habe die Empfehlungen von fast allen Firmen bekommen. Dieser Lebenslauf ist ein Beispiel meinen Fähigkeiten."
+msgstr "Ich bin verheiratet und wir haben einen %s Jahre alten Sohn. 2015 begann für uns ein neues Leben in Deutschland. Seit %s rauche ich nicht mehr. 2016 habe ich durch systematische Diät und Ausbildung 35 kg abgenommen. Ich habe mein eigenes PHP Framework entwickelt und habe Empfehlungen von fast allen Firmen bekommen. Dieser Lebenslauf ist ein Beispiel meiner Fähigkeiten."
 
 msgid "cv-employment-date-partTime"
 msgstr "Teilzeit"
@@ -260,7 +262,7 @@ msgid "cv-technicalSkills-sectionTitle"
 msgstr "Technisheerfahrung"
 
 msgid "cv-sign-content"
-msgstr "Sollten Sie mein Wissen und meine Berufserfahrung interessant finden und es würde bei der laufnahme Ihres Unternehmens helfen, bitte kontaktieren Sie mich per Telefon, per E-mail oder Skype."
+msgstr "Sollten Sie mein Wissen und meine Berufserfahrung interessant finden und dieses würde Ihnen bei der Entwicklung Ihres Unternehmens helfen, kontaktieren Sie mich bitte per Telefon, per E-mail oder Skype."
 
 msgid "cv-mainHeader-personalData-experience"
 msgstr "Berufserfahrung"
@@ -301,7 +303,7 @@ msgstr ""
 "2012 Professioneller Kurs des Informationssicherheitsadministrators mit Zertifikat\r\n"
 "2012 Professionelles Google Analytics Training,\r\n"
 "seit 2012 Führerschein B,\r\n"
-"1999 - 2003 Studium an der Technischen Universität Lodz (Informatik, 3 Jahre)"
+"1999 - 2003 Studium an der Technischen Universität Lodz - Informatik"
 
 msgid "cv-employmentHistory-sectionTitle"
 msgstr "Berufserfahrung, Vollzeit & Teilzeit"
@@ -316,7 +318,7 @@ msgid "cv-hobby-sectionTitle"
 msgstr "Hobby & Sport"
 
 msgid "cv-hobby-content"
-msgstr "Mein Freizeit verbringe ich mit Brettspielen 'Civilization Through the Ages' oder 'Robinson Crusoe: Abenteuer auf der Verfluchten Insel'. Ich sehe gerne sf & abenteuerfilme sowie TV-Serien. Meine Favoriten sind 'Battlestar Galactica' & 'The Last of the Mohicans'. Wenn ich Möglichkeit habe, spiele ich Fußball oder Tischtennis. Ich analysiere auch die Börse und unsere Investitionen."
+msgstr "Mein Freizeit verbringe ich mit Brettspielen wie 'Civilization Through the Ages' oder 'Robinson Crusoe: Abenteuer auf der Verfluchten Insel'. Ich sehe gerne SiFi- & Abenteuerfilme sowie TV-Serien. Meine Favoriten sind 'Battlestar Galactica' & 'The Last of the Mohicans'. Wenn ich die Möglichkeit habe, spiele ich Fußball oder Tischtennis. Darüber hinaus analysiere ich auch die Börse und unsere Investitionen."
 
 msgid "cv-softwareTools-sectionTitle"
 msgstr "Software und Fähigkeiten"
@@ -335,5 +337,8 @@ msgstr "Charaktereigenschaften"
 
 msgid "cv-footer-recruitmentAgreement"
 msgstr ""
-"Ich bin einverstanden, dass meine in diesem Arbeitsangebot enthaltenen personalen Daten durch die Firma für die Rekrutierungszwecke verwendet werden\r\n"
+"Ich bin einverstanden, dass meine in diesem Arbeitsangebot enthaltenen persönlichen Daten durch die Firma für die Rekrutierungszwecke verwendet werden\n"
 "(gemäß dem Gesetz vom 29.08.1997 über den Schutz der Personaldaten, Gesetzblatt von 2002, Nr. 101, Pos. 926 mit späteren Änderungen)."
+
+msgid "cv-pageNumber"
+msgstr "Seite"

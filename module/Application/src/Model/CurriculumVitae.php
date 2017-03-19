@@ -118,7 +118,7 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     public function footer()
     {
-        $y = -15;
+        $y = -13;
 
         $this->SetXY(5, $y);
         $this->SetFont($this->verdana, '', 6);
@@ -253,7 +253,15 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
         $this->SetY($y);
         $this->SetFont($this->verdana, '', 6);
 
-        $this->Cell(214.5, 4, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, 0, 'R');
+        $this->Cell(
+            214.5,
+            4,
+            $this->translator->translate('cv-pageNumber')
+                . ' ' . $this->getAliasNumPage() . '/' . $this->getAliasNbPages(),
+            0,
+            0,
+            'R'
+        );
     }
 
     /**

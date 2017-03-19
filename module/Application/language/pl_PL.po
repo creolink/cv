@@ -336,3 +336,6 @@ msgid "cv-footer-recruitmentAgreement"
 msgstr ""
 "Wyrażam zgodę na przetwarzanie moich danych osobowych na potrzeby niezbędne do procesu realizacji rekrutacji\r\n"
 "(zgodnie z ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. z 2002r. Nr 101, poz. 926 ze zm.)"
+
+msgid "cv-pageNumber"
+msgstr "Strona"
