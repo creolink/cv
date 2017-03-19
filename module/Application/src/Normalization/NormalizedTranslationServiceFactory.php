@@ -30,6 +30,11 @@ class NormalizedTranslationServiceFactory extends AbstractBaseFactory
         $translator->setLocale($localizationService->getLocale())
             ->setFallbackLocale(Locale::DEFAULT_LOCALE);
 
-        return new NormalizedTranslationService($translator);
+        $normalizedTranslationService = new NormalizedTranslationService($translator);
+        $normalizedTranslationService->setLanguage(
+            $this->getLocale($container)
+        );
+
+        return $normalizedTranslationService;
     }
 }

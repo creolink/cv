@@ -18,14 +18,34 @@ use Application\Normalization\NormalizedDateService;
 
 class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 {
-    public $isDownloaded = false;
-    public $selectedLanguage = 'en';
-
+    /**
+     * @var string
+     */
     public $verdana = '';
+
+    /**
+     * @var string
+     */
     public $verdanaItalic = '';
+
+    /**
+     * @var string
+     */
     public $tahoma = '';
+
+    /**
+     * @var string
+     */
     public $tahomaBold = '';
+
+    /**
+     * @var string
+     */
     public $tahomaItalic = '';
+
+    /**
+     * @var string
+     */
     public $dejavu = '';
 
     /**
@@ -37,6 +57,11 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      * @var NormalizedDateService
      */
     private $dateService;
+
+    /**
+     * @var string
+     */
+    private $locale;
 
     /**
      * {@inheritDoc}
@@ -77,9 +102,18 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     /**
      * @return NormalizedDateService
      */
-    public function getDate(): NormalizedDateService
+    public function getDateService(): NormalizedDateService
     {
         return $this->dateService;
+    }
+
+    /**
+     * @param string $locale
+     * @return string
+     */
+    public function setLocale(string $locale): string
+    {
+        $this->locale = $locale;
     }
 
     /**
@@ -197,7 +231,13 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
      */
     public function outputPdf(): string
     {
-        return $this->Output(PdfConfig::FILE_NAME, 'S');
+        return $this->Output(
+            sprintf(
+                PdfConfig::FILE_NAME,
+                $this->translator->getLanguage()
+            ),
+            'S'
+        );
     }
 
     /**
