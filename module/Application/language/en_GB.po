@@ -301,7 +301,7 @@ msgstr ""
 "2012 professional course of Information Security Administrator with certificate\r\n"
 "2012 professional Google Analytics training,\r\n"
 "since 2012 driving license category B,\r\n"
-"further past: studies at the Lodz University of Technology (Computer Science, 3 years)"
+"1999 - 2003 studies at the Lodz University of Technology - Computer Science"
 
 msgid "cv-employmentHistory-sectionTitle"
 msgstr "Employment history, full & part time"

@@ -300,7 +300,7 @@ msgstr ""
 "2012 profesjonalny kurs dla ABI z certyfikatem\r\n"
 "2012 profesjonalny trening Google Analytics,\r\n"
 "od 2012 prawo jazdy kategorii B,\r\n"
-"dalsza przeszłość: studia na Politechnice Łódzkiej (Informatyka, 3 lata)"
+"1999 - 2003 studia na Politechnice Łódzkiej - Informatyka"
 
 msgid "cv-employmentHistory-sectionTitle"
 msgstr "Historia zatrudnienia, pełny i pół etatu"

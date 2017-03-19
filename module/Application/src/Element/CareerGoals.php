@@ -27,7 +27,7 @@ class CareerGoals extends AbstractSection
     const RECIPIENT_FONT_SIZE = 9;
 
     const CONTENT_CELL_HEIGHT = 4;
-    const CONTENT_CELL_WIDTH = 198;
+    const CONTENT_CELL_WIDTH = 199;
     const CONTENT_MARGIN = 0;
     const CONTENT_FONT_SIZE = 7.5;
 

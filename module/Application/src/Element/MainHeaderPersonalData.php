@@ -27,7 +27,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
 
     const DATA_BOX_STLE = 'DF';
     const DATA_BOX_BORDER_CORNERS = '1111';
-    const DATA_BOX_WIDTH = 22;
+    const DATA_BOX_WIDTH = 23.4;
     const DATA_BOX_HEIGHT = 4;
     const DATA_BOX_BORDER_RADIUS = 1;
 
@@ -36,7 +36,7 @@ class MainHeaderPersonalData extends AbstractTcpdfDecorator
     const DATA_BOX_TITLE_WIDTH = 10;
     const DATA_BOX_TITLE_HEIGHT = 6;
 
-    const DATA_TEXT_MARGIN_X = 12;
+    const DATA_TEXT_MARGIN_X = 13;
     const DATA_TEXT_MARGIN_Y = 0.2;
     const DATA_TEXT_WIDTH = 32;
     const DATA_TEXT_LINE_HEIGHT = 0;
