@@ -2,7 +2,7 @@
 <phpunit colors="true" bootstrap="bootstrap.php">
     <testsuites>
         <testsuite name="ZendSkeletonApplication Test Suite">
-            <directory>./module/*/test</directory>
+            <directory>./module/*/test/unit</directory>
         </testsuite>
     </testsuites>
 </phpunit>

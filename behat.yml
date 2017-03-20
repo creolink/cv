@@ -1,0 +1,9 @@
+default:
+    autoload:
+        '': %paths.base%/config/behat/
+    formatters:
+        pretty: true
+    suites:
+        application:
+            paths: [ %paths.base%/module/Application/test/behat/features ]
+

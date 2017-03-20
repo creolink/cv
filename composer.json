@@ -8,6 +8,14 @@
         "luczynski"
     ],
     "homepage": "http://cv.creolink.pl/",
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/"
+        }
+    },
+    "config": {
+        "bin-dir":"bin/"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -22,10 +30,12 @@
         "zendframework/zend-servicemanager": "^3.2",
         "squizlabs/php_codesniffer": "*"
     },
-    "autoload": {
-        "psr-4": {
-            "Application\\": "module/Application/src/"
-        }
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "zendframework/zend-developer-tools": "^1.1",
+        "creolink/code_style": "dev-develop",
+        "behat/behat": "3.2.*",
+        "behat/mink-extension": "2.1.*"
     },
     "extra": {
         "zend-skeleton-installer": [
@@ -126,11 +136,6 @@
         "url" : "git@github.com:creolink/code_style.git"
       }
     ],
-    "require-dev": {
-        "phpunit/phpunit": "^5.7",
-        "zendframework/zend-developer-tools": "^1.1",
-        "creolink/code_style": "dev-develop"
-    },
     "authors": [
         {
           "name": "Jakub Luczynski",
