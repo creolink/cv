@@ -47,4 +47,4 @@ phplint:
 	find app/ src/ -name "*.php" ! -path "*cache*" ! -path "*Test*" -print0 -exec php -l {} 2>&1 > /dev/null \;
 
 rm-cache:
-	rm -fR app/cache/*
+	rm -fR data/cache/*

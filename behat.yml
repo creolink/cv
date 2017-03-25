@@ -1,26 +1,27 @@
 default:
     autoload:
         - %paths.base%/module/
-        
+
     extensions:
         Behat\MinkExtension:
             base_url:  'http://example.com'
             sessions:
                 default:
                     goutte: ~
-                    
+
     formatters:
         pretty: true
-        
+
     suites:
         application:
-            paths: 
+            paths:
                 - %paths.base%/module/Application/test/behat/features
-                
+
             contexts:
+                - Application\test\behat\context\AbstractContext
                 - Application\test\behat\context\PDFContext
                 - Knp\FriendlyContexts\Context\MinkContext
-                
+
             extensions:
                 Behatch\Extension: ~
 
