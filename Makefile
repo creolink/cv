@@ -21,7 +21,7 @@ behat: rm-cache
 	bin/behat --stop-on-failure
 
 phpunit:
-	bin/phpunit -c app
+	bin/phpunit
 
 phpunit-coverage:
 	SYMFONY_DEPRECATIONS_HELPER=weak bin/phpunit -c app --testsuite UnitTest --coverage-php build/code-coverage/phpunit.cov

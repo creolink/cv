@@ -8,7 +8,8 @@
 namespace Application\Normalization;
 
 use Zend\I18n\Translator\TranslatorInterface;
-use Zend\I18n\Translator\Translator;
+//use Zend\I18n\Translator\Translator;
+use Zend\Mvc\I18n\Translator;
 use Application\Config\Locale;
 
 class NormalizedTranslationService implements TranslatorInterface
@@ -87,7 +88,7 @@ class NormalizedTranslationService implements TranslatorInterface
             )
         );
     }
-    
+
     /**
      * @param string $locale
      */
