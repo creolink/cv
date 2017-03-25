@@ -2,7 +2,7 @@
 
 namespace Application\Test\Behat\Context;
 
-use Application\Config\PdfConfig;
+use Application\Helper\ServerResolver;
 use Application\Test\Behat\Context\AbstractContext;
 
 class PDFContext extends AbstractContext
@@ -38,7 +38,7 @@ class PDFContext extends AbstractContext
      */
     public function iExecuteProvidedUrl()
     {
-        $url = PdfConfig::DOCUMENT_HOST;
+        $url = ServerResolver::getName();
 
         if ('' !== $this->language) {
             $url = $this->language . '.' . $url;

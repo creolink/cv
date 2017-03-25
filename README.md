@@ -92,7 +92,11 @@ server {
 # Testing #
 
 Behat:
+```
 make behat
+```
 
 PHPUnit:
+```
 make phpunit
+```
