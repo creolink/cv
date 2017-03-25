@@ -1,7 +1,8 @@
-Feature: CV display
-  In order to display pdf in proper language
+Feature: CV download
+  In order to download pdf in proper language
   As a Head Hunter or HR worker
-  I need to provide a default link and I should select a language
+  I need to provide a link, click on download button
+  And I should get the PDF file
 
   Scenario: Trying to open cv in browser with default url
     Given I should not add language in url
