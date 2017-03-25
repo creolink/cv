@@ -11,7 +11,7 @@ use SGH\PdfBox\PdfBox;
 use Zend\Mvc\Application;
 use Behat\Testwork\Hook\Scope\BeforeSuiteScope;
 use Application\Normalization\NormalizedTranslationService;
-use Zend\I18n\Translator\Translator;
+use Zend\Mvc\I18n\Translator;
 use Behatch\Context\BaseContext;
 use Application\Config\PdfConfig;
 
@@ -26,27 +26,27 @@ class PDFContext extends BaseContext
      * @var string
      */
     private $url = '';
-    
+
     /**
      * @var string
      */
     private $language = '';
-    
+
     /**
-     * @var NormalizedTranslationService 
+     * @var NormalizedTranslationService
      */
     private static $translator;
-    
+
     /**
      * Inits ZF3 application in tests
-     * 
+     *
      * @BeforeSuite
      */
     public static function initZendApplication()
     {
         self::setTranslator();
     }
-    
+
     /**
      * @Given I should not provide language in url
      */
@@ -54,7 +54,7 @@ class PDFContext extends BaseContext
     {
         $this->iShouldProvideLanguageInUrl();
     }
-    
+
     /**
      * @Given I should provide :language language in url
      */
@@ -62,18 +62,18 @@ class PDFContext extends BaseContext
     {
         $this->language = $language;
     }
-    
+
     /**
      * @When I execute url
      */
     public function iExecuteUrl()
     {
         $this->url = PdfConfig::DOCUMENT_HOST;
-        
+
         if (empty($this->language)) {
             $url = $this->language . '.' . $this->url;
         }
-        
+
         $this->url = 'http://' . $this->url;
     }
 
@@ -84,21 +84,21 @@ class PDFContext extends BaseContext
     {
         $this->getSession()->visit($this->url);
         $this->assertSession()->statusCodeEquals($code);
-        
+
         $content = $this->getSession()->getPage()->getContent();
-        
+
         //preg_match_all('/URI\(([^,]*?)\)\/S\/URI/', $content, $matches);
         //var_dump($matches); die();
-        
+
         //var_dump(strstr($content, 'cv.creolink.pl')); die();
-        
+
         //var_dump($content); die();
-        
+
         $converter = new PdfBox();
         $converter->setPathToPdfBox(realpath('') . '/config/pdfbox-app-2.0.5.jar');
 
         $this->setLocale('en_GB');
-        
+
         $this->assertContains(
             $this->getTranslator()
                 ->translate('cv-personalData-workPlace'),
@@ -118,15 +118,15 @@ class PDFContext extends BaseContext
     {
         $translator = new Translator();
         $translator->addTranslationFilePattern('gettext', __DIR__ . '/../../../language/', '%s.mo');
-        
+
         self::$translator = new NormalizedTranslationService($translator);
     }
-    
+
     private function getTranslator():NormalizedTranslationService
     {
         return self::$translator;
     }
-    
+
     private function setLocale(string $locale)
     {
         self::$translator->setLocale($locale);

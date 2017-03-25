@@ -8,7 +8,6 @@
 namespace Application\Normalization;
 
 use Interop\Container\ContainerInterface;
-//use Zend\I18n\Translator\Translator;
 use Zend\Mvc\I18n\Translator;
 use Application\Normalization\NormalizedTranslationService;
 use Application\I18n\LocalizationService;

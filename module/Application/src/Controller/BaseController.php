@@ -8,7 +8,7 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\I18n\Translator\Translator;
+use Zend\Mvc\I18n\Translator;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Model\CurriculumVitae;
 use Application\Builder\CurriculumVitaeDirector;
