@@ -5,42 +5,6 @@
 Latest version of PDF file can be found here: http://cv.creolink.pl/
 
 
-# ZF3 books: #
-* https://olegkrivtsov.github.io/using-zend-framework-3-book/html/
-* http://neverstopbuilding.com/set-up-zend-framework-2-with-behat-and-twig
-* http://zf2cheatsheet.com/
-* https://docs.zendframework.com/
-* https://docs.zendframework.com/tutorials/
-* https://framework.zend.com/learn
-* https://framework.zend.com/manual/2.4/en/index.html
-* https://zfmodules.com/
-* https://github.com/zendframework
-* https://github.com/zendframework/zf3-web
-* https://zend-expressive.readthedocs.io/en/latest/
-* http://circlical.com/blog/2016/3/9/preparing-for-zend-f
-* https://www.youtube.com/watch?v=sXTaWb7Tg6k&list=PLXRC3l-ZhN3rQrtVm9nLe_vRi7AB-iWOX
-* http://www.zendcon.com/tutorial
-
-
-# Behat / BDD #
-* https://www.jverdeyen.be/php/behat-file-downloads/
-* http://matmati.net/testing-pdf-with-behat-and-php/
-* https://php-xpdf.readthedocs.io/en/latest/
-* https://github.com/Behat/MinkExtension
-* https://github.com/Behat/WebApiExtension
-* https://www.slideshare.net/JessicaMauerhan/behat-beyond-the-basics
-* http://mink.behat.org/en/latest/
-* https://www.pavlakis.info/php/23-having-a-go-at-creating-a-behat-3-extension
-* https://speakerdeck.com/weaverryan/behavioral-driven-development-with-behat-and-zend-framework-2
-* https://www.slideshare.net/marcello.duarte/bdd-for-zend-framework-with-php-spec
-* https://github.com/alteris/behat-zendframework-extension
-* https://github.com/mvlabs/zf2behat-extension
-
-
-# PDF #
-https://github.com/schmengler/PdfBox
-
-
 # Nginx, example configuration #
 
 ```
@@ -100,3 +64,39 @@ PHPUnit:
 ```
 make phpunit
 ```
+
+
+# ZF3 books: #
+* https://olegkrivtsov.github.io/using-zend-framework-3-book/html/
+* http://neverstopbuilding.com/set-up-zend-framework-2-with-behat-and-twig
+* http://zf2cheatsheet.com/
+* https://docs.zendframework.com/
+* https://docs.zendframework.com/tutorials/
+* https://framework.zend.com/learn
+* https://framework.zend.com/manual/2.4/en/index.html
+* https://zfmodules.com/
+* https://github.com/zendframework
+* https://github.com/zendframework/zf3-web
+* https://zend-expressive.readthedocs.io/en/latest/
+* http://circlical.com/blog/2016/3/9/preparing-for-zend-f
+* https://www.youtube.com/watch?v=sXTaWb7Tg6k&list=PLXRC3l-ZhN3rQrtVm9nLe_vRi7AB-iWOX
+* http://www.zendcon.com/tutorial
+
+
+# Behat / BDD #
+* https://www.jverdeyen.be/php/behat-file-downloads/
+* http://matmati.net/testing-pdf-with-behat-and-php/
+* https://php-xpdf.readthedocs.io/en/latest/
+* https://github.com/Behat/MinkExtension
+* https://github.com/Behat/WebApiExtension
+* https://www.slideshare.net/JessicaMauerhan/behat-beyond-the-basics
+* http://mink.behat.org/en/latest/
+* https://www.pavlakis.info/php/23-having-a-go-at-creating-a-behat-3-extension
+* https://speakerdeck.com/weaverryan/behavioral-driven-development-with-behat-and-zend-framework-2
+* https://www.slideshare.net/marcello.duarte/bdd-for-zend-framework-with-php-spec
+* https://github.com/alteris/behat-zendframework-extension
+* https://github.com/mvlabs/zf2behat-extension
+
+
+# PDF #
+https://github.com/schmengler/PdfBox
