@@ -1,9 +1,16 @@
-Feature: Product basket
-  In order to display pdf
-  As a Head Hunter
-  I need to open proper language
+Feature: CV display
+  In order to display pdf in proper language
+  As a Head Hunter or HR worker
+  I need to provide a default link and I should select a language
 
-  Scenario: Opening cv in english version
-    Given Pdf should open in proper language
-    When I select en flag
-    Then I should have english translation
+  Scenario: Trying to open cv in browser with default url
+    Given I should not provide language in url
+    When I execute url
+    Then I should get response with code "200"
+    And I should get "en_GB" translation
+
+  Scenario: Trying to open cv in browser with selected language
+    Given I should provide "en" language in url
+    When I execute url
+    Then I should get response with code "200"
+    And I should get "en_GB" translation

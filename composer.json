@@ -35,7 +35,12 @@
         "zendframework/zend-developer-tools": "^1.1",
         "creolink/code_style": "dev-develop",
         "behat/behat": "3.2.*",
-        "behat/mink-extension": "2.1.*"
+        "behat/mink-extension": "^2.2",
+        "knplabs/friendly-contexts": "dev-master",
+        "behat/mink": "^1.7",
+        "behat/mink-goutte-driver": "^1.2",
+        "sgh/pdfbox": "^1.0",
+        "behatch/contexts": "^2.6"
     },
     "extra": {
         "zend-skeleton-installer": [

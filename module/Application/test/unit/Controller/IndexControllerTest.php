@@ -5,7 +5,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ApplicationTest\Controller;
+namespace Application\Test\Unit\Controller;
 
 use Application\Controller\IndexController;
 use Zend\Stdlib\ArrayUtils;
@@ -26,7 +26,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
 
         $this->setApplicationConfig(ArrayUtils::merge(
             //include __DIR__ . '../../../../../../config/application.config.php',
-            include realpath('') . '/config/application.config.php',
+            require realpath('') . '/config/application.config.php',
             $configOverrides
         ));
 

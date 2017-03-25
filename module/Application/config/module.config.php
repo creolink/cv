@@ -6,7 +6,7 @@ use Zend\Router\Http\Literal;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
 use Zend\Mvc\I18n\TranslatorFactory;
-use Zend\Mvc\I18n\Translator;
+use Zend\I18n\Translator\Translator;
 use Application\Controller\IndexController;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Normalization\NormalizedTranslationServiceFactory;
@@ -88,7 +88,7 @@ return [
             Translator::class => TranslatorFactory::class,
             NormalizedTranslationService::class => NormalizedTranslationServiceFactory::class,
             NormalizedDateService::class => NormalizedDateServiceFactory::class,
-        ],
+        ]
     ],
     'translator' => [
         'locale' => Locale::DEFAULT_LOCALE,

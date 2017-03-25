@@ -16,7 +16,7 @@ class ServerResolver
      */
     public static function getName(): string
     {
-        return (APPLICATION_ENV === DEVELOPMENT_ENV)
+        return (getenv('APPLICATION_ENV') === 'development')
             ? $_SERVER['SERVER_NAME']
             : PdfConfig::DOCUMENT_HOST;
     }

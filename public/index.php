@@ -3,15 +3,7 @@
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
-$applicationEnvironment = 'production';
-if (!empty($_SERVER['APPLICATION_ENV'])) {
-    $applicationEnvironment = $_SERVER['APPLICATION_ENV'];
-}
-
-define('APPLICATION_ENV', $applicationEnvironment);
-define('DEVELOPMENT_ENV', 'development');
-
-if (APPLICATION_ENV === DEVELOPMENT_ENV) {
+if (getenv('APPLICATION_ENV') === 'development') {
     error_reporting(E_ALL);
     ini_set("display_errors", true);
     ini_set('display_startup_errors', true);
