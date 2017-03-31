@@ -45,7 +45,7 @@ return [
             'language' => [
                 'type' => Hostname::class,
                 'options' => [
-                    'route' => ':' . Locale::ROUTER_LANGUAGE_PARAM . '.' . ServerResolver::getName(),
+                    'route' => ':' . Locale::ROUTER_LANGUAGE_PARAM . '.' . ServerResolver::getHost(),
                     'constraints' => [
                         Locale::ROUTER_LANGUAGE_PARAM => Locale::ROUTER_ALLOWED_LANGUAGES,
                     ],

@@ -2,8 +2,9 @@
 
 namespace Application\Test\Behat\Context;
 
-use Application\Helper\ServerResolver;
 use Application\Test\Behat\Context\AbstractContext;
+use Behat\Gherkin\Node\TableNode;
+use Application\Helper\UrlHelper;
 
 class PDFContext extends AbstractContext
 {
@@ -18,33 +19,29 @@ class PDFContext extends AbstractContext
     private $language = '';
 
     /**
-     * @Given I should not add language in url
+     * @Given I do not add language in URL
      */
-    public function iShouldNotAddLanguageInUrl()
+    public function iDoNotAddLanguageInUrl()
     {
-        $this->iShouldAddLanguageInUrl();
+        $this->iAddLanguageInUrl();
     }
 
     /**
-     * @Given I should add :language language in url
+     * @Given I add :language language in URL
+     * @Given I add :language in URL
+     * @Given I have opened CV in browser in :language
      */
-    public function iShouldAddLanguageInUrl(string $language = '')
+    public function iAddLanguageInUrl(string $language = '')
     {
         $this->language = $language;
     }
 
     /**
-     * @When I execute provided url
+     * @When I execute provided URL
      */
     public function iExecuteProvidedUrl()
     {
-        $url = ServerResolver::getName();
-
-        if ('' !== $this->language) {
-            $url = $this->language . '.' . $url;
-        }
-
-        $this->url = 'http://' . $url;
+        $this->url = UrlHelper::getLanguageUrl($this->language);
     }
 
     /**
@@ -58,16 +55,87 @@ class PDFContext extends AbstractContext
 
     /**
      * @Then I should get :locale translation for key :key
+     * @Then I should get :locale for :key
      */
     public function iShouldGetTranslation(string $locale, string $key)
     {
-        $content = $this->getSession()->getPage()->getContent();
-
         $this->setLocale($locale);
 
         $this->assertContains(
             $this->translate($key),
-            $this->getPdfText($content)
+            $this->getPdfText(
+                $this->getContent()
+            )
         );
+    }
+    
+    /**
+     * @Then Document should contain URLs to different languages:
+     */
+    public function documentShouldContainUrlToDifferentLanguages(TableNode $languages)
+    {
+        $content = $this->getContent();
+        
+        $matches = [];
+        
+        foreach ($languages->getHash() as $row) {
+            $url = UrlHelper::getLanguageUrl($row['language']);
+            
+            preg_match('~' . $url .'~', $content, $matches);
+        
+            $this->assertTrue(
+                count($matches) > 0,
+                sprintf(
+                    "The url %s does not exist in document",
+                    $url
+                )
+            );
+        }
+    }
+    
+    
+    
+//    /**
+//     * @Given I have opened CV in browser in :arg1
+//     */
+//    public function iHaveOpenedCvInBrowserIn($arg1)
+//    {
+//        throw new PendingException();
+//    }
+
+    /**
+     * @When I click on download link
+     */
+    public function iClickOnDownloadLink()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then I should get PDF file
+     */
+    public function iShouldGetPdfFile()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then It should contain :arg1 in :arg2
+     */
+    public function itShouldContainIn($arg1, $arg2)
+    {
+        throw new PendingException();
+    }
+
+    
+    
+    /**
+     * @return string
+     */
+    private function getContent(): string
+    {
+        return $this->getSession()
+            ->getPage()
+            ->getContent();
     }
 }

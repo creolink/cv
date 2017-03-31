@@ -8,16 +8,19 @@
 namespace Application\Helper;
 
 use Application\Config\PdfConfig;
+use Zend\View\Helper\ServerUrl;
 
 class ServerResolver
 {
     /**
      * @return string
      */
-    public static function getName(): string
+    public static function getHost(): string
     {
-        return (getenv('APPLICATION_ENV') === 'development')
-            ? $_SERVER['SERVER_NAME']
+        $host = (new ServerUrl())->getHost();
+        
+        return (getenv('APPLICATION_ENV') === 'development' && !empty($host))
+            ? $host
             : PdfConfig::DOCUMENT_HOST;
     }
 }
