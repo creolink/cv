@@ -13,13 +13,15 @@ use Zend\View\Helper\ServerUrl;
 class UrlHelper
 {
     /**
+     * @param string $language
+     *
      * @return string
      */
-    public static function getLanguageUrl($language): string
+    public static function getLanguageUrl(string $language): string
     {
         return self::getScheme(). '://' . self::getHost($language);
     }
-    
+
     /**
      * @return string
      */
@@ -27,7 +29,7 @@ class UrlHelper
     {
         return self::getServerUrl()->getScheme();
     }
-    
+
     /**
      * @return ServerUrl
      */
@@ -35,7 +37,7 @@ class UrlHelper
     {
         return new ServerUrl();
     }
-    
+
     /**
      * @param string $language
      * @return string
@@ -47,7 +49,7 @@ class UrlHelper
         if ('' !== $language) {
             $host = $language . '.' . $host;
         }
-        
+
         return $host;
     }
 }

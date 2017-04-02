@@ -89,7 +89,7 @@ return [
             Translator::class => TranslatorFactory::class,
             NormalizedTranslationService::class => NormalizedTranslationServiceFactory::class,
             NormalizedDateService::class => NormalizedDateServiceFactory::class,
-        ]
+        ],
     ],
     'translator' => [
         'locale' => Locale::DEFAULT_LOCALE,

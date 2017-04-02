@@ -31,6 +31,8 @@ class PDFContext extends AbstractContext
      * @Given I add :language language in URL
      * @Given I add :language in URL
      * @Given I have opened CV in browser in :language
+     *
+     * @param string $language
      */
     public function iAddLanguageInUrl(string $language = '')
     {
@@ -49,6 +51,8 @@ class PDFContext extends AbstractContext
 
     /**
      * @Then I should get response with code :code
+     *
+     * @param string $code
      */
     public function iShouldGetResponseWithCode(string $code)
     {
@@ -61,6 +65,9 @@ class PDFContext extends AbstractContext
      * @Then I should get :locale translation for key :key
      * @Then I should get :locale for :key
      * @Then It should contain :key in :locale
+     *
+     * @param string $locale
+     * @param string $key
      */
     public function iShouldGetTranslation(string $locale, string $key)
     {
@@ -76,6 +83,8 @@ class PDFContext extends AbstractContext
 
     /**
      * @Then Document should contain URLs to different languages:
+     *
+     * @param TableNode $languages
      */
     public function documentShouldContainUrlToDifferentLanguages(TableNode $languages)
     {
