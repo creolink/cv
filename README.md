@@ -84,6 +84,7 @@ make phpunit
 * http://circlical.com/blog/2016/3/9/preparing-for-zend-f
 * https://www.youtube.com/watch?v=sXTaWb7Tg6k&list=PLXRC3l-ZhN3rQrtVm9nLe_vRi7AB-iWOX
 * http://www.zendcon.com/tutorial
+* http://www.zimuel.it/slides/midwestphp2016/expressive
 
 
 # Behat / BDD #

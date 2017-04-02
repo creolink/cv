@@ -3,7 +3,7 @@ Feature: CV display
   As a Head Hunter or HR worker
   I need to provide a default link
   Then I should get CV with default language
-  Or I should select a language 
+  Or I should select a language
   Then I should get CV in selected language
 
   Scenario: Trying to open CV in browser with default url
@@ -29,3 +29,4 @@ Feature: CV display
       | "pl"     | "pl_PL" | "cv-technicalSkills-sectionTitle"   |
       | "de"     | "de_DE" | "cv-employmentHistory-sectionTitle" |
       | "xx"     | "xx_XX" | "cv-careerGoals-sectionTitle"       |
+

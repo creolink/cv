@@ -18,6 +18,7 @@ use Application\Normalization\NormalizedDateService;
 use Application\Normalization\NormalizedDateServiceFactory;
 
 return [
+    'webhost' => ServerResolver::getHost(),
     'controllers' => [
         'factories' => [
             IndexController::class => InvokableFactory::class,

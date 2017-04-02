@@ -2,9 +2,10 @@
 
 namespace Application\Test\Behat\Context;
 
-use Application\Test\Behat\Context\AbstractContext;
+use Application\test\behat\context\AbstractContext;
 use Behat\Gherkin\Node\TableNode;
 use Application\Helper\UrlHelper;
+use Application\Helper\ServerResolver;
 
 class PDFContext extends AbstractContext
 {
@@ -41,6 +42,8 @@ class PDFContext extends AbstractContext
      */
     public function iExecuteProvidedUrl()
     {
+        ServerResolver::setServerName($this->host);
+
         $this->url = UrlHelper::getLanguageUrl($this->language);
     }
 
@@ -68,21 +71,21 @@ class PDFContext extends AbstractContext
             )
         );
     }
-    
+
     /**
      * @Then Document should contain URLs to different languages:
      */
     public function documentShouldContainUrlToDifferentLanguages(TableNode $languages)
     {
         $content = $this->getContent();
-        
+
         $matches = [];
-        
+
         foreach ($languages->getHash() as $row) {
             $url = UrlHelper::getLanguageUrl($row['language']);
-            
+
             preg_match('~' . $url .'~', $content, $matches);
-        
+
             $this->assertTrue(
                 count($matches) > 0,
                 sprintf(
@@ -92,23 +95,13 @@ class PDFContext extends AbstractContext
             );
         }
     }
-    
-    
-    
-//    /**
-//     * @Given I have opened CV in browser in :arg1
-//     */
-//    public function iHaveOpenedCvInBrowserIn($arg1)
-//    {
-//        throw new PendingException();
-//    }
 
     /**
-     * @When I click on download link
+     * @when I click on download link
      */
     public function iClickOnDownloadLink()
     {
-        throw new PendingException();
+        $this->iExecuteProvidedUrl();
     }
 
     /**
@@ -116,7 +109,7 @@ class PDFContext extends AbstractContext
      */
     public function iShouldGetPdfFile()
     {
-        throw new PendingException();
+        $this->getSession()->visit($this->url);
     }
 
     /**
@@ -127,8 +120,8 @@ class PDFContext extends AbstractContext
         throw new PendingException();
     }
 
-    
-    
+
+
     /**
      * @return string
      */
