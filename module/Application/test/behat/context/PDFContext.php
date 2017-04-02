@@ -53,12 +53,14 @@ class PDFContext extends AbstractContext
     public function iShouldGetResponseWithCode(string $code)
     {
         $this->getSession()->visit($this->url);
+
         $this->assertSession()->statusCodeEquals($code);
     }
 
     /**
      * @Then I should get :locale translation for key :key
      * @Then I should get :locale for :key
+     * @Then It should contain :key in :locale
      */
     public function iShouldGetTranslation(string $locale, string $key)
     {
@@ -102,6 +104,8 @@ class PDFContext extends AbstractContext
     public function iClickOnDownloadLink()
     {
         $this->iExecuteProvidedUrl();
+
+        $this->url = $this->url . '/download';
     }
 
     /**
@@ -110,17 +114,17 @@ class PDFContext extends AbstractContext
     public function iShouldGetPdfFile()
     {
         $this->getSession()->visit($this->url);
+
+        $headers = $this->getSession()->getResponseHeaders();
+
+        $contentDisposition = 'Content-Disposition';
+
+        $this->assertArrayHasKey($contentDisposition, $headers);
+
+        foreach ($headers[$contentDisposition] as $headerData) {
+            $this->assertContains('attachment', $headerData);
+        }
     }
-
-    /**
-     * @Then It should contain :arg1 in :arg2
-     */
-    public function itShouldContainIn($arg1, $arg2)
-    {
-        throw new PendingException();
-    }
-
-
 
     /**
      * @return string

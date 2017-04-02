@@ -100,6 +100,9 @@ make phpunit
 * https://www.slideshare.net/marcello.duarte/bdd-for-zend-framework-with-php-spec
 * https://github.com/alteris/behat-zendframework-extension
 * https://github.com/mvlabs/zf2behat-extension
+* https://media.readthedocs.org/pdf/mink/latest/mink.pdf
+* http://apigen.juzna.cz/doc/Behat/Mink/class-Behat.Mink.WebAssert.html
+* http://blog.lepine.pro/images/2012-03-behat-cheat-sheet-en.pdf
 
 
 # PDF #
