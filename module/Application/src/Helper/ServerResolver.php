@@ -7,7 +7,7 @@
 
 namespace Application\Helper;
 
-use Zend\View\Helper\ServerUrl;
+use Application\Config\PdfConfig;
 
 class ServerResolver
 {
@@ -23,7 +23,7 @@ class ServerResolver
     {
         return (getenv('APPLICATION_ENV') === 'development')
             ? self::getServerName()
-            : (new ServerUrl())->getHost();
+            : PdfConfig::DOCUMENT_HOST;
     }
 
     /**
