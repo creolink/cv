@@ -9,7 +9,7 @@ namespace Application\Element;
 
 use Application\Decorator\AbstractTcpdfDecorator;
 use Application\Config\Image;
-use Application\Helper\ServerResolver;
+use Application\Helper\UrlHelper;
 
 class MainHeaderFlags extends AbstractTcpdfDecorator
 {
@@ -21,7 +21,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
     const FLAG_PL_MARGIN = 8;
 
     /**
-     * Renders flags / cv languages & urls
+     * Renders flags / CV languages & URL
      */
     public function renderFlags()
     {
@@ -45,7 +45,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
     }
 
     /**
-     * Renders flag with url
+     * Renders flag with URL
      *
      * @param string $flag
      * @param string $language
@@ -59,7 +59,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             self::FLAGS_CURSOR_Y + $margin,
             Image::FLAG_WIDTH,
             Image::FLAG_HEIGHT,
-            'http://' . $language . '.' . ServerResolver::getName()
+            UrlHelper::getLanguageUrl($language)
         );
 
         $this->tcpdf->Rect(

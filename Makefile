@@ -18,10 +18,10 @@ check: phpcs phpmd check-deprecations
 test: phpunit behat
 
 behat: rm-cache
-	bin/behat --stop-on-failure
+	APPLICATION_ENV="development" bin/behat --config config/behat.yml --stop-on-failure
 
 phpunit:
-	bin/phpunit -c app
+	bin/phpunit
 
 phpunit-coverage:
 	SYMFONY_DEPRECATIONS_HELPER=weak bin/phpunit -c app --testsuite UnitTest --coverage-php build/code-coverage/phpunit.cov
@@ -47,4 +47,4 @@ phplint:
 	find app/ src/ -name "*.php" ! -path "*cache*" ! -path "*Test*" -print0 -exec php -l {} 2>&1 > /dev/null \;
 
 rm-cache:
-	rm -fR app/cache/*
+	rm -fR data/cache/*

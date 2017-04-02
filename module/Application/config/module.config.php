@@ -3,7 +3,6 @@
 namespace Application;
 
 use Zend\Router\Http\Literal;
-use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Router\Http\Hostname;
 use Zend\Mvc\I18n\TranslatorFactory;
@@ -19,6 +18,7 @@ use Application\Normalization\NormalizedDateService;
 use Application\Normalization\NormalizedDateServiceFactory;
 
 return [
+    'webhost' => ServerResolver::getHost(),
     'controllers' => [
         'factories' => [
             IndexController::class => InvokableFactory::class,
@@ -46,7 +46,7 @@ return [
             'language' => [
                 'type' => Hostname::class,
                 'options' => [
-                    'route' => ':' . Locale::ROUTER_LANGUAGE_PARAM . '.' . ServerResolver::getName(),
+                    'route' => ':' . Locale::ROUTER_LANGUAGE_PARAM . '.' . ServerResolver::getHost(),
                     'constraints' => [
                         Locale::ROUTER_LANGUAGE_PARAM => Locale::ROUTER_ALLOWED_LANGUAGES,
                     ],

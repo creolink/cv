@@ -1,0 +1,27 @@
+default:
+    autoload:
+        - %paths.base%/../module/
+
+    extensions:
+        Behat\MinkExtension:
+            base_url:  'http://cv.creolink.pl'
+            sessions:
+                default:
+                    goutte: ~
+
+    formatters:
+        pretty: true
+
+    suites:
+        application:
+            paths:
+                - %paths.base%/../module/Application/test/behat/features
+
+            contexts:
+                - Application\test\behat\context\PDFContext:
+                    host: 'cv.home'
+                - Knp\FriendlyContexts\Context\MinkContext
+
+            extensions:
+                Behatch\Extension: ~
+

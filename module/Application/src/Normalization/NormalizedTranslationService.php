@@ -89,6 +89,14 @@ class NormalizedTranslationService implements TranslatorInterface
     }
 
     /**
+     * @param string $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->translator->setLocale($locale);
+    }
+
+    /**
      * @param string $language
      */
     public function setLanguage(string $language)
