@@ -123,6 +123,7 @@ abstract class AbstractContext extends BaseContext
         );
 
         $events = self::$application->getEventManager();
+
         self::$application->getServiceManager()->get('SendResponseListener')->detach($events);
     }
 

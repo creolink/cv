@@ -12,7 +12,9 @@ use Application\Entity\EmploymentPosition;
 use Application\Element\EmploymentReferencesInterface;
 use Application\Element\EmploymentRecommendationInterface;
 
-class EmploymentExamples extends EmploymentDocuments implements EmploymentReferencesInterface, EmploymentRecommendationInterface
+class EmploymentExamples extends EmploymentDocuments implements
+    EmploymentReferencesInterface,
+    EmploymentRecommendationInterface
 {
     const DOWNLOAD_ICON_MARGIN = 5.5;
     const DOWNLOAD_DOCUMENT_FONT_SIZE = 7;

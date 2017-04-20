@@ -13,18 +13,18 @@ class DateHelper
      * @var array
      */
     private $polishMonths = [
-        1 => array('styczeń', 'stycznia'),
-        2 => array('luty', 'lutego'),
-        3 => array('marzec', 'marca'),
-        4 => array('kwiecień', 'kwietnia'),
-        5 => array('maj', 'maja'),
-        6 => array('czerwiec', 'czerwca'),
-        7 => array('lipiec', 'lipca'),
-        8 => array('sierpień', 'sierpnia'),
-        9 => array('wrzesień', 'wrzesnia'),
-        10 => array('październik', 'października'),
-        11 => array('listopad', 'listopada'),
-        12 => array('grudzień', 'grudnia'),
+        1 => ['styczeń', 'stycznia'],
+        2 => ['luty', 'lutego'],
+        3 => ['marzec', 'marca'],
+        4 => ['kwiecień', 'kwietnia'],
+        5 => ['maj', 'maja'],
+        6 => ['czerwiec', 'czerwca'],
+        7 => ['lipiec', 'lipca'],
+        8 => ['sierpień', 'sierpnia'],
+        9 => ['wrzesień', 'wrzesnia'],
+        10 => ['październik', 'października'],
+        11 => ['listopad', 'listopada'],
+        12 => ['grudzień', 'grudnia'],
     ];
 
     /**

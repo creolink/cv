@@ -124,6 +124,7 @@
         ]
     },
     "scripts": {
+        "phpcs": "make phpcs",
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "development-disable": "zf-development-mode disable",
