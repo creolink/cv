@@ -87,7 +87,7 @@ class TcpdfFix extends TCPDF
                         $annots .= ' /FT /'.$pl['opt']['ft'];
                         $formfield = true;
                     }
-                    $annots .= $this->fixAnnotation($pl, $annot_obj_id, $annots); // Fix for annotations in Chrome
+                    //$annots .= $this->fixAnnotation($pl, $annot_obj_id, $annots); // Fix for annotations in Chrome
                     $annots .= ' /P '.$this->page_obj_id[$n].' 0 R';
                     $annots .= ' /NM '.$this->_datastring(sprintf('%04u-%04u', $n, $key), $annot_obj_id);
                     $annots .= ' /M '.$this->_datestring($annot_obj_id, $this->doc_modification_timestamp);
