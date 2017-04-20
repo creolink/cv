@@ -5,19 +5,33 @@ namespace Application\Test\Unit\CurriculumVitae;
 use Application\Test\Unit\AbstractTest;
 use Application\Model\CurriculumVitae;
 
+/**
+ * @coversDefaultClass \Application\Model\CurriculumVitae
+ */
 class CurriculumVitaeTest extends AbstractTest
 {
     /**
-     * @test
+     * @covers ::outputPdf
      */
-    public function testCVHeader()
+    public function testCVIsNotEmpty()
     {
-        $cv = new CurriculumVitae();
-        $cv->setTranslator($this->translator);
-
-        $result = $cv->outputPdf();
+        $result = $this->getCV()->outputPdf();
 
         $this->assertNotEmpty($result);
         $this->assertContains('PDF-1.7', $result);
+    }
+
+    /**
+     * @return CurriculumVitae
+     */
+    private function getCV(): CurriculumVitae
+    {
+        $cv = new CurriculumVitae();
+
+        $cv->configure();
+        $cv->initFonts();
+        $cv->setTranslator($this->translator);
+
+        return $cv;
     }
 }
