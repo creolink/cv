@@ -15,7 +15,8 @@ class CurriculumVitaeTest extends AbstractTest
      */
     public function testCVIsNotEmpty()
     {
-        $result = $this->getCV()->outputPdf();
+        $result = $this->getCV()
+            ->outputPdf();
 
         $this->assertNotEmpty($result);
         $this->assertContains('PDF-1.7', $result);
