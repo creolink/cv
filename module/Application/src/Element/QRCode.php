@@ -69,7 +69,8 @@ class QRCode extends AbstractPageDecorator
     {
         return 'BEGIN:VCARD'. "\n"
             . 'VERSION:2.1' . "\n"
-            . 'FN:' . PersonalData::NAME . ' ' . PersonalData::LASTNAME . "\n"
+            . 'FN:' . $this->trans(PersonalData::NAME)
+                . ' ' . $this->trans(PersonalData::LASTNAME) . "\n"
             . 'TITLE:' . $this->trans(PersonalData::TITLE) . "\n"
             . 'TEL:' . PersonalData::PHONE . "\n"
             . 'EMAIL:' . PersonalData::EMAIL . "\n"
