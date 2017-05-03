@@ -173,7 +173,7 @@ msgid "cv-languages-english"
 msgstr "English (C1), prof. proficiency"
 
 msgid "cv-languages-german"
-msgstr "German (B1), kommunikativ"
+msgstr "German (B1), communicative"
 
 msgid "cv-languages-russian"
 msgstr "Russian (A1), beginner"

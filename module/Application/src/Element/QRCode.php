@@ -70,14 +70,14 @@ class QRCode extends AbstractPageDecorator
         return 'BEGIN:VCARD'. "\n"
             . 'VERSION:2.1' . "\n"
             . 'FN:' . PersonalData::NAME . ' ' . PersonalData::LASTNAME . "\n"
-            . 'TITLE:' . PersonalData::TITLE . "\n"
+            . 'TITLE:' . $this->trans(PersonalData::TITLE) . "\n"
             . 'TEL:' . PersonalData::PHONE . "\n"
             . 'EMAIL:' . PersonalData::EMAIL . "\n"
             . 'PHOTO;PNG:' . Image::PERSONAL_PHOTO_URL . "\n"
             . 'ADR:;;' . PersonalData::STREET . ';'
                 . PersonalData::CITY . ';;'
                 . PersonalData::POST_CODE . ';'
-                . PersonalData::COUNTRY . "\n"
+                . $this->trans(PersonalData::COUNTRY) . "\n"
             . 'URL:' . PdfConfig::DOCUMENT_URL . "\n"
             . 'END:VCARD';
     }
