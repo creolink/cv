@@ -19,7 +19,7 @@ default:
 
             contexts:
                 - Application\test\behat\context\PDFContext:
-                    host: 'cv.home'
+                    host: 'cv.develop'
                 - Knp\FriendlyContexts\Context\MinkContext
 
             extensions:

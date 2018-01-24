@@ -3,8 +3,8 @@
 
 server {
 	listen       80;
-	server_name  cv.home en.cv.home pl.cv.home de.cv.home xx.cv.home;
-	
+	server_name  cv.develop en.cv.develop pl.cv.develop de.cv.develop xx.cv.develop;
+
 	listen      443;
 	ssl on;
 	ssl_certificate     /etc/nginx/ssl/cert.pem;

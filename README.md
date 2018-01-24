@@ -4,10 +4,16 @@
 
 Latest version of PDF file can be found here: http://cv.creolink.pl/
 
+
 # Installation #
 `sudo apt-get install composer openjdk-8-jdk php-intl`
 
 `composer install`
+
+In `/etc/hosts` file you need to add host:
+```
+127.0.0.1 cv.develop en.cv.develop pl.cv.develop de.cv.develop
+```
 
 
 # Nginx, example configuration #
@@ -15,7 +21,7 @@ Latest version of PDF file can be found here: http://cv.creolink.pl/
 ```
 #!txt
 server {
-    server_name cv.dev en.cv.dev pl.cv.dev de.cv.dev;
+    server_name cv.develop en.cv.develop pl.cv.develop de.cv.develop;
     root /path/to/cv/public;
 
     listen       80;
@@ -58,9 +64,11 @@ server {
 
 ```
 
+
 # Testing #
 
 Behat:
+For Behat tests you need to configure cv.develop virtualhost (see above nginx configuration) 
 ```
 make behat
 ```
