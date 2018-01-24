@@ -4,6 +4,11 @@
 
 Latest version of PDF file can be found here: http://cv.creolink.pl/
 
+# Installation #
+`sudo apt-get install composer openjdk-8-jdk php-intl`
+
+`composer install`
+
 
 # Nginx, example configuration #
 
