@@ -36,7 +36,7 @@ server {
 	open_file_cache_valid    30s;
 	open_file_cache_min_uses 2;
 	open_file_cache_errors   on;
-	
+
 	error_page  404  /404/;
 
 	#konfiguracja podstawowa
