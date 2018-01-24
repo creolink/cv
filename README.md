@@ -6,7 +6,7 @@ Latest version of PDF file can be found here: http://cv.creolink.pl/
 
 
 # Installation #
-`sudo apt-get install composer openjdk-8-jdk php-intl`
+`sudo apt-get install composer openjdk-8-jdk php-intl poedit`
 
 `composer install`
 
@@ -120,3 +120,8 @@ make phpunit
 
 # PDF #
 https://github.com/schmengler/PdfBox
+
+
+# TRANSLATIONS MANAGEMENT #
+Use `poedit` https://poedit.net/
+Install it with `sudo apt-get install poedit`
