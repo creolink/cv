@@ -186,6 +186,9 @@ msgstr "Zorganizowany"
 msgid "cv-personalTraits-directive"
 msgstr "Dyrektywny"
 
+msgid "cv-personalTraits-helpful"
+msgstr "Pomocny"
+
 msgid "cv-personalTraits-independence"
 msgstr "Niezależny"
 
@@ -196,7 +199,7 @@ msgid "cv-personalTraits-solidity"
 msgstr "Rzetelny"
 
 msgid "cv-personalTraits-cooperation"
-msgstr "Współpracujący"
+msgstr "Zespołowy"
 
 msgid "cv-personalTraits-punctuality"
 msgstr "Punktualny"

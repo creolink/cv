@@ -5,15 +5,15 @@ positions:
     - { name: 'JS, jQuery, Json, Xml', level: 4, experience: 10 }
     - { name: 'UML, WEB / UI / DB Design', level: 4, experience: 10 }
     - { name: 'Linux, Windows', level: 4, experience: 10 }
-    - { name: 'SEO, SEM', level: 3, experience: 9 }
     - { name: 'SOLID, Clean code, KISS, DRY', level: 3, experience: 4 }
     - { name: 'Symfony 2 & 3', level: 3, experience: 4 }
     - { name: 'Design patterns: MVC, DI, ...', level: 3, experience: 4 }
     - { name: 'TDD, PHPUnit', level: 3, experience: 3 }
-    - { name: 'Elastic Search, Solr, Sphinx', level: 2, experience: 2 }
-    - { name: 'React, Typescript', level: 2, experience: 1 }
-    - { name: 'ZF 1..3', level: 1, experience: 0.7 }
-    - { name: 'BDD, Behat', level: 1, experience: 0.5 }
+    - { name: 'BDD, Behat', level: 3, experience: 1.5 }
+    - { name: 'SEO, SEM', level: 2, experience: 9 }
+    - { name: 'Elastic Search, Solr, Sphinx', level: 2, experience: 1 }
+    - { name: 'ZF 1..3', level: 2, experience: 1 }
+    - { name: 'React, Typescript', level: 1, experience: 0.7 }
     - { name: 'Perl, Python, Java, C#, C++', level: 1, experience: 0.2 }
 
     - { name: 'Sass, Less', level: 2, experience: 2, disabled: true }

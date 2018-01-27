@@ -187,6 +187,9 @@ msgstr "Organized"
 msgid "cv-personalTraits-directive"
 msgstr "Directive"
 
+msgid "cv-personalTraits-helpful"
+msgstr "Helpful"
+
 msgid "cv-personalTraits-independence"
 msgstr "Independent"
 

@@ -208,6 +208,12 @@ msgstr "cv-personalTraits-diligence"
 msgid "cv-personalTraits-creativity"
 msgstr "cv-personalTraits-creativity"
 
+msgid "cv-personalTraits-helpful"
+msgstr "cv-personalTraits-helpful"
+
+msgid "cv-personalTraits-directive"
+msgstr "cv-personalTraits-directive"
+
 msgid "cv-personalTraits-teamWork"
 msgstr "cv-personalTraits-teamWork"
 
