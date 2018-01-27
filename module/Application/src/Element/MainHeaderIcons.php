@@ -15,11 +15,12 @@ use Application\Config\PersonalData;
 class MainHeaderIcons extends AbstractTcpdfDecorator
 {
     const CONTACT_ICON_CURSOR_Y = 40;
-    const CONTACT_ICON_PHONE_CURSOR_X = 58;
-    const CONTACT_ICON_EMAIL_CURSOR_X = 86;
-    const CONTACT_ICON_SKYPE_CURSOR_X = 123;
-    const CONTACT_ICON_LINKED_IN_CURSOR_X = 152;
-    const CONTACT_ICON_GOLDEN_LINE_CURSOR_X = 177;
+    const CONTACT_ICON_PHONE_CURSOR_X = 52;
+    const CONTACT_ICON_EMAIL_CURSOR_X = 80;
+    const CONTACT_ICON_GITHUB_CURSOR_X = 116;
+    const CONTACT_ICON_SKYPE_CURSOR_X = 132;
+    const CONTACT_ICON_LINKED_IN_CURSOR_X = 155;
+    const CONTACT_ICON_GOLDEN_LINE_CURSOR_X = 179;
 
     const CONTACT_LINE_UP_CURSOR_X_START = 0;
     const CONTACT_LINE_UP_CURSOR_X_END = 210;
@@ -52,6 +53,7 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
     {
         $this->renderPhone();
         $this->renderEmail();
+        $this->renderGitHub();
         $this->renderSkype();
         $this->renderLinkedIn();
         $this->renderGoldenLine();
@@ -82,6 +84,20 @@ class MainHeaderIcons extends AbstractTcpdfDecorator
             Image::SKYPE,
             PersonalData::SKYPE,
             PersonalData::SKYPE_URL
+        );
+    }
+
+    /**
+     * Renders Github icon and url
+     */
+    private function renderGitHub()
+    {
+        $this->tcpdf->renderIcon(
+            self::CONTACT_ICON_GITHUB_CURSOR_X,
+            self::CONTACT_ICON_CURSOR_Y,
+            Image::GITHUB,
+            PersonalData::GITHUB,
+            PersonalData::GITHUB_URL
         );
     }
 

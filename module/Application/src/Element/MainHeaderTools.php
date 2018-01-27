@@ -40,7 +40,7 @@ class MainHeaderTools extends AbstractTcpdfDecorator implements MainHeaderTitleI
             self::CELL_LINE_NONE,
             self::ALIGN_RIGHT,
             self::TRANSPARENT,
-            PersonalData::GITHUB
+            PersonalData::GITHUB_URL
         );
     }
 

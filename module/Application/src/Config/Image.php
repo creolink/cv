@@ -12,6 +12,7 @@ class Image
     const PHONE = 'phone.png';
     const EMAIL = 'email.png';
     const SKYPE = 'skype.png';
+    const GITHUB = 'github.png';
     const LINKED_IN = 'linkedin.png';
     const GOLDEN_LINE = 'goldenline.png';
 
