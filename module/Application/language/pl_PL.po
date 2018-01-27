@@ -130,13 +130,13 @@ msgid "cv-employment-date-present"
 msgstr "...wciąż"
 
 msgid "cv-contract-auto1-name"
-msgstr "Inżynier oprogramowania / projekt B2B"
+msgstr "Inżynier oprogramowania / projekt B2B & B2E"
 
 msgid "cv-contract-auto1-country"
 msgstr "Niemcy"
 
 msgid "cv-contract-auto1-description"
-msgstr "Odpowiedzialność za wdrożenie nowego produktu flagowego firmy. Budowanie aplikacji z wykorzystaniem ElasticSearch, Symfony 2 & 3, serwisów Java, Json, Node.js, React.js, Typescript i Silex. Implementacja testów jednostkowych PHPUnit oraz Behat. Przegląd kodów, refaktoryzacja. Tworzenie technicznej dokumentacji projektu z wykorzystaniem Confluence."
+msgstr "Współpraca przy tworzeniu nowego produktu flagowego firmy oraz przy rozwijaniu wewnętrznego systemu do zarządzania firmą. Budowanie aplikacji z wykorzystaniem Symfony 2 & 3, Silex, ElasticSearch, serwisów Java, Json, Node.js, React.js, Typescript. Implementacja testów jednostkowych PHPUnit oraz Behat. Przegląd kodów, refaktoryzacja. Tworzenie technicznej dokumentacji projektu z wykorzystaniem Confluence."
 
 msgid "cv-contract-gandalf-name"
 msgstr "Kierownik IT / kompleksowe rozwiązanie B2E & B2C, eCommerce"

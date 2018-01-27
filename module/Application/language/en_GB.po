@@ -131,13 +131,13 @@ msgid "cv-employment-date-present"
 msgstr "...until now"
 
 msgid "cv-contract-auto1-name"
-msgstr "Software Engineer / B2B project"
+msgstr "Software Engineer / B2B & B2E project"
 
 msgid "cv-contract-auto1-country"
 msgstr "Germany"
 
 msgid "cv-contract-auto1-description"
-msgstr "Responsibility for development of new, company flagship product. Building applications with ElasticSearch, Symfony 2 & 3, Web services, Json, Node.js, React.js, Typescript and Silex. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence. Team work."
+msgstr "Cooperation in creating of new company flagship product and development of the Intranet System for management of company. Building applications with Symfony 2 & 3, Silex, Javascript, ElasticSearch, Web services, Json, Node.js, React.js, Typescript. Implementation of Unit and Behat tests. Code reviews and refactoring. Creating technical & project documentation using Confluence. Team work."
 
 msgid "cv-contract-gandalf-name"
 msgstr "IT Manager / B2E & B2C, eCommerce complex solution"
