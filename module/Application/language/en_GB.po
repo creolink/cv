@@ -287,7 +287,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Dear Sir or Madam"
 
 msgid "cv-careerGoals-content"
-msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have %s years of experience as programmer in project design & development and 6 years as team coordinator and project manager. I feel the best as developer and coder of big B2E, B2B, B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a manager of IT department in international company."
+msgstr "I am a full stack developer. My passion is system designing and coding in PHP language. I have %s years of experience in design & development and 6 years as team coordinator and project manager. I feel the best as developer and coder of big B2E & B2C eCommerce web projects. I like all kind of tasks, easy and challenging one. I gladly accept challenges basing on new technical solutions. I'm very well organized, thorough and flexible in teamwork. I am also appreciated for independent and remote work. My future goal is to become a Technical Product Manager of international company."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Additional, commissioned & freelance jobs"

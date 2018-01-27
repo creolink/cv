@@ -289,7 +289,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Sehr geehrte Damen und Herren"
 
 msgid "cv-careerGoals-content"
-msgstr "Ich bin Full-Stack Entwickler. Meine Passion ist Systemdesign und Codierung in der PHP-Sprache. Ich habe %s Jahre Berufserfahrung als Entwickler in den Bereichen Projektentwurf und -entwicklung sowie als Teamkoordinator und Projektleiter (6 Jahre). Ich arbeite gern als Entwickler von B2E, B2B, B2C eCommerce Web-Projekten. Ich übernehme alle Arten von Aufgaben, von einfach bis herausforderndwobei. Ich besonders mag die Herausforderungen, auf neuen technischen Lösungen basieren. Ich bin sehr gut organisiert, gründlich und flexibel in der Teamarbeit. Ich schätze auch unabhängige und online Arbeit. Mein zukünftiges Ziel ist es, ein Manager der IT-Abteilung in einem international Unternehmen zu werden."
+msgstr "Ich bin Full-Stack Entwickler. Meine Passion ist Systemdesign und Codierung in der PHP-Sprache. Ich habe %s Jahre Berufserfahrung als Entwickler in den Bereichen Projektentwurf und -entwicklung sowie als Teamkoordinator und Projektleiter (6 Jahre). Ich arbeite gern als Entwickler von B2E, B2B, B2C eCommerce Web-Projekten. Ich übernehme alle Arten von Aufgaben, von einfach bis herausforderndwobei. Ich besonders mag die Herausforderungen, auf neuen technischen Lösungen basieren. Ich bin sehr gut organisiert, gründlich und flexibel in der Teamarbeit. Ich schätze auch unabhängige und online Arbeit. Mein zukünftiges Ziel ist es, ein Technischer Produktmanager in einem international Unternehmen zu werden."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Zusätzliche, beauftragte & freiberufliche Jobs"

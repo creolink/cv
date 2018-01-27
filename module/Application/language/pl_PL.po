@@ -286,7 +286,7 @@ msgid "cv-careerGoals-recipent"
 msgstr "Szanowni Państwo"
 
 msgid "cv-careerGoals-content"
-msgstr "Jestem FullStack developer-em. Moją pasją jest projektowanie i programowanie w języku PHP. Posiadam %s lat doświadczenia jako programista, projektant systemów oraz 6 lat jako koordynator zespołu i manager projektu. Najlepiej czuję się jako projektant i programista dużych rozwiązań eCommerce oraz aplikacji B2E, B2B, B2C. Lubię każdy rodzaj zadań - łatwe i wymagające. Chętnie przyjmuję wyzwania oparte o nowe technologie. Jestem bardzo dobrze zorganizowany, dokładny i elastyczny w pracy zespołowej. Jestem także doceniany za prace niezależną i zdalną. Moim celem jest zdobycie stanowiska Managera IT w międzynarodowej firmie."
+msgstr "Jestem FullStack developer-em. Moją pasją jest projektowanie i programowanie w języku PHP. Posiadam %s lat doświadczenia jako programista, projektant systemów oraz 6 lat jako koordynator zespołu i manager projektu. Najlepiej czuję się jako projektant i programista dużych rozwiązań eCommerce oraz aplikacji B2E, B2B, B2C. Lubię każdy rodzaj zadań - łatwe i wymagające. Chętnie przyjmuję wyzwania oparte o nowe technologie. Jestem bardzo dobrze zorganizowany, dokładny i elastyczny w pracy zespołowej. Jestem także doceniany za prace niezależną i zdalną. Moim celem jest zostanie Technicznym Produktmanagerem w międzynarodowej firmie."
 
 msgid "cv-commisionedJobs-sectionTitle"
 msgstr "Dodatkowe, zlecone prace oraz freelancing"
