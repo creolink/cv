@@ -79,6 +79,9 @@ return [
                         ],
                         'may_terminate' => true,
                     ],
+                    CustomizerInterface::ROUTER_CUSTOMIZER_PARAM => [
+                        
+                    ]
                 ],
             ],
         ],

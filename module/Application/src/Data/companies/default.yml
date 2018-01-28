@@ -1,0 +1,4 @@
+cv-careerGoals-recipent:
+    - { language: 'en_GB', value: 'cos en' }
+    - { language: 'de_DE', value: 'cos de' }
+    - { language: 'pl_PL', value: 'cos pl' }

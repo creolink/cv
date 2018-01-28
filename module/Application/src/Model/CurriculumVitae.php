@@ -82,6 +82,15 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     }
 
     /**
+     * Injects translator service with normalization
+     *
+     * @param CustomizerService $translator
+     */
+    public function setCustomizer(CustomizerService $translator)
+    {
+        $this->translator = $translator;
+    }
+    /**
      * Injects date internalization service
      *
      * @param NormalizedDateService $dateService
