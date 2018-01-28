@@ -16,6 +16,7 @@ use Application\Config\Locale;
 use Application\Helper\ServerResolver;
 use Application\Normalization\NormalizedDateService;
 use Application\Normalization\NormalizedDateServiceFactory;
+use Application\Customizer\CustomizerInterface;
 
 return [
     'webhost' => ServerResolver::getHost(),
@@ -79,9 +80,9 @@ return [
                         ],
                         'may_terminate' => true,
                     ],
-                    CustomizerInterface::ROUTER_CUSTOMIZER_PARAM => [
-                        
-                    ]
+//                    CustomizerInterface::ROUTER_CUSTOMIZER_PARAM => [
+//
+//                    ]
                 ],
             ],
         ],
