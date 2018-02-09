@@ -124,6 +124,14 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     }
 
     /**
+     * @return CustomizerService
+     */
+    public function getCustomizer(): CustomizerService
+    {
+        return $this->customizerService;
+    }
+
+    /**
      * @param string $locale
      * @return string
      */

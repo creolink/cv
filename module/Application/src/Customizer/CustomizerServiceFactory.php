@@ -21,9 +21,11 @@ class CustomizerServiceFactory extends AbstractBaseFactory
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $customizerService = $container->get(CustomizerService::class);
+        $customizerService = new CustomizerService();
 
-        $customizerService->setCompany($this->getCompany($container));
+        $customizerService->setCompany(
+            $this->getCompany($container)
+        );
 
         return $customizerService;
     }
@@ -35,6 +37,6 @@ class CustomizerServiceFactory extends AbstractBaseFactory
     protected function getCompany(ContainerInterface $container): string
     {
         return $this->getRouteMatch($container)
-            ->getParam(CustomizerInterface::ROUTER_CUSTOMIZER_PARAM);
+            ->getParam(CustomizerInterface::ROUTER_CUSTOMIZER_PARAM) ?? '';
     }
 }
