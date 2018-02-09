@@ -23,8 +23,8 @@ class PersonalData
     const WORK_PLACE = 'cv-personalData-workPlace';
     const STOP_SMOKING_YEAR = 2006;
 
-    const PHONE = '+49 1521 7786892';
-    const PHONE_URL = 'tel:04915217786892';
+    const PHONE = '+49 176 66997457';
+    const PHONE_URL = 'tel:04917666997457';
     const EMAIL = 'jakub.luczynski@gmail.com';
     const EMAIL_URL = 'mailto:jakub.luczynski@gmail.com';
     const LINKED_IN = '/jakubluczynski';
