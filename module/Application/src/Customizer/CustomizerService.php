@@ -7,98 +7,30 @@
 
 namespace Application\Customizer;
 
-use \IntlDateFormatter;
-use Application\I18n\LocalizationService;
-use \DateTime;
-
 class CustomizerService
 {
-    const LOCALIZED_DATE_PATTERN = 'd MMMM yyyy';
-    const LOCALIZED_MONTH_AND_YEAR = 'LLLL yyyy';
-
     /**
-     * @var LocalizationService
+     * @var string $company
      */
-    private $localizationService;
+    private $company = '';
 
-    /**
-     * @var IntlDateFormatter
-     */
-    private $formatter;
-
-    /**
-     * @param LocalizationService $localizationService
-     */
-    public function __construct(
-        LocalizationService $localizationService
-    ) {
-        $this->localizationService = $localizationService;
-    }
-
-    /**
-     * Sets formatter
-     */
-    public function setFormatter()
+    public function __construct()
     {
-        $this->formatter = new IntlDateFormatter(
-            $this->localizationService->getLocale(),
-            IntlDateFormatter::FULL,
-            IntlDateFormatter::FULL
-        );
     }
 
     /**
-     * Returns localized date with properly transformed month name
-     *
-     * @param  DateTime|int|array|string $date
+     * @param string $company
+     */
+    public function setCompany(string $company = '')
+    {
+        $this->company = $company;
+    }
+
+    /**
      * @return string
      */
-    public function getLocalizedDate(DateTime $date): string
+    public function getCompany(): string
     {
-        return $this->format(
-            self::LOCALIZED_DATE_PATTERN,
-            $date
-        );
-    }
-
-    /**
-     * Returns localized month and year
-     *
-     * @param  DateTime|int|array|string $date
-     * @return string
-     */
-    public function getMonthAndYear(DateTime $date): string
-    {
-        return $this->format(
-            self::LOCALIZED_MONTH_AND_YEAR,
-            $date
-        );
-    }
-
-    /**
-     * @param  DateTime|int|array|string $date
-     * @return DateTime|int|array
-     */
-    private function createDate(DateTime $date): DateTime
-    {
-        if (gettype($date) === 'string') {
-            $date = new DateTime($date);
-        }
-
-        return $date;
-    }
-
-    /**
-     * @param string $pattern
-     * @param DateTime|int|array $date
-     * @return string
-     */
-    private function format(string $pattern, DateTime $date): string
-    {
-        $this->formatter->setPattern($pattern);
-
-        return $this->formatter->format(
-            $this->createDate($date)
-        );
+        return $this->company;
     }
 }

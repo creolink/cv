@@ -9,8 +9,7 @@ namespace Application\Customizer;
 
 use Interop\Container\ContainerInterface;
 use Application\Factory\AbstractBaseFactory;
-use Application\Normalization\NormalizedDateService;
-use Application\I18n\LocalizationService;
+use Application\Customizer\CustomizerService;
 
 class CustomizerServiceFactory extends AbstractBaseFactory
 {
@@ -18,18 +17,24 @@ class CustomizerServiceFactory extends AbstractBaseFactory
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param null|array $options
-     * @return NormalizedDateService
+     * @return CustomizerService
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $localizationService = $container->get(LocalizationService::class);
+        $customizerService = $container->get(CustomizerService::class);
 
-        $normalizedDateService = new NormalizedDateService(
-            $localizationService
-        );
+        $customizerService->setCompany($this->getCompany($container));
 
-        $normalizedDateService->setFormatter();
+        return $customizerService;
+    }
 
-        return $normalizedDateService;
+    /**
+     * @param ContainerInterface $container
+     * @return string
+     */
+    protected function getCompany(ContainerInterface $container): string
+    {
+        return $this->getRouteMatch($container)
+            ->getParam(CustomizerInterface::ROUTER_CUSTOMIZER_PARAM);
     }
 }

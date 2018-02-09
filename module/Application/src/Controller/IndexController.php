@@ -21,16 +21,7 @@ class IndexController extends BaseController
      */
     public function indexAction(): Response
     {
-        $pdf = $this->getPdf();
-
-        $this->setHeaders(
-            $this->getPdfHeaders($pdf)
-        );
-
-        $this->getResponse()
-            ->setContent($pdf);
-
-        return $this->response;
+        return $this->renderPDF();
     }
 
     /**
@@ -38,10 +29,21 @@ class IndexController extends BaseController
      */
     public function downloadAction(): Response
     {
+        return $this->renderPDF(true);
+    }
+
+    /**
+     * @param bool $isAttachement
+     * @return Response
+     */
+    private function renderPDF(bool $isAttachement = false): Response
+    {
+        $company = $this->params()->fromRoute('company');
+
         $pdf = $this->getPdf();
 
         $this->setHeaders(
-            $this->getPdfHeaders($pdf, true)
+            $this->getPdfHeaders($pdf, $isAttachement)
         );
 
         $this->getResponse()

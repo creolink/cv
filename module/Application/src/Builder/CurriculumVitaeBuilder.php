@@ -33,15 +33,22 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     private $normalizedDate;
 
     /**
+     * @var CustomizerService
+     */
+    private $customizer;
+
+    /**
      * @param NormalizedTranslationService $normalizedLocalization
      * @param NormalizedDateService $normalizedDate
      */
     public function __construct(
         NormalizedTranslationService $normalizedLocalization,
-        NormalizedDateService $normalizedDate
+        NormalizedDateService $normalizedDate,
+        CustomizerService $customizer
     ) {
         $this->normalizedLocalization = $normalizedLocalization;
         $this->normalizedDate = $normalizedDate;
+        $this->customizer = $customizer;
 
         $this->cv = new CurriculumVitae();
     }
@@ -60,12 +67,19 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     public function configure()
     {
         $this->cv->configure();
+        
         $this->cv->initFonts();
+
         $this->cv->setTranslator(
             $this->normalizedLocalization
         );
+
         $this->cv->setDateService(
             $this->normalizedDate
+        );
+
+        $this->cv->setCompany(
+            $this->customizer
         );
     }
 
