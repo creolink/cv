@@ -7,30 +7,75 @@
 
 namespace Application\Customizer;
 
+use Zend\Config\Factory;
+
 class CustomizerService
 {
+    const PATH = '/../Data/companies/';
+
     /**
-     * @var string $company
+     * @var string
      */
     private $company = '';
 
-    public function __construct()
-    {
-    }
+    /**
+     * @var string
+     */
+    private $locale = '';
+
+    /**
+     * @var array
+     */
+    private $customizedData = [];
 
     /**
      * @param string $company
+     * @param string $locale
      */
-    public function setCompany(string $company = '')
+    public function __construct(string $company = '', string $locale = '')
     {
         $this->company = $company;
+        $this->locale = $locale;
     }
 
     /**
-     * @return string
+     * @param string $translationKey
+     * @return string|null
      */
-    public function getCompany(): string
+    public function getCustomizedData(string $translationKey)
     {
-        return $this->company;
+        return $this->customizedData[$translationKey][$this->locale] ?? null;
+    }
+
+    /**
+     * @return void
+     */
+    public function setCustomizedData()
+    {
+        $this->customizedData = $this->getFileData();
+    }
+
+    /**
+     * @return array
+     */
+    private function getFileData(): array
+    {
+        $path = __DIR__ . self::PATH . $this->company . '.yml';
+
+        if (!$this->isFileValid($path)) {
+            return [];
+        }
+
+        return Factory::fromFile($path);
+    }
+
+    /**
+     * Validates file name
+     *
+     * @param string $path
+     */
+    private function isFileValid(string $path)
+    {
+        return file_exists($path) && is_file($path);
     }
 }

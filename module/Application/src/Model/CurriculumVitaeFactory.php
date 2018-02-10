@@ -13,7 +13,6 @@ use Application\Builder\CurriculumVitaeDirector;
 use Application\Builder\CurriculumVitaeBuilder;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Normalization\NormalizedDateService;
-use Application\Customizer\CustomizerService;
 
 class CurriculumVitaeFactory implements FactoryInterface
 {
@@ -29,13 +28,11 @@ class CurriculumVitaeFactory implements FactoryInterface
     {
         $normalizedTranslation = $container->get(NormalizedTranslationService::class);
         $normalizedDate = $container->get(NormalizedDateService::class);
-        $customizer = $container->get(CustomizerService::class);
 
         $cvDirector = new CurriculumVitaeDirector(
             new CurriculumVitaeBuilder(
                 $normalizedTranslation,
-                $normalizedDate,
-                $customizer
+                $normalizedDate
             )
         );
 

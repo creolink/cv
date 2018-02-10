@@ -15,7 +15,6 @@ use Application\Config\PersonalData;
 use Application\Model\TcpdfInterface;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Normalization\NormalizedDateService;
-use Application\Customizer\CustomizerService;
 
 class CurriculumVitae extends TcpdfFix implements TcpdfInterface
 {
@@ -60,11 +59,6 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     private $dateService;
 
     /**
-     * @var CustomizerService
-     */
-    private $customizerService;
-
-    /**
      * @var string
      */
     private $locale;
@@ -98,16 +92,6 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     }
 
     /**
-     * Injects company to customize content
-     *
-     * @param CustomizerService $customizerService
-     */
-    public function setCustomizer(CustomizerService $customizerService)
-    {
-        $this->customizerService = $customizerService;
-    }
-
-    /**
      * @return NormalizedTranslationService
      */
     public function getTranslator(): NormalizedTranslationService
@@ -121,14 +105,6 @@ class CurriculumVitae extends TcpdfFix implements TcpdfInterface
     public function getDateService(): NormalizedDateService
     {
         return $this->dateService;
-    }
-
-    /**
-     * @return CustomizerService
-     */
-    public function getCustomizer(): CustomizerService
-    {
-        return $this->customizerService;
     }
 
     /**

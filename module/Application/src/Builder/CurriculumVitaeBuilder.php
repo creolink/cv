@@ -14,7 +14,6 @@ use Application\Model\CurriculumVitae;
 use Application\Model\TcpdfInterface;
 use Application\Normalization\NormalizedTranslationService;
 use Application\Normalization\NormalizedDateService;
-use Application\Customizer\CustomizerService;
 
 class CurriculumVitaeBuilder extends AbstractBuilder
 {
@@ -34,23 +33,15 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     private $normalizedDate;
 
     /**
-     * @var CustomizerService
-     */
-    private $customizer;
-
-    /**
      * @param NormalizedTranslationService $normalizedLocalization
      * @param NormalizedDateService $normalizedDate
-     * @param CustomizerService $customizer
      */
     public function __construct(
         NormalizedTranslationService $normalizedLocalization,
-        NormalizedDateService $normalizedDate,
-        CustomizerService $customizer
+        NormalizedDateService $normalizedDate
     ) {
         $this->normalizedLocalization = $normalizedLocalization;
         $this->normalizedDate = $normalizedDate;
-        $this->customizer = $customizer;
 
         $this->cv = new CurriculumVitae();
     }
@@ -78,10 +69,6 @@ class CurriculumVitaeBuilder extends AbstractBuilder
 
         $this->cv->setDateService(
             $this->normalizedDate
-        );
-
-        $this->cv->setCustomizer(
-            $this->customizer
         );
     }
 

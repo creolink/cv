@@ -33,26 +33,6 @@ class IndexController extends BaseController
     }
 
     /**
-     * @param bool $isAttachement
-     * @return Response
-     */
-    private function renderPDF(bool $isAttachement = false): Response
-    {
-        $company = $this->params()->fromRoute('company');
-
-        $pdf = $this->getPdf();
-
-        $this->setHeaders(
-            $this->getPdfHeaders($pdf, $isAttachement)
-        );
-
-        $this->getResponse()
-            ->setContent($pdf);
-
-        return $this->response;
-    }
-
-    /**
      * Home page - auto redirect to english site
      *
      * @return Response
@@ -63,6 +43,24 @@ class IndexController extends BaseController
             'language',
             [Locale::ROUTER_LANGUAGE_PARAM => Locale::DEFAULT_LANGUAGE]
         );
+    }
+
+    /**
+     * @param bool $isAttachement
+     * @return Response
+     */
+    private function renderPDF(bool $isAttachement = false): Response
+    {
+        $pdf = $this->getPdf();
+
+        $this->setHeaders(
+            $this->getPdfHeaders($pdf, $isAttachement)
+        );
+
+        $this->getResponse()
+            ->setContent($pdf);
+
+        return $this->response;
     }
 
     /**

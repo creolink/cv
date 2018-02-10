@@ -79,9 +79,9 @@ return [
                         'type' => Segment::class,
                         'priority' => 99,
                         'options' => [
-                            'route' => '/download[/:company]',
+                            'route' => sprintf('/download[/:%s]', CustomizerInterface::ROUTER_CUSTOMIZER_PARAM),
                             'constraints' => [
-                                'company' => '[a-zA-Z0-9_-]+',
+                                CustomizerInterface::ROUTER_CUSTOMIZER_PARAM => '[a-zA-Z0-9_-]+',
                             ],
                             'defaults' => [
                                 'controller' => IndexController::class,

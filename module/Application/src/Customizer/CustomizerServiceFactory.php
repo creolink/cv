@@ -10,6 +10,7 @@ namespace Application\Customizer;
 use Interop\Container\ContainerInterface;
 use Application\Factory\AbstractBaseFactory;
 use Application\Customizer\CustomizerService;
+use Zend\Mvc\I18n\Translator;
 
 class CustomizerServiceFactory extends AbstractBaseFactory
 {
@@ -21,11 +22,14 @@ class CustomizerServiceFactory extends AbstractBaseFactory
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $customizerService = new CustomizerService();
+        $translator = $container->get(Translator::class);
 
-        $customizerService->setCompany(
-            $this->getCompany($container)
+        $customizerService = new CustomizerService(
+            $this->getCompany($container),
+            $translator->getLocale()
         );
+
+        $customizerService->setCustomizedData();
 
         return $customizerService;
     }

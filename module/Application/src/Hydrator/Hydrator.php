@@ -115,7 +115,7 @@ class Hydrator
      * Validates file name
      *
      * @param string $path
-     * @throws EntityNotFoundException
+     * @throws FileNotFoundException
      */
     private function validateFile(string $path)
     {

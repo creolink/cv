@@ -1,4 +1,5 @@
 cv-careerGoals-recipent:
-    - { language: 'en_GB', value: 'cos en' }
-    - { language: 'de_DE', value: 'cos de' }
-    - { language: 'pl_PL', value: 'cos pl' }
+    en_GB: 'Dear Mr. Kmicic, Dear Mrs. Smith'
+    de_DE: 'Sehr geehrter Herr Kmicic, Sehr geehrte Frau Smith'
+    pl_PL: 'Szanowny Panie Kmicic, Szanowna Pani Smith'
+
