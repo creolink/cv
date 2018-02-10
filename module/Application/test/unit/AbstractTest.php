@@ -7,6 +7,7 @@ use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 use Zend\Mvc\I18n\Translator;
 use Zend\I18n\Translator\Translator as I18nTranslator;
 use Application\Normalization\NormalizedTranslationService;
+use Application\Customizer\CustomizerService;
 
 abstract class AbstractTest extends AbstractHttpControllerTestCase
 {
@@ -60,12 +61,14 @@ abstract class AbstractTest extends AbstractHttpControllerTestCase
             new I18nTranslator()
         );
 
+        $customizer = new CustomizerService();
+
         $translator->addTranslationFilePattern(
             self::LANGUAGES_TYPE,
             self::LANGUAGES_PATH,
             self::LANGUAGES_PATTERN
         );
 
-        $this->translator = new NormalizedTranslationService($translator);
+        $this->translator = new NormalizedTranslationService($translator, $customizer);
     }
 }
