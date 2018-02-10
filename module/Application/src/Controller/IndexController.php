@@ -21,16 +21,7 @@ class IndexController extends BaseController
      */
     public function indexAction(): Response
     {
-        $pdf = $this->getPdf();
-
-        $this->setHeaders(
-            $this->getPdfHeaders($pdf)
-        );
-
-        $this->getResponse()
-            ->setContent($pdf);
-
-        return $this->response;
+        return $this->renderPDF();
     }
 
     /**
@@ -38,16 +29,7 @@ class IndexController extends BaseController
      */
     public function downloadAction(): Response
     {
-        $pdf = $this->getPdf();
-
-        $this->setHeaders(
-            $this->getPdfHeaders($pdf, true)
-        );
-
-        $this->getResponse()
-            ->setContent($pdf);
-
-        return $this->response;
+        return $this->renderPDF(true);
     }
 
     /**
@@ -61,6 +43,24 @@ class IndexController extends BaseController
             'language',
             [Locale::ROUTER_LANGUAGE_PARAM => Locale::DEFAULT_LANGUAGE]
         );
+    }
+
+    /**
+     * @param bool $isAttachement
+     * @return Response
+     */
+    private function renderPDF(bool $isAttachement = false): Response
+    {
+        $pdf = $this->getPdf();
+
+        $this->setHeaders(
+            $this->getPdfHeaders($pdf, $isAttachement)
+        );
+
+        $this->getResponse()
+            ->setContent($pdf);
+
+        return $this->response;
     }
 
     /**

@@ -13,6 +13,7 @@ use Application\Normalization\NormalizedTranslationService;
 use Application\I18n\LocalizationService;
 use Application\Config\Locale;
 use Application\Factory\AbstractBaseFactory;
+use Application\Customizer\CustomizerService;
 
 class NormalizedTranslationServiceFactory extends AbstractBaseFactory
 {
@@ -30,7 +31,9 @@ class NormalizedTranslationServiceFactory extends AbstractBaseFactory
         $translator->setLocale($localizationService->getLocale())
             ->setFallbackLocale(Locale::DEFAULT_LOCALE);
 
-        $normalizedTranslationService = new NormalizedTranslationService($translator);
+        $customizer = $container->get(CustomizerService::class);
+
+        $normalizedTranslationService = new NormalizedTranslationService($translator, $customizer);
         $normalizedTranslationService->setLanguage(
             $this->getLocale($container)
         );

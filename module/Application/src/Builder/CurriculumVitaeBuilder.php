@@ -60,10 +60,13 @@ class CurriculumVitaeBuilder extends AbstractBuilder
     public function configure()
     {
         $this->cv->configure();
+
         $this->cv->initFonts();
+
         $this->cv->setTranslator(
             $this->normalizedLocalization
         );
+
         $this->cv->setDateService(
             $this->normalizedDate
         );

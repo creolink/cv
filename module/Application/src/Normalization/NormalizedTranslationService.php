@@ -10,6 +10,7 @@ namespace Application\Normalization;
 use Zend\I18n\Translator\TranslatorInterface;
 use Zend\Mvc\I18n\Translator;
 use Application\Config\Locale;
+use Application\Customizer\CustomizerService;
 
 class NormalizedTranslationService implements TranslatorInterface
 {
@@ -45,16 +46,23 @@ class NormalizedTranslationService implements TranslatorInterface
     private $translator;
 
     /**
+     * @var CustomizerService
+     */
+    private $customizer;
+
+    /**
      * @var string
      */
     private $language = Locale::DEFAULT_LANGUAGE;
 
     /**
      * @param Translator $translator
+     * @param CustomizerService $customizer
      */
-    public function __construct(Translator $translator)
+    public function __construct(Translator $translator, CustomizerService $customizer)
     {
         $this->translator = $translator;
+        $this->customizer = $customizer;
     }
 
     /**
@@ -62,9 +70,9 @@ class NormalizedTranslationService implements TranslatorInterface
      */
     public function translate($message, $textDomain = 'default', $locale = null)
     {
-        return $this->normalize(
-            $this->translator->translate($message)
-        );
+        $translatedMessage = $this->customizer->getCustomizedData($message) ?? $this->translator->translate($message);
+
+        return $this->normalize($translatedMessage);
     }
 
     /**
