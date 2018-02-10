@@ -121,6 +121,14 @@ class NormalizedTranslationService implements TranslatorInterface
     }
 
     /**
+     * @return string
+     */
+    public function getCustomizedCompany()
+    {
+        return $this->customizer->getCompany();
+    }
+
+    /**
      * Removes polish letters from string
      *
      * @param string $message

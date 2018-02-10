@@ -14,12 +14,16 @@ class UrlHelper
 {
     /**
      * @param string $language
+     * @param string $customization
      *
      * @return string
      */
-    public static function getLanguageUrl(string $language): string
+    public static function getLanguageUrl(string $language, string $customizationUrl = ''): string
     {
-        return self::getScheme(). '://' . self::getHost($language);
+        return self::getScheme(). '://'
+            . self::getHost($language)
+            . $customizationUrl
+        ;
     }
 
     /**

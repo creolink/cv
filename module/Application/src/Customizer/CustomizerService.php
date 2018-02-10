@@ -56,6 +56,14 @@ class CustomizerService
     }
 
     /**
+     * @return string
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
      * @return array
      */
     private function getFileData(): array

@@ -61,4 +61,15 @@ abstract class AbstractTcpdfDecorator implements TcpdfDecoratorInterface
         return $this->tcpdf->getDateService()
             ->getMonthAndYear($date);
     }
+
+    /**
+     * @return string
+     */
+    protected function getCustomizationUrl(): string
+    {
+        $customization = $this->tcpdf->getTranslator()
+                    ->getCustomizedCompany();
+
+        return !empty($customization) ? '/' . $customization : '';
+    }
 }

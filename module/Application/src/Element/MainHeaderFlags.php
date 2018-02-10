@@ -59,7 +59,7 @@ class MainHeaderFlags extends AbstractTcpdfDecorator
             self::FLAGS_CURSOR_Y + $margin,
             Image::FLAG_WIDTH,
             Image::FLAG_HEIGHT,
-            UrlHelper::getLanguageUrl($language)
+            UrlHelper::getLanguageUrl($language, $this->getCustomizationUrl())
         );
 
         $this->tcpdf->Rect(
