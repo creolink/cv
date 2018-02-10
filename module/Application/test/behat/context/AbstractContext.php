@@ -3,13 +3,13 @@
 namespace Application\Test\Behat\Context;
 
 use SGH\PdfBox\PdfBox;
-use Behat\Testwork\Hook\Scope\BeforeSuiteScope;
 use Application\Normalization\NormalizedTranslationService;
 use Zend\Mvc\I18n\Translator;
 use Zend\I18n\Translator\Translator as I18nTranslator;
 use Behatch\Context\BaseContext;
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
+use Application\Customizer\CustomizerService;
 
 abstract class AbstractContext extends BaseContext
 {
@@ -136,13 +136,15 @@ abstract class AbstractContext extends BaseContext
             new I18nTranslator()
         );
 
+        $customizer = new CustomizerService();
+
         $translator->addTranslationFilePattern(
             self::LANGUAGES_TYPE,
             self::LANGUAGES_PATH,
             self::LANGUAGES_PATTERN
         );
 
-        self::$translator = new NormalizedTranslationService($translator);
+        self::$translator = new NormalizedTranslationService($translator, $customizer);
     }
 
     /**
