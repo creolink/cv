@@ -57,6 +57,7 @@ class NormalizedTranslationService implements TranslatorInterface
 
     /**
      * @param Translator $translator
+     * @param CustomizerService $customizer
      */
     public function __construct(Translator $translator, CustomizerService $customizer)
     {
