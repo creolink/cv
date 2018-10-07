@@ -1,18 +1,18 @@
 positions:
     - { name: 'MySQL Workbench, PMA', level: 4, experience: 14 }
-    - { name: 'Netbeans, PHPStorm', level: 4, experience: 10 }
     - { name: 'Debian, Ubuntu, Fedora', level: 4, experience: 9 }
+    - { name: 'PHPStorm, Netbeans', level: 4, experience: 10 }
     - { name: 'Soap, REST, OAuth', level: 3, experience: 8 }
-    - { name: 'Nginx, Lighttpd, Apache', level: 3, experience: 7 }
+    - { name: 'Docker, Vagrant, VirtualBox', level: 3, experience: 6 }
     - { name: 'Git, Svn, Bitbucket', level: 3, experience: 6 }
-    - { name: 'PHP FPM, APC, Memcache', level: 3, experience: 5 }
+    - { name: 'Composer, Node.js, npm', level: 3, experience: 4 }
     - { name: 'JIRA, Confluence, Trac, DIA', level: 3, experience: 6 }
-    - { name: 'CodeSniffer, PhpDoc', level: 3, experience: 4 }
-    - { name: 'Composer, Node.js, npm', level: 3, experience: 3 }
+    - { name: 'CodeSniffer, PhpDoc', level: 3, experience: 6 }
+    - { name: 'Nginx, Lighttpd, Apache', level: 3, experience: 7 }
+    - { name: 'PHP FPM, APC, Memcache', level: 3, experience: 5 }
     - { name: 'FPDF, TCPDF', level: 3, experience: 5 }
-    - { name: 'Google Analytics, Adwords', level: 2, experience: 6 }
-    - { name: 'VirtualBox, Docker, Vagrant', level: 2, experience: 3 }
     - { name: 'Jenkins, Capistrano', level: 2, experience: 2 }
+    - { name: 'Google Analytics, Adwords', level: 2, experience: 6 }
     - { name: 'GIMP, Photoshop, Fireworks', level: 1, experience: 3 }
     - { name: 'Percona server, Galera Cluster', level: 1, experience: 2 }
 
